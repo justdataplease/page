@@ -1,12 +1,15 @@
 ---
 layout: default
-title: Welcome to Data for Greece
+title: Data for Greece
 ---
 
-# Welcome to Data for Greece
+<link rel="stylesheet" href="/assets/style.css">
 
-![Data for Greece Icon](/assets/favicon.svg)
+<div style="text-align: center; margin-top: 50px;">
+    <img src="/assets/logo.png" alt="Data for Greece Logo" style="max-width: 200px;">
+</div>
 
-**Data for Greece** provides insights and datasets related to Greece's social, economic, and cultural life.
-
-Stay tuned for updates on important trends and data visualizations related to Greece’s evolving landscape.
+<div style="text-align: center; margin-top: 20px;">
+    <h1>Welcome to Data for Greece</h1>
+    <p>Data for Greece provides insights and information about the country's social, economic, and cultural life.</p>
+</div>
