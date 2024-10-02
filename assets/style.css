@@ -1,24 +1,71 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff; /* White background for a clean look */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
 }
 
-h1 {
-    color: #00539C; /* Blue heading color */
+/* Styling for the navbar (fixed and minimal) */
+.navbar {
+    background-color: #1a1a1a; /* Dark background for the navbar */
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: #ffffff; /* White text for the brand */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #ffffff; /* White links for menu items */
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: #f8f9fa; /* Slight hover effect */
+}
+
+/* Hero section (mimicking Ghost's large headers) */
+.hero-section {
+    background-color: #f7f7f7; /* Light gray background for hero section */
+    padding: 100px 20px;
+    margin-top: 75px; /* Adjust to prevent overlap with fixed navbar */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: #333; /* Dark heading */
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #666;
     margin-top: 20px;
 }
 
-p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.6;
+/* Main content styling */
+.main-content {
+    margin: 50px 0;
 }
 
-/* Logo customization */
-.navbar-brand img {
-    max-height: 40px; /* Adjust the logo size */
+.main-content .content-description {
+    font-size: 1.5rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.container {
-    margin-top: 100px; /* Increase margin for better spacing */
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-section h1 {
