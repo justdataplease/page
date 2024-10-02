@@ -1,0 +1,4 @@
+markdown: kramdown
+theme: jekyll-theme-cayman  # or whichever theme you're using
+plugins:
+  - jekyll-feed
