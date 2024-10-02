@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,45 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-    <!-- Fixed Navbar with Ghost-like Styling -->
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <!-- Left-aligned logo -->
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo.svg" alt="Logo" width="240" height="40" class="d-inline-block align-text-top">
-            </a>
 
-            <!-- Toggler for mobile menu -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <!-- Left: About Link -->
+            <a class="navbar-brand" href="#about">About</a>
 
-            <!-- Right-aligned menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                </ul>
+            <!-- Center: Logo -->
+            <div class="mx-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo.svg" alt="Logo" width="240" height="40" class="d-inline-block align-text-top">
+                </a>
+            </div>
+
+            <!-- Right: Icons (Cart, Search, Language) -->
+            <div class="d-flex align-items-center">
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-3">Welcome to Data for Greece</h1>
-            <p class="lead">Insights and information about Greece's social, economic, and cultural life.</p>
-        </div>
-    </header>
+    <!-- Separator (thin line) -->
+    <hr class="my-0">
 
-    <!-- Main Content Section -->
-    <section class="main-content container text-center">
-        <p class="content-description">Data for Greece aims to provide valuable datasets and analysis to help understand key trends and dynamics in the country.</p>
-    </section>
+    <!-- Optional main content section -->
+    <div class="container text-center" style="margin-top: 50px;">
+        <h1>Welcome to Data for Greece</h1>
+        <p>Data for Greece provides insights and information about the country's social, economic, and cultural life.</p>
+    </div>
 
-    <!-- Bootstrap JS for toggling the menu -->
+    <!-- Bootstrap JS for functionality -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
