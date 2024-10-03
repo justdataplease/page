@@ -55,8 +55,8 @@ p {
 /* Background image with black overlay */
 .container-bg {
     position: relative;
-    background: url('assets/background-image.jpg') no-repeat center center/cover;
-    height: 80vh;
+    background: url('bg.webp') no-repeat center center/cover;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +72,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+    background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 60% opacity */
     z-index: 1;
 }
 
@@ -82,14 +82,33 @@ p {
     z-index: 2;
 }
 
-/* Style for the button */
-.btn-custom {
-    border: 2px solid white;
-    color: white;
-    padding: 10px 30px;
-    font-size: 20px;
-    border-radius: 0;
-    background-color: transparent;
+h1 {
+    font-size: 5rem; /* Increase the size of the heading */
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-/* Whit
+.btn-custom {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid white; /* Thicker border */
+    color: white;
+    padding: 15px 40px; /* Increased padding for a larger button */
+    font-size: 1.5rem; /* Larger font size */
+    border-radius: 0;
+    background-color: transparent;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+    outline: none;
+
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active {
+    border: 3px solid white;
+    background-color: transparent; /* Stay transparent on hover and focus */
+    color: white; /* Keep text color white on hover and focus */
+    outline: none; /* Ensure no outline on focus */
+}
+
+

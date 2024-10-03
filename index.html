@@ -20,22 +20,26 @@
 <body>
 
 <!-- Main Navbar -->
+<!-- Main Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container">
-        <!-- Left: About Link -->
+    <div class="container d-flex justify-content-between">
+        <!-- Navbar toggler for mobile devices -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- Center: Logo -->
-        <div class="mx-auto">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo.svg" alt="Logo" width="240" height="40" class="d-inline-block align-text-top">
-            </a>
-        </div>
+        <!-- Centered logo -->
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="assets/logo.svg" alt="Logo" width="240" height="40" class="d-inline-block align-text-top">
+        </a>
 
-        <!-- Right: Icons (Cart, Search, Language) -->
+        <!-- Navbar links in collapse for mobile -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <div class="d-flex align-items-center">
-                <a href="#" class="navbar-brand">About</a>
-            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -48,11 +52,9 @@
     <div class="content">
         <h1>Ανακάλυψε την Ελλάδα<br> μέσα απο δεδομένα.</h1>
         <br>
-        <a href="https://github.com/justdataplease/dataforgreece/tree/main/data" target="_blank">
-            <button type="button" class="btn btn-custom">
-                GitHub
-            </button>
-        </a>
+<a href="https://github.com/justdataplease/dataforgreece/tree/main/data" target="_blank" class="btn-custom">
+    GitHub
+</a>
     </div>
 </div>
 
