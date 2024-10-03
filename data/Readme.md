@@ -28,8 +28,8 @@ Then, explore the datasets inside the `data` folder and check out the example no
 
 We are grateful to the following projects for their support and contributions to this repository:
 
-- [JustDataPlease](https://justdataplease.com)  
 - [Astylab](https://astylab.gr)
+- [JustDataPlease](https://justdataplease.com)  
 
 Please check out their amazing work!
 
