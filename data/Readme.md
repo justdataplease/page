@@ -1,7 +1,5 @@
 # Data for Greece
 
-Welcome to the **Data for Greece** repository! This repository provides a comprehensive dataset covering various aspects of Greece, from economics and demographics to environmental and historical data. Our goal is to make Greek-related data easily accessible, well-organized, and useful for researchers, developers, and data enthusiasts.
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -12,26 +10,19 @@ Welcome to the **Data for Greece** repository! This repository provides a compre
 
 ## Overview
 
-The **Data for Greece** contains structured data on Greece, sourced from reputable institutions and official sources. Each dataset has been cleaned and formatted for easy integration into data analysis projects, visualizations, and machine learning models.
+Data for Greece is an initiative that aims to provide data and insights into the social, economic, and political life of Greece.
+We collect and analyze various datasets to offer a deeper understanding of how Greece is evolving across different sectors.
 
 ## Usage
 
 You can use this data in your own projects, whether for research, education, or data-driven development. To get started, simply clone this repository:
 
-```bash
-git clone https://github.com/your-username/data-for-greece.git
-```
-
-Then, explore the datasets inside the `data` folder and check out the example notebooks in the `examples` folder for insights on how to work with the data.
-
 ## Attribution
 
-We are grateful to the following projects for their support and contributions to this repository:
+This project is a collaboration between Astylab and JustDataPlease
 
 - [Astylab](https://astylab.gr)
 - [JustDataPlease](https://justdataplease.com)  
-
-Please check out their amazing work!
 
 ## License
 
