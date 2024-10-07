@@ -1,7 +1,7 @@
 ---
 layout: default_gr
 title: "Αρχική"
-description: "Ανακαλύψτε την Ελλάδα μέσα από δεδομένα"
+description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"
 permalink: /
 ---
@@ -11,7 +11,7 @@ permalink: /
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="title-heading mt-4">
-                    <h1 style="color:white;">Ανακαλύψτε την Ελλάδα<br> μέσα από δεδομένα.</h1>
+                    <h1 style="color:white;">Ανακάλυψε την Ελλάδα<br> μέσα από δεδομένα.</h1>
                     <br>
                     <a href="https://github.com/justdataplease/dataforgreece/blob/main/Readme.md" target="_blank" class="btn-custom">GitHub</a>
                 </div>
