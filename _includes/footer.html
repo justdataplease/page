@@ -63,25 +63,12 @@
                         </p>
                     </div>
                 </div><!--end col-->
-                <div class="col-lg-6 col-12 text-lg-end text-sm-center">
-                    <!-- Language Selection with Flags -->
-                    <ul class="list-inline mb-0">
-                        {% if page.lang == 'en' %}
-                            <li class="list-inline-item">
-                                <a href="{{ site.baseurl }}{{ page.url | replace_first: '/en/', '/' }}">
-                                    <strong>GR</strong>
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="list-inline-item">
-                                <a href="{{ site.baseurl }}/en{{ page.url }}">
-                                    <strong>EN</strong>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div><!--end col-->
             </div><!--end row-->
         </div><!--end container-->
     </div><!--end footer-->
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+
 </footer><!--end footer-->
+
