@@ -1,9 +1,9 @@
 ---
-layout: default_gr
-title: "Σχετικά"
-description: "Ανακαλύψτε περισσότερα για την πρωτοβουλία Data for Greece"
-lang: "gr"
-permalink: /about/
+layout: default_en
+title: "About"
+description: "About DataForGreece Initiative"
+lang: "en"
+permalink: /en/about/
 ---
 <section class="bg-half-100 d-table w-100">
 
