@@ -1,0 +1,21 @@
+gr:
+  links:
+    - name: "Αρχική"
+      url: "/"
+    - name: "Σχετικά"
+      url: "/about/"
+
+  language_switcher:
+    label: "EN"
+    link_prefix: "/en"
+
+en:
+  links:
+    - name: "Home"
+      url: "/en/"
+    - name: "About"
+      url: "/en/about/"
+
+  language_switcher:
+    label: "GR"
+    link_prefix: ""

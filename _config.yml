@@ -1,0 +1,25 @@
+title: Data for Greece
+description: Ανακαλύψτε την Ελλάδα μέσα από δεδομένα
+baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
+url: "https://dataforgreece.com"
+author: DataForGreece
+email: support@justdataplease.com
+
+# Define two separate blog collections for Greek and English posts
+collections:
+  gr_posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+    posts_dir: gr/_posts
+  en_posts:
+    output: true
+    permalink: /en/:collection/:year/:month/:day/:title/
+    posts_dir: en/_posts
+
+languages:
+  default: "gr"
+  en:
+    label: "English"
+    path: "/en"
+
+permalink: pretty

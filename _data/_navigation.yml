@@ -1,0 +1,14 @@
+gr:
+  - name: "Αρχική"
+    url: "/"
+  - name: "Σχετικά"
+    url: "/about/"
+  - name: "Blog"
+    url: "/blog/"
+en:
+  - name: "Home"
+    url: "/en/"
+  - name: "About"
+    url: "/en/about/"
+  - name: "Blog"
+    url: "/en/blog/"

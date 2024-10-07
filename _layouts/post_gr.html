@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.min.css">
+
+  <!-- SEO Tag for Alternate Language -->
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ page.url }}" />
+</head>
+<body>
+  {% include navbar.html %}
+  <main>
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      <p><small>Δημοσιεύθηκε στις {{ page.date | date: "%B %-d, %Y" }}</small></p>
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

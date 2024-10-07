@@ -1,0 +1,87 @@
+<footer class="footer footer-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="footer-py-60">
+                    <div class="row">
+                        <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                            <a href="#" class="logo-footer">
+                                <img src="/assets/logo.svg" height="40" alt="Data for Greece">
+                            </a>
+                            <p class="mt-4">
+                                {% assign footer_data = site.data.footer[page.lang] %}
+                                {{ footer_data.description }}
+                            </p>
+                            <ul class="list-unstyled social-icon social mb-0 mt-4">
+                                <li class="list-inline-item mb-0">
+                                    <a href="mailto:support@justdataplease.com" class="rounded">
+                                        <i class="uil uil-envelope align-middle" title="email"></i>
+                                    </a>
+                                </li>
+                            </ul><!--end icon-->
+                        </div><!--end col-->
+
+                        <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        </div>
+                        <div class="col-lg-1 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <h5 class="footer-head">
+                                {% if page.lang == 'en' %} Company {% else %} Εταιρεία {% endif %}
+                            </h5>
+                            <ul class="list-unstyled footer-list mt-4">
+                                {% for item in footer_data.company %}
+                                    <li><a href="{{ item.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ item.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div><!--end col-->
+
+                        <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <h5 class="footer-head">
+                                {% if page.lang == 'en' %} Links {% else %} Σύνδεσμοι {% endif %}
+                            </h5>
+                            <ul class="list-unstyled footer-list mt-4">
+                                {% for link in footer_data.links %}
+                                    <li><a href="{{ link.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ link.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="footer footer-light">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-12">
+                    <div class="text-sm-start">
+                        <p class="mb-0">©
+                            <script>document.write(new Date().getFullYear())</script> Data for Greece.
+                        </p>
+                    </div>
+                </div><!--end col-->
+                <div class="col-lg-6 col-12 text-lg-end text-sm-center">
+                    <!-- Language Selection with Flags -->
+                    <ul class="list-inline mb-0">
+                        {% if page.lang == 'en' %}
+                            <li class="list-inline-item">
+                                <a href="{{ site.baseurl }}{{ page.url | replace_first: '/en/', '/' }}">
+                                    <strong>GR</strong>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="list-inline-item">
+                                <a href="{{ site.baseurl }}/en{{ page.url }}">
+                                    <strong>EN</strong>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </div><!--end footer-->
+</footer><!--end footer-->
