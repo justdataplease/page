@@ -1,9 +1,9 @@
 ---
-layout: default_en
-title: "About"
-description: "About DataForGreece Initiative"
-lang: "en"
-permalink: /en/about/
+layout: default_gr
+title: "Σχετικά"
+description: "Ανακαλύψτε περισσότερα για την πρωτοβουλία Data for Greece"
+lang: "gr"
+permalink: /about/
 ---
 <section class="bg-half-100 d-table w-100">
 
@@ -12,17 +12,17 @@ permalink: /en/about/
         <div class="col-md-8">
             <h1 style="color:black">About</h1>
             <p class="mt-4">
-                Το <strong>Data for Greece</strong> είναι μια πρωτοβουλία που στοχεύει στην παροχή δεδομένων και πληροφοριών για την κοινωνική, οικονομική, και πολιτική ζωή της Ελλάδας.
+                <strong>Data for Greece</strong> is an initiative that aims to provide data and insights into the social, economic, and political life of Greece.
             </p>
             <p class="mt-4">
-                Συλλέγουμε και αναλύουμε διάφορα σύνολα δεδομένων για να προσφέρουμε μια βαθύτερη κατανόηση του πώς εξελίσσεται η Ελλάδα σε διάφορους τομείς.
+                We collect and analyze various datasets to offer a deeper understanding of how Greece is evolving across different sectors.
             </p>
             <p class="mt-3">
-                Αυτό το έργο είναι μια συνεργασία μεταξύ του <a href="https://astylab.gr" target="_blank">AstyLab</a> και του <a href="https://justdataplease.com" target="_blank">JustDataPlease</a>.<br>
-                Συνδυάζοντας τεχνογνωσία στην ανάλυση δεδομένων και την καινοτομία, επιδιώκουμε να δημιουργήσουμε έναν ολοκληρωμένο πόρο που θα ωφελεί ερευνητές, επιχειρήσεις και όποιον ενδιαφέρεται για την ανάπτυξη της Ελλάδας.
+                This project is a collaboration between <a href="https://astylab.gr" target="_blank">AstyLab</a> and <a href="https://justdataplease.com" target="_blank">JustDataPlease</a>.<br>
+                By combining expertise in data analysis and innovation, we strive to create a comprehensive resource that benefits researchers, businesses, and anyone interested in Greece's development.
             </p>
             <p class="mt-3">
-                Εάν έχετε οποιεσδήποτε ερωτήσεις ή θέλετε να μάθετε περισσότερα για το έργο, μη διστάσετε να επικοινωνήσετε μαζί μας:
+                If you have any questions or would like to learn more about the project, feel free to reach out to us:
             </p>
             <ul>
                 <li>Astylab: <a href="mailto:astylab@outlook.com">support@justdataplease.com</a></li>
