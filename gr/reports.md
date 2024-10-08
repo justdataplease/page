@@ -1,6 +1,6 @@
 ---
 layout: reports_gr
-title: "Reports"
+title: "Πίνακες Δεδομένων"
 description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"
 permalink: /reports/
