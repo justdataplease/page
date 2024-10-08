@@ -38,3 +38,7 @@ h1 {
     color: white; /* Keep text color white on hover and focus */
     outline: none; /* Ensure no outline on focus */
 }
+
+bg-light-blue {
+background-color: #f0f2fc!important;
+}

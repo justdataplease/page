@@ -7,7 +7,7 @@ permalink: /en/reports/
 ---
 
 <!-- Hero Start -->
-<section class="bg-half-100 bg-light d-table w-100">
+<section class="bg-half-100 bg-light-blue d-table w-100">
     <div class="container">
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-12 text-center">
