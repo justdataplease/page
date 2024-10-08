@@ -5,7 +5,7 @@ gr:
     url: "/about/"
   - name: "Blog"
     url: "/blog/"
-  - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
+  - name: "Πίνακες Δεδομένων"
     url: "/reports/"
 en:
   - name: "Home"
