@@ -1,0 +1,12 @@
+gr:
+  links:
+    - name: "Τιμές Σουπερμάρκετ"
+      url: "https://justdataplease.com/product/supermarket-price-trends-greece/7/dashboard/"
+      description: Ανακαλύψτε τις τιμές σουπερμάρκετ
+      image_path: assets/d1.jpg
+en:
+  links:
+    - name: "Supermarket Prices - Greece"
+      url: "https://justdataplease.com/product/supermarket-price-trends-greece/7/dashboard/"
+      description: Discover Supermarket Prices in Greece
+      image_path: assets/d1.jpg
