@@ -6,6 +6,8 @@ gr:
     - name: "Πολιτική Απορρήτου"
       url: "/privacy/"
   links:
+    - name: "Σχετικά με εμάς"
+      url: "/about/"
     - name: "Astylab"
       url: "https://astylab.gr"
     - name: "JustDataPlease"
@@ -14,8 +16,6 @@ gr:
 en:
   description: "Data for Greece is an initiative aimed at providing data and information on the social, economic, and political life of Greece. We collect and analyze various datasets to offer a deeper understanding of how Greece evolves across different sectors."
   policies:
-    - name: "Σχετικά με εμάς"
-      url: "/about/"
     - name: "Terms of Use"
       url: "/en/terms/"
     - name: "Privacy Policy"
