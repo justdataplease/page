@@ -25,7 +25,7 @@ permalink: /en/about/
                 If you have any questions or would like to learn more about the project, feel free to reach out to us:
             </p>
             <ul>
-                <li>Astylab: <a href="mailto:astylab@outlook.com">support@justdataplease.com</a></li>
+                <li>Astylab: <a href="mailto:astylab@outlook.com">astylab@outlook.com</a></li>
                 <li>JustDataPlease: <a href="mailto:support@justdataplease.com">support@justdataplease.com</a></li>
             </ul>
         </div>
