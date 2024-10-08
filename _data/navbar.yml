@@ -4,7 +4,7 @@ gr:
       url: "/"
     - name: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
       url: "/about/"
-    - name: "REPORTS"
+    - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
       url: "/reports/"
 
   language_switcher:
