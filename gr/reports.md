@@ -20,7 +20,7 @@ permalink: /reports/
             <nav aria-label="breadcrumb" class="d-inline-block">
                 <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Πίνακες Δεδομένων</li>
+                    <li class="breadcrumb-item active" aria-current="page">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</li>
                 </ul>
             </nav>
         </div>
