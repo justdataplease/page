@@ -20,7 +20,7 @@ permalink: /en/reports/
         <div class="row mt-3 justify-content-start">
             <div class="col-lg-12">
                 <div class="pages-heading">
-                    <h4 class="title mb-0"> Reports </h4>
+                    <h2 class="title mb-0"> Reports </h2>
                 </div>
             </div>  <!--end col-->
         </div><!--end row-->
