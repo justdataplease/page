@@ -1,9 +1,11 @@
 gr:
   links:
-    - name: "Αρχική"
+    - name: "ΑΡΧΙΚΗ"
       url: "/"
-    - name: "Ποιοι Είμαστε"
+    - name: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
       url: "/about/"
+    - name: "REPORTS"
+      url: "/reports/"
 
   language_switcher:
     label: "EN"
@@ -11,10 +13,12 @@ gr:
 
 en:
   links:
-    - name: "Home"
+    - name: "ΗΟΜΕ"
       url: "/en/"
-    - name: "About"
+    - name: "ABOUT"
       url: "/en/about/"
+    - name: "REPORTS"
+      url: "/en/reports/"
 
   language_switcher:
     label: "GR"

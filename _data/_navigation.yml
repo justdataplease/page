@@ -5,6 +5,8 @@ gr:
     url: "/about/"
   - name: "Blog"
     url: "/blog/"
+  - name: "Reports"
+    url: "/reports/"
 en:
   - name: "Home"
     url: "/en/"
@@ -12,3 +14,5 @@ en:
     url: "/en/about/"
   - name: "Blog"
     url: "/en/blog/"
+  - name: "Reports"
+    url: "/reports/"
