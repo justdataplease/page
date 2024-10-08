@@ -12,7 +12,7 @@ permalink: /reports/
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="pages-heading">
-                    <h4 class="title mb-0"> Reports </h4>
+                    <h4 class="title mb-0"> Πίνακες Δεδομένων </h4>
                 </div>
             </div>  <!--end col-->
         </div><!--end row-->
@@ -20,7 +20,7 @@ permalink: /reports/
             <nav aria-label="breadcrumb" class="d-inline-block">
                 <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Reports</li>
+                    <li class="breadcrumb-item active" aria-current="page">Πίνακες Δεδομένων</li>
                 </ul>
             </nav>
         </div>
