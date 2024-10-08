@@ -48,7 +48,7 @@ permalink: /reports/
                                                 <div class="post-meta d-flex justify-content-between mt-3">
                                                     <ul class="list-unstyled mb-0">
                                                     </ul>
-                                                    <a href="{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    <a href="{{ item.url }}" class="text-muted readmore">Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></a>
                                                 </div>
                                             </div>
                                         </div><!--end col-->
