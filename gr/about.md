@@ -1,6 +1,6 @@
 ---
 layout: default_gr
-title: "Σχετικά"
+title: "Ποιοι Είμαστε"
 description: "Aνακάλυψε περισσότερα για την πρωτοβουλία Data for Greece"
 lang: "gr"
 permalink: /about/

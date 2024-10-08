@@ -6,7 +6,7 @@ gr:
     - name: "Πολιτική Απορρήτου"
       url: "/privacy/"
   links:
-    - name: "Σχετικά με εμάς"
+    - name: "Ποιοι Είμαστε"
       url: "/about/"
     - name: "Astylab"
       url: "https://astylab.gr"

@@ -2,7 +2,7 @@ gr:
   links:
     - name: "Αρχική"
       url: "/"
-    - name: "Σχετικά"
+    - name: "Ποιοι Είμαστε"
       url: "/about/"
 
   language_switcher:
