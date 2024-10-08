@@ -7,38 +7,31 @@ permalink: /reports/
 ---
 
 <!-- Hero Start -->
-<section class="bg-half-100 bg-light-blue d-table w-100">
+<section class="bg-half-100 bg-light-blue d-table w-100 pb-0">
     <div class="container">
-        <div class="row mt-5 justify-content-center">
-            <div class="col-lg-12 text-center">
-                <div class="pages-heading">
-                    <h4 class="title mb-0"> Πίνακες Δεδομένων </h4>
-                </div>
-            </div>  <!--end col-->
-        </div><!--end row-->
-        <div class="position-breadcrumb">
+        <div class="">
             <nav aria-label="breadcrumb" class="d-inline-block">
-                <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
+                <ul class="breadcrumb m-0 p-0">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
                     <li class="breadcrumb-item active" aria-current="page">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</li>
                 </ul>
             </nav>
         </div>
+        <div class="row mt-3 justify-content-start">
+            <div class="col-lg-12">
+                <div class="pages-heading">
+                    <h4 class="title mb-0"> Πίνακες Δεδομένων </h4>
+                </div>
+            </div>  <!--end col-->
+        </div><!--end row-->
     </div> <!--end container-->
 </section><!--end section-->
 <!-- Hero End -->
-<div class="position-relative">
-    <div class="shape overflow-hidden text-color-white">
-        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-        </svg>
-    </div>
-</div>
 
 {% assign dashboards_data = site.data.dashboards[page.lang] %}
 
 <!--Blog Lists Start-->
-<section class="section">
+<section class="section pt-5">
     <div class="container">
         <div class="row">
             {% for item in dashboards_data.links %}
