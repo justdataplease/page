@@ -1,8 +1,8 @@
 gr:
   links:
-    - name: "Τιμές Supermarket"
+    - name: "Τιμές Σουπερμάρκετ"
       url: "https://justdataplease.com/product/supermarket-price-trends-greece/7/dashboard/"
-      description: Δείτε και συγκρίνετε τις τάσεις τιμών στα Supermarket της Ελλάδας.
+      description: Δείτε και συγκρίνετε τις τάσεις τιμών στα Σούπερμάρκετ της Ελλάδας.
       image_path: assets/d1.jpg
 en:
   links:
