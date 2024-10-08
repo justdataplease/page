@@ -25,6 +25,7 @@ permalink: /about/
                 Εάν έχετε οποιεσδήποτε ερωτήσεις ή θέλετε να μάθετε περισσότερα για το έργο, μη διστάσετε να επικοινωνήσετε μαζί μας:
             </p>
             <ul>
+                <li>DataForGreece: <a href="mailto:dataforgreece@outlook.com">dataforgreece@outlook.com</a></li>
                 <li>Astylab: <a href="mailto:astylab@outlook.com">astylab@outlook.com</a></li>
                 <li>JustDataPlease: <a href="mailto:support@justdataplease.com">support@justdataplease.com</a></li>
             </ul>
