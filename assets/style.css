@@ -39,6 +39,6 @@ h1 {
     outline: none; /* Ensure no outline on focus */
 }
 
-bg-light-blue {
+.bg-light-blue {
 background-color: #f0f2fc!important;
 }
