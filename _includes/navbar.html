@@ -1,6 +1,6 @@
 <header id="topnav" class="defaultscroll sticky navbar-white-bg border-bottom">
     <div class="container">
-        <a class="logo" href="{{ site.baseurl }}/">
+        <a class="logo" href="{% if page.lang == 'en' %} {{ site.baseurl }}/en/ {% else %} {{ site.baseurl }} {% endif %}">
             <img src="{{ site.baseurl }}/assets/logo.svg" height="40" alt="Data for Greece">
         </a>
 

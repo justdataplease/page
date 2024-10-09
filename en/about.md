@@ -1,5 +1,5 @@
 ---
-layout: default_en
+layout: default
 title: "About"
 description: "About DataForGreece Initiative"
 lang: "en"

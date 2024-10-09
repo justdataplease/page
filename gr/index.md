@@ -1,5 +1,5 @@
 ---
-layout: default_gr
+layout: default
 title: "Αρχική"
 description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"

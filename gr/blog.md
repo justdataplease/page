@@ -1,5 +1,5 @@
 ---
-layout: default_gr
+layout: default
 title: "Blog"
 lang: "gr"
 permalink: /blog/
