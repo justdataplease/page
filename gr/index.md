@@ -13,7 +13,7 @@ permalink: /
                 <div class="title-heading mt-4">
                     <h1 style="color:white;">Ανακάλυψε την Ελλάδα<br> μέσα από δεδομένα.</h1>
                     <br>
-                    <a href="https://github.com/justdataplease/dataforgreece/blob/main/Readme.md" target="_blank" class="btn-custom">GitHub</a>
+                    <a href="{{ site.baseurl }}/reports/" target="_blank" class="btn-custom">Πίνακες Δεδομένων</a>
                 </div>
             </div>
         </div>

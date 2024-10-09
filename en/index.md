@@ -14,8 +14,8 @@ permalink: /en/
                     <div class="content">
                         <h1 style="color:white;">Discover Greece<br> through data.</h1>
                         <br>
-                        <a href="https://github.com/justdataplease/dataforgreece/blob/main/Readme.md" target="_blank" class="btn-custom">
-                            GitHub
+                        <a href="{{ site.baseurl }}/en/reports/" target="_blank" class="btn-custom">
+                            Reports
                         </a>
                     </div>
                 </div>
