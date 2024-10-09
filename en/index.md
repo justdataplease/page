@@ -1,5 +1,5 @@
 ---
-layout: default_en
+layout: default
 title: "Homepage"
 description: "Discover Greece Through Data"
 lang: "en"

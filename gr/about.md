@@ -1,5 +1,5 @@
 ---
-layout: default_gr
+layout: default
 title: "Ποιοι Είμαστε"
 description: "Aνακάλυψε περισσότερα για την πρωτοβουλία Data for Greece"
 lang: "gr"
