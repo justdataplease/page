@@ -1,0 +1,18 @@
+{% include head.html %}
+<body>
+  {% include navbar.html %}
+  <main>
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      {% if page.lang == 'en' %}
+      <p><small>Published on {{ page.date | date: "%Y-%m-%d" }}</small></p>
+      {% else %}
+      <p><small>Δημοσιεύθηκε στις {{ page.date | date: "%Y-%m-%d" }}</small></p>
+      {% endif %}
+
+      {{content}}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>
