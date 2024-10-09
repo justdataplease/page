@@ -1,0 +1,79 @@
+{% assign dashboards_data = site.data.reports[page.lang] %}
+{% assign report_data = dashboards_data.links | where: "slug", page.slug | first %}
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ report_data.name }}</title>
+    <meta name="description" content="{{ report_data.description }}">
+    <link rel="shortcut icon" href="/assets/favicon.svg">
+
+    <!-- CSS Links -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Main content -->
+    <style>
+        .text-muted a {
+            color: #8492a6 !important;
+            font-size: 13px;
+         }
+
+        .fullscreen-iframe {
+            width: 100%!important;
+            height: 100%;
+            position: relative; /* Needed for absolute positioning of the iframe */
+            padding: 0;
+            margin: 0;
+        }
+
+        .fullscreen-iframe iframe {
+            width: 100%!important;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            border: none;
+        }
+
+        .modal-backdrop.show {
+        opacity: 0.8!important; /* or any value between 0.0 and 1.0 */
+        }
+
+        @media (max-width: 767px) {
+        .navbar-sm-hide {
+            display: none!important;
+        }
+        }
+    </style>
+
+
+    <div class="d-flex flex-column" style="height: 100vh;">
+        <!-- Navbar -->
+        <nav class="d-flex justify-content-between navbar navbar-sm-hide p-0 border-bottom" style="height:30px!important;border-color:#DFE0E1!important;">
+            <p class="text-muted ps-3 p-1 m-0">
+                {% if page.lang == 'en' %}
+                <a href="{{ site.baseurl }}/">Home</a> / <a href="{{ site.baseurl }}/reports">Reports</a> / <a href="{{ site.baseurl }}{{page.permalink}}"> {{report_data.name}}</a>
+                {% else %}
+                <a href="{{ site.baseurl }}/">Αρχική</a> / <a href="{{ site.baseurl }}/reports">Πίνακες Δεδομένων</a> / <a href="{{ site.baseurl }}{{page.permalink}}"> {{report_data.name}}</a>
+                {% endif %}
+            </p>
+
+        </nav>
+        <!-- End Navbar -->
+
+        <section class="section fullscreen-iframe">
+            <iframe src="{{ report_data.embedded_url}}" frameborder="0" style="border:0"
+                    allowfullscreen></iframe>
+        </section><!--end section-->
+
+
+    </div>
+
+</body>
+</html>
