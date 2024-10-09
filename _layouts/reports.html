@@ -1,0 +1,82 @@
+{% assign dashboards_data = site.data.reports[page.lang] %}
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="shortcut icon" href="/assets/favicon.svg">
+
+    <!-- CSS Links -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Include Navbar -->
+    {% include navbar.html %}
+
+    <!-- Main content -->
+    <main>
+    <!-- Hero Start -->
+    <section class="bg-half-100 bg-light-blue d-table w-100 pb-0">
+        <div class="container">
+            <div class="">
+                <nav aria-label="breadcrumb" class="d-inline-block">
+                    <ul class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Reports</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row mt-3 justify-content-start">
+                <div class="col-lg-12">
+                    <div class="pages-heading">
+                        <h2 class="title mb-0"> Reports </h2>
+                    </div>
+                </div>  <!--end col-->
+            </div><!--end row-->
+        </div> <!--end container-->
+    </section><!--end section-->
+    <!-- Hero End -->
+
+    <!--Blog Lists Start-->
+    <section class="section pt-5">
+        <div class="container">
+            <div class="row">
+                {% for item in dashboards_data.links %}
+                         <div class="col-lg-6 col-12 mb-4 pb-2">
+                                    <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col-md-6">
+                                                <img src="{{ site.baseurl }}/{{item.image_path}}" class="img-fluid" alt="">
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="card-body content">
+                                                    <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.name }}</a></h5>
+                                                    <p class="text-muted mb-0">{{ item.description }}</p>
+                                                    <div class="post-meta d-flex justify-content-between mt-3">
+                                                        <ul class="list-unstyled mb-0">
+                                                        </ul>
+                                                        <a href="{{ site.baseurl }}{{ page.permalink }}{{ item.slug }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div> <!--end row-->
+                                    </div><!--end blog post-->
+                                </div><!--end col-->
+                {% endfor %}
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section -->
+    <!--Blog Lists End-->
+    </main>
+
+    <!-- Include Footer -->
+    {% include footer.html %}
+</body>
+</html>
