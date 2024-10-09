@@ -4,12 +4,16 @@ gr:
       name_upper: "ΤΙΜΕΣ ΣΟΥΠΕΡΜΑΡΚΕΤ"
       embedded_url: "https://app.powerbi.com/view?r=eyJrIjoiMDdlMTA0ZmMtOWM0MC00NzA0LThmYmItOWQ3YTU1OWUzNzAzIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9"
       description: Δείτε και συγκρίνετε τις τάσεις τιμών στα Σούπερμάρκετ της Ελλάδας.
+      description_detailed: Χρησιμοποιώντας δεδομένα από την πλατφόρμα e-Καταναλωτής, ο διαδραστικός πίνακας PowerBI παρέχει πλήρη εικόνα για τις τάσεις τιμών σε πάνω από 3.000 βασικά καταναλωτικά προϊόντα σε μεγάλες αλυσίδες σούπερ μάρκετ της Ελλάδας. Με εβδομαδιαία ενημέρωση, μπορείτε να παρακολουθείτε τις αλλαγές τιμών, να συγκρίνετε προϊόντα και να εντοπίζετε οικονομικές ευκαιρίες. Ο πίνακας παρουσιάζει με διαφάνεια τις διακυμάνσεις των τιμών, προσφέροντας στους καταναλωτές τη δυνατότητα να κάνουν ενημερωμένες επιλογές και να προγραμματίσουν τις αγορές τους με το χαμηλότερο δυνατό κόστος. Εξερευνήστε τις τάσεις σε βάθος και προσαρμόστε το καλάθι σας για μεγαλύτερη εξοικονόμηση.
       image_path: assets/d1.jpg
       slug: supermarket-prices-greece
+      update-frequency: "<strong>Συχνότητα Ενημέρωσης:</strong> Εβδομαδιαία"
 en:
   links:
     - name: "Supermarket Prices - Greece"
       embedded_url: "https://app.powerbi.com/view?r=eyJrIjoiMDdlMTA0ZmMtOWM0MC00NzA0LThmYmItOWQ3YTU1OWUzNzAzIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9"
-      description: View and compare price trends in supermarkets across Greece
+      description: View and compare price trends in supermarkets across Greece.
+      description_detailed: "Using data from the e-katanalotis platform, the interactive PowerBI dashboard provides a comprehensive view of price trends for over 3,000 essential consumer products from major supermarket chains across Greece. With weekly updates, you can track price changes, compare products, and identify cost-saving opportunities. The dashboard transparently presents price fluctuations, giving consumers the ability to make informed decisions and plan their purchases at the lowest possible cost. Explore trends in depth and adjust your shopping basket for greater savings."
       image_path: assets/d1.jpg
       slug: supermarket-prices-greece
+      update-frequency: "<strong>Frequency of Report Updates::</strong> Weekly"

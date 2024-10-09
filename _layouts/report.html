@@ -1,29 +1,15 @@
 {% assign dashboards_data = site.data.reports[page.lang] %}
 {% assign report_data = dashboards_data.links | where: "slug", page.slug | first %}
 
-<!doctype html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ report_data.name }}</title>
-    <meta name="description" content="{{ report_data.description }}">
-    <link rel="shortcut icon" href="/assets/favicon.svg">
+{% include head.html %}
 
-    <!-- CSS Links -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
-    <link href="/assets/css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/style.css" rel="stylesheet" type="text/css">
-</head>
 <body>
     <!-- Main content -->
     <style>
         .text-muted a {
             color: #8492a6 !important;
             font-size: 16px;
-         }
+        }
 
         .fullscreen-iframe {
             width: 100%!important;
@@ -42,42 +28,65 @@
         }
 
         .modal-backdrop.show {
-        opacity: 0.8!important; /* or any value between 0.0 and 1.0 */
+            opacity: 0.8!important; /* or any value between 0.0 and 1.0 */
         }
 
         @media (max-width: 767px) {
-        .navbar-sm-hide {
-            display: none!important;
-        }
+            .navbar-sm-hide {
+                display: none!important;
+            }
         }
     </style>
 
-
     <div class="d-flex flex-column" style="height: 100vh;">
         <!-- Navbar -->
-
-        <nav aria-label="breadcrumb" class="d-inline-block ps-3 border-bottom">
+        <nav aria-label="breadcrumb" class="d-inline-block ps-3 border-bottom navbar-sm-hide" style="height:30px!important">
             <ul class="breadcrumb m-0 p-0">
                 {% if page.lang == 'en' %}
-                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">REPORTS</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{report_data.name}}</li>
+                    <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
+                    <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">REPORTS</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.name }}</li>
                 {% else %}
-                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ report_data.name_upper | default: report_data.name }}</li>
+                    <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
+                    <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.name_upper | default: report_data.name }}</li>
                 {% endif %}
             </ul>
         </nav>
         <!-- End Navbar -->
 
+        <!-- Offcanvas Toggle Button -->
+        <button class="btn btn-primary rounded-circle position-fixed end-0 m-4 d-flex justify-content-center align-items-center"
+                style="z-index: 100; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); bottom: 60px;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#infoPanel" aria-controls="infoPanel">
+            <i class="uil uil-info-circle" style="font-size: 40px;"></i> <!-- Larger Unicon Icon -->
+        </button>
+
+        <!-- Offcanvas Panel -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="infoPanel" aria-labelledby="infoPanelLabel">
+            <div class="offcanvas-header">
+                <h5 id="infoPanelLabel">{{ report_data.name }}</h5>
+            <button type="button" class="position-absolute top-0 end-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close"
+                    style="background: none; border: none;">
+                <i class="uil uil-times" style="font-size: 24px; color: black;"></i>
+            </button>
+            </div>
+            <div class="offcanvas-body">
+                <p>{{ report_data.description_detailed }}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ps-0">{{ report_data.update-frequency }} </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content - Fullscreen Iframe -->
         <section class="section fullscreen-iframe">
-            <iframe src="{{ report_data.embedded_url}}" frameborder="0" style="border:0"
-                    allowfullscreen></iframe>
-        </section><!--end section-->
-
-
+            <iframe src="{{ report_data.embedded_url }}" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section><!-- end section -->
     </div>
 
+    <!-- Bootstrap JS (Updated Scripts) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
