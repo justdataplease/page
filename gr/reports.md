@@ -28,7 +28,7 @@ permalink: /reports/
 </section><!--end section-->
 <!-- Hero End -->
 
-{% assign dashboards_data = site.data.dashboards[page.lang] %}
+{% assign dashboards_data = site.data.reports[page.lang] %}
 
 <!--Blog Lists Start-->
 <section class="section pt-5">

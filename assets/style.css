@@ -11,9 +11,24 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-    font-size: 5rem; /* Increase the size of the heading */
     font-weight: bold;
     line-height: 1.2;
+}
+
+h1 {
+  font-size: 75px; /* Default font size */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 65px; /* Font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 45px; /* Font size for mobile devices */
+  }
 }
 
 .btn-custom {

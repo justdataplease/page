@@ -15,6 +15,12 @@ collections:
     output: true
     permalink: /en/:collection/:year/:month/:day/:title/
     posts_dir: en/_posts
+  gr_reports:
+    output: true
+    permalink: /reports/:slug/
+  en_reports:
+    output: true
+    permalink: /en/reports/:slug/
 
 languages:
   default: "gr"

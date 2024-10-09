@@ -27,7 +27,7 @@ permalink: /en/reports/
     </div> <!--end container-->
 </section><!--end section-->
 <!-- Hero End -->
-{% assign dashboards_data = site.data.dashboards[page.lang] %}
+{% assign dashboards_data = site.data.reports[page.lang] %}
 
 <!--Blog Lists Start-->
 <section class="section pt-5">
@@ -47,7 +47,7 @@ permalink: /en/reports/
                                                 <div class="post-meta d-flex justify-content-between mt-3">
                                                     <ul class="list-unstyled mb-0">
                                                     </ul>
-                                                    <a href="{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    <a href="{{ site.baseurl }}/reports/{{ item.slug }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
                                                 </div>
                                             </div>
                                         </div><!--end col-->
