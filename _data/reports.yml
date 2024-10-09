@@ -4,9 +4,11 @@ gr:
       url: "https://justdataplease.com/product/supermarket-price-trends-greece/7/dashboard/"
       description: Δείτε και συγκρίνετε τις τάσεις τιμών στα Σούπερμάρκετ της Ελλάδας.
       image_path: assets/d1.jpg
+      slug: supermarket-prices-greece
 en:
   links:
     - name: "Supermarket Prices - Greece"
       url: "https://justdataplease.com/product/supermarket-price-trends-greece/7/dashboard/"
       description: View and compare price trends in supermarkets across Greece
       image_path: assets/d1.jpg
+      slug: supermarket-prices-greece

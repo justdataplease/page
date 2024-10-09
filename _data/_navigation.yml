@@ -7,6 +7,9 @@ gr:
     url: "/blog/"
   - name: "Πίνακες Δεδομένων"
     url: "/reports/"
+  - name: "Πίνακας Τιμών Σουπερμάρκετ"
+    url: "/reports/supermarket-prices-greece/"
+    show: false  # Only available in English
 en:
   - name: "Home"
     url: "/en/"
@@ -15,4 +18,7 @@ en:
   - name: "Blog"
     url: "/en/blog/"
   - name: "Reports"
-    url: "/reports/"
+    url: "/en/reports/"
+  - name: "Supermarket Prices Report"
+    url: "/en/reports/supermarket-prices-greece/"
+    show: false  # Only available in English
