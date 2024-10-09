@@ -22,7 +22,7 @@
     <style>
         .text-muted a {
             color: #8492a6 !important;
-            font-size: 13px;
+            font-size: 16px;
          }
 
         .fullscreen-iframe {
@@ -55,15 +55,19 @@
 
     <div class="d-flex flex-column" style="height: 100vh;">
         <!-- Navbar -->
-        <nav class="d-flex justify-content-between navbar navbar-sm-hide p-0 border-bottom" style="height:30px!important;border-color:#DFE0E1!important;">
-            <p class="text-muted ps-3 p-1 m-0">
-                {% if page.lang == 'en' %}
-                <a href="{{ site.baseurl }}/">Home</a> / <a href="{{ site.baseurl }}/reports">Reports</a> / <a href="{{ site.baseurl }}{{page.permalink}}"> {{report_data.name}}</a>
-                {% else %}
-                <a href="{{ site.baseurl }}/">Αρχική</a> / <a href="{{ site.baseurl }}/reports">Πίνακες Δεδομένων</a> / <a href="{{ site.baseurl }}{{page.permalink}}"> {{report_data.name}}</a>
-                {% endif %}
-            </p>
 
+        <nav aria-label="breadcrumb" class="d-inline-block ps-3 border-bottom">
+            <ul class="breadcrumb m-0 p-0">
+                {% if page.lang == 'en' %}
+                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
+                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">REPORTS</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{report_data.name}}</li>
+                {% else %}
+                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
+                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ report_data.name_upper | default: report_data.name }}</li>
+                {% endif %}
+            </ul>
         </nav>
         <!-- End Navbar -->
 
