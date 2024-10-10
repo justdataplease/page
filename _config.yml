@@ -4,34 +4,43 @@ baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
 url: "https://dataforgreece.com"
 author: DataForGreece
 email: support@justdataplease.com
+include: ['_reports/en','_reports/gr','_posts/en','_posts/gr','_data_dir/en','_data_dir/gr']
 
-# Define two separate blog collections for Greek and English posts
 collections:
-  en_posts:
+  posts:
     output: true
-    permalink: /en/posts/:slug/
-    relative_directory: en/_posts
-  gr_posts:
+  reports:
     output: true
-    permalink: /posts/:slug/
-    relative_directory: gr/_posts
 
-# Default language setting for posts in different directories
 defaults:
   - scope:
       path: "en/_posts"
     values:
-      lang: "en"
+      lang: "_posts/en"
       layout: "post"
       categories: "blog"
-      permalink: /en/posts/:slug/
+      permalink: /en/blog/:slug/
   - scope:
-      path: "gr/_posts"
+      path: "_posts/gr"
     values:
       lang: "gr"
       layout: "post"
       categories: "blog"
-      permalink: /posts/:slug/
+      permalink: /blog/:slug/
+  - scope:
+      path: "_reports/en"
+    values:
+      lang: "en"
+      layout: "report"
+      categories: "reports"
+      permalink: /en/reports/:slug/
+  - scope:
+      path: "_reports/gr"
+    values:
+      lang: "gr"
+      layout: "report"
+      categories: "reports"
+      permalink: /reports/:slug/
 
 languages:
   default: "gr"

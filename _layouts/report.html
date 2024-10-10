@@ -1,5 +1,4 @@
-{% assign dashboards_data = site.data.reports[page.lang] %}
-{% assign report_data = dashboards_data.links | where: "slug", page.slug | first %}
+{% assign report_data = site.reports | where: "slug", page.slug | where: "lang", page.lang | first %}
 
 {% include head.html %}
 
@@ -45,11 +44,11 @@
                 {% if page.lang == 'en' %}
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">REPORTS</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.name }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.title }}</li>
                 {% else %}
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.name_upper | default: report_data.name }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.title | remove_accents | default: report_data.title }}</li>
                 {% endif %}
             </ul>
         </nav>
@@ -65,7 +64,7 @@
         <!-- Offcanvas Panel -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="infoPanel" aria-labelledby="infoPanelLabel">
             <div class="offcanvas-header">
-                <h5 id="infoPanelLabel">{{ report_data.name }}</h5>
+                <h5 id="infoPanelLabel">{{ report_data.title }}</h5>
             <button type="button" class="position-absolute top-0 end-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close"
                     style="background: none; border: none;">
                 <i class="uil uil-times" style="font-size: 24px; color: black;"></i>
