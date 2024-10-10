@@ -14,10 +14,10 @@
                     <ul class="breadcrumb m-0 p-0">
                         {% if page.lang == 'en' %}
                         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                        <li class="breadcrumb-item active">REPORTS</li>
+                        <li class="breadcrumb-item active">DATA DIRECTORY</li>
                         {% else %}
                         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                        <li class="breadcrumb-item active">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</li>
+                        <li class="breadcrumb-item active">ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ</li>
                         {% endif %}
 
                     </ul>
@@ -27,9 +27,9 @@
                 <div class="col-lg-12">
                     <div class="pages-heading">
                         {% if page.lang == 'en' %}
-                        <h2 class="title mb-0"> Reports </h2>
+                        <h2 class="title mb-0"> Data Directory </h2>
                         {% else %}
-                        <h2 class="title mb-0"> Πίνακες Δεδομένων </h2>
+                        <h2 class="title mb-0"> Συλλογή Δεδομένων </h2>
                         {% endif %}
                     </div>
                 </div>  <!--end col-->
@@ -43,15 +43,12 @@
 <section class="section pt-5">
     <div class="container">
         <div class="row">
-            {% for item in site.reports %}
+            {% for item in site.data_directory %}
             {% if item.lang == page.lang %}
-            <div class="col-lg-6 col-12 mb-4 pb-2">
+            <div class="col-lg-4 col-6 mb-4 pb-2">
                 <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
                     <div class="row align-items-center g-0">
-                        <div class="col-md-6">
-                            <img src="{{ site.baseurl }}/{{ item.image_path }}" class="img-fluid" alt="">
-                        </div><!--end col-->
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="card-body content">
                                 <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.title }}</a></h5>
                                 <p class="text-muted mb-0">{{ item.description }}</p>

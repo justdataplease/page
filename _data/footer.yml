@@ -8,6 +8,12 @@ gr:
   links:
     - name: "Ποιοι Είμαστε"
       url: "/about/"
+    - name: "Πίνακες Δεδομένων"
+      url: "/reports/"
+    - name: "Συλλογή Δεδομένων"
+      url: "/data-directory/"
+    - name: "Ιστολόγιο"
+      url: "/blog/"
     - name: "Astylab"
       url: "https://astylab.gr"
     - name: "JustDataPlease"
@@ -23,7 +29,14 @@ en:
   links:
     - name: "About Us"
       url: "/en/about/"
+    - name: "Reports"
+      url: "/en/reports/"
+    - name: "Data Directory"
+      url: "/en/data-directory/"
+    - name: "Blog"
+      url: "/en/blog/"
     - name: "Astylab"
       url: "https://astylab.gr"
     - name: "JustDataPlease"
       url: "https://justdataplease.com"
+

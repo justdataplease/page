@@ -14,10 +14,10 @@
                     <ul class="breadcrumb m-0 p-0">
                         {% if page.lang == 'en' %}
                         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                        <li class="breadcrumb-item active">REPORTS</li>
+                        <li class="breadcrumb-item active">BLOG</li>
                         {% else %}
                         <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                        <li class="breadcrumb-item active">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</li>
+                        <li class="breadcrumb-item active">ΙΣΤΟΛΟΓΙΟ</li>
                         {% endif %}
 
                     </ul>
@@ -27,9 +27,9 @@
                 <div class="col-lg-12">
                     <div class="pages-heading">
                         {% if page.lang == 'en' %}
-                        <h2 class="title mb-0"> Reports </h2>
+                        <h2 class="title mb-0"> Blog </h2>
                         {% else %}
-                        <h2 class="title mb-0"> Πίνακες Δεδομένων </h2>
+                        <h2 class="title mb-0"> Ιστολόγιο </h2>
                         {% endif %}
                     </div>
                 </div>  <!--end col-->
@@ -43,13 +43,13 @@
 <section class="section pt-5">
     <div class="container">
         <div class="row">
-            {% for item in site.reports %}
+            {% for item in site.articles %}
             {% if item.lang == page.lang %}
             <div class="col-lg-6 col-12 mb-4 pb-2">
                 <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
                     <div class="row align-items-center g-0">
                         <div class="col-md-6">
-                            <img src="{{ site.baseurl }}/{{ item.image_path }}" class="img-fluid" alt="">
+                             <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/default-blog.webp' }}" class="img-fluid" alt="">
                         </div><!--end col-->
                         <div class="col-md-6">
                             <div class="card-body content">

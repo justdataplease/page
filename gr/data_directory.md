@@ -1,8 +1,8 @@
 ---
-layout: blog
-title: "Ιστολόγιο"
+layout: data_directory
+title: "Συλλογή Δεδομένων"
 description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"
-permalink: /blog/
+permalink: /data-directory/
 ---
 

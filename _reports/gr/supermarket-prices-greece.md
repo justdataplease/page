@@ -1,5 +1,6 @@
 ---
 title: Τιμές Σούπερμαρκετ
+title_upper: ΤΙΜΕΣ ΣΟΥΠΕΡΜΑΡΚΕΤ
 slug: supermarket-prices-greece
 embedded_url: https://app.powerbi.com/view?r=eyJrIjoiMDdlMTA0ZmMtOWM0MC00NzA0LThmYmItOWQ3YTU1OWUzNzAzIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9
 description: Δείτε και συγκρίνετε τις τάσεις τιμών στα σούπερ μάρκετ σε όλη την Ελλάδα.

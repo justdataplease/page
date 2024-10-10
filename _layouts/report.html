@@ -48,7 +48,7 @@
                 {% else %}
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.title | remove_accents | default: report_data.title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ report_data.title_upper | default: report_data.title }}</li>
                 {% endif %}
             </ul>
         </nav>
