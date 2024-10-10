@@ -1,12 +1,13 @@
 <header id="topnav" class="defaultscroll sticky navbar-white-bg border-bottom">
     <div class="container">
-        <a class="logo" href="{% if page.lang == 'en' %} {{ site.url }}/en/ {% else %} {{ site.url }} {% endif %}">
+        <!-- Logo -->
+        <a class="logo" href="{% if page.lang == 'en' %}{{ site.url }}/en/{% else %}{{ site.url }}{% endif %}">
             <img src="{{ site.baseurl }}/assets/logo.svg" height="40" alt="Data for Greece">
         </a>
 
         <div class="menu-extras">
             <div class="menu-item">
-                <!-- Mobile menu toggle-->
+                <!-- Mobile menu toggle -->
                 <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
                     <div class="lines">
                         <span></span>
@@ -14,45 +15,49 @@
                         <span></span>
                     </div>
                 </a>
-                <!-- End mobile menu toggle-->
+                <!-- End mobile menu toggle -->
             </div>
         </div>
 
-
         <div id="navigation">
-
             <!-- Navigation Menu -->
-            <ul class="navigation-menu justify-content-end">
+               <ul class="navigation-menu justify-content-end">
                 {% assign nav_items = site.data.navbar[page.lang].links %}
+
                 {% for item in nav_items %}
-                <li><a href="{{ site.baseurl }}{{ item.url }}" class="sub-menu-item">{{ item.name }}</a></li>
+                    {% if item.submenu %}
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)" class="sub-menu-item">{{ item.name }}</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                {% for subitem in item.submenu %}
+                                    <li><a href="{{ subitem.url }}" class="sub-menu-item">{{ subitem.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{{ item.url }}" class="sub-menu-item">{{ item.name }}</a></li>
+                    {% endif %}
                 {% endfor %}
-
-                <!-- Language Switcher -->
-                <li class="list-inline mb-0">
+                 <li class="list-inline-item">
                     {% if page.lang == 'en' %}
-                    {% capture gr_url %}
-                    {{ page.url | replace_first: '/en/', '/' }}
-                    {% endcapture %}
-                <li class="list-inline-item">
-                    <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
-                </li>
-                {% else %}
-                {% capture en_url %}
-                {% if page.url == "/" %}
-                /en/
-                {% else %}
-                /en{{ page.url }}
-                {% endif %}
-                {% endcapture %}
-                <li class="list-inline-item">
-                    <a href="{{ site.baseurl }}{{ en_url }}"><i>EN</i></a>
-                </li>
-                {% endif %}
+                        {% capture gr_url %}
+                            {{ page.url | replace_first: '/en/', '/' }}
+                        {% endcapture %}
+                        <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
+                    {% else %}
+                        {% capture en_url %}
+                            {% if page.url == "/" %}
+                                /en/
+                            {% else %}
+                                /en{{ page.url }}
+                            {% endif %}
+                        {% endcapture %}
+                        <a href="{{ site.baseurl }}{{ en_url }}"><i>EN</i></a>
+                    {% endif %}
                 </li>
 
-            </ul>
 
+            </ul><!--end navigation menu-->
 
         </div>
     </div>

@@ -4,8 +4,15 @@ gr:
       url: "/"
     - name: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
       url: "/about/"
-    - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
-      url: "/reports/"
+    - name: "ΔΕΔΟΜΕΝΑ"
+      url: "#"
+      submenu:
+        - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
+          url: "/reports/"
+        - name: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
+          url: "/data-directory/"
+    - name: "IΣΤΟΛΟΓΙΟ"
+      url: "/blog/"
 
   language_switcher:
     label: "EN"
@@ -13,12 +20,19 @@ gr:
 
 en:
   links:
-    - name: "ΗΟΜΕ"
+    - name: "HOME"
       url: "/en/"
     - name: "ABOUT"
       url: "/en/about/"
-    - name: "REPORTS"
-      url: "/en/reports/"
+    - name: "DATA"
+      url: "#"
+      submenu:
+        - name: "REPORTS"
+          url: "/en/reports/"
+        - name: "DATA DIRECTORY"
+          url: "/en/data-directory/"
+    - name: "BLOG"
+      url: "/en/blog/"
 
   language_switcher:
     label: "GR"

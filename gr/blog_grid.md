@@ -1,12 +1,8 @@
 ---
-layout: default
-title: "Blog"
+layout: blog
+title: "Ιστολόγιο"
+description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"
 permalink: /blog/
 ---
 
-# Blog
-
-{% for post in site.gr_posts %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}

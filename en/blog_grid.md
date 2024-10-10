@@ -1,9 +1,8 @@
 ---
-layout: default
-title: "Home"
+layout: blog
+title: "Blog"
+description: "Discover Greece Through Data"
 lang: "en"
 permalink: /en/blog/
 ---
 
-# Welcome to Data for Greece
-This is the English version of the homepage.

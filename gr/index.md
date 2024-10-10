@@ -5,6 +5,7 @@ description: "Aνακάλυψε την Ελλάδα μέσα από δεδομέ
 lang: "gr"
 permalink: /
 ---
+
 <section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg.webp') center center;">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -18,6 +19,7 @@ permalink: /
             </div>
         </div>
     </div>
+
 </section>
 <div class="position-relative">
     <div class="shape overflow-hidden text-color-white">
