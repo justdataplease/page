@@ -1,8 +1,8 @@
 ---
-layout: blog
-title: "Blog"
+layout: news
+title: "News"
 description: "Discover Greece Through Data"
 lang: "en"
-permalink: /en/blog/
+permalink: /en/news/
 ---
 

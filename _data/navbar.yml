@@ -11,8 +11,8 @@ gr:
           url: "/reports/"
         - name: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
           url: "/data-directory/"
-    - name: "IΣΤΟΛΟΓΙΟ"
-      url: "/blog/"
+    - name: "ΝΕΑ"
+      url: "/news/"
 
   language_switcher:
     label: "EN"
@@ -31,8 +31,8 @@ en:
           url: "/en/reports/"
         - name: "DATA DIRECTORY"
           url: "/en/data-directory/"
-    - name: "BLOG"
-      url: "/en/blog/"
+    - name: "NEWS"
+      url: "/en/news/"
 
   language_switcher:
     label: "GR"

@@ -1,18 +1,88 @@
 {% include head.html %}
 <body>
-  {% include navbar.html %}
-  <main>
-    <div class="container">
-      <h1>{{ page.title }}</h1>
-      {% if page.lang == 'en' %}
-      <p><small>Published on {{ page.date | date: "%Y-%m-%d" }}</small></p>
-      {% else %}
-      <p><small>Δημοσιεύθηκε στις {{ page.date | date: "%Y-%m-%d" }}</small></p>
-      {% endif %}
+{% include navbar.html %}
+<main>
+    <section class="bg-half-100 bg-light-blue d-table w-100">
 
-      {{content}}
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row">
+
+                        <div class="col-md-1 d-none d-md-block">
+                            <ul class="list-unstyled text-start sticky-bar social-icon social mb-0 pt-1">
+                                <li class="mb-2 h6 text-center">Share</li>
+                                <div class="text-center">
+                                <!-- Facebook Share -->
+                                <li class="mt-1">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                                       target="_blank"
+                                       class="rounded">
+                                       <i data-feather="facebook" class="uil uil-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <!-- Twitter Share -->
+                                <li class="mt-1">
+                                    <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
+                                       target="_blank"
+                                       class="rounded">
+                                       <i data-feather="twitter" class="uil uil-twitter"></i>
+                                    </a>
+                                </li>
+                                <!-- LinkedIn Share -->
+                                <li class="mt-1">
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                                       target="_blank"
+                                       class="rounded">
+                                       <i data-feather="linkedin" class="uil uil-linkedin"></i>
+                                    </a>
+                                </li>
+                                </div>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-md-11 fs-5">
+
+                            <div class="row justify-content-center">
+                                <nav aria-label="breadcrumb" class="d-inline-block">
+                                    <ul class="breadcrumb m-0 p-0">
+                                        {% if page.lang == 'en' %}
+                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
+                                        <li class="breadcrumb-item active">ARTICLE</li>
+                                        {% else %}
+                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
+                                        <li class="breadcrumb-item active">{{ page.title }}</li>
+                                        {% endif %}
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <h1>{{ page.title }}</h1>
+
+                            <ul class="list-unstyled d-flex justify-content-between mt-4 fs-6">
+                                <li class="list-inline-item user me-2"><i class="uil uil-user text-dark"></i> {{ page.author | default : "DataForGreece" }}</li>
+                                <li class="list-inline-item date"><i class="uil uil-calendar-alt text-dark"></i>
+                                    {{ page.date | date: "%Y-%m-%d" }}
+                                </li>
+                            </ul>
+
+                        <div class="text-center">
+                            <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/default-blog-cover.webp' }}"
+                                 class="img-fluid rounded-md  w-100 shadow" alt="">
+                        </div>
+
+                            <p class="text-muted">{{content}}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </div>
-  </main>
-  {% include footer.html %}
+</main>
+{% include footer.html %}
 </body>
 </html>
