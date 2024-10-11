@@ -13,30 +13,30 @@
                             <ul class="list-unstyled text-start sticky-bar social-icon social mb-0 pt-1">
                                 <li class="mb-2 h6 text-center">Share</li>
                                 <div class="text-center">
-                                <!-- Facebook Share -->
-                                <li class="mt-1">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="facebook" class="uil uil-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <!-- Twitter Share -->
-                                <li class="mt-1">
-                                    <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="twitter" class="uil uil-twitter"></i>
-                                    </a>
-                                </li>
-                                <!-- LinkedIn Share -->
-                                <li class="mt-1">
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="linkedin" class="uil uil-linkedin"></i>
-                                    </a>
-                                </li>
+                                    <!-- Facebook Share -->
+                                    <li class="mt-1">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="facebook" class="uil uil-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <!-- Twitter Share -->
+                                    <li class="mt-1">
+                                        <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="twitter" class="uil uil-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <!-- LinkedIn Share -->
+                                    <li class="mt-1">
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="linkedin" class="uil uil-linkedin"></i>
+                                        </a>
+                                    </li>
                                 </div>
                             </ul>
                         </div>
@@ -67,12 +67,12 @@
                                 </li>
                             </ul>
 
-                        <div class="text-center">
-                            <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/default-blog-cover.webp' }}"
-                                 class="img-fluid rounded-md  w-100 shadow" alt="">
-                        </div>
-
                             <p class="text-muted">{{content}}</p>
+
+                            <a href="{{ page.download_url }}" target="_blank" class="btn-custom-black">
+                                {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}
+                            </a>
+
 
                         </div>
                     </div>
