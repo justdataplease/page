@@ -5,6 +5,15 @@
   font-style: normal;
 }
 
+p {
+font-size: 20px;
+}
+
+.footer p {
+font-size: 16px;
+
+}
+
 /* Usage of the font in the stylesheet */
 h1,h2,h3,h4,h5 {
     font-family: 'BoldFont', sans-serif !important;
@@ -43,7 +52,7 @@ h1 {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
     outline: none;
-
+}
 
 .btn-custom-black:hover,
 .btn-custom-black:focus,
@@ -66,7 +75,7 @@ h1 {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
     outline: none;
-
+}
 
 .btn-custom:hover,
 .btn-custom:focus,
@@ -76,11 +85,6 @@ h1 {
     color: white; /* Keep text color white on hover and focus */
     outline: none; /* Ensure no outline on focus */
 }
-
-.bg-light-blue {
-    background-color: #f0f2fc!important;
-}
-
 
 /* Main navigation */
 .navigation-menu {
@@ -99,29 +103,3 @@ h1 {
     text-decoration: none;
 }
 
-/* Submenu */
-.submenu {
-    display: none;
-    position: absolute;
-    list-style: none;
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item:hover .submenu {
-    display: block;
-}
-
-.submenu li {
-    display: block;
-}
-
-.submenu li a {
-    padding: 10px;
-    white-space: nowrap;
-    display: block;
-}

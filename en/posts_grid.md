@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: posts
 title: "News"
 description: "Discover Greece Through Data"
 lang: "en"
