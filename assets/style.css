@@ -5,6 +5,15 @@
   font-style: normal;
 }
 
+p {
+font-size: 20px;
+}
+
+.footer p {
+font-size: 16px;
+
+}
+
 /* Usage of the font in the stylesheet */
 h1,h2,h3,h4,h5 {
     font-family: 'BoldFont', sans-serif !important;
