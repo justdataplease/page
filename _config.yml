@@ -45,14 +45,14 @@ defaults:
       path: "_data_directory/en"
     values:
       lang: "en"
-      layout: "data_directory"
+      layout: "data"
       categories: "data-directory"
       permalink: /en/data-directory/:slug/
   - scope:
       path: "_data_directory/gr"
     values:
       lang: "gr"
-      layout: "data_directory"
+      layout: "data"
       categories: "data-directory"
       permalink: /data-directory/:slug/
 
