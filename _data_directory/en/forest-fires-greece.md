@@ -20,7 +20,7 @@ download_url: https://github.com/justdataplease/dataforgreece/tree/main/data/fir
 ### Data Description
 The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike.
 
-# Definitions for Dataset
+### Definitions for Dataset
 
 | **Column**                        | **Description**                                                             |
 |------------------------------------|-----------------------------------------------------------------------------|
