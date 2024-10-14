@@ -2,12 +2,12 @@
 title: Forest Fires in Greece
 slug: forest-fires-greece
 description: Forest Fires in Greece
-date: 2024-10-01
-download_url: https://github.com/justdataplease/dataforgreece/tree/main/data/fires-greece
+date: 2024-10-14
+download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv?download=
 ---
 
-# Environment  
-## Forest Fire Incidents
+## Environment  
+### Forest Fire Incidents
 
 | **Published by**     | Hellenic Fire Service                                 |
 |----------------------|------------------------------------------------------|
@@ -19,6 +19,9 @@ download_url: https://github.com/justdataplease/dataforgreece/tree/main/data/fir
 
 ### Data Description
 The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike.
+
+### Data Preprocessing
+The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis.
 
 ### Definitions for Dataset
 
