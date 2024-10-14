@@ -62,18 +62,10 @@
 
                             <h1>{{ page.title }}</h1>
 
-                            <ul class="list-unstyled d-flex justify-content-between mt-4 fs-6">
-                                <li class="list-inline-item user me-2"><i class="uil uil-user text-dark"></i> {{ page.author | default : "DataForGreece" }}</li>
-                                <li class="list-inline-item date"><i class="uil uil-calendar-alt text-dark"></i>
-                                    {{ page.date | date: "%Y-%m-%d" }}
-                                </li>
-                            </ul>
-
                             <div class="row align-items-center">
                                 <!-- Title on the left -->
                                 <div class="col-md-9 col-12">
-                                    <h2>{{ page.category }}</h2>
-                                    <h4>{{ page.title }}</h4>
+                                    <h5><i class="uil uil-tag-alt"></i> {{ page.category }}</h5>
                                 </div>
 
                                 <!-- Download button on the right -->
@@ -86,9 +78,9 @@
 
                             <p class="text-muted">{{content}}</p>
 
-<!--                            <a href="{{ page.download_url }}" target="_blank" class="btn-custom-black">-->
-<!--                                {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}-->
-<!--                            </a>-->
+                            <!--                            <a href="{{ page.download_url }}" target="_blank" class="btn-custom-black">-->
+                            <!--                                {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}-->
+                            <!--                            </a>-->
 
 
                         </div>
