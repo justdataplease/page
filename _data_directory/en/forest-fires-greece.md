@@ -21,6 +21,14 @@ The dataset provides information on forest and urban fire incidents where the He
 ### Data Preprocessing
 The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis.
 
+### Data Accessibility
+1. You can download and analyze the data in Excel by clicking the "Download" button.
+2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
+   ```sql
+   SELECT * FROM dataforgreece.public_data.forest_fires_greece
+   ```
+
+
 ### Definitions for Dataset
 
 | **Column**                        | **Description**                                                             |
