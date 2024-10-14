@@ -4,7 +4,7 @@ slug: forest-fires-greece
 description: Forest Fires in Greece
 category: Environment
 date: 2024-10-14
-download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv?download=
+download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 ---
 
 | **Published by**     | Hellenic Fire Service                                 |
