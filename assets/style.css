@@ -123,9 +123,10 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
   font-size: 16px;
   text-align: left;
+  overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+  display: block; /* Makes the table a block element to enable scrolling */
 }
 
 th, td {
