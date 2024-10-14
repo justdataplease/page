@@ -77,6 +77,31 @@ h1 {
     outline: none; /* Ensure no outline on focus */
 }
 
+
+.btn-custom-purple {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #5E4FE5; /* Thicker border */
+    color: #5E4FE5;
+    padding: 15px 40px; /* Increased padding for a larger button */
+    font-size: 1.5rem; /* Larger font size */
+    border-radius: 0;
+    background-color: transparent;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+    outline: none;
+}
+
+.btn-custom-purple:hover,
+.btn-custom-purple:focus,
+.btn-custom-purple:active {
+    border: 3px solid #5E4FE5;
+    background-color: transparent; /* Stay transparent on hover and focus */
+    color: #5E4FE5; /* Keep text color white on hover and focus */
+    outline: none; /* Ensure no outline on focus */
+}
+
+
 /* Main navigation */
 .navigation-menu {
     list-style: none;
