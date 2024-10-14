@@ -4,7 +4,7 @@ slug: forest-fires-greece
 description: Δασικές Πυρκαγιές στην Ελλάδα
 date: 2024-10-14
 category: Περιβάλλον
-download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv?download=
+download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 ---
 
 | **Δημοσιεύτηκε από**  | Πυροσβεστικό Σώμα Ελλάδας                             |
