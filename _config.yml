@@ -63,3 +63,12 @@ languages:
     path: "/en"
 
 permalink: pretty
+
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  math_engine: mathjax
+  show_warnings: false
+  tables: true
