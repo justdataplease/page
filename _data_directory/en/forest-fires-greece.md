@@ -25,7 +25,7 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 1. You can download and analyze the data in Excel by clicking the "Download" button.
 2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
    ```sql
-   SELECT * FROM dataforgreece.public_data.forest_fires_greece
+   SELECT * FROM dataforgreece.public_data.forest_fires_greece_v
    ```
 
 

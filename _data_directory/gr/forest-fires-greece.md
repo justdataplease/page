@@ -25,7 +25,7 @@ download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/mai
 1. Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασμα".
 2. Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το δημόσιο dataset απευθείας στο [Google BigQuery](https://console.cloud.google.com/bigquery) με το εξής ερώτημα:
 ```sql
-SELECT * FROM dataforgreece.public_data.forest_fires_greece
+   SELECT * FROM dataforgreece.public_data.forest_fires_greece_v
 ```
 
 ### Ορισμοί για το Σύνολο Δεδομένων
