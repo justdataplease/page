@@ -6,7 +6,7 @@ lang: "gr"
 permalink: /
 ---
 
-<section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg.webp') center center;">
+<section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg-3.webp') center center;">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
