@@ -12,13 +12,21 @@
                                 {% assign footer_data = site.data.footer[page.lang] %}
                                 {{ footer_data.description }}
                             </p>
-                            <ul class="list-unstyled social-icon social mb-0 mt-4">
-                                <li class="list-inline-item mb-0">
-                                    <a href="mailto:dataforgreece@outlook.com" class="rounded">
-                                        <i class="uil uil-envelope align-middle" title="email"></i>
-                                    </a>
-                                </li>
-                            </ul><!--end icon-->
+
+
+                            {% if page.lang == 'en' %}
+                                <a class="btn-custom-purple-solid" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">Subscribe</a>
+                            {% else %}
+                                <a class="btn-custom-purple-solid" href="https://dataforgreeks.substack.com/subscribe" method="get" target="_blank">Εγγραφή</a>
+                            {% endif %}
+
+<!--                            <ul class="list-unstyled social-icon social mb-0 mt-4">-->
+<!--                                <li class="list-inline-item mb-0">-->
+<!--                                    <a href="mailto:dataforgreece@outlook.com" class="rounded">-->
+<!--                                        <i class="uil uil-envelope align-middle" title="email"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>&lt;!&ndash;end icon&ndash;&gt;-->
                         </div><!--end col-->
 
                         <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
@@ -32,7 +40,7 @@
                             </h5>
                             <ul class="list-unstyled footer-list mt-4">
                                 {% for item in footer_data.policies %}
-                                    <li><a href="{{ item.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ item.name }}</a></li>
+                                <li><a href="{{ item.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ item.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div><!--end col-->
@@ -44,7 +52,7 @@
 
                             <ul class="list-unstyled footer-list mt-4">
                                 {% for link in footer_data.links %}
-                                    <li><a href="{{ link.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ link.name }}</a></li>
+                                <li><a href="{{ link.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ link.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div><!--end col-->
@@ -60,7 +68,8 @@
                 <div class="col-lg-6 col-12">
                     <div class="text-sm-start">
                         <p class="mb-0">©
-                            <script>document.write(new Date().getFullYear())</script> Data for Greece.
+                            <script>document.write(new Date().getFullYear())</script>
+                            Data for Greece.
                         </p>
                     </div>
                 </div><!--end col-->

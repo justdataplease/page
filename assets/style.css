@@ -102,6 +102,31 @@ h1 {
 }
 
 
+.btn-custom-purple-solid {
+
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #5E4FE5; /* Thicker border */
+    color: white;
+    padding: 10px 30px; /* Increased padding for a larger button */
+    font-size: 1rem; /* Larger font size */
+    border-radius: 10px;
+    background-color: #5E4FE5;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+    outline: none;
+}
+
+.btn-custom-purple-solid:hover,
+.btn-custom-purple-solid:focus,
+.btn-custom-purple-solid:active {
+    border: 3px solid #5E4FE5;
+    background-color: #5E4FE5; /* Stay transparent on hover and focus */
+    color: white; /* Keep text color white on hover and focus */
+    outline: none; /* Ensure no outline on focus */
+}
+
+
 /* Main navigation */
 .navigation-menu {
     list-style: none;

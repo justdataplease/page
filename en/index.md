@@ -5,6 +5,7 @@ description: "Discover Greece Through Data"
 lang: "en"
 permalink: /en/
 ---
+
 <section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg.webp') center center;">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -14,14 +15,13 @@ permalink: /en/
                     <div class="content">
                         <h1 style="color:white;">Discover Greece<br> through data.</h1>
                         <br>
-                        <a href="{{ site.baseurl }}/en/reports/" target="_blank" class="btn-custom">
-                            Reports
-                        </a>
+                        <a class="btn-custom" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">Follow us</a>
                     </div>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
     </div> <!--end container-->
+
 </section><!--end section-->
 <div class="position-relative">
     <div class="shape overflow-hidden text-color-white">
