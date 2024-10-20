@@ -12,7 +12,7 @@ gr:
         - name: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
           url: "/data-directory/"
     - name: "ΝΕΑ"
-      url: "https://dataforgreeks.substack.com/"
+      url: "https://dataforgreece.substack.com/"
 
   language_switcher:
     label: "EN"
@@ -32,7 +32,7 @@ en:
         - name: "DATA DIRECTORY"
           url: "/en/data-directory/"
     - name: "NEWS"
-      url: "https://dataforgreece.substack.com/"
+      url: "https://dataforgreececom.substack.com/"
 
   language_switcher:
     label: "GR"

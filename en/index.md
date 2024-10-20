@@ -15,7 +15,7 @@ permalink: /en/
                     <div class="content">
                         <h1 style="color:white;">Discover Greece<br> through data.</h1>
                         <br>
-                        <a class="btn-custom" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">Follow us</a>
+                        <a class="btn-custom" href="https://dataforgreececom.substack.com/subscribe" method="get" target="_blank">Follow us</a>
                     </div>
                 </div>
             </div><!--end col-->
