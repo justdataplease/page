@@ -2,9 +2,9 @@ gr:
   description: "Το Data for Greece είναι μια πρωτοβουλία που στοχεύει στην παροχή δεδομένων και πληροφοριών για την κοινωνική, οικονομική και πολιτική ζωή της Ελλάδας. Συλλέγουμε και αναλύουμε διάφορα σύνολα δεδομένων για να προσφέρουμε μια βαθύτερη κατανόηση του πώς εξελίσσεται η Ελλάδα σε διάφορους τομείς."
   policies:
     - name: "Όροι Χρήσης"
-      url: "/terms/"
+      url: "/"
     - name: "Πολιτική Απορρήτου"
-      url: "/privacy/"
+      url: "/"
   links:
     - name: "Ποιοι Είμαστε"
       url: "/about/"
@@ -25,9 +25,9 @@ en:
   description: "Data for Greece is an initiative aimed at providing data and information on the social, economic, and political life of Greece. We collect and analyze various datasets to offer a deeper understanding of how Greece evolves across different sectors."
   policies:
     - name: "Terms of Use"
-      url: "/en/terms/"
+      url: "/"
     - name: "Privacy Policy"
-      url: "/en/privacy/"
+      url: "/"
   links:
     - name: "About Us"
       url: "/en/about/"
