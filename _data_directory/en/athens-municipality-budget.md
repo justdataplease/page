@@ -32,12 +32,15 @@ The data was downloaded and combined into a single file.
 
 | **Column** | **Column (English)**                                                        | **Description**                                                             |
 |------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| ΤΙΤΛΟΣ     | Title                                                                       | Description of the specific expenditure or project                          |
-| ΠΟΣΟ       | Amount                                                                      | Initial budget amount allocated for the expenditure                         |
-| ΑΝΑΜΟΡΦΩΣΗ | Adjustment                                                                  | Adjustments or revisions made to the initial budget amount                  |
-| ΔΙΑΜΟΡΦΩΣΗ | Final Budget                                                                | Final budget amount after adjustments                                       |
-| ΔΕΣΜΕΥΘΕΝΤΑ | Committed Funds                                                             | Amount of money committed for the expenditure                               |
-| ΕΝΤΑΛΘΕΝΤΑ | Authorized Payments                                                         | Funds authorized for payment                                                |
-| ΠΛΗΡΩΘΕΝΤΑ | Payments Made                                                               | Actual payments made for the specific expenditure                           |
-| ΒΕΒΑΙΩΘΕΝΤΑ | Certified Revenues                                                          | Revenues certified by the municipality (if applicable)                      |
+| ΈΤΟΣ         | Year                                                                        | The year of the recorded budget and expenditures                            |
+| ΔΙΕΥΘΥΝΣΗ    | Department/Office                                                           | The municipal office or department responsible for the expense              |
+| ΚΩΔΙΚΟΣ      | Code                                                                        | Unique identifier for each budget entry                                     |
+| ΤΙΤΛΟΣ       | Title                                                                       | Description of the specific expenditure or project                          |
+| ΠΟΣΟ         | Amount                                                                      | Initial budget amount allocated for the expenditure                         |
+| ΑΝΑΜΟΡΦΩΣΗ   | Adjustment                                                                  | Adjustments or revisions made to the initial budget amount                  |
+| ΔΙΑΜΟΡΦΩΣΗ   | Final Budget                                                                | Final budget amount after adjustments                                       |
+| ΔΕΣΜΕΥΘΕΝΤΑ  | Committed Funds                                                             | Amount of money committed for the expenditure                               |
+| ΕΝΤΑΛΘΕΝΤΑ   | Authorized Payments                                                         | Funds authorized for payment                                                |
+| ΠΛΗΡΩΘΕΝΤΑ   | Payments Made                                                               | Actual payments made for the specific expenditure                           |
+| ΒΕΒΑΙΩΘΕΝΤΑ  | Certified Revenues                                                          | Revenues certified by the municipality (if applicable)                      |
 | ΕΙΣΠΡΑΧΘΕΝΤΑ | Collected Revenues                                                          | Revenues actually collected (if applicable)                                 |
