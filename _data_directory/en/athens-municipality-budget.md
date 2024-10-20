@@ -30,17 +30,20 @@ The data was downloaded and combined into a single file.
 
 ### Definitions for Dataset
 
-| **Column** | **Column (English)**                                                        | **Description**                                                             |
-|------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| ΈΤΟΣ         | Year                                                                        | The year of the recorded budget and expenditures                            |
-| ΔΙΕΥΘΥΝΣΗ    | Department/Office                                                           | The municipal office or department responsible for the expense              |
-| ΚΩΔΙΚΟΣ      | Code                                                                        | Unique identifier for each budget entry                                     |
-| ΤΙΤΛΟΣ       | Title                                                                       | Description of the specific expenditure or project                          |
-| ΠΟΣΟ         | Amount                                                                      | Initial budget amount allocated for the expenditure                         |
-| ΑΝΑΜΟΡΦΩΣΗ   | Adjustment                                                                  | Adjustments or revisions made to the initial budget amount                  |
-| ΔΙΑΜΟΡΦΩΣΗ   | Final Budget                                                                | Final budget amount after adjustments                                       |
-| ΔΕΣΜΕΥΘΕΝΤΑ  | Committed Funds                                                             | Amount of money committed for the expenditure                               |
-| ΕΝΤΑΛΘΕΝΤΑ   | Authorized Payments                                                         | Funds authorized for payment                                                |
-| ΠΛΗΡΩΘΕΝΤΑ   | Payments Made                                                               | Actual payments made for the specific expenditure                           |
-| ΒΕΒΑΙΩΘΕΝΤΑ  | Certified Revenues                                                          | Revenues certified by the municipality (if applicable)                      |
-| ΕΙΣΠΡΑΧΘΕΝΤΑ | Collected Revenues                                                          | Revenues actually collected (if applicable)                                 |
+| **Column**      | **Description**                                                             |
+|---------------------|-----------------------------------------------------------------------------|
+| year                | The year of the recorded budget and expenditures                            |
+| department_office    | The municipal office or department responsible for the expense              |
+| code                | Unique identifier for each budget entry                                     |
+| title               | Description of the specific expenditure or project                          |
+| amount              | Initial budget amount allocated for the expenditure                         |
+| adjustment          | Adjustments or revisions made to the initial budget amount                  |
+| final_budget        | Final budget amount after adjustments                                       |
+| committed_funds     | Amount of money committed for the expenditure                               |
+| authorized_payments | Funds authorized for payment                                                |
+| payments_made       | Actual payments made for the specific expenditure                           |
+| certified_revenues  | Revenues certified by the municipality (if applicable)                      |
+| collected_revenues  | Revenues actually collected (if applicable)                                 |
+| args_year           | (internal field)                                         |
+| args_pro_cdief      | (internal field)                                     |
+| args_pro_esex       | (internal field)                                    |
