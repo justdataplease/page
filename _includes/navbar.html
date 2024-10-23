@@ -43,7 +43,7 @@
                         {% capture gr_url %}
                             {{ page.url | replace_first: '/en/', '/' }}
                         {% endcapture %}
-                        {% if gr_url == '/news' %}
+                        {% if page.url contains 'substack' %}
                             <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>GR</i></a>
                         {% else %}
                             <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
@@ -57,7 +57,7 @@
                             {% endif %}
                         {% endcapture %}
 
-                        {% if gr_url == '/en/news' %}
+                        {% if page.url contains 'substack' %}
                             <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>EN</i></a>
                         {% else %}
                             <a href="{{ site.baseurl }}{{ gr_url }}"><i>EN</i></a>
