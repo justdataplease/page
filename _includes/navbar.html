@@ -43,7 +43,7 @@
                         {% capture gr_url %}
                             {{ page.url | replace_first: '/en/', '/' }}
                         {% endcapture %}
-                        {% if gr_url == '/news' or gr_url == '/en/news' %}
+                        {% if gr_url == '/news' %}
                             <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>GR</i></a>
                         {% else %}
                             <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
@@ -56,7 +56,12 @@
                                 /en{{ page.url }}
                             {% endif %}
                         {% endcapture %}
-                        <a href="{{ site.baseurl }}{{ en_url }}"><i>EN</i></a>
+
+                        {% if gr_url == '/en/news' %}
+                            <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>EN</i></a>
+                        {% else %}
+                            <a href="{{ site.baseurl }}{{ gr_url }}"><i>EN</i></a>
+                        {% endif %}
                     {% endif %}
                 </li>
 
