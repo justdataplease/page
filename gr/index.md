@@ -37,9 +37,8 @@ permalink: /
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
                             <h2 class="mb-4">Πίνακες Δεδομένων</h2>
-                            <p class="text-muted mx-auto para-desc">Εξερευνήστε τους πιο πρόσφατους διαδραστικούς πίνακες δεδομένων. 
-                            Αυτοί οι πίνακες παρέχουν βαθιές γνώσεις για το κοινωνικό, οικονομικό και πολιτικό τοπίο της Ελλάδας, διευκολύνοντας την κατανόηση 
-                            και ανάλυση σύνθετων δεδομένων σε διάφορους τομείς.<br><a href="/en/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>      
+                            <p class="text-muted mx-auto para-desc">Εξερευνήστε τα δεδομένα της Ελλάδας μέσα απο διαδραστικούς πίνακές δεδομένων — απλά κάντε κλικ για να ανακαλύψετε τάσεις και πληροφορίες σχετικά με την κοινωνική, οικονομική και πολιτική ζωή της χώρας.
+                                <br><a href="/reports">Ανακαλύψτε Περισσότερα &rarr;</a></p>      
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
@@ -56,10 +55,10 @@ permalink: /
                                                 <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="w-100" alt=""></a>
                                                 </div>
                                                 <div class="col-6" style="display: flex; flex-direction: column; height: 100%;">
-                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
                                                     <p class="text-muted mt-2">{{ item.description }}</p>
                                                     <div style="margin-top: auto;">
-                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></strong></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,8 +81,8 @@ permalink: /
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
                             <h2 class="mb-4">Συλλογή Δεδομένων</h2>
-                            <p class="text-muted mx-auto para-desc">Εξερευνήστε τα πιο πρόσφατα σύνολα δεδομένων για να κατανοήσετε καλύτερα τις κοινωνικές, οικονομικές και πολιτικές αλλαγές στην Ελλάδα. Αυτά τα σύνολα δεδομένων προσφέρουν βασικές πληροφορίες για διάφορους τομείς.
-                            <br><a href="/en/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>
+                            <p class="text-muted mx-auto para-desc">Ανακαλύψτε έτοιμα προς χρήση σύνολα δεδομένων για την κοινωνική, οικονομική και πολιτική ζωή της Ελλάδας. Ιδανικά για όποιον θέλει να διεξάγει τη δική του ανάλυση.
+                            <br><a href="/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>
                             </div>
                     </div><!--end col-->
                 </div><!--end row-->
@@ -96,9 +95,9 @@ permalink: /
                                     <div class="tiny-slide">
                                         <div class="d-flex m-2">
                                             <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
                                                 <p class="text-muted mt-2">{{ item.description }}</p>
-                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
