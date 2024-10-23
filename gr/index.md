@@ -28,3 +28,85 @@ permalink: /
         </svg>
     </div>
 </div>
+
+
+
+<section class="pb-2 bg-light">
+ <div class="container mt-60 pb-3" style="padding-top:70px;">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-2">
+                            <h2 class="mb-4">Πίνακες Δεδομένων</h2>
+                            <p class="text-muted mx-auto para-desc">Εξερευνήστε τους πιο πρόσφατους πίνακες δεδομένων με διαδραστικούς πίνακες και οπτικοποιήσεις. 
+                            Αυτοί οι πίνακες παρέχουν βαθιές γνώσεις για το κοινωνικό, οικονομικό και πολιτικό τοπίο της Ελλάδας, διευκολύνοντας την κατανόηση 
+                            και ανάλυση σύνθετων δεδομένων σε διάφορους τομείς.<br><a href="/en/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>      
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                <div class="row justify-content-center pt-3">
+                    <div class="col-lg-12">
+                        <div class="tiny-two-item">
+                                {% for item in site.reports %}
+                                {% if item.lang == page.lang %}
+                                    <div class="tiny-slide">
+                                        <div class="d-flex m-2">
+                                            <div class="card flex-1 content p-3 shadow rounded position-relative"> 
+                                                <div class="row">
+                                                <div class="col-6">
+                                                <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="w-100" alt=""></a>
+                                                </div>
+                                                <div class="col-6" style="display: flex; flex-direction: column; height: 100%;">
+                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                    <p class="text-muted mt-2">{{ item.description }}</p>
+                                                    <div style="margin-top: auto;">
+                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+
+</div>
+<!--end container-->
+</section>
+
+<section class="border-bottom pb-5 bg-light">
+ <div class="container mt-60 pb-5" style="padding-top:60px;">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-2">
+                            <h2 class="mb-4">Συλλογή Δεδομένων</h2>
+                            <p class="text-muted mx-auto para-desc">Εξερευνήστε τα πιο πρόσφατα σύνολα δεδομένων για να κατανοήσετε καλύτερα τις κοινωνικές, οικονομικές και πολιτικές αλλαγές στην Ελλάδα. Αυτά τα σύνολα δεδομένων προσφέρουν βασικές πληροφορίες για διάφορους τομείς.
+                            <br><a href="/en/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>
+                            </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center pt-3">
+                    <div class="col-lg-12">
+                        <div class="tiny-three-item">
+                                {% for item in site.data_directory %}
+                                {% if item.lang == page.lang %}
+                                    <div class="tiny-slide">
+                                        <div class="d-flex m-2">
+                                            <div class="card flex-1 content p-3 shadow rounded position-relative">
+                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                <p class="text-muted mt-2">{{ item.description }}</p>
+                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+</section>
