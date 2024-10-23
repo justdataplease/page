@@ -38,12 +38,16 @@
                         <li><a href="{{ item.url }}" class="sub-menu-item">{{ item.name }}</a></li>
                     {% endif %}
                 {% endfor %}
-                 <li class="list-inline-item">
+                <li class="list-inline-item">
                     {% if page.lang == 'en' %}
                         {% capture gr_url %}
                             {{ page.url | replace_first: '/en/', '/' }}
                         {% endcapture %}
-                        <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
+                        {% if gr_url == '/news' or gr_url == '/en/news' %}
+                            <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>GR</i></a>
+                        {% else %}
+                            <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
+                        {% endif %}
                     {% else %}
                         {% capture en_url %}
                             {% if page.url == "/" %}
