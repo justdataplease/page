@@ -59,13 +59,8 @@
                                         <ul class="list-unstyled mb-0">
                                         </ul>
                                         <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">
-                                            {% if page.lang == 'en' %}
-                                            <h2 class="title mb-0"> Read More </h2>
-                                            {% else %}
-                                            <h2 class="title mb-0"> Μάθετε Περισσότερα </h2>
-                                            {% endif %}
-
-                                            <i class="uil uil-angle-right-b align-middle"></i></a>
+                                            {% if page.lang == 'en' %}Read More{% else %}Μάθετε Περισσότερα{% endif %}
+                                        <i class="uil uil-angle-right-b align-middle"></i></a>
                                     </div>
                                 </div>
                             </div><!--end col-->
