@@ -30,7 +30,11 @@
                             <a href="javascript:void(0)" class="sub-menu-item">{{ item.name }}</a><span class="menu-arrow"></span>
                             <ul class="submenu">
                                 {% for subitem in item.submenu %}
-                                    <li><a href="{{ subitem.url }}" class="sub-menu-item">{{ subitem.name }}</a></li>
+                                    {% if subitem.url contains 'substack' %}
+                                        <li><a href="{{ subitem.url }}" class="sub-menu-item" target="_blank">{{ subitem.name }}</a></li>
+                                    {% else %}
+                                        <li><a href="{{ subitem.url }}" class="sub-menu-item">{{ subitem.name }}</a></li>
+                                    {% endif %}
                                 {% endfor %}
                             </ul>
                         </li>
@@ -43,11 +47,7 @@
                         {% capture gr_url %}
                             {{ page.url | replace_first: '/en/', '/' }}
                         {% endcapture %}
-                        {% if page.url contains 'substack' %}
-                            <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>GR</i></a>
-                        {% else %}
-                            <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
-                        {% endif %}
+                        <a href="{{ site.baseurl }}{{ gr_url }}"><i>GR</i></a>
                     {% else %}
                         {% capture en_url %}
                             {% if page.url == "/" %}
@@ -56,15 +56,9 @@
                                 /en{{ page.url }}
                             {% endif %}
                         {% endcapture %}
-
-                        {% if page.url contains 'substack' %}
-                            <a href="{{ site.baseurl }}{{ gr_url }}" target="_blank"><i>EN</i></a>
-                        {% else %}
-                            <a href="{{ site.baseurl }}{{ gr_url }}"><i>EN</i></a>
-                        {% endif %}
+                        <a href="{{ site.baseurl }}{{ gr_url }}"><i>EN</i></a>
                     {% endif %}
                 </li>
-
 
             </ul><!--end navigation menu-->
 
