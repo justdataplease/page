@@ -39,7 +39,7 @@ permalink: /en/
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
                             <h2 class="mb-4">Reports</h2>
-                        <p class="text-muted mx-auto para-desc">Explore the latest reports featuring interactive dashboards and visualizations. These reports offer in-depth insights into Greece's social, economic, and political landscape, making complex data easy to understand and analyze across different sectors.
+                        <p class="text-muted mx-auto para-desc">Explore Greece's data with our easy-to-use interactive dashboards—just click to discover trends and insights across the country's social, economic, and political life.
                         <br><a href="/en/reports">Explore More &rarr;</a></p>
                         </div>
                     </div><!--end col-->
@@ -57,10 +57,10 @@ permalink: /en/
                                                 <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="w-100" alt=""></a>
                                                 </div>
                                                 <div class="col-6" style="display: flex; flex-direction: column; height: 100%;">
-                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
                                                     <p class="text-muted mt-2">{{ item.description }}</p>
                                                     <div style="margin-top: auto;">
-                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Read More <i class="uil uil-angle-right-b align-middle"></i></strong></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,7 +82,7 @@ permalink: /en/
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
                             <h2 class="mb-4">Datasets</h2>
-                            <p class="text-muted mx-auto para-desc">Explore the newest datasets to better understand Greece's social, economic, and political changes. These datasets provide key insights into various sectors.
+                            <p class="text-muted mx-auto para-desc">Discover ready-to-use datasets about Greece's social, economic, and political life. Perfect for anyone to conduct their own analysis.
                              <br><a href="/en/data-directory">Explore More &rarr;</a></p>                        
                             </div>
                     </div><!--end col-->
@@ -95,9 +95,9 @@ permalink: /en/
                                     <div class="tiny-slide">
                                         <div class="d-flex m-2">
                                             <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
                                                 <p class="text-muted mt-2">{{ item.description }}</p>
-                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Read More <i class="uil uil-angle-right-b align-middle"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
