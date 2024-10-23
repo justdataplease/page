@@ -19,6 +19,10 @@ h1 {
   font-size: 75px; /* Default font size */
 }
 
+h2{
+  font-size: 55px; /* Default font size */
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 65px; /* Font size for tablets */

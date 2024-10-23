@@ -6,6 +6,7 @@ lang: "en"
 permalink: /en/
 ---
 
+
 <section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg.webp') center center;">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -30,3 +31,81 @@ permalink: /en/
         </svg>
     </div>
 </div>
+
+
+<section class="pb-2 bg-light">
+ <div class="container mt-60 pb-3" style="padding-top:70px;">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-2">
+                            <h2 class="mb-4">Reports</h2>
+                        <p class="text-muted mx-auto para-desc">Explore the latest reports featuring interactive dashboards and visualizations. These reports offer in-depth insights into Greece's social, economic, and political landscape, making complex data easy to understand and analyze across different sectors.
+                        <br><a href="/en/reports">Explore More &rarr;</a></p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                <div class="row justify-content-center pt-3">
+                    <div class="col-lg-12">
+                        <div class="tiny-two-item">
+                                {% for item in site.reports %}
+                                {% if item.lang == page.lang %}
+                                    <div class="tiny-slide">
+                                        <div class="d-flex m-2">
+                                            <div class="card flex-1 content p-3 shadow rounded position-relative"> 
+                                                <div class="row">
+                                                <div class="col-6">
+                                                <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="w-100" alt=""></a>
+                                                </div>
+                                                <div class="col-6" style="display: flex; flex-direction: column; height: 100%;">
+                                                    <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                    <p class="text-muted mt-2">{{ item.description }}</p>
+                                                    <div style="margin-top: auto;">
+                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+</div>
+<!--end container-->
+</section>
+
+<section class="border-bottom pb-5 bg-light">
+ <div class="container mt-60 pb-5" style="padding-top:60px;">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-2">
+                            <h2 class="mb-4">Datasets</h2>
+                            <p class="text-muted mx-auto para-desc">Explore the newest datasets to better understand Greece's social, economic, and political changes. These datasets provide key insights into various sectors.
+                             <br><a href="/en/data-directory">Explore More &rarr;</a></p>                        
+                            </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                <div class="row justify-content-center pt-3">
+                    <div class="col-lg-12">
+                        <div class="tiny-three-item">
+                                {% for item in site.data_directory %}
+                                {% if item.lang == page.lang %}
+                                    <div class="tiny-slide">
+                                        <div class="d-flex m-2">
+                                            <div class="card flex-1 content p-3 shadow rounded position-relative">
+                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h6>
+                                                <p class="text-muted mt-2">{{ item.description }}</p>
+                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+</section>
