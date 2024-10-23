@@ -35,14 +35,10 @@
                             </ul>
                         </li>
                     {% else %}
-                        {% if subitem.url contains 'substack' %}
-                            <li><a href="{{ item.url }}" class="sub-menu-item" target="_blank">{{ item.name }}</a></li>
-                        {% else %}
-                            <li><a href="{{ item.url }}" class="sub-menu-item">{{ item.name }}</a></li>
-                        {% endif %}
+                        <li><a href="{{ item.url }}" class="sub-menu-item">{{ item.name }}</a></li>
                     {% endif %}
                 {% endfor %}
-                <li class="list-inline-item">
+                 <li class="list-inline-item">
                     {% if page.lang == 'en' %}
                         {% capture gr_url %}
                             {{ page.url | replace_first: '/en/', '/' }}
@@ -56,9 +52,10 @@
                                 /en{{ page.url }}
                             {% endif %}
                         {% endcapture %}
-                        <a href="{{ site.baseurl }}{{ gr_url }}"><i>EN</i></a>
+                        <a href="{{ site.baseurl }}{{ en_url }}"><i>EN</i></a>
                     {% endif %}
                 </li>
+
 
             </ul><!--end navigation menu-->
 
