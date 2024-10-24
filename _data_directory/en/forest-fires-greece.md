@@ -62,4 +62,4 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 | airborne_hired_helicopters         | Hired helicopters used for firefighting                                |
 | airborne_hired_airplanes           | Hired airplanes used for aerial firefighting                           |
 
-NOTE - 1 stremma = 1,000 m² = 0.1 hectrares
+NOTE - 1 stremma = 1,000 m² = 0.1 hectrares. Greece has a total of 1.9 million hectares of forested area.
