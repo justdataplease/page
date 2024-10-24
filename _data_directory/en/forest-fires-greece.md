@@ -23,7 +23,7 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 
 ### Related Charts
 <div class="pt-2">
-<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
+<iframe width="800" height="446" src="https://lookerstudio.google.com/embed/reporting/513f28b7-eb4d-46ec-9322-e66476a0b86d/" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 </div>
 
 ### Data Accessibility
