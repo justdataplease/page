@@ -36,28 +36,30 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 
 ### Definitions for Dataset
 
-| **Column**                        | **Description**                                                             |
-|------------------------------------|-----------------------------------------------------------------------------|
-| burned_forest_area                 | Forested areas that were affected by fire                                   |
-| burned_groves                      | Small forested areas or groves affected by fire                             |
-| burned_grassland_areas             | Grasslands that were affected by fire                                       |
-| burned_reeds_marshes               | Marshlands and reed-covered areas burned                                    |
-| burned_agricultural_areas          | Agricultural lands that were affected by fire                               |
-| burned_crops_residues              | Leftover crops and residues from farming affected by fire                   |
-| burned_landfills                   | Landfill or waste disposal sites affected by fire                           |
-| personnel_fire_brigade             | Firefighters from the fire brigade involved in firefighting operations       |
-| personnel_infantry_divisions       | Infantry units involved in fire operations                                  |
-| personnel_volunteers               | Volunteers assisting in firefighting operations                             |
-| personnel_army                     | Army personnel involved in firefighting operations                          |
-| personnel_other_forces             | Other forces that contributed to firefighting                               |
-| vehicles_fire_vehicles             | Fire trucks and other firefighting vehicles                                 |
-| vehicles_municipal_vehicles        | Municipal vehicles involved in firefighting operations                      |
-| vehicles_tanker_trucks             | Tanker trucks used to transport water for firefighting                      |
-| vehicles_machinery                 | Heavy machinery used in fire response                                       |
-| airborne_helicopters               | Helicopters used in aerial firefighting                                     |
-| airborne_aircraft_cl415            | CL-415 aircraft used for water bombing in firefighting                      |
-| airborne_aircraft_cl215            | CL-215 aircraft used for aerial firefighting                                |
-| airborne_aircraft_pzl              | PZL aircraft used for water bombing in firefighting                         |
-| airborne_aircraft_gru              | GRU aircraft used for fire intervention                                     |
-| airborne_hired_helicopters         | Hired helicopters used for firefighting                                     |
-| airborne_hired_airplanes           | Hired airplanes used for aerial firefighting                                |
+| **Column**                        | **Description**                                                        |
+|------------------------------------|------------------------------------------------------------------------|
+| burned_forest_area                 | Forested areas that were affected by fire (stremma)                       |
+| burned_groves                      | Small forested areas or groves affected by fire (stremma)                 |
+| burned_grassland_areas             | Grasslands that were affected by fire (stremma)                           |
+| burned_reeds_marshes               | Marshlands and reed-covered areas burned (stremma)                        |
+| burned_agricultural_areas          | Agricultural lands that were affected by fire (stremma)                   |
+| burned_crops_residues              | Leftover crops and residues from farming affected by fire (stremma)       |
+| burned_landfills                   | Landfill or waste disposal sites affected by fire (stremma)                     |
+| personnel_fire_brigade             | Firefighters from the fire brigade involved in firefighting operations |
+| personnel_infantry_divisions       | Infantry units involved in fire operations                             |
+| personnel_volunteers               | Volunteers assisting in firefighting operations                        |
+| personnel_army                     | Army personnel involved in firefighting operations                     |
+| personnel_other_forces             | Other forces that contributed to firefighting                          |
+| vehicles_fire_vehicles             | Fire trucks and other firefighting vehicles                            |
+| vehicles_municipal_vehicles        | Municipal vehicles involved in firefighting operations                 |
+| vehicles_tanker_trucks             | Tanker trucks used to transport water for firefighting                 |
+| vehicles_machinery                 | Heavy machinery used in fire response                                  |
+| airborne_helicopters               | Helicopters used in aerial firefighting                                |
+| airborne_aircraft_cl415            | CL-415 aircraft used for water bombing in firefighting                 |
+| airborne_aircraft_cl215            | CL-215 aircraft used for aerial firefighting                           |
+| airborne_aircraft_pzl              | PZL aircraft used for water bombing in firefighting                    |
+| airborne_aircraft_gru              | GRU aircraft used for fire intervention                                |
+| airborne_hired_helicopters         | Hired helicopters used for firefighting                                |
+| airborne_hired_airplanes           | Hired airplanes used for aerial firefighting                           |
+
+NOTE - 1 stremma = 1,000 m2 = 0.1 hectrares
