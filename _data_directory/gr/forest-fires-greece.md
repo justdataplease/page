@@ -21,6 +21,11 @@ download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/mai
 ### Προεπεξεργασία Δεδομένων
 Τα διαφορετικά αρχεία συγχωνεύονται σε ένα ενιαίο σύνολο δεδομένων και καθαρίζονται για να διασφαλιστεί η συνέπεια. Επίσης, προστίθενται μερικές βοηθητικές στήλες για τη διευκόλυνση της ανάλυσης.
 
+### Σχετικά Γραφήματα
+<div class="pt-2">
+<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
+</div>
+
 ### Προσβασιμότητα Δεδομένων 
 1. Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασμα".
 2. Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το δημόσιο dataset απευθείας στο [Google BigQuery](https://console.cloud.google.com/bigquery) με το εξής ερώτημα:
@@ -55,12 +60,6 @@ download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/mai
 | airborne_aircraft_gru        | Α/Φ GRU                            | Αεροσκάφη GRU που συμμετείχαν στις επιχειρήσεις κατάσβεσης                  |
 | airborne_hired_helicopters   | ΜΙΣΘ. ΕΛΙΚΟΠΤ.                    | Ελικόπτερα που μισθώθηκαν για επιχειρήσεις κατάσβεσης                       |
 | airborne_hired_airplanes     | ΜΙΣΘ. ΑΕΡΟΣΚ.                     | Αεροπλάνα που μισθώθηκαν για αεροπυρόσβεση                                  |
-
-### Σχετικά Γραφήματα
-<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
-
-
-
 
 
 

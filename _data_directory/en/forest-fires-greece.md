@@ -21,6 +21,11 @@ The dataset provides information on forest and urban fire incidents where the He
 ### Data Preprocessing
 The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis.
 
+### Related Charts
+<div class="pt-2">
+<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
+</div>
+
 ### Data Accessibility
 1. You can download and analyze the data in Excel by clicking the "Download" button.
 2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
@@ -56,6 +61,3 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 | airborne_aircraft_gru              | GRU aircraft used for fire intervention                                     |
 | airborne_hired_helicopters         | Hired helicopters used for firefighting                                     |
 | airborne_hired_airplanes           | Hired airplanes used for aerial firefighting                                |
-
-### Related Charts
-<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
