@@ -62,7 +62,7 @@ download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/mai
 | airborne_hired_helicopters   | ΜΙΣΘ. ΕΛΙΚΟΠΤ.                    | Ελικόπτερα που μισθώθηκαν για επιχειρήσεις κατάσβεσης                     |
 | airborne_hired_airplanes     | ΜΙΣΘ. ΑΕΡΟΣΚ.                     | Αεροπλάνα που μισθώθηκαν για αεροπυρόσβεση                                |
 
-ΣΗΜ - 1 στρέμμα = 1.000 m² = 0,1 εκτάρια
+ΣΗΜ - 1 στρέμμα = 1.000 m² = 0,1 εκτάρια. Η Ελλάδα έχει συνολικά 1,9 εκατομμύρια εκτάρια δασικής έκτασης.
 
 
 
