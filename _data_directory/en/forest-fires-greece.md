@@ -56,3 +56,6 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 | airborne_aircraft_gru              | GRU aircraft used for fire intervention                                     |
 | airborne_hired_helicopters         | Hired helicopters used for firefighting                                     |
 | airborne_hired_airplanes           | Hired airplanes used for aerial firefighting                                |
+
+### Related Charts
+<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>

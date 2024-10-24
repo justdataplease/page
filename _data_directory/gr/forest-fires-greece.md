@@ -55,3 +55,35 @@ download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/mai
 | airborne_aircraft_gru        | Α/Φ GRU                            | Αεροσκάφη GRU που συμμετείχαν στις επιχειρήσεις κατάσβεσης                  |
 | airborne_hired_helicopters   | ΜΙΣΘ. ΕΛΙΚΟΠΤ.                    | Ελικόπτερα που μισθώθηκαν για επιχειρήσεις κατάσβεσης                       |
 | airborne_hired_airplanes     | ΜΙΣΘ. ΑΕΡΟΣΚ.                     | Αεροπλάνα που μισθώθηκαν για αεροπυρόσβεση                                  |
+
+### Σχετικά Γραφήματα
+<iframe src="/charts/forest-fires-greece-yearly" width="800px" height="600px" style="border:none;"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
