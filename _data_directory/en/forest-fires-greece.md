@@ -88,4 +88,4 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 | end_hour                     | End hour of the incident (only the hour)                               |
 | service_full                 | Full description of the service                                        |
 
-NOTE - 1 stremma = 1,000 m² = 0.1 hectrares. Greece has a total of 1.9 million hectares of forested area.
+**NOTE** - 1 stremma = 1,000 m² = 0.1 hectrares. Greece has a total of 1.9 million hectares of forested area.
