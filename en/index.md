@@ -38,7 +38,7 @@ background:#F8F9FA;
 
 
 <section class="pb-2 bg-light">
- <div class="container mt-60 pb-3" style="padding-top:70px;">
+ <div class="container pb-3" style="padding-top:70px;">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
@@ -81,7 +81,7 @@ background:#F8F9FA;
 </section>
 
 <section class="border-bottom pb-5 bg-light">
- <div class="container mt-60 pb-5" style="padding-top:60px;">
+ <div class="container pb-5" style="padding-top:60px;">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">

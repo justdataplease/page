@@ -27,12 +27,22 @@ h2{
   h1 {
     font-size: 65px; /* Font size for tablets */
   }
+
+    h2 {
+    font-size: 45px; /* Font size for tablets */
+  }
+
 }
 
 @media (max-width: 480px) {
   h1 {
     font-size: 45px; /* Font size for mobile devices */
   }
+
+  h2 {
+    font-size: 35px; /* Font size for tablets */
+  }
+
 }
 
 .btn-custom {
