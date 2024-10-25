@@ -10,7 +10,7 @@ permalink: /about/
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1 style="color:black">Ποιοι Είμαστε</h1>
+            <h2 style="color:black">Ποιοι Είμαστε</h2>
             <p class="mt-4">
                 Το <strong>Data for Greece</strong> είναι μια πρωτοβουλία που στοχεύει στην παροχή δεδομένων και πληροφοριών για την κοινωνική, οικονομική, και πολιτική ζωή της Ελλάδας.
             </p>

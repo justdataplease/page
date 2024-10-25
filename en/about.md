@@ -10,7 +10,7 @@ permalink: /en/about/
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1 style="color:black">About</h1>
+            <h2 style="color:black">About</h2>
             <p class="mt-4">
                 <strong>Data for Greece</strong> is an initiative that aims to provide data and insights into the social, economic, and political life of Greece.
             </p>
