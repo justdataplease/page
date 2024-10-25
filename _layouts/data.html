@@ -76,12 +76,44 @@
                                 </div>
                             </div>
 
+                            <div class="container-fluid ps-0 pe-0 ">
+                                <table class="custom-table">
+                                    <thead>
+                                    <tr>
+                                        <th><strong>Published by</strong></th>
+                                        <th>{{ page.published_by }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th><strong>Last Update</strong></th>
+                                        <td>{{ page.last_update }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Date Added</strong></th>
+                                        <td>{{ page.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Category</strong></th>
+                                        <td>{{ page.category }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Data Dates</strong></th>
+                                        <td>{{ page.data_dates }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Source</strong></th>
+                                        <td><a href="{{ page.source_url }}">{{ page.source_name }}</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                             <p class="text-muted">{{content}}</p>
 
                             <!--                            <a href="{{ page.download_url }}" target="_blank" class="btn-custom-black">-->
                             <!--                                {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}-->
                             <!--                            </a>-->
-
 
 
                         </div>
