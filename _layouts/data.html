@@ -76,33 +76,81 @@
                                 </div>
                             </div>
 
-                            <div class="container-fluid ps-0 pe-0 ">
+                            <div class="container-fluid ps-0 pe-0">
                                 <table class="custom-table">
                                     <thead>
                                     <tr>
-                                        <th><strong>Published by</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Published by
+                                                {% else %}
+                                                Δημοσιεύθηκε από
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <th>{{ page.published_by }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th><strong>Last Update</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Last Update
+                                                {% else %}
+                                                Τελευταία ενημέρωση
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <td>{{ page.last_update }}</td>
                                     </tr>
                                     <tr>
-                                        <th><strong>Date Added</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Date Added
+                                                {% else %}
+                                                Ημερομηνία προσθήκης
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <td>{{ page.date_added }}</td>
                                     </tr>
                                     <tr>
-                                        <th><strong>Category</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Category
+                                                {% else %}
+                                                Κατηγορία
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <td>{{ page.category }}</td>
                                     </tr>
                                     <tr>
-                                        <th><strong>Data Dates</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Data Dates
+                                                {% else %}
+                                                Ημερομηνίες Δεδομένων
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <td>{{ page.data_dates }}</td>
                                     </tr>
                                     <tr>
-                                        <th><strong>Source</strong></th>
+                                        <th>
+                                            <strong>
+                                                {% if page.lang == "en" %}
+                                                Source
+                                                {% else %}
+                                                Πηγή
+                                                {% endif %}
+                                            </strong>
+                                        </th>
                                         <td><a href="{{ page.source_url }}">{{ page.source_name }}</a></td>
                                     </tr>
                                     </tbody>
