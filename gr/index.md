@@ -6,6 +6,12 @@ lang: "gr"
 permalink: /
 ---
 
+<style>
+body {
+background:#F8F9FA;
+}
+</style>
+
 <section class="bg-half-260 d-table w-100" style="background: url('{{ site.baseurl }}/assets/bg-3.webp') center center;">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -32,7 +38,7 @@ permalink: /
 
 
 <section class="pb-2 bg-light">
- <div class="container mt-60 pb-3" style="padding-top:70px;">
+ <div class="container pb-3" style="padding-top:70px;">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
@@ -76,7 +82,7 @@ permalink: /
 </section>
 
 <section class="border-bottom pb-5 bg-light">
- <div class="container mt-60 pb-5" style="padding-top:60px;">
+ <div class="container pb-5" style="padding-top:60px;">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
