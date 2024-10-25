@@ -5,15 +5,14 @@ description: Budget of the Municipality of Athens
 category: Economy
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
+
+published_by: "Municipality of Athens"
+last_update: "2024-10-20"
+date_added: "2024-10-20"
+data_dates: "2005/01 - 2024/10"
+source_name: "Municipality of Athens Budget and Expenditure Dataset"
+source_url: "https://old.cityofathens.gr/khe/proypologismos"
 ---
-| **Published by** | Municipality of Athens                                                                 |
-|------------------|----------------------------------------------------------------------------------------|
-| **Last Update**  | 2024-10-20                                                                             |
-| **Date Added**   | 2024-10-20                                                                             |
-| **Category**     | Economy, Public Administration                                                         |
-| **Language**     | Greek                                                                                  |
-| **Data Dates**   | 2005/01 - 2024/10                                                                      |
-| **Source**       | [Municipality of Athens Budget and Expenditure Dataset](https://old.cityofathens.gr/khe/proypologismos)    |
 
 ### Data Description
 This dataset provides detailed information on the budget and expenditure for the Municipality of Athens from 2005 to 2024. It includes the initial budget allocations, adjustments, committed funds, authorized payments, and actual payments made across various departments. The data includes expenses such as legal fees, office supplies, public relations costs, and maintenance of equipment.

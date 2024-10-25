@@ -5,15 +5,14 @@ description: Προυπολογισμός Δήμου Αθηναίων
 category: Οικονομία
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
----
 
-| **Δημοσιεύτηκε από**           | Δήμο Αθηναίων                                                    |
-|--------------------------------|------------------------------------------------------------------|
-| **Ενημέρωση**                  | 2024-10-20                                                       |
-| **Προσθήκη**                   | 2024-10-20                                                       |
-| **Κατηγορία**                  | Οικονομία                                                        |
-| **Χρονικό Διάστημα Δεδομένων** | 2005/01 - 2024/10                                                |
-| **Πηγή**                       | [Δήμος Αθηναίων](https://old.cityofathens.gr/khe/proypologismos) |
+published_by: "Δήμο Αθηναίων"
+last_update: "2024-10-20"
+date_added: "2024-10-20"
+data_dates: "2005/01 - 2024/10"
+source_name: "Δήμος Αθηναίων"
+source_url: "https://old.cityofathens.gr/khe/proypologismos"
+---
 
 ### Περιγραφή Δεδομένων
 
