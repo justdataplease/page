@@ -160,22 +160,21 @@ h2{
 
 
 table {
-  display: block; /* Make the table behave like a block element */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding-bottom: 20px;
+  width: 100%;
   border-collapse: collapse;
+  margin: 20px 0;
   font-size: 16px;
   text-align: left;
+  overflow-x: auto;  /* Allows horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
 }
-
 
 th, td {
   padding: 12px 15px;
   border: 1px solid #ddd; /* Add borders to cells */
   word-wrap: break-word; /* Break long words */
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Add "..." for overflowing content */
 }
+
 
 thead th {
   background-color: #f4f4f4; /* Header background color */
