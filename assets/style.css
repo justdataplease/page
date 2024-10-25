@@ -172,7 +172,7 @@ table {
 th, td {
   padding: 12px 15px;
   border: 1px solid #ddd; /* Add borders to cells */
-  max-width: 200px; /* Or any appropriate value */
+  max-width: 100px; /* Or any appropriate value */
   word-wrap: break-word; /* Break long words */
 }
 
