@@ -197,3 +197,9 @@ pre {
 pre code {
     background-color: transparent; /* Keep the pre block background consistent */
 }
+
+@media (max-width: 991px) {
+    .sm-hide {
+        display: none!important;
+    }
+}
