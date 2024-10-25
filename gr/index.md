@@ -51,10 +51,10 @@ permalink: /
                                         <div class="d-flex m-2">
                                             <div class="card flex-1 content p-3 shadow rounded position-relative"> 
                                                 <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-6 sm-hide">
                                                 <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="w-100" alt=""></a>
                                                 </div>
-                                                <div class="col-6" style="display: flex; flex-direction: column; height: 100%;">
+                                                <div class="col-12 col-lg-6" style="display: flex; flex-direction: column; height: 100%;">
                                                     <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
                                                     <p class="text-muted mt-2">{{ item.description }}</p>
                                                     <div style="margin-top: auto;">
