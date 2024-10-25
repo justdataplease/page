@@ -160,16 +160,23 @@ h2{
 
 
 table {
-  width: 100%;
+  width : 100%!important;
+  display: block; /* Make the table behave like a block element */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 20px;
+  margin: 20 0 px;
   border-collapse: collapse;
   font-size: 16px;
   text-align: left;
 }
 
+
 th, td {
   padding: 12px 15px;
   border: 1px solid #ddd; /* Add borders to cells */
   word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add "..." for overflowing content */
 }
 
 thead th {
