@@ -165,8 +165,6 @@ table {
   margin: 20px 0;
   font-size: 16px;
   text-align: left;
-  overflow-x: auto;  /* Allows horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
 }
 
 th, td {
