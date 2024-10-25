@@ -4,7 +4,7 @@ baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
 url: "https://dataforgreece.com"
 author: DataForGreece
 email: support@justdataplease.com
-include: ['_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr']
+include: ['_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr' ]
 
 collections:
   articles:
@@ -12,6 +12,8 @@ collections:
   reports:
     output: true
   data_directory:
+    output: true
+  charts:
     output: true
 
 defaults:
@@ -41,6 +43,20 @@ defaults:
       layout: "report"
       categories: "reports"
       permalink: /reports/:slug/
+  - scope:
+      path: "_charts/en"
+    values:
+      lang: "en"
+      layout: "chart"
+      categories: "charts"
+      permalink: /en/charts/:slug/
+  - scope:
+      path: "_charts/gr"
+    values:
+      lang: "gr"
+      layout: "chart"
+      categories: "charts"
+      permalink: /charts/:slug/
   - scope:
       path: "_data_directory/en"
     values:
