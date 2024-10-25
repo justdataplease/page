@@ -5,15 +5,14 @@ description: Forest Fires in Greece
 category: Environment
 date: 2024-10-14
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
----
 
-| **Published by**     | Hellenic Fire Service                                 |
-|----------------------|------------------------------------------------------|
-| **Last Update**       | 2024-10-14                                                 |
-| **Date Added**        | 2024-10-14                                           |
-| **Category**          | Environment              |
-| **Data Dates**        | 2000/01 - 2023/12                                    |
-| **Source**               | [Hellenic Fire Service Dataset](https://www.fireservice.gr/el_GR/synola-dedomenon) |
+published_by: "Hellenic Fire Service"
+last_update: "2024-10-14"
+date_added: "2024-10-14"
+data_dates: "2000/01 - 2023/12"
+source_name: "Hellenic Fire Service Dataset"
+source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
+---
 
 ### Data Description
 The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike.
