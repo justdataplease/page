@@ -240,3 +240,10 @@ pre code {
         display: none!important;
     }
 }
+
+
+@media (max-width: 767px) {
+    iframe {
+        width: 100% !important;
+    }
+}

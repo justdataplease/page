@@ -30,6 +30,8 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 </iframe>
 </div>
 
+<iframe loading="lazy" style="width: 100%; height: 500px; border: 0px none;" allow="clipboard-write" src="https://charts.dataforindia.com/charts/839efae182054d8dbba30739cfe77353"> </iframe>
+
 ### Data Accessibility
 1. You can download and analyze the data in Excel by clicking the "Download" button.
 2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
