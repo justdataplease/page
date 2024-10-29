@@ -25,12 +25,10 @@ The individual files are merged into a single dataset and cleaned to ensure cons
 <iframe 
     src="/en/charts/forest-fires-greece-yearly/" 
     frameborder="0" 
-    style="border: 0; width: 100%; aspect-ratio: 16 / 9;" 
+    style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
     allowfullscreen>
 </iframe>
 </div>
-
-<iframe loading="lazy" style="width: 100%; height: 500px; border: 0px none;" allow="clipboard-write" src="https://charts.dataforindia.com/charts/839efae182054d8dbba30739cfe77353"> </iframe>
 
 ### Data Accessibility
 1. You can download and analyze the data in Excel by clicking the "Download" button.
