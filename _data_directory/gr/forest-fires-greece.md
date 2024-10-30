@@ -24,7 +24,7 @@ source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
 
 <div class="pt-2">
 <iframe 
-    src="/en/charts/forest-fires-greece-yearly/" 
+    src="/en/charts/forest-fires-greece-monthly/" 
     frameborder="0" 
     style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
     allowfullscreen>
