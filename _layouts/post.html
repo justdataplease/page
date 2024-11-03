@@ -69,7 +69,7 @@
 
                         {% if page.use_cover_image %}
                         <div class="text-center">
-                            <img src="{{ site.baseurl }}/{{ item.cover_image_path | default: 'assets/posts/default-blog-cover.webp' }}"
+                            <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
                                  class="img-fluid rounded-md  w-100 shadow" alt="">
                         </div>
                         {% endif %}
