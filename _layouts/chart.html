@@ -98,10 +98,48 @@
         <div class="loading-text">Loading</div>
     </div>
 
-<div class="fullscreen-iframe">
-    <iframe src="{{ report_data.embedded_url }}" frameborder="0" allowfullscreen
-            onload="setTimeout(function() { document.getElementById('loading-container').style.display = 'none'; }, 2000);">
-    </iframe>
-</div>
+    <div class="fullscreen-iframe">
+        <!-- Placeholder iframe with empty src; will be set via JavaScript -->
+        <iframe id="report-iframe" frameborder="0" allowfullscreen></iframe>
+    </div>
+
 </body>
+
+
+<script>
+    // Function to retrieve the 'page' query parameter (e.g., page=2131)
+    function getPageParameter() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("page"); // Get the value of 'page' from URL
+    }
+
+    // Construct the final URL with /page/ format
+    document.addEventListener("DOMContentLoaded", function() {
+        const pageParam = getPageParameter();
+        const baseUrl = "{{ report_data.embedded_url }}"; // Original embedded URL from Jekyll
+        let finalUrl = baseUrl;
+
+        // Append /page/<parameter> if pageParam exists
+        if (pageParam) {
+            if (finalUrl.endsWith("/")) {
+                finalUrl += "page/" + encodeURIComponent(pageParam); // No additional slash needed
+            } else {
+                finalUrl += "/page/" + encodeURIComponent(pageParam); // Add the slash
+            }
+        }
+
+        // Set the iframe source
+        console.log(finalUrl);
+        document.getElementById("report-iframe").src = finalUrl;
+
+        // Hide the loading screen after iframe loads
+        document.getElementById("report-iframe").onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading-container').style.display = 'none';
+            }, 2000); // 2-second delay for smooth transition
+        };
+    });
+</script>
+
+
 </html>
