@@ -66,11 +66,12 @@
                                     {{ page.date | date: "%Y-%m-%d" }}
                                 </li>
                             </ul>
-
+                        {% if not no_cover %}
                         <div class="text-center">
                             <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
                                  class="img-fluid rounded-md  w-100 shadow" alt="">
                         </div>
+                        {% endif %}
 
                             <p class="text-muted">{{content}}</p>
 
