@@ -1,5 +1,5 @@
 ---
-title: Forest Fires in Greece 2023
+title: Forest Fires in Greece (2000-2023)
 slug: forest-fires-greece-monthly-2023
 use_cover_image: false
 date: 2024-11-03
