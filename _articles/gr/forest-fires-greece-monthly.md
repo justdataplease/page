@@ -2,7 +2,7 @@
 title: Δασικές Πυρκαγίες στην Ελλάδα
 title_upper: ΔΑΣΙΚΕΣ ΠΥΡΚΑΓΙΕΣ ΣΤΗΝ ΕΛΛΑΔΑ
 slug: forest-fires-greece-monthly
-no_cover: true
+use_cover_image: false
 date: 2024-11-03
 ---
 
