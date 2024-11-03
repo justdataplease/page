@@ -5,7 +5,7 @@ use_cover_image: false
 date: 2024-11-03
 ---
 
-In 2023, 3% of Greece's total forested area was destroyed.
+Between 2021 and 2023, 5% of the forested area in Greece was destroyed due to wildfires.
 
 <div class="pt-2">
 <iframe 
