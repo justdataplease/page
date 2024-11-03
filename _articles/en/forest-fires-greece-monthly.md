@@ -2,6 +2,7 @@
 title: Forest Fires in Greece
 slug: forest-fires-greece-monthly
 no_cover: true
+date: 2024-11-03
 ---
 
 In 2023, 3% of Greece's total forested area was destroyed.
