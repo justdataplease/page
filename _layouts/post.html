@@ -13,30 +13,30 @@
                             <ul class="list-unstyled text-start sticky-bar social-icon social mb-0 pt-1">
                                 <li class="mb-2 h6 text-center">Share</li>
                                 <div class="text-center">
-                                <!-- Facebook Share -->
-                                <li class="mt-1">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="facebook" class="uil uil-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <!-- Twitter Share -->
-                                <li class="mt-1">
-                                    <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="twitter" class="uil uil-twitter"></i>
-                                    </a>
-                                </li>
-                                <!-- LinkedIn Share -->
-                                <li class="mt-1">
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                                       target="_blank"
-                                       class="rounded">
-                                       <i data-feather="linkedin" class="uil uil-linkedin"></i>
-                                    </a>
-                                </li>
+                                    <!-- Facebook Share -->
+                                    <li class="mt-1">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="facebook" class="uil uil-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <!-- Twitter Share -->
+                                    <li class="mt-1">
+                                        <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="twitter" class="uil uil-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <!-- LinkedIn Share -->
+                                    <li class="mt-1">
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                                           target="_blank"
+                                           class="rounded">
+                                            <i data-feather="linkedin" class="uil uil-linkedin"></i>
+                                        </a>
+                                    </li>
                                 </div>
                             </ul>
                         </div>
@@ -67,14 +67,31 @@
                                 </li>
                             </ul>
 
-                        {% if page.use_cover_image %}
-                        <div class="text-center">
-                            <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
-                                 class="img-fluid rounded-md  w-100 shadow" alt="">
-                        </div>
-                        {% endif %}
+                            {% if page.use_cover_image %}
+                            <div class="text-center">
+                                <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
+                                     class="img-fluid rounded-md  w-100 shadow" alt="">
+                            </div>
+                            {% endif %}
 
                             <p class="text-muted">{{content}}</p>
+
+                            <br><br>
+
+                            <hr>
+                            <br>
+                            <div class="text-center justify-content-center">
+                                {% if page.lang == 'en' %}
+                                Subscribe for freeto receive new posts<br>  and support our work.<br>
+                                <iframe src="https://dataforgreececom.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
+                                        scrolling="no"></iframe>
+                                {% else %}
+                                Εγγραφείτε δωρεάν για να ενημερώνεστε πρώτοι για νέες δημοσιεύσεις<br>  και να στηρίζετε την προσπάθειά μας.<br>
+                                <iframe src="https://dataforgreece.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
+                                        scrolling="no"></iframe>
+                                {% endif %}
+                            </div>
+
 
                         </div>
                     </div>
