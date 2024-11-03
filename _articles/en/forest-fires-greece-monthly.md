@@ -1,7 +1,7 @@
 ---
 title: Forest Fires in Greece
 slug: forest-fires-greece-monthly
-no_cover: true
+use_cover_image: false
 date: 2024-11-03
 ---
 
