@@ -2,7 +2,7 @@
 <body>
 {% include navbar.html %}
 <main>
-    <section class="bg-half-100 d-flex w-100">
+    <section class="bg-half-100 d-flex w-100 pb-4">
 
         <div class="container">
             <div class="row justify-content-center">
@@ -160,10 +160,24 @@
                             <div class=" ps-0 pe-0">
                                 <p class="text-muted">{{content}}</p>
                             </div>
+                            <br>
+                            {% include data-extra-footer.html %}
 
-                            <!--                            <a href="{{ page.download_url }}" target="_blank" class="btn-custom-black">-->
-                            <!--                                {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}-->
-                            <!--                            </a>-->
+                            <br>
+
+                            <hr>
+                            <br>
+                            <div class="text-center justify-content-center">
+                                {% if page.lang == 'en' %}
+                                Subscribe for freeto receive new posts<br>  and support our work.<br>
+                                <iframe src="https://dataforgreececom.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
+                                        scrolling="no"></iframe>
+                                {% else %}
+                                Εγγραφείτε δωρεάν για να ενημερώνεστε πρώτοι για νέες δημοσιεύσεις<br>  και να στηρίζετε την προσπάθειά μας.<br>
+                                <iframe src="https://dataforgreece.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
+                                        scrolling="no"></iframe>
+                                {% endif %}
+                            </div>
 
 
                         </div>
@@ -177,7 +191,6 @@
     </section>
 </main>
 
-{% include data-extra-footer.html %}
 {% include footer.html %}
 </body>
 </html>
