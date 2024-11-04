@@ -28,7 +28,7 @@ source_url: "https://old.cityofathens.gr/khe/proypologismos"
 1. Μπορείτε να κατεβάσετε το σύνολο δεδομένων σε μορφή Excel κάνοντας κλικ στο κουμπί "Λήψη".
 2. Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το Google BigQuery με το παρακάτω ερώτημα:
    ```sql
-   SELECT * FROM dataforgreece.public_data.athens_municipality_budget
+   SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v
    ```
 
 ### Ορισμοί για το Σύνολο Δεδομένων

@@ -24,7 +24,7 @@ The data was downloaded and combined into a single file.
 1. You can download the dataset in Excel format by clicking the "Download" button.
 2. Alternatively, you can analyze the data online using Google BigQuery with the following query:
    ```sql
-   SELECT * FROM dataforgreece.public_data.athens_municipality_budget
+   SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v
    ```
 
 ### Definitions for Dataset
