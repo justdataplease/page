@@ -21,7 +21,7 @@ This dataset provides detailed information on the budget and expenditure for the
 The data was downloaded and combined into a single file. 
 
 ### Data Accessibility
-1. You can download the dataset in Excel format by clicking the "Download" button.
+1. You can download the dataset in Excel format by clicking the "Download" button at the top of the page.
 2. Alternatively, you can analyze the data online using Google BigQuery with the following query:
    ```sql
    SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v

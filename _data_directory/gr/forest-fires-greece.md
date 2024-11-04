@@ -32,7 +32,7 @@ source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
 </div>
 
 ### Προσβασιμότητα Δεδομένων 
-1. Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασμα".
+1. Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασε" στην αρχή της σελίδας.
 2. Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το δημόσιο dataset απευθείας στο [Google BigQuery](https://console.cloud.google.com/bigquery) με το εξής ερώτημα:
 ```sql
    SELECT * FROM dataforgreece.public_data.forest_fires_greece_v
