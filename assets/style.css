@@ -247,3 +247,12 @@ pre code {
         width: 100% !important;
     }
 }
+
+
+.sources {
+    background-color: #fff9db; /* Pastel yellow */
+    border-radius: 10px;       /* Rounded corners */
+    padding: 15px;             /* Inner padding for spacing */
+    margin: 20px 0;            /* Margin to separate from other elements */
+    font-family: Arial, sans-serif; /* Font style for readability */
+}
