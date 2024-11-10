@@ -1,6 +1,6 @@
 ---
 title: Τιμές Καυσίμων Κίνησης στην Ελλάδα
-slug: forest-fires-greece
+slug: fuel-prices-greece
 description: Τιμές Καυσίμων Κίνησης στην Ελλάδα
 date: 2024-11-09
 category: Οικονομία
