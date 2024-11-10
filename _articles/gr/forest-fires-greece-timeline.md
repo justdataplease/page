@@ -1,7 +1,7 @@
 ---
 title: Δασικές Πυρκαγίες στην Ελλάδα (2000-2023)
 title_upper: ΔΑΣΙΚΕΣ ΠΥΡΚΑΓΙΕΣ ΣΤΗΝ ΕΛΛΑΔΑ
-slug: forest-fires-greece-monthly-2023
+slug: forest-fires-greece-timeline
 use_cover_image: false
 date: 2024-11-03
 ---

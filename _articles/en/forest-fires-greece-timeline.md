@@ -1,6 +1,6 @@
 ---
 title: Forest Fires in Greece (2000-2023)
-slug: forest-fires-greece-monthly-2023
+slug: forest-fires-greece-timeline
 use_cover_image: false
 date: 2024-11-03
 ---
