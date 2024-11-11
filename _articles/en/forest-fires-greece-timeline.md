@@ -19,7 +19,7 @@ Between 2021 and 2023, 5% of the forested area in Greece was destroyed due to wi
 
 In 2007, Greece experienced its worst year of wildfires, with 4% of the forested area destroyed, primarily in the region of Ilia. Recently, wildfires have been increasing in frequency: in 2021, 2% of the forested area burned, with Evia being the most affected region, while in 2023, an additional 3% was lost, with Evros suffering the greatest damage. These recurring disasters highlight the ongoing challenge of wildfires in Greece and the importance of intensifying prevention and response efforts.
 
-You can find the graph and related data [here](https://dataforgreece.com/data-directory/forest-fires-greece/).
+You can find the graph and related data [here](https://dataforgreece.com/en/data-directory/forest-fires-greece/).
 
 
 
