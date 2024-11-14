@@ -37,7 +37,7 @@ Russia's invasion caused a major disruption in energy supplies, especially in Eu
 Europe diversified energy sources and sought alternative suppliers, leading to price stabilization. Additionally, economic concerns like inflation and central bank actions reduced demand, further helping prices to gradually decrease [[5]](https://www.imf.org/en/Publications/WEO/Issues/2023/07/25/world-economic-outlook-update-july-2023).
 
 
-**You can find the graph and related data [here](https://dataforgreece.com/data-directory/en/fuel-prices-greece/).**
+**You can find the graph and related data [here](https://dataforgreece.com/en/data-directory/fuel-prices-greece/).**
 
 
 <div class="sources">
