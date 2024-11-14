@@ -141,6 +141,7 @@
                                         </th>
                                         <td>{{ page.data_dates }}</td>
                                     </tr>
+                                    {% if page.contributed_by %}
                                     <tr>
                                         <th>
                                             <strong>
@@ -153,6 +154,7 @@
                                         </th>
                                         <td><a href="{{ page.contributed_by_url }}">{{ page.contributed_by }}</a></td>
                                     </tr>
+                                    {% endif %}
                                     <tr>
                                         <th>
                                             <strong>
