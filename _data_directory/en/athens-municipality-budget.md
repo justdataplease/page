@@ -12,6 +12,8 @@ date_added: "2024-10-20"
 data_dates: "2005/01 - 2024/10"
 source_name: "Municipality of Athens Budget and Expenditure Dataset"
 source_url: "https://old.cityofathens.gr/khe/proypologismos"
+contributed_by: "Adam Markakis"
+contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 ---
 
 ### Data Description
