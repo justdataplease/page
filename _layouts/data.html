@@ -177,6 +177,8 @@
                                 <p class="text-muted">{{content}}</p>
                             </div>
 
+                            <br>
+
                             <div class="related-articles">
                                 <h3>
                                     {% if page.lang == "en" %}
@@ -205,14 +207,10 @@
                                 {% endif %}
                                 {% endfor %}
                             </div>
-                            <br>                            <br>
-
-                            {% include data-extra-footer.html %}
-
-                            <br>
-
+                            <br><br>
                             <hr>
-                            <br>
+                            <br><br>
+
                             <div class="text-center justify-content-center">
                                 {% if page.lang == 'en' %}
                                 Subscribe for free to receive new posts<br> and support our work.<br>
@@ -225,6 +223,8 @@
                                 {% endif %}
                             </div>
 
+                            <br>
+                            {% include data-extra-footer.html %}
 
                         </div>
                     </div>
