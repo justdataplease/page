@@ -6,7 +6,7 @@ category: Economy
 date: 2024-11-09
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip
 
-published_by: "Ministry"
+published_by: "DataForGreece"
 last_update: "2024-11-01"
 date_added: "2024-11-09"
 data_dates: "2017/01 - 2024/11"
