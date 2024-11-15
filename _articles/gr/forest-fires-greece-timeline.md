@@ -4,6 +4,8 @@ title_upper: ΔΑΣΙΚΕΣ ΠΥΡΚΑΓΙΕΣ ΣΤΗΝ ΕΛΛΑΔΑ
 slug: forest-fires-greece-timeline
 use_cover_image: false
 date: 2024-11-03
+related_dataset_slugs: 
+  - athens-municipality-budget
 ---
 
 Μεταξύ 2021 και 2023, το 5% της δασικής έκτασης στην Ελλάδα καταστράφηκε λόγω πυρκαγιών.

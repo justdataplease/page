@@ -3,6 +3,8 @@ title: Timeline of Greek Fuel Prices 2020–2024
 slug: fuel-prices-greece-timeline
 use_cover_image: false
 date: 2024-11-10
+related_dataset_slugs: 
+  - fuel-prices-greece
 ---
 
 Understanding the impact of global Key events on Greek fuel prices.
