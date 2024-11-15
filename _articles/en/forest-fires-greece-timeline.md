@@ -3,6 +3,8 @@ title: Forest Fires in Greece 2000-2023
 slug: forest-fires-greece-timeline
 use_cover_image: false
 date: 2024-11-03
+related_dataset_slugs: 
+  - athens-municipality-budget
 ---
 
 Between 2021 and 2023, 5% of the forested area in Greece was destroyed due to wildfires.
