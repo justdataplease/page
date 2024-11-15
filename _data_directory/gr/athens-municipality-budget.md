@@ -6,7 +6,7 @@ category: Οικονομία
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 
-published_by: "Δήμο Αθηναίων"
+published_by: "DataForGreece"
 last_update: "2024-10-20"
 date_added: "2024-10-20"
 data_dates: "2005/01 - 2024/10"

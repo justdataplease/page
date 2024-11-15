@@ -6,7 +6,7 @@ category: Environment
 date: 2024-10-14
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 
-published_by: "Hellenic Fire Service"
+published_by: "DataForGreece"
 last_update: "2024-10-14"
 date_added: "2024-10-14"
 data_dates: "2000/01 - 2023/12"
