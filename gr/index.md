@@ -24,7 +24,7 @@ background:#F8F9FA;
                             Ακολούθησέ μας
                         </a>
                         <a class="btn-custom" href="https://forms.gle/Wq449G9WeDgTkj2SA" method="get" target="_blank">
-                            &nbsp;&nbsp;Βοήθησε μας&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;Βοήθησέ μας&nbsp;&nbsp;&nbsp;
                         </a>
                 </div>
             </div>
