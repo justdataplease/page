@@ -10,7 +10,7 @@ published_by: "DataForGreece"
 last_update: "2024-11-01"
 date_added: "2024-11-09"
 data_dates: "2017/01 - 2024/11"
-source_name: "Πυροσβεστικό Σώμα Ελλάδας - Σύνολα Δεδομένων"
+source_name: "Υπουργείο Ανάπτυξης και Ανταγωνιστικότητας"
 source_url: "http://www.fuelprices.gr/"
 ---
 
