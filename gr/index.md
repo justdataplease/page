@@ -23,8 +23,8 @@ background:#F8F9FA;
                         <a class="btn-custom" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">
                             Ακολούθησέ μας
                         </a>
-                        <a class="btn-custom" href="https://forms.gle/Wq449G9WeDgTkj2SA" method="get" target="_blank">
-                            &nbsp;&nbsp;Βοήθησέ μας&nbsp;&nbsp;&nbsp;
+                        <a class="btn-custom m-sm-3" href="https://forms.gle/Wq449G9WeDgTkj2SA" method="get" target="_blank">
+                             &nbsp;&nbsp;&nbsp;Βοήθησέ μας&nbsp;&nbsp;&nbsp;
                         </a>
                 </div>
             </div>
