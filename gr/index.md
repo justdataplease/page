@@ -20,10 +20,10 @@ background:#F8F9FA;
                 <div class="title-heading mt-4">
                     <h1 style="color:white;">Ανακάλυψε την Ελλάδα<br> μέσα από δεδομένα.</h1>
                     <br>
-                        <a class="btn-custom" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">
+                        <a class="btn-custom me-0 me-md-2" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">
                             Ακολούθησέ μας
                         </a>
-                        <a class="btn-custom m-sm-3" href="https://forms.gle/Wq449G9WeDgTkj2SA" method="get" target="_blank">
+                        <a class="btn-custom ms-0 ms-md-2 mt-3 mt-md-0" href="https://forms.gle/Wq449G9WeDgTkj2SA" method="get" target="_blank">
                              &nbsp;&nbsp;&nbsp;Βοήθησέ μας&nbsp;&nbsp;&nbsp;
                         </a>
                 </div>
