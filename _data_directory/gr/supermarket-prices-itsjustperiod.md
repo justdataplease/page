@@ -5,7 +5,6 @@ description: Τιμές Προϊόντων Σουπερμάρκετ - It's just 
 category: Οικονομία
 date: 2024-11-09
 download_url: 
-live: true
 
 published_by: "DataForGreece"
 last_update: "-"
