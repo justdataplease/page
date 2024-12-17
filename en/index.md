@@ -38,7 +38,40 @@ background:#F8F9FA;
 
 
 <section class="pb-2 bg-light">
- <div class="container pb-3" style="padding-top:70px;">
+ <div class="container pb-3" style="padding-top:60px;">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-2">
+                            <h2 class="mb-4">Datasets</h2>
+                            <p class="text-muted mx-auto para-desc">Discover ready-to-use datasets about Greece's social, economic, and political life. Perfect for anyone to conduct their own analysis.
+                             <br><a href="/en/data-directory">Explore More &rarr;</a></p>                        
+                            </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                <div class="row justify-content-center pt-3">
+                    <div class="col-lg-12">
+                        <div class="tiny-three-item">
+                                {% for item in site.data_directory %}
+                                {% if item.lang == page.lang %}
+                                    <div class="tiny-slide">
+                                        <div class="d-flex m-2">
+                                            <div class="card flex-1 content p-3 shadow rounded position-relative">
+                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
+                                                <p class="text-muted mt-2">{{ item.description }}</p>
+                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Read More <i class="uil uil-angle-right-b align-middle"></i></strong></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+</section>
+
+<section class="border-bottom pb-5 bg-light">
+ <div class="container pb-5" style="padding-top:70px;">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
@@ -77,39 +110,5 @@ background:#F8F9FA;
                 </div><!--end row-->
             </div>
 </div>
-<!--end container-->
-</section>
-
-<section class="border-bottom pb-5 bg-light">
- <div class="container pb-5" style="padding-top:60px;">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="section-title text-center mb-2">
-                            <h2 class="mb-4">Datasets</h2>
-                            <p class="text-muted mx-auto para-desc">Discover ready-to-use datasets about Greece's social, economic, and political life. Perfect for anyone to conduct their own analysis.
-                             <br><a href="/en/data-directory">Explore More &rarr;</a></p>                        
-                            </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-                <div class="row justify-content-center pt-3">
-                    <div class="col-lg-12">
-                        <div class="tiny-three-item">
-                                {% for item in site.data_directory %}
-                                {% if item.lang == page.lang %}
-                                    <div class="tiny-slide">
-                                        <div class="d-flex m-2">
-                                            <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
-                                                <p class="text-muted mt-2">{{ item.description }}</p>
-                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Read More <i class="uil uil-angle-right-b align-middle"></i></strong></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endif %}
-                                {% endfor %}
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
 
 </section>
