@@ -173,7 +173,14 @@
                                                 {% endif %}
                                             </strong>
                                         </th>
-                                        <td><a href="{{ page.source_url }}">🔗 {{ page.source_name }}</a></td>
+
+                                    {% assign names = page.source_name | split: ',' %}
+                                    {% assign urls = page.source_url | split: ',' %}
+                                    {% assign last_index = names.size | minus: 1 %}
+
+                                    <td>{% for i in (0..last_index) %}
+                                      <a href="{{ urls[i] | strip }}">🔗 {{ names[i] | strip }}</a>
+                                    {% endfor %}</td>
                                     </tr>
                                     </tbody>
                                 </table>
