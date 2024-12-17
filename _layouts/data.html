@@ -72,9 +72,15 @@
 
                                 <!-- Download button on the right -->
                                 <div class="col-md-4 col-12 text-md-end">
+                                    {% if {{ page.download_url }} %}
                                     <a href="{{ page.download_url }}" target="_blank" class="btn btn-custom-purple">
                                         {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}CSV
                                     </a>
+                                    {% else %}
+                                    <a href="https://dataforgreece.com/about/" target="_blank" class="btn btn-custom-purple">
+                                        {% if page.lang == 'en' %} Ask {% else %} Ζήτησε {% endif %}
+                                    </a>
+                                    {% endif %}
                                 </div>
                             </div>
 
