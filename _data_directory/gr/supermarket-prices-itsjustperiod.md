@@ -1,7 +1,7 @@
 ---
 title: Τιμές Σουπερμάρκετ - It's just period
 slug: supermarket-prices-itsjustperiod
-description: Τιμές Προϊόντων Περιόδου Σουπερμάρκετ - Σε συνεργασία με την ομάδα It's just period.
+description: Τιμές Προϊόντων Περιόδου Σουπερμάρκετ - Σε συνεργασία με την ομάδα itsjustperiod.
 category: Οικονομία
 date: 2024-11-09
 download_url: 
