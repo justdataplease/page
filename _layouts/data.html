@@ -192,6 +192,7 @@
 
                             <br>
 
+                            {% if related_articles %}
                             <div class="related-articles">
                                 <h3>
                                     {% if page.lang == "en" %}
@@ -220,7 +221,9 @@
                                 {% endif %}
                                 {% endfor %}
                             </div>
-                            <br><br>
+                            <br>
+                            {% endif %}
+                            <br>
                             <hr>
                             <br><br>
 
