@@ -7,10 +7,10 @@ gr:
     - name: "ΔΕΔΟΜΕΝΑ"
       url: "#"
       submenu:
-        - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
-          url: "/reports/"
         - name: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
           url: "/data-directory/"
+        - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
+          url: "/reports/"
     - name: "ΝΕΑ"
       url: "https://dataforgreece.substack.com/"
 
@@ -27,10 +27,10 @@ en:
     - name: "DATA"
       url: "#"
       submenu:
-        - name: "REPORTS"
-          url: "/en/reports/"
         - name: "DATA DIRECTORY"
           url: "/en/data-directory/"
+        - name: "REPORTS"
+          url: "/en/reports/"
     - name: "NEWS"
       url: "https://dataforgreececom.substack.com/"
 
