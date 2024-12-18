@@ -225,13 +225,17 @@ code {
 pre {
     background-color: #f8f9fa; /* Light grey background for pre-formatted text */
     border-left: 5px solid #5e4fe5; /* Left border to highlight the block */
-    padding: 16px;
+    margin: 0!important; /* Remove default margins */
+    padding: 1rem!important; /* Add consistent padding */
     overflow-x: auto; /* Horizontal scrolling for long lines */
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 pre code {
+    font-family: monospace;
+    font-size: 1rem; /* Adjust font size */
+    white-space: pre-wrap; /* Wrap code when needed */
     background-color: transparent; /* Keep the pre block background consistent */
 }
 

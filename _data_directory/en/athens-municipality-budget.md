@@ -14,22 +14,13 @@ source_name: "Municipality of Athens Budget and Expenditure Dataset"
 source_url: "https://old.cityofathens.gr/khe/proypologismos"
 contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
+
+chart_id: 
+description_detailed: "This dataset provides detailed information on the budget and expenditure for the Municipality of Athens from 2005 to 2024. It includes the initial budget allocations, adjustments, committed funds, authorized payments, and actual payments made across various departments. The data includes expenses such as legal fees, office supplies, public relations costs, and maintenance of equipment."
+description_preprocess: "The data was downloaded and combined into a single file."
+description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
+
 ---
-
-### Data Description
-This dataset provides detailed information on the budget and expenditure for the Municipality of Athens from 2005 to 2024. It includes the initial budget allocations, adjustments, committed funds, authorized payments, and actual payments made across various departments. The data includes expenses such as legal fees, office supplies, public relations costs, and maintenance of equipment.
-
-### Data Preprocessing
-The data was downloaded and combined into a single file. 
-
-### Data Accessibility
-1. You can download the dataset in Excel format by clicking the "Download" button at the top of the page.
-2. Alternatively, you can analyze the data online using Google BigQuery with the following query:
-   ```sql
-   SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v
-   ```
-
-### Definitions for Dataset
 
 | **Column**      | **Description**                                                             |
 |---------------------|-----------------------------------------------------------------------------|

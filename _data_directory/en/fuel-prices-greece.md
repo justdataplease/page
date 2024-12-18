@@ -12,33 +12,13 @@ date_added: "2024-11-09"
 data_dates: "2017/01 - 2024/11"
 source_name: "Ministry of Development and Competitiveness"
 source_url: "http://www.fuelprices.gr/"
+
+chart_id: "fuel-prices-greece-daily"
+description_detailed: "This dataset shows daily fuel prices across Greece, including fuel types, station counts, average prices, and report IDs to help consumers understand pricing trends. Shared by the Ministry of Development on fuelprices.gr, it aims to keep consumers informed. While efforts are made to ensure accuracy, the Ministry publishes data as received from stations and does not guarantee completeness."
+description_preprocess: "The individual pdf files are merged into a single dataset and cleaned to ensure consistency."
+description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.fuel_prices_greece_v"
+
 ---
-
-### Data Description
-This dataset shows daily fuel prices across Greece, including fuel types, station counts, average prices, and report IDs to help consumers understand pricing trends. Shared by the Ministry of Development on fuelprices.gr, it aims to keep consumers informed. While efforts are made to ensure accuracy, the Ministry publishes data as received from stations and does not guarantee completeness.
-
-### Data Preprocessing
-The individual pdf files are merged into a single dataset and cleaned to ensure consistency.
-
-### Related Charts
-<div class="pt-2">
-<iframe 
-    src="/en/charts/fuel-prices-greece-daily/" 
-    frameborder="0" 
-    style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
-    allowfullscreen>
-</iframe>
-</div>
-
-### Data Accessibility
-1. You can download and analyze the data in Excel by clicking the "Download" button at the top of the page.
-2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
-   ```sql
-   SELECT * FROM dataforgreece.public_data.fuel_prices_greece_v
-   ```
-
-
-### Definitions for Dataset
 
 | **Column**                   | **Description**                                                                                    |
 |------------------------------|----------------------------------------------------------------------------------------------------|

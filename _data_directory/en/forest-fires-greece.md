@@ -12,33 +12,13 @@ date_added: "2024-10-14"
 data_dates: "2000/01 - 2023/12"
 source_name: "Hellenic Fire Service Dataset"
 source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
+
+chart_id: "forest-fires-greece-monthly"
+description_detailed: "The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike."
+description_preprocess: "The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis."
+description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.forest_fires_greece_v"
+
 ---
-
-### Data Description
-The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike.
-
-### Data Preprocessing
-The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis.
-
-### Related Charts
-<div class="pt-2">
-<iframe 
-    src="/en/charts/forest-fires-greece-monthly/" 
-    frameborder="0" 
-    style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
-    allowfullscreen>
-</iframe>
-</div>
-
-### Data Accessibility
-1. You can download and analyze the data in Excel by clicking the "Download" button at the top of the page.
-2. Alternatively, you can analyze the data online using the public dataset directly in [Google BigQuery](https://console.cloud.google.com/bigquery) with the following query:
-   ```sql
-   SELECT * FROM dataforgreece.public_data.forest_fires_greece_v
-   ```
-
-
-### Definitions for Dataset
 
 | **Column**                   | **Description**                                                        |
 |------------------------------|------------------------------------------------------------------------|

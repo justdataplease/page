@@ -174,25 +174,152 @@
                                             </strong>
                                         </th>
 
-                                    {% assign names = page.source_name | split: ',' %}
-                                    {% assign urls = page.source_url | split: ',' %}
-                                    {% assign last_index = names.size | minus: 1 %}
+                                        {% assign names = page.source_name | split: ',' %}
+                                        {% assign urls = page.source_url | split: ',' %}
+                                        {% assign last_index = names.size | minus: 1 %}
 
-                                    <td>{% for i in (0..last_index) %}
-                                      <a href="{{ urls[i] | strip }}">🔗 {{ names[i] | strip }}</a>
-                                    {% endfor %}</td>
+                                        <td>{% for i in (0..last_index) %}
+                                            <a href="{{ urls[i] | strip }}">🔗 {{ names[i] | strip }}</a>
+                                            {% endfor %}
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
 
                             <div class=" ps-0 pe-0">
-                                <p class="text-muted">{{content}}</p>
+                                <!-- Data Description Section -->
+                                <div class="data-section">
+                                    <h3>
+                                        {% if page.lang == 'en' %}
+                                        Data Description
+                                        {% else %}
+                                        Περιγραφή Δεδομένων
+                                        {% endif %}
+                                    </h3>
+                                    <p>{{ page.description_detailed }}</p>
+                                </div>
+
+                                <!-- Data Preprocessing Section -->
+                                <div class="data-section">
+                                    <h3>
+                                        {% if page.lang == 'en' %}
+                                        Data Preprocessing
+                                        {% else %}
+                                        Προεπεξεργασία Δεδομένων
+                                        {% endif %}
+                                    </h3>
+                                    <p>{{ page.description_preprocess }}</p>
+                                </div>
+
+                                <!-- Data Accessibility Section -->
+                                <div class="data-section">
+                                    <h3>
+                                        {% if page.lang == 'en' %}
+                                        Data Accessibility
+                                        {% else %}
+                                        Προσβασιμότητα Δεδομένων
+                                        {% endif %}
+                                    </h3>
+                                    <p>
+                                        {% if page.lang == 'en' %}
+                                        You can download and analyze the data in Excel by clicking the "Download" button at the top of the page. If the download button is unavailable, click the "Ask"
+                                        button to make a request.
+                                        {% else %}
+                                        Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασε" στην αρχή της σελίδας. Αν το κουμπί λήψης δεν είναι διαθέσιμο,
+                                        επιλέξτε το κουμπί "Ζήτησε" για να κάνετε αίτημα.
+                                        {% endif %}
+                                        <br><br>
+                                        {% if page.description_data_access_sql_bigquery %}
+                                        {% if page.lang == 'en' %}
+                                        Alternatively, you can analyze the data online using the public dataset directly in <a href="https://console.cloud.google.com/bigquery">Google
+                                        BigQuery</a> with the
+                                        following query
+                                        {% else %}
+                                        Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το δημόσιο dataset απευθείας στο <a href="https://console.cloud.google.com/bigquery">Google
+                                        BigQuery</a> με το εξής ερώτημα:
+                                        {% endif %}
+                                    <pre><code>{{page.description_data_access_sql_bigquery}}</code></pre>
+                                    {% endif %}
+
+                                    </p>
+                                </div>
+
+                                <!-- Dataset Definitions Section -->
+                                {% if content.size > 10 %}
+                                <div class="data-section">
+                                    <h3>
+                                        {% if page.lang == 'en' %}
+                                        Dataset Definitions
+                                        {% else %}
+                                        Ορισμοί για το Σύνολο Δεδομένων
+                                        {% endif %}
+                                    </h3>
+                                    <p>{{ content }}</p>
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            {% if page.chart_id %}
+
+                            <div><h3>{% if page.lang == 'en' %} Related Charts {% else %} Σχετικά Γραφήματα {% endif %}</h3>
+                                <div class="pt-2">
+                                    <iframe
+                                            src="/charts/{{page.chart_id}}/"
+                                            frameborder="0"
+                                            style="border: 0; width: 100%; aspect-ratio: 4 / 3;"
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
                             </div>
 
                             <br>
+                            <div>
 
-                            {% if len(related_articles)>0 %}
+                                <h3 id="embed">
+                                    {% if page.lang == 'en' %}
+                                    Embed the charts
+                                    {% else %}
+                                    Χρησιμοποίησε τα γραφήματα
+                                    {% endif %}
+                                </h3>
+
+
+                                <!-- Input field for chart ID -->
+                                <label for="chartId">
+                                    {% if page.lang == 'en' %} Enter Chart ID: {% else %} Εισαγάγετε το ID του γραφήματος: {% endif %}
+                                </label>
+                                <input type="text" id="chartId" placeholder="e.g., {{page.chart_id}}" oninput="updateEmbedCode()"/>
+
+                                <p>
+                                    {% if page.lang == 'en' %}
+                                    Paste the following HTML code into your blog (WordPress, HTML, etc.) for the chart to appear.
+                                    {% else %}
+                                    Επικολλήστε τον παρακάτω HTML κώδικα στο blog σας (WordPress, HTML κ.λπ.) για να εμφανιστεί το γράφημα.
+                                    {% endif %}
+                                </p>
+
+                                <!-- Display area for the updated iframe code -->
+                                <pre id="embedCode1"><code>&lt;iframe src="https://dataforgreece.com/charts/{{page.chart_id}}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+
+                                <br>
+
+                                <p>
+                                    {% if page.lang == 'en' %}
+                                    You can specify a width in pixels (e.g., 700px), and the height will adjust automatically.
+                                    {% else %}
+                                    Μπορείτε να επιλέξετε ένα πλάτος σε pixels (π.χ., 700px), και το ύψος θα προσαρμοστεί αυτόματα.
+                                    {% endif %}
+                                </p>
+
+                                <!-- Display area for the updated iframe code -->
+                                <pre id="embedCode2"><code>&lt;iframe src="https://dataforgreece.com/charts/{{page.chart_id}}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+
+                                <br>
+                            </div>
+                            {% endif %}
+
+                            {% if related_articles.size > 0 %}
                             <div class="related-articles">
                                 <h3>
                                     {% if page.lang == "en" %}
@@ -242,16 +369,34 @@
                             <br>
                             {% include data-extra-footer.html %}
 
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
     </section>
 </main>
 
 {% include footer.html %}
+
+
+<!-- JavaScript to update iframe -->
+<script>
+    function updateEmbedCode() {
+        // Get the input value for chart ID
+        const chartId = document.getElementById("chartId").value.trim();
+
+        // Construct the iframe code dynamically with different widths
+        const iframeCode100 = `&lt;iframe src="https://dataforgreece.com/charts/${chartId}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;`;
+        const iframeCode700 = `&lt;iframe src="https://dataforgreece.com/charts/${chartId}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;`;
+
+        // Update the embed code blocks
+        document.querySelector("#embedCode1").innerHTML = `<code>${iframeCode100}</code>`; // width 100%
+        document.querySelector("#embedCode2").innerHTML = `<code>${iframeCode700}</code>`; // width 700px
+
+    }
+</script>
 </body>
 </html>
+
+
