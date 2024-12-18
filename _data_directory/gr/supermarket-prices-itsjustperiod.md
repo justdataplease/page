@@ -7,7 +7,7 @@ date: 2024-11-09
 download_url: 
 
 published_by: "DataForGreece"
-last_update: "-"
+last_update: "Live - Εβδομαδιαία την Δευτέρα"
 date_added: "2024-12-17"
 data_dates: "-"
 source_name: "sklavenitis,ab,e-katanalotis"
