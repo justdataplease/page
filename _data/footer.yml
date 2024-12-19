@@ -8,8 +8,6 @@ gr:
   links:
     - name: "Ποιοι Είμαστε"
       url: "/about/"
-    - name: "Πίνακες Δεδομένων"
-      url: "/reports/"
     - name: "Συλλογή Δεδομένων"
       url: "/data-directory/"
     - name: "Νέα"
@@ -30,8 +28,6 @@ en:
       url: "/en/privacy-policy/"
   links:
     - name: "About Us"
-      url: "/en/about/"
-    - name: "Reports"
       url: "/en/reports/"
     - name: "Data Directory"
       url: "/en/data-directory/"
