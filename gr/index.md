@@ -76,6 +76,7 @@ background:#F8F9FA;
 <!--end container-->
 </section>
 
+<!--
 <section class="border-bottom pb-5 bg-light">
  <div class="container pb-5" style="padding-top:70px;">
                 <div class="row justify-content-center">
@@ -85,8 +86,8 @@ background:#F8F9FA;
                             <p class="text-muted mx-auto para-desc">Εξερευνήστε τα δεδομένα της Ελλάδας μέσα απο διαδραστικούς πίνακές δεδομένων — απλά κάντε κλικ για να ανακαλύψετε τάσεις και πληροφορίες σχετικά με την κοινωνική, οικονομική και πολιτική ζωή της χώρας.
                                 <br><a href="/reports">Ανακαλύψτε Περισσότερα &rarr;</a></p>      
                         </div>
-                    </div><!--end col-->
-                </div><!--end row-->
+                    </div>
+                </div>
                 <div class="row justify-content-center pt-3">
                     <div class="col-lg-12">
                         <div class="tiny-two-item">
@@ -112,10 +113,10 @@ background:#F8F9FA;
                                 {% endif %}
                                 {% endfor %}
                         </div>
-                    </div><!--end col-->
-                </div><!--end row-->
+                    </div>
+                </div>
             </div>
 
 </div>
 
-</section>
+</section>-->

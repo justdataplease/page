@@ -5,12 +5,7 @@ gr:
     - name: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
       url: "/about/"
     - name: "ΔΕΔΟΜΕΝΑ"
-      url: "#"
-      submenu:
-        - name: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
-          url: "/data-directory/"
-        - name: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
-          url: "/reports/"
+      url: "/data-directory/"
     - name: "ΝΕΑ"
       url: "https://dataforgreece.substack.com/"
 
@@ -24,13 +19,8 @@ en:
       url: "/en/"
     - name: "ABOUT"
       url: "/en/about/"
-    - name: "DATA"
-      url: "#"
-      submenu:
-        - name: "DATA DIRECTORY"
-          url: "/en/data-directory/"
-        - name: "REPORTS"
-          url: "/en/reports/"
+    - name: "DATASETS"
+      url: "/en/data-directory/"
     - name: "NEWS"
       url: "https://dataforgreececom.substack.com/"
 

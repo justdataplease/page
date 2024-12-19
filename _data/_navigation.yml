@@ -5,8 +5,6 @@ gr:
     url: "/about/"
   - name: "Νέα"
     url: "/news/"
-  - name: "Πίνακες Δεδομένων"
-    url: "/reports/"
 en:
   - name: "Home"
     url: "/en/"
@@ -14,5 +12,3 @@ en:
     url: "/en/about/"
   - name: "News"
     url: "/en/news/"
-  - name: "Reports"
-    url: "/en/reports/"
