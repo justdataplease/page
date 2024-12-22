@@ -55,15 +55,24 @@ background:#F8F9FA;
                 </div><!--end row-->
                 <div class="row justify-content-center pt-3">
                     <div class="col-lg-12">
-                        <div class="tiny-three-item">
+                        <div class="tiny-two-item">
                                 {% for item in site.data_directory %}
                                 {% if item.lang == page.lang %}
                                     <div class="tiny-slide">
-                                        <div class="d-flex m-2">
-                                            <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                <h6><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h6>
-                                                <p class="text-muted mt-2">{{ item.description }}</p>
-                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>Μάθετε Περισσότερα <i class="uil uil-angle-right-b align-middle"></i></strong></a>
+                                        <div class="card flex-1 content p-3 shadow rounded position-relative">
+                                            <div class="row">
+                                                <div class="col-6 sm-hide"><a href="{{ site.baseurl }}{{ item.url }}"><img
+                                                        src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
+                                                        class="w-100"
+                                                        alt=""></a>
+                                                </div>
+                                                <div class="col-12 col-lg-6" style="display: flex; flex-direction: column; height: 100%;">
+                                                    <h5><a href="{{ site.baseurl }}{{ item.url }}" class="h5 title text-dark">{{ item.title }}</a></h5>
+                                                    <div style="margin-top: auto;">
+                                                        <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore"><strong>{% if page.lang == 'en' %}Read More{% else %}Μάθετε Περισσότερα{% endif %} <i
+                                                                class="uil uil-angle-right-b align-middle"></i></strong></a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

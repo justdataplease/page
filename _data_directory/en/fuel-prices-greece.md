@@ -17,6 +17,7 @@ chart_id: "fuel-prices-greece-daily"
 description_detailed: "This dataset shows daily fuel prices across Greece, including fuel types, station counts, average prices, and report IDs to help consumers understand pricing trends. Shared by the Ministry of Development on fuelprices.gr, it aims to keep consumers informed. While efforts are made to ensure accuracy, the Ministry publishes data as received from stations and does not guarantee completeness."
 description_preprocess: "The individual pdf files are merged into a single dataset and cleaned to ensure consistency."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.fuel_prices_greece_v"
+image_path: assets/posts/fuel_station.webp
 
 ---
 

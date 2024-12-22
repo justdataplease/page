@@ -20,6 +20,7 @@ description_detailed: "Αυτό το σύνολο δεδομένων παρέχ�
 αναμορφώσεις, δεσμευθέντα ποσά, ενταλθέντα και πληρωθέντα ποσά ανά υπηρεσία. Τα δεδομένα αφορούν έξοδα όπως νομικές αμοιβές, προμήθειες γραφείου, έξοδα δημοσίων σχέσεων και συντήρηση εξοπλισμού."
 description_preprocess: "Τα δεδομένα κατέβηκαν και συνδυάστηκαν σε ένα αρχείο."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
+image_path: assets/posts/athens.webp
 ---
 
 | **Στήλη**    | **Στήλη (Ελληνικά)** | **Περιγραφή**                                                         |
