@@ -17,6 +17,7 @@ chart_id: "forest-fires-greece-monthly"
 description_detailed: "The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike."
 description_preprocess: "The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.forest_fires_greece_v"
+image_path: assets/posts/forest_burning.webp
 
 ---
 

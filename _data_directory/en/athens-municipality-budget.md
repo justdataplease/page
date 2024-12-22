@@ -19,6 +19,7 @@ chart_id:
 description_detailed: "This dataset provides detailed information on the budget and expenditure for the Municipality of Athens from 2005 to 2024. It includes the initial budget allocations, adjustments, committed funds, authorized payments, and actual payments made across various departments. The data includes expenses such as legal fees, office supplies, public relations costs, and maintenance of equipment."
 description_preprocess: "The data was downloaded and combined into a single file."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
+image_path: assets/posts/athens.webp
 
 ---
 
