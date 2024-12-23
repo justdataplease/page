@@ -61,13 +61,15 @@ background:#F8F9FA;
                                                         <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
                                                     </div><!--end col-->
                                                     <div class="col-md-6">
-                                                        <div class="card-body content">
-                                                            <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.title }}</a></h5>
-                                                            <div class="post-meta d-flex justify-content-between mt-3">
-                                                                <ul class="list-unstyled mb-0">
-                                                                </ul>
-                                                                <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                                                            </div>
+                                                    <div class="card-body content">
+                                                        <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.title }}</a></h5>
+                                                        <div class="post-meta d-flex justify-content-start align-items-center mt-3">
+                                                            <ul class="list-unstyled mb-0">
+                                                            </ul>
+                                                            <a href="{{ site.baseurl }}{{ item.url }}" class="text-muted readmore">
+                                                                {% if page.lang == 'en' %}Read More{% else %}Διάβασε Περισσότερα{% endif %}
+                                                                <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                        </div>
                                                         </div>
                                                     </div><!--end col-->
                                                 </div> <!--end row-->
