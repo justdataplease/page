@@ -5,6 +5,7 @@ use_cover_image: false
 date: 2024-11-03
 related_dataset_slugs: 
   - forest-fires-greece
+image_path: assets/posts/forest_burning.webp
 ---
 
 Between 2021 and 2023, 5% of the forested area in Greece was destroyed due to wildfires.
