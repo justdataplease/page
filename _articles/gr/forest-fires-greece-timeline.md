@@ -6,6 +6,7 @@ use_cover_image: false
 date: 2024-11-03
 related_dataset_slugs: 
   - forest-fires-greece
+image_path: assets/posts/forest_burning.webp
 ---
 
 Μεταξύ 2021 και 2023, το 5% της δασικής έκτασης στην Ελλάδα καταστράφηκε λόγω πυρκαγιών.

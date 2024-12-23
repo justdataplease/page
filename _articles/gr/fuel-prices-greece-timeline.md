@@ -5,6 +5,7 @@ use_cover_image: false
 date: 2024-11-10
 related_dataset_slugs: 
   - fuel-prices-greece
+image_path: assets/posts/fuel_station.webp
 ---
 
 Kατανόηση της επίδρασης σημαντικών παγκόσμιων γεγονότων στις τιμές καυσίμων στην Ελλάδα.
