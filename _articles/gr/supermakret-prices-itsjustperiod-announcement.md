@@ -1,5 +1,5 @@
 ---
-title: Κάνοντας τα Προϊόντα Περιόδου Προσιτά στην Ελλάδα
+title: Προϊόντα Περιόδου Προσιτά για Όλους
 slug: supermarket-prices-itsjustperiod-announcement
 use_cover_image: false
 date: 2024-11-10
