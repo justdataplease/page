@@ -177,6 +177,7 @@
                                         {% assign names = page.source_name | split: ',' %}
                                         {% assign urls = page.source_url | split: ',' %}
                                         {% assign last_index = names.size | minus: 1 %}
+                                        {% assign chart_ids = page.chart_id | split: "," %}
 
                                         <td>{% for i in (0..last_index) %}
                                             <a href="{{ urls[i] | strip }}">🔗 {{ names[i] | strip }}</a>
@@ -266,15 +267,18 @@
 
                             {% if page.chart_id %}
                             <div><h3>{% if page.lang == 'en' %} Related Charts {% else %} Σχετικά Γραφήματα {% endif %}</h3>
+                                {% for id in chart_ids %}
+
                                 <div class="pt-2">
-                                    <div>1. ID: {{page.chart_id}}</div>
+                                    <div>{{ forloop.index }}ID: {{id}}</div>
                                     <iframe
-                                            src="/charts/{{page.chart_id}}/"
+                                            src="/charts/{{id}}/"
                                             frameborder="0"
                                             style="border: 0; width: 100%; aspect-ratio: 4 / 3;"
                                             allowfullscreen>
                                     </iframe>
                                 </div>
+                                {% endfor %}
                             </div>
 
                             <br>
@@ -293,7 +297,9 @@
                                 <label for="chartId">
                                     {% if page.lang == 'en' %} Enter Chart ID: {% else %} Εισαγάγετε το ID του γραφήματος: {% endif %}
                                 </label>
-                                <input type="text" id="chartId" placeholder="e.g., {{page.chart_id}}" oninput="updateEmbedCode()"/>
+                                {% assign first_chart_id = chart_ids | first %}
+
+                                <input type="text" id="chartId" placeholder="e.g.,{{ first_chart_id | strip }}" oninput="updateEmbedCode()"/>
 
                                 <p>
                                     {% if page.lang == 'en' %}
