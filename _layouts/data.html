@@ -361,22 +361,8 @@
                             <br>
                             {% endif %}
                             <br>
-                            <hr>
-                            <br><br>
 
-                            <div class="text-center justify-content-center">
-                                {% if page.lang == 'en' %}
-                                Subscribe for free to receive new posts<br> and support our work.<br>
-                                <iframe src="https://dataforgreececom.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
-                                        scrolling="no"></iframe>
-                                {% else %}
-                                Εγγραφείτε δωρεάν για να ενημερώνεστε πρώτοι για νέες δημοσιεύσεις<br> και να στηρίζετε την προσπάθειά μας.<br>
-                                <iframe src="https://dataforgreece.substack.com/embed" width="100%" height="150" style="border:0px solid #fff; background:white;" frameborder="0"
-                                        scrolling="no"></iframe>
-                                {% endif %}
-                            </div>
-
-                            <br>
+                            {% include footer-newsletter.html %}
                             {% include data-extra-footer.html %}
 
                             </a>
