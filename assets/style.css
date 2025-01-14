@@ -141,6 +141,30 @@ h2{
 }
 
 
+.btn-custom-white-solid {
+
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #5E4FE5; /* Thicker border */
+    color: #E4FE5;
+    padding: 10px 30px; /* Increased padding for a larger button */
+    font-size: 1rem; /* Larger font size */
+    border-radius: 10px;
+    background-color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+    outline: none;
+}
+
+.btn-custom-white-solid:hover,
+.btn-custom-white-solid:focus,
+.btn-custom-white-solid:active {
+    border: 3px solid #5E4FE5;
+    background-color: #fff; /* Stay transparent on hover and focus */
+    color: #E4FE5; /* Keep text color white on hover and focus */
+    outline: none; /* Ensure no outline on focus */
+}
+
 /* Main navigation */
 .navigation-menu {
     list-style: none;

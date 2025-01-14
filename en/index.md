@@ -56,7 +56,7 @@ background:#F8F9FA;
                                 {% for item in data_directory_ %}
                                 {% if item.lang == page.lang %}
                                     <div class="tiny-slide">
-                                            <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
+                                            <div class="card blog-primary rounded border-0 shadow overflow-hidden">
                                                 <div class="row align-items-center g-0">
                                                     <div class="col-md-6">
                                                         <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
@@ -103,7 +103,7 @@ background:#F8F9FA;
                                 {% for item in articles_ %}
                                 {% if item.lang == page.lang %}
                                     <div class="tiny-slide">
-                                            <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
+                                            <div class="card blog-primary rounded border-0 shadow overflow-hidden">
                                                 <div class="row align-items-center g-0">
                                                     <div class="col-md-6">
                                                         <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
