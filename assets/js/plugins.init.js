@@ -80,6 +80,7 @@ if(document.getElementsByClassName('tiny-two-item').length > 0) {
     });
 };
 
+
 if(document.getElementsByClassName('tiny-three-item').length > 0) {
     var slider = tns({
         container: '.tiny-three-item',
@@ -124,7 +125,7 @@ if(document.getElementsByClassName('tiny-four-item').length > 0) {
         gutter: 12,
         responsive: {
             992: {
-                items: 4
+                items: 2
             },
 
             767: {
