@@ -38,7 +38,7 @@
 
     <!--Blog Lists Start-->
     <!--Blog Lists Start-->
-    <section class="section pt-5">
+    <section class="section pt-5 pb-0">
         <div class="container">
             <div class="row">
                 {% for item in site.data_directory %}
@@ -75,6 +75,9 @@
 
 <!-- Include Footer -->
 {% include data-extra-footer.html %}
+
+{% include footer-newsletter.html %}
+
 {% include footer.html %}
 </body>
 </html>
