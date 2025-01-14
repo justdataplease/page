@@ -44,7 +44,7 @@
                 {% for item in site.articles %}
                 {% if item.lang == page.lang %}
                 <div class="col-md-6 col-12 mb-4 pb-2">
-                    <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
+                    <div class="card blog-primary rounded border-0 shadow overflow-hidden">
                         <div class="row align-items-center g-0">
                             <div class="col-md-6">
                                 <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">

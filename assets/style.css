@@ -52,7 +52,7 @@ h2{
     color: white;
     padding: 15px 40px; /* Increased padding for a larger button */
     font-size: 1.5rem; /* Larger font size */
-    border-radius: 0;
+    border-radius: 10px;
     background-color: transparent;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
@@ -75,7 +75,7 @@ h2{
     color: black;
     padding: 15px 40px; /* Increased padding for a larger button */
     font-size: 1.5rem; /* Larger font size */
-    border-radius: 0;
+    border-radius: 10px;
     background-color: transparent;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
@@ -99,7 +99,7 @@ h2{
     color: #5E4FE5;
     padding: 15px 40px; /* Increased padding for a larger button */
     font-size: 1.5rem; /* Larger font size */
-    border-radius: 0;
+    border-radius: 10px;
     background-color: transparent;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
@@ -243,7 +243,7 @@ code {
     color: #5e4fe5;  /* A nice shade of pink for the code */
     background-color: #e4fe5; /* Light background for code readability */
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 pre {
@@ -252,7 +252,7 @@ pre {
     margin: 0!important; /* Remove default margins */
     padding: 1rem!important; /* Add consistent padding */
     overflow-x: auto; /* Horizontal scrolling for long lines */
-    border-radius: 4px;
+    border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
 
