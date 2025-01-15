@@ -21,8 +21,8 @@ permalink: /en/about/
                 By combining expertise in data analysis and innovation, we strive to create a comprehensive resource that benefits researchers, businesses, and anyone interested in Greece's development.
             </p>
             <p class="mt-3">
-                The data is provided <strong>free of charge</strong> to researchers, universities, and organizations working towards social good, aiming to support research and analysis that contribute to societal improvement.
-                <br>For commercial use by companies, the data is available under specific terms and with a fee, ensuring the sustainability and growth of the initiative.
+                The data analysis is provided <strong>free of charge</strong> to researchers, universities, and organizations working towards social good, aiming to support research and analysis that contribute to societal improvement.
+                <br>For commercial use by companies, the data analysis is available under specific terms and with a fee, ensuring the sustainability and growth of the initiative.
             </p>
              <p class="mt-3">
                 If you have any questions or would like to learn more about the project, feel free to reach out to us:
