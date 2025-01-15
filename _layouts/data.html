@@ -4,7 +4,7 @@
 <body>
 {% include navbar.html %}
 <main>
-    <section class="bg-half-100 d-flex w-100 pb-4">
+    <section class="bg-half-100 d-flex w-100 pb-3">
 
         <div class="container">
             <div class="row justify-content-center">
@@ -66,12 +66,12 @@
 
                             <div class="row align-items-center pt-4">
                                 <!-- Title on the left -->
-                                <div class="col-md-8 col-12">
+                                <div class="col-7">
                                     <h4><i class="uil uil-tag-alt"></i> {{ page.category }}</h4>
                                 </div>
 
                                 <!-- Download button on the right -->
-                                <div class="col-md-4 col-12 text-md-end">
+                                <div class="col-5 text-end">
                                     {% if page.download_url %}
                                     <a href="{{ page.download_url }}" target="_blank" class="btn btn-custom-purple">
                                         {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}CSV
@@ -358,7 +358,6 @@
                                 {% endif %}
                                 {% endfor %}
                             </div>
-                            <br>
                             {% endif %}
                             <br>
 

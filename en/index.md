@@ -43,7 +43,7 @@ background:#F8F9FA;
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
-                            <h2 class="mb-4">Datasets</h2>
+                            <h2 class="mb-4">Latest Datasets</h2>
                             <p class="text-muted mx-auto para-desc">Discover ready-to-use datasets about Greece's social, economic, and political life. Perfect for anyone to conduct their own analysis.
                              <br><a href="/en/data-directory">Explore More &rarr;</a></p>                        
                             </div>
@@ -90,7 +90,7 @@ background:#F8F9FA;
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
-                            <h2 class="mb-4">News</h2>
+                            <h2 class="mb-4">Latest Research</h2>
                             <p class="text-muted mx-auto para-desc">Read data-driven research on the social, economic, and political life of Greece.
                              <br><a href="/en/news">Explore More &rarr;</a></p>                        
                             </div>
@@ -132,6 +132,6 @@ background:#F8F9FA;
 
 </section>
 
-<section class="pt-5 pb-5 bg-light"></section>
+<section class="pt-5 pb-0 pb-sm-3 bg-light"></section>
 
 {% include footer-newsletter.html %}

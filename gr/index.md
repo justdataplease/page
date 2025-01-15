@@ -47,7 +47,7 @@ background:#F8F9FA;
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
-                            <h2 class="mb-4">Συλλογή Δεδομένων</h2>
+                            <h2 class="mb-4">Νέα Δεδομένα</h2>
                             <p class="text-muted mx-auto para-desc">Ανακαλύψτε έτοιμα προς χρήση σύνολα δεδομένων για την κοινωνική, οικονομική και πολιτική ζωή της Ελλάδας. Ιδανικά για όποιον θέλει να διεξάγει τη δική του ανάλυση.
                             <br><a href="/data-directory">Ανακαλύψτε Περισσότερα &rarr;</a></p>
                             </div>
@@ -94,7 +94,7 @@ background:#F8F9FA;
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="section-title text-center mb-2">
-                            <h2 class="mb-4">Νέα</h2>
+                            <h2 class="mb-4">Νέες Έρευνες</h2>
                             <p class="text-muted mx-auto para-desc">Διαβάστε έρευνες βασισμένες σε δεδομένα για την κοινωνική, οικονομική και πολιτική ζωή της Ελλάδας.
                             <br><a href="/news">Ανακαλύψτε Περισσότερα &rarr;</a></p>
                             </div>
@@ -137,7 +137,7 @@ background:#F8F9FA;
 
 </section>
 
-<section class="pt-5 pb-5 bg-light"></section>
+<section class="pt-5 pb-0 pb-sm-3 bg-light"></section>
 
 {% include footer-newsletter.html %}
 
