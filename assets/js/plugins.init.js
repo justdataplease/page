@@ -62,7 +62,7 @@ if(document.getElementsByClassName('tiny-two-item').length > 0) {
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,
         navPosition: "bottom",
-        speed: 400,
+        speed: 800,
         gutter: 12,
         responsive: {
             992: {
@@ -92,7 +92,7 @@ if(document.getElementsByClassName('tiny-three-item').length > 0) {
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,
         navPosition: "bottom",
-        speed: 400,
+        speed: 800,
         gutter: 12,
         responsive: {
             992: {
@@ -121,7 +121,7 @@ if(document.getElementsByClassName('tiny-four-item').length > 0) {
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,
         navPosition: "bottom",
-        speed: 400,
+        speed: 800,
         gutter: 12,
         responsive: {
             992: {
@@ -152,7 +152,7 @@ if(document.getElementsByClassName('roadmaps').length > 0) {
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,
         nav: false,
-        speed: 400,
+        speed: 800,
         gutter: 12,
         responsive: {
             992: {
@@ -181,7 +181,7 @@ if(document.getElementsByClassName('tiny-six-item').length > 0) {
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,
         navPosition: "bottom",
-        speed: 400,
+        speed: 800,
         gutter: 12,
         responsive: {
             992: {
@@ -212,7 +212,7 @@ if(document.getElementsByClassName('tiny-ten-item').length > 0) {
         navPosition: "bottom",
         controlsText: ['<i class="mdi mdi-chevron-left "></i>', '<i class="mdi mdi-chevron-right"></i>'],
         nav: false,
-        speed: 400,
+        speed: 800,
         gutter: 0,
         responsive: {
             1025: {
