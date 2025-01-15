@@ -63,11 +63,13 @@ background:#F8F9FA;
                                             <div class="card blog-primary rounded border-0 shadow overflow-hidden">
                                                 <div class="row align-items-center g-0">
                                                     <div class="col-md-6">
-                                                        <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
+                                                    <a href="{{ site.baseurl }}{{ item.url }}">
+                                                    <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
+                                                    </a>                                                    
                                                     </div><!--end col-->
                                                     <div class="col-md-6">
                                 <div class="card-body content">
-                                    <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.title }}</a></h5>
+                                    <h5><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h5>
                                     <div class="post-meta d-flex justify-content-start align-items-center mt-3">
                                         <ul class="list-unstyled mb-0">
                                         </ul>
@@ -110,11 +112,13 @@ background:#F8F9FA;
                                             <div class="card blog-primary rounded border-0 shadow overflow-hidden">
                                                 <div class="row align-items-center g-0">
                                                     <div class="col-md-6">
-                                                        <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
+                                                    <a href="{{ site.baseurl }}{{ item.url }}">
+                                                    <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}" class="img-fluid w-100 h-100" alt="">
+                                                    </a>                                                    
                                                     </div><!--end col-->
                                                     <div class="col-md-6">
                                 <div class="card-body content">
-                                    <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ item.title }}</a></h5>
+                                    <h5><a href="{{ site.baseurl }}{{ item.url }}" class="card-title title text-dark">{{ item.title }}</a></h5>
                                     <div class="post-meta d-flex justify-content-start align-items-center mt-3">
                                         <ul class="list-unstyled mb-0">
                                         </ul>
