@@ -17,7 +17,7 @@ image_path: assets/posts/supermarket_prices_olive_oil.webp
 Η εικόνα που προκύπτει είναι χαρακτηριστική της κρίσης που έπληξε την αγορά ελαιόλαδου: οι τιμές παρέμειναν σχετικά σταθερές καθ' όλη τη διάρκεια του 2022, κυμαινόμενες μεταξύ 6 και 7 ευρώ/λίτρο.
 Ωστόσο, από τα μέσα του 2023, παρατηρήθηκε μια απότομη και έντονη ανοδική πορεία, με τις τιμές να διπλασιάζονται και να κορυφώνονται τον Ιανουάριο του 2024, φτάνοντας τα 14 ευρώ/λίτρο.
 
-Λαμβάνοντας υπόψη ότι η μέση ετήσια κατανάλωση ελαιόλαδου στην Ελλάδα ανέρχεται στα 11,22 λίτρα ανά άτομο, η αύξηση της τιμής από 6€ σε 14€ συνεπάγεται μια πρόσθετη επιβάρυνση 90€ ετησίως για τον
+Λαμβάνοντας υπόψη ότι η μέση ετήσια κατανάλωση ελαιόλαδου στην Ελλάδα ανέρχεται στα <a href="https://www.olivenews.gr/el/diatrofi/koyzina-estiasi/ellada-echase-tin-1i-thesi-stin-kefali-katanalosi-elaioladoy/">[1]</a> 11,22 λίτρα ανά άτομο, η αύξηση της τιμής από 6€ σε 14€ συνεπάγεται μια πρόσθετη επιβάρυνση 90€ ετησίως για τον
 καταναλωτή, με την προϋπόθεση ότι η κατανάλωση παραμένει στα ίδια επίπεδα.
 
 <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/supermarket-prices-olive-oil-2025-01_02.png' }}" class="img-fluid w-100 h-100" alt="">
@@ -32,6 +32,6 @@ image_path: assets/posts/supermarket_prices_olive_oil.webp
 <div class="sources">
     <h3>Πηγές</h3>
     <p>
-        <a href="https://www.olivenews.gr/el/diatrofi/koyzina-estiasi/ellada-echase-tin-1i-thesi-stin-kefali-katanalosi-elaioladoy/" target="_blank">[1]</a> Olivenews.
+        <a href="https://www.olivenews.gr/el/diatrofi/koyzina-estiasi/ellada-echase-tin-1i-thesi-stin-kefali-katanalosi-elaioladoy/" target="_blank">[1]</a> OliveNews.
     </p>
 </div>
