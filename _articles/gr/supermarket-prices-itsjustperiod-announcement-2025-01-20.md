@@ -5,6 +5,7 @@ use_cover_image: false
 date: 2025-01-20
 related_dataset_slugs: 
   - supermarket-prices-itsjustperiod
+  - supermarket-prices
 image_path: assets/posts/supermarket_period.webp
 ---
 

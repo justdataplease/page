@@ -338,11 +338,11 @@
                                     Σχετικά Άρθρα
                                     {% endif %}
                                 </h3>
-                                {% for article in related_articles %}
-                                {% if article.lang == page.lang %}
                                 <div class="row justify-content-center pt-3 ps-0">
                                     <div class="col-lg-12">
                                         <div class="tiny-three-item">
+                                            {% for article in related_articles %}
+                                            {% if article.lang == page.lang %}
                                             <div class="tiny-slide">
                                                 <div class="d-flex m-2">
                                                     <div class="card flex-1 content p-3 shadow rounded position-relative">
@@ -352,12 +352,12 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            {% endif %}
+                                            {% endfor %}
                                         </div>
-                                    </div><!--end col-->
-                                </div><!--end row-->
-                                {% endif %}
-                                {% endfor %}
-                            </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
                             {% endif %}
                             <br>
 
