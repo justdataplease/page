@@ -1,7 +1,7 @@
 ---
 title: Προυπολογισμός Δήμου Αθηναίων
 slug: athens-municipality-budget
-description: Προυπολογισμός Δήμου Αθηναίων
+description: Προϋπολογισμός Δήμου Αθηναίων
 category: Οικονομία
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
