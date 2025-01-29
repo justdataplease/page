@@ -1,6 +1,8 @@
 ---
 title: Πορεία Τιμών Καυσίμων στην Ελλάδα 2020–2024
 slug: fuel-prices-greece-timeline
+redirect_from:
+  - /qu36yl/
 use_cover_image: false
 date: 2024-11-10
 related_dataset_slugs: 
