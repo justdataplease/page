@@ -3,6 +3,8 @@ title: 'Τιμές ελαιόλαδου στην Ελλάδα: Ανάλυση τ
 slug: supermarket-prices-olive-oil-2025-01-27
 use_cover_image: false
 date: 2025-01-26
+redirect_from:
+  - /7e69c3/
 related_dataset_slugs:
   - supermarket-prices
 image_path: assets/posts/supermarket_prices_olive_oil.webp
