@@ -4,7 +4,7 @@ baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
 url: "https://dataforgreece.com"
 author: DataForGreece
 email: support@justdataplease.com
-include: ['_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr' ]
+include: [ '_shortlinks','_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr' ]
 
 collections:
   articles:
@@ -71,6 +71,9 @@ defaults:
       layout: "data"
       categories: "data-directory"
       permalink: /data-directory/:slug/
+
+plugins:
+  - jekyll-redirect-from
 
 languages:
   default: "gr"
