@@ -38,6 +38,6 @@ We may update this privacy policy at any time. Changes will be posted on this pa
 
 If you have questions or concerns about our privacy policy, contact us at:
 
-**DataForGreece**: dataforgreece@outlook.com<br>
+**DataForGreece**: info@dataforgreece.com<br>
 **Astylab**: astylab@outlook.com<br>
 **JustDataPlease**: support@justdataplease.com<br>
