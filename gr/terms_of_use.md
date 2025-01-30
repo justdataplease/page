@@ -44,7 +44,7 @@ _Τελευταία τροποποίηση: 5 Δεκεμβρίου 2024_
 
 Για οποιεσδήποτε ερωτήσεις ή σχόλια, παρακαλούμε επικοινωνήστε μαζί μας στο:
 
-**DataForGreece**: dataforgreece@outlook.com<br>
+**DataForGreece**: info@dataforgreece.com<br>
 **Astylab**: astylab@outlook.com<br>
 **JustDataPlease**: support@justdataplease.com<br>
 
