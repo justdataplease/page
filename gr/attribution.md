@@ -43,7 +43,7 @@ permalink: /attribution/
                 <img src="https://dataforgreece.com/assets/posts/supermarket-prices-olive-oil-2025-01.png" alt="Γράφημα Τιμών Σούπερ Μάρκετ" class="img-fluid">
 
                 <p class="mt-2 text-center">
-                    <small><strong>Τα δεδομένα παρέχονται από</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">
+                    <small><strong>Πηγή:</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">
                     DataForGreece</a></small>
                 </p>
 
