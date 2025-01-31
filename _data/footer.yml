@@ -18,7 +18,7 @@ gr:
       url: "https://justdataplease.com"
     - name: "Επικοινωνία"
       url: "/about/"
-    - name: "Αναφορά Πηγής"
+    - name: "Αναφορά Πηγής & Πολιτική Χρήσης"
       url: "/attribution/"
 
 en:
@@ -41,6 +41,6 @@ en:
       url: "https://justdataplease.com"
     - name: "Contact Us"
       url: "/about/"
-    - name: "Attribution"
+    - name: "Attribution & Usage Policy"
       url: "/en/attribution/"
 
