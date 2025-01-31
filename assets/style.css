@@ -284,3 +284,10 @@ pre code {
     margin: 20px 0;            /* Margin to separate from other elements */
     font-family: Arial, sans-serif; /* Font style for readability */
 }
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1600px!important; /* Adjust as needed */
+  }
+}
