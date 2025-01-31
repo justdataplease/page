@@ -20,7 +20,7 @@ permalink: /en/attribution/
                 <h5 class="mt-3">Proper Attribution Format</h5>
                 <p class="mt-3">
                     If you are embedding or referencing a specific dataset or visual, include a direct link to that dataset. <br>
-                    Example: You decide to use this <a href="https://dataforgreece.com/data-directory/supermarket-prices/">visual</a>.
+                    For example if you decide to use this <a href="https://dataforgreece.com/data-directory/supermarket-prices/">visual, you should include one of the following.</a>
                 </p>
 
                 <div class="bg-light p-3 border rounded">
