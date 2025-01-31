@@ -18,6 +18,8 @@ gr:
       url: "https://justdataplease.com"
     - name: "Επικοινωνία"
       url: "/about/"
+    - name: "Δικαιώματα"
+      url: "/attribution/"
 
 en:
   description: "Data for Greece is an initiative aimed at providing data and information on the social, economic, and political life of Greece. We collect and analyze various datasets to offer a deeper understanding of how Greece evolves across different sectors."
@@ -28,7 +30,7 @@ en:
       url: "/en/privacy-policy/"
   links:
     - name: "About Us"
-      url: "/en/reports/"
+      url: "/en/about/"
     - name: "Data Directory"
       url: "/en/data-directory/"
     - name: "News"
@@ -39,4 +41,6 @@ en:
       url: "https://justdataplease.com"
     - name: "Contact Us"
       url: "/about/"
+    - name: "Attribution"
+      url: "/en/attribution/"
 
