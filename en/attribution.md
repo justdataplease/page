@@ -42,7 +42,7 @@ permalink: /en/attribution/
                 <img src="https://dataforgreece.com/assets/posts/supermarket-prices-olive-oil-2025-01.png" alt="Supermarket Prices Graph" class="img-fluid">
 
                 <p class="mt-2 text-center">
-                    <small><strong>Data provided by</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">
+                    <small><strong>Source:</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">
                     DataForGreece</a></small>
                 </p>
 
