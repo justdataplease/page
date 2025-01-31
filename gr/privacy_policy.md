@@ -41,5 +41,5 @@ _Τελευταία τροποποίηση: 5 Δεκεμβρίου 2024_
 Εάν έχετε ερωτήσεις ή ανησυχίες σχετικά με την πολιτική απορρήτου μας, επικοινωνήστε μαζί μας στο:
 
 **DataForGreece**: info@dataforgreece.com<br>
-**Astylab**: astylab@outlook.com<br>
+**Astylab**: info@astylab.gr<br>
 **JustDataPlease**: support@justdataplease.com<br>

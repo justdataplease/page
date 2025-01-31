@@ -45,7 +45,7 @@ We reserve the right to modify these terms at any time. Changes will take effect
 For any questions or comments, please contact us at:
 
 **DataForGreece**: info@dataforgreece.com<br>
-**Astylab**: astylab@outlook.com<br>
+**Astylab**: info@astylab.gr<br>
 **JustDataPlease**: support@justdataplease.com<br>
 
 If you believe that any content on the website is offensive, raises intellectual property concerns, or has other issues, please contact us, and we will review your request.

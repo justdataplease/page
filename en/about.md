@@ -29,7 +29,7 @@ permalink: /en/about/
             </p>
             <ul>
                 <li>DataForGreece: <a href="mailto:info@dataforgreece.com">info@dataforgreece.com</a></li>
-                <li>Astylab: <a href="mailto:astylab@outlook.com">astylab@outlook.com</a></li>
+                <li>Astylab: <a href="mailto:info@astylab.gr">info@astylab.gr</a></li>
                 <li>JustDataPlease: <a href="mailto:support@justdataplease.com">support@justdataplease.com</a></li>
             </ul>
         </div>
