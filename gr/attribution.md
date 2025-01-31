@@ -21,7 +21,7 @@ permalink: /attribution/
                 <h5 class="mt-3">Σωστή Μορφή Αναφοράς</h5>
                 <p class="mt-3">
                     Εάν ενσωματώνετε ή αναφέρεστε σε ένα συγκεκριμένο σύνολο δεδομένων ή οπτικοποίηση, συμπεριλάβετε έναν άμεσο σύνδεσμο προς αυτά. <br>
-                    Για παράδειγμα αν επιλέγατε να χρησιμοποιήσετε αυτό το <a href="https://dataforgreece.com/data-directory/supermarket-prices/">γράφημα, θα έπερε να χρησιμοποιήσετε ένα απο τα παρακάτω</a>.
+                    Για παράδειγμα αν επιλέγατε να χρησιμοποιήσετε αυτό το <a href="https://dataforgreece.com/data-directory/supermarket-prices/">γράφημα, θα έπερε να χρησιμοποιήσετε ένα απο τα παρακάτω.</a>
                 </p>
 
                 <div class="bg-light p-3 border rounded">
