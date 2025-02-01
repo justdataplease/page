@@ -41,7 +41,8 @@
     <section class="section pt-5 pb-4">
         <div class="container">
             <div class="row">
-                {% for item in site.data_directory %}
+                {% assign data_directory_ = site.data_directory | sort:"date" | reverse %}
+                {% for item in data_directory_ %}
                 {% if item.lang == page.lang and item.live != false %}
 
                 <div class="col-md-6 col-12 mb-4 pb-2">
