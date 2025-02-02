@@ -1,7 +1,7 @@
 ---
-title: Τιμές Καυσίμων Κίνησης στην Ελλάδα
+title: Τιμές Καυσίμων Κίνησης και Θέρμανσης στην Ελλάδα
 slug: fuel-prices-greece
-description: Τιμές Καυσίμων Κίνησης στην Ελλάδα
+description: Τιμές Καυσίμων Κίνησης και Θέρμανσης στην Ελλάδα
 date: 2024-11-09
 category: Οικονομία
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip

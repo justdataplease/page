@@ -1,5 +1,5 @@
 ---
-title: Προυπολογισμός Δήμου Αθηναίων
+title: Προϋπολογισμός Δήμου Αθηναίων
 slug: athens-municipality-budget
 description: Προϋπολογισμός Δήμου Αθηναίων
 category: Οικονομία
@@ -15,7 +15,7 @@ source_url: "https://old.cityofathens.gr/khe/proypologismos"
 contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 
-chart_id: 
+chart_id: "athens-municipality-budget"
 description_detailed: "Αυτό το σύνολο δεδομένων παρέχει λεπτομερείς πληροφορίες για τον προϋπολογισμό και τις δαπάνες του Δήμου Αθηναίων από το 2005 έως το 2024. Περιλαμβάνει τις αρχικές κατανομές προϋπολογισμού,
 αναμορφώσεις, δεσμευθέντα ποσά, ενταλθέντα και πληρωθέντα ποσά ανά υπηρεσία. Τα δεδομένα αφορούν έξοδα όπως νομικές αμοιβές, προμήθειες γραφείου, έξοδα δημοσίων σχέσεων και συντήρηση εξοπλισμού."
 description_preprocess: "Τα δεδομένα κατέβηκαν και συνδυάστηκαν σε ένα αρχείο."
