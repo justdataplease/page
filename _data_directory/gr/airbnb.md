@@ -5,7 +5,8 @@ description: Airbnb
 category: Οικονομία
 date: 2025-01-14
 download_url: 
-
+redirect_from:
+  - /airbnb/
 published_by: "DataForGreece"
 last_update: "🟢 Live - Ανά 2-3 μήνες"
 date_added: "2025-01-14"
