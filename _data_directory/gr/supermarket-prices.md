@@ -5,7 +5,8 @@ description: Τιμές Σουπερμάρκετ
 category: Οικονομία
 date: 2024-12-22
 download_url: 
-
+redirect_from:
+  - /supermarkets/
 published_by: "DataForGreece"
 last_update: "🟢 Live - Εβδομαδιαία (κάθε Δευτέρα)"
 date_added: "2024-12-22"
