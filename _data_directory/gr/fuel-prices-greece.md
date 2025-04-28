@@ -5,7 +5,8 @@ description: Τιμές Καυσίμων Κίνησης και Θέρμανση�
 date: 2024-11-09
 category: Οικονομία
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip
-
+redirect_from:
+  - /fuel/
 published_by: "DataForGreece"
 last_update: "2025-02-01"
 date_added: "2024-11-09"
