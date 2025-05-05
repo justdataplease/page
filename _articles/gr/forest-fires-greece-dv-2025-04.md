@@ -1,5 +1,5 @@
 ---
-title: Δασικές Πυρκαγίες στην Ελλάδα 2000-2024 by Dimitris Bekris (Community)
+title: Δασικές Πυρκαγίες στην Ελλάδα 2000-2024 by Dimitris Bekris (Κοινότητα )
 slug: forest-fires-greece-dv-2025-04
 use_cover_image: false
 date: 2025-04-15
