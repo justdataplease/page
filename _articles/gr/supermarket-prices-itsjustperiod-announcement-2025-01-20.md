@@ -2,7 +2,7 @@
 title: Προϊόντα Περιόδου Προσιτά για Όλους
 slug: supermarket-prices-itsjustperiod-announcement-2025-01-20
 use_cover_image: false
-date: 2025-01-20
+date: 2025-05-12
 related_dataset_slugs: 
   - supermarket-prices-itsjustperiod
   - supermarket-prices
