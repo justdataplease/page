@@ -31,7 +31,7 @@ image_path: assets/posts/supermarket_period.webp
 
 Σε συνεργασία με το **Data for Greece**, παρακολουθούν τις τιμές των προϊόντων για να διασφαλίσουν ότι, αν μειωθεί ο φόρος, οι καταναλωτές θα επωφεληθούν από τη μείωση και δεν θα απορροφηθούν τα κέρδη από τα σούπερ μάρκετ, όπως έχει συμβεί σε πολλές περιπτώσεις στην Ευρώπη.
 
-Μάθετε περισότερα για τη συγκεκριμένη δράση της ομάδας **It’s Just Period** μέσα απο 
+Μάθετε περισσότερα για τη συγκεκριμένη δράση της ομάδας **It’s Just Period** μέσα απο 
 - το [website](https://itsjustperiod.org/) 
 - τα social ([tiktok](https://www.tiktok.com/@_itsjustperiod?) & [Instagram](https://www.instagram.com/_itsjustperiod)) 
 - η βοηθώντας ενεργά υπογράφοντας το [ψήφισμα](https://shorturl.at/cRhM1 )
