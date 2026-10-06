@@ -43,7 +43,7 @@
         <header class="article__head article__head--wide topic__head">
             <nav class="crumbs" aria-label="breadcrumb">
                 <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
-                <a href="{{ site.baseurl }}{{ t.paths.topics }}">{% include upper.html text=t.topics %}</a>
+                <a href="{{ site.baseurl }}{{ t.paths.topics }}">{% include upper.html text=t.data_directory %}</a>
                 <span aria-current="page">{% include upper.html text=tx.name %}</span>
             </nav>
             <p class="kicker">{% if tp.kind == 'special' %}{% include upper.html text=t.special %} · {{ tx.when_label }}{% else %}{% include upper.html text=t.topic %}{% endif %}</p>

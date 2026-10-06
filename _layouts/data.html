@@ -72,7 +72,7 @@
                     {%- if page.download_url %}
                     <a class="btn btn--block" href="{{ page.download_url }}" target="_blank" rel="noopener">{{ t.download }}</a>
                     {%- else %}
-                    <a class="btn btn--block" href="https://dataforgreece.com/about/" target="_blank" rel="noopener">{{ t.ask }}</a>
+                    <a class="btn btn--block" href="https://dataforgreece.gr/about/" target="_blank" rel="noopener">{{ t.ask }}</a>
                     {%- endif %}
                 </div>
 
@@ -116,9 +116,9 @@
                 <label for="chartId">{{ t.embed_label }}</label>
                 <input type="text" id="chartId" placeholder="e.g.,{{ first_chart_id }}" data-default="{{ first_chart_id }}" autocomplete="off">
                 <p>{{ t.embed_help_1 }}</p>
-                <pre id="embedCode1"><code>&lt;iframe src="https://dataforgreece.com/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+                <pre id="embedCode1"><code>&lt;iframe src="https://dataforgreece.gr/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
                 <p>{{ t.embed_help_2 }}</p>
-                <pre id="embedCode2"><code>&lt;iframe src="https://dataforgreece.com/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+                <pre id="embedCode2"><code>&lt;iframe src="https://dataforgreece.gr/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
             </div>
         </section>
         {%- endif %}

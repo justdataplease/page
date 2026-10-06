@@ -4,7 +4,7 @@ gr:
   other_lang: "EN"
   paths:
     home: "/"
-    data_directory: "/data-directory/"
+    data_directory: "/themata/#datasets"
     news: "/news/"
     reports: "/reports/"
     topics: "/themata/"
@@ -37,8 +37,8 @@ gr:
   research_plural: "Έρευνες"
   reports: "Πίνακες δεδομένων"
   news: "ΝΕΑ"
-  data_directory: "Συλλογή Δεδομένων"
-  data_directory_upper: "ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ"
+  data_directory: "Δεδομένα"
+  data_directory_upper: "ΔΕΔΟΜΕΝΑ"
   data_upper: "ΔΕΔΟΜΕΝΑ"
   reports_upper: "ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ"
 
@@ -109,7 +109,7 @@ gr:
   disclaimer: "Τα δεδομένα που παρουσιάζονται εδώ προορίζονται αποκλειστικά για εκπαιδευτικούς και ενημερωτικούς σκοπούς. Δεν αποτελούν νομικές, επαγγελματικές ή συμβουλευτικές οδηγίες. Οι πληροφορίες παρέχονται «ως έχουν» χωρίς καμία εγγύηση ακρίβειας ή πληρότητας. Οποιαδήποτε χρήση τους είναι αποκλειστική ευθύνη του χρήστη. Αν παρατηρήσετε προβλήματα ή θέλετε να αναφέρετε κάποιο ζήτημα σχετικά με τα δεδομένα, επικοινωνήστε μαζί μας στο"
 
   # topics (Θέματα) and special topics
-  topics_nav: "ΘΕΜΑΤΑ"
+  topics_nav: "ΔΕΔΟΜΕΝΑ"
   topics: "Θέματα"
   topics_dek: "Κάθε θέμα με τα δεδομένα του: πηγές, dashboards που ενημερώνονται συνεχώς και τακτικές αναλύσεις."
   topic: "Θέμα"
@@ -169,7 +169,7 @@ en:
   other_lang: "GR"
   paths:
     home: "/en/"
-    data_directory: "/en/data-directory/"
+    data_directory: "/en/topics/#datasets"
     news: "/en/news/"
     reports: "/en/reports/"
     topics: "/en/topics/"
@@ -200,8 +200,8 @@ en:
   research_plural: "Research"
   reports: "Reports"
   news: "NEWS"
-  data_directory: "Data Directory"
-  data_directory_upper: "DATA DIRECTORY"
+  data_directory: "Data"
+  data_directory_upper: "DATA"
   data_upper: "DATA"
   reports_upper: "REPORTS"
 
@@ -266,7 +266,7 @@ en:
   disclaimer: "The data presented here are intended exclusively for educational and informational purposes. They do not constitute legal, professional, or advisory guidance. The information is provided 'as is' without any guarantees of accuracy or completeness. Any use of this data is solely the responsibility of the user. If you notice any problems or want to report an issue related to the data, contact us at"
 
   # topics and special topics
-  topics_nav: "TOPICS"
+  topics_nav: "DATA"
   topics: "Topics"
   topics_dek: "Every topic with its data: sources, always-up-to-date dashboards and regular analysis."
   topic: "Topic"

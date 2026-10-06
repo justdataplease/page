@@ -17,12 +17,12 @@ By accessing and using the website, you agree to be bound by these terms of use.
 #### 2. Use of the Website
 
 The website and its content are intended for educational and informational purposes. Free use of the data and charts provided on the website is permitted, provided proper attribution is given to *
-*dataforgreece.com**.
+*dataforgreece.gr**.
 
 #### 3. Intellectual Property
 
 All website content, including text, graphics, and data, is protected under intellectual property laws. Reproduction, distribution, or modification of the content is allowed only if accompanied by
-attribution to **dataforgreece.com**.
+attribution to **dataforgreece.gr**.
 
 #### 4. Disclaimer
 

@@ -1,7 +1,7 @@
 title: Data for Greece
 description: Aνακάλυψε την Ελλάδα μέσα από δεδομένα
 baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
-url: "https://dataforgreece.com"
+url: "https://dataforgreece.gr"
 author: DataForGreece
 email: support@justdataplease.com
 include: [ '_shortlinks','_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr','_topics/en','_topics/gr' ]
