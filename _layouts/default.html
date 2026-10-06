@@ -1,6 +1,6 @@
 {% include head.html %}
 {%- if page.url == '/' or page.url == '/en/' %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css?v={{ site.time | date: '%s' }}">
 {%- endif %}
 <body class="{% if page.url == '/' or page.url == '/en/' %}is-home{% endif %}">
 {% include masthead.html %}

@@ -8,7 +8,7 @@
 {%- assign all_topics = site.data.topics | where: "kind", "topic" -%}
 {%- assign all_specials = site.data.topics | where: "kind", "special" -%}
 <body>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/topics.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/topics.css?v={{ site.time | date: '%s' }}">
 {% include masthead.html %}
 
 <main class="wrap tl">
