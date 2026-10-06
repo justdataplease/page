@@ -1,15 +1,14 @@
 {% include head.html %}
+{%- if page.url == '/' or page.url == '/en/' %}
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css">
+{%- endif %}
+<body class="{% if page.url == '/' or page.url == '/en/' %}is-home{% endif %}">
+{% include masthead.html %}
 
-<body>
-    <!-- Include Navbar -->
-    {% include navbar.html %}
+<main>
+    {{ content }}
+</main>
 
-    <!-- Main content -->
-    <main>
-        {{ content }}
-    </main>
-
-    <!-- Include Footer -->
-    {% include footer.html %}
+{% include footer.html %}
 </body>
 </html>

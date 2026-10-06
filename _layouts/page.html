@@ -1,47 +1,23 @@
 {% include head.html %}
-
 <body>
-<!-- Include Navbar -->
-{% include navbar.html %}
+{% include masthead.html %}
 
-<!-- Main content -->
 <main>
-    <!-- Hero Start -->
-    <section class="bg-half-100 d-flex w-100 pb-0">
-        <div class="container">
-            <div class="">
-                <div class="row justify-content-center">
-                    <nav aria-label="breadcrumb" class="d-inline-block">
-                        <ul class="breadcrumb m-0 p-0">
-                            {% if page.lang == 'en' %}
-                            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                            <li class="breadcrumb-item active">{{ page.title_upper | default: page.title }}</li>
-                            {% else %}
-                            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                            <li class="breadcrumb-item active">{{ page.title_upper | default: page.title }}</li>
-                            {% endif %}
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="row mt-3 justify-content-start">
-                <div class="col-lg-12">
-                    {% if page.lang == 'en' %}
-                    <h2 class="title mb-0"> {{page.title}} </h2>
-                    {% else %}
-                    <h2 class="title mb-0"> {{page.title}}</h2>
-                    {% endif %}
-                </div>  <!--end col-->
-            </div><!--end row-->
+    <article class="article wrap">
+        <header class="article__head">
+            <nav class="crumbs" aria-label="breadcrumb">
+                <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
+                <span aria-current="page">{{ page.title_upper | default: page.title }}</span>
+            </nav>
+            <h1 class="hl hl--article">{{ page.title }}</h1>
+            {%- if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
+        </header>
+        <div class="prose">
             {{ content }}
-        <br><br>
-        </div> <!--end container-->
-        <!-- Hero End -->
-
-    </section><!--end section-->
+        </div>
+    </article>
 </main>
 
-<!-- Include Footer -->
 {% include footer.html %}
 </body>
 </html>

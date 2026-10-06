@@ -1,0 +1,13 @@
+{%- comment -%}
+  Finds the topic (or special topic) an article belongs to and leaves it in `_topic` (nil when none):
+  its own `topic:` front matter first, else the topic whose `articles` list names its slug (_data/topics.yml).
+{%- endcomment -%}
+{%- assign _topic = nil -%}
+{%- assign _tslug = include.doc.slug -%}
+{%- if include.doc.topic -%}
+{%- assign _topic = site.data.topics | where: "key", include.doc.topic | first -%}
+{%- else -%}
+{%- for _x in site.data.topics -%}
+{%- if _x.articles contains _tslug -%}{%- assign _topic = _x -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- endif -%}

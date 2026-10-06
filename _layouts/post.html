@@ -1,142 +1,64 @@
 {% include head.html %}
+{%- include topic-of.html doc=page -%}
+{%- assign post_topic = _topic -%}
 <body>
-{% include navbar.html %}
+{% include masthead.html %}
+
 <main>
-    <section class="bg-half-100 d-flex w-100 pb-4">
+    <article class="article wrap">
+        <header class="article__head">
+            <p class="kicker"><a href="{{ site.baseurl }}{% if post_topic %}{{ t.paths.topics }}{{ post_topic.key }}/{% else %}{{ t.paths.news }}{% endif %}">{% include kicker.html doc=page %}</a></p>
+            <h1 class="hl hl--article">{{ page.title }}</h1>
+            {% include byline.html doc=page %}
+            {% include share.html %}
+        </header>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="row">
+        {%- if page.use_cover_image %}
+        <figure class="art art--cover">
+            <img src="{{ site.baseurl }}/{{ page.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="">
+        </figure>
+        {%- endif %}
 
-                        <div class="col-md-1 d-none d-md-block">
-                            <ul class="list-unstyled text-start sticky-bar social-icon social mb-0 pt-1">
-                                <li class="mb-2 h6 text-center">Share</li>
-                                <div class="text-center">
-                                    <!-- Facebook Share -->
-                                    <li class="mt-1">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="facebook" class="uil uil-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Bluesky -->
-                                    <li class="mt-1">
-                                        <a href="https://bsky.app/intent/compose?text=Check%20this%20out!%20{{ site.url }}{{ page.url }}" target="_blank" class="rounded">
-                                            <i class="uil uil-cloud"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Twitter Share -->
-                                    <li class="mt-1">
-                                        <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="twitter" class="uil uil-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <!-- LinkedIn Share -->
-                                    <li class="mt-1">
-                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="linkedin" class="uil uil-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-
-
-                        <div class="col-md-11 fs-5">
-
-                            <div class="row justify-content-center">
-                                <nav aria-label="breadcrumb" class="d-inline-block">
-                                    <ul class="breadcrumb m-0 p-0">
-                                        {% if page.lang == 'en' %}
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                                        <li class="breadcrumb-item active">{{ page.title_upper | default: page.title }}</li>
-                                        {% else %}
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                                        <li class="breadcrumb-item active">{{ page.title_upper | default: page.title }}</li>
-                                        {% endif %}
-                                    </ul>
-                                </nav>
-                            </div>
-
-                            <h1>{{ page.title }}</h1>
-
-                            <ul class="list-unstyled d-flex justify-content-between mt-4 fs-6">
-                                <li class="list-inline-item user me-2"><i class="uil uil-user text-dark"></i> {{ page.author | default : "DataForGreece" }}</li>
-                                <li class="list-inline-item date"><i class="uil uil-calendar-alt text-dark"></i>
-                                    {{ page.date | date: "%Y-%m-%d" }}
-                                </li>
-                            </ul>
-
-                            {% if page.use_cover_image %}
-                            <div class="text-center">
-                                <img src="{{ site.baseurl }}/{{ item.image_path | default: 'assets/posts/default-blog-cover.webp' }}"
-                                     class="img-fluid rounded-md  w-100 shadow" alt="">
-                            </div>
-                            {% endif %}
-
-                            <p class="text-muted">{{content}}</p>
-
-                            <br>
-
-                            <div class="related-datasets">
-                                <h3>
-                                    {% if page.lang == "en" %}
-                                    Related Datasets
-                                    {% else %}
-                                    Σχετικά Σύνολα Δεδομένων
-                                    {% endif %}
-                                </h3>
-
-                                <div class="row justify-content-center pt-3 ps-0">
-                                    <div class="col-lg-12">
-                                        <div class="tiny-three-item">
-                                            {% for slug in page.related_dataset_slugs %}
-                                            {% assign related_dataset = site.data_directory | where: "slug", slug | where: "lang", page.lang | first %}
-                                            {% if related_dataset %}
-
-                                            <div class="tiny-slide">
-                                                <div class="d-flex m-2">
-                                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                        <h6>
-                                                            <a href="{{ site.baseurl }}{{ related_dataset.url }}" class="h5 title text-dark">
-                                                                {{ related_dataset.title }}
-                                                            </a>
-                                                        </h6>
-                                                        <a href="{{ site.baseurl }}{{ related_dataset.url }}" class="text-muted readmore">
-                                                            <strong>
-                                                                {% if page.lang == "en" %}Read More{% else %}Διαβάστε Περισσότερα{% endif %}
-                                                                <i class="uil uil-angle-right-b align-middle"></i>
-                                                            </strong>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                    </div><!--end col-->
-                                </div><!--end row-->
-                            </div>
-
-                            <br>
-
-                            {% include footer-newsletter.html %}
-                            {% include data-extra-footer.html %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="prose">
+            {{ content }}
         </div>
-    </section>
 
+        {%- if page.related_dataset_slugs %}
+        <aside class="related">
+            <h2 class="label">{{ t.related_datasets }}</h2>
+            <div class="related__list">
+                {%- for slug in page.related_dataset_slugs %}
+                {%- assign rd = site.data_directory | where: "slug", slug | where: "lang", page.lang | first %}
+                {%- if rd %}
+                <a class="related__item" href="{{ site.baseurl }}{{ rd.url }}">
+                    <span class="art"><img src="{{ site.baseurl }}/{{ rd.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy"></span>
+                    <span class="related__text">
+                        <span class="kicker">{% include upper.html text=rd.category %}</span>
+                        <span class="hl hl--s">{{ rd.title }}</span>
+                        <span class="meta">{% include update.html doc=rd %}</span>
+                    </span>
+                </a>
+                {%- endif %}
+                {%- endfor %}
+            </div>
+        </aside>
+        {%- endif %}
+
+        {%- if post_topic %}
+        {%- comment -%} Every analysis points back to its topic: the dashboards, the sources, the other editions. {%- endcomment %}
+        <aside class="topic-end">
+            <h2 class="label">{{ t.see_topic }}</h2>
+            {% include topic-card.html topic=post_topic %}
+        </aside>
+        {%- endif %}
+    </article>
+
+    <div class="wrap article-end">
+        {% include newsletter.html wide=true %}
     </div>
+    {% include disclaimer.html %}
 </main>
+
 {% include footer.html %}
 </body>
 </html>

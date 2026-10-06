@@ -1,0 +1,7 @@
+{%- comment -%} "🟢 Live - Εβδομαδιαία" becomes a LIVE badge + "Εβδομαδιαία". {%- endcomment -%}
+{%- assign _u = include.doc.last_update | default: '' | append: '' -%}
+{%- if _u contains 'Live' -%}
+<span class="live">{{ t.live }}</span> {{ _u | remove: '🟢' | remove: 'Live' | strip | remove_first: '-' | strip }}
+{%- elsif _u != '' -%}
+{{ t.updated }}: {{ _u }}
+{%- endif -%}

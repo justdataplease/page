@@ -1,0 +1,89 @@
+{%- comment -%}
+  /themata/ and /en/topics/: the topics index, a ruled ledger. One row per topic (picture, name, the data file,
+  the analysis schedule, the dashboard), then the special topics as a short dated list.
+  Everything comes from _data/topics.yml, in its order; the UI strings from _data/i18n.yml.
+  Styles: assets/css/topics.css. One row: _includes/topics-row.html.
+{%- endcomment -%}
+{% include head.html %}
+{%- assign all_topics = site.data.topics | where: "kind", "topic" -%}
+{%- assign all_specials = site.data.topics | where: "kind", "special" -%}
+<body>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/topics.css">
+{% include masthead.html %}
+
+<main class="wrap tl">
+    {% include section-head.html title=t.topics crumb=t.topics dek=t.topics_dek %}
+
+    <nav class="tl-jump" id="tl-index" aria-label="{{ t.index }}">
+        <span class="tl-jump__label">{% include upper.html text=t.index %}</span>
+        <ul>
+            {%- for tp in all_topics %}
+            <li><a href="#{{ tp.key }}">{{ tp[lang].name }}</a></li>
+            {%- endfor %}
+            {%- if all_specials.size > 0 %}
+            <li class="tl-jump__sp"><a href="#specials">{{ t.specials }}</a></li>
+            {%- endif %}
+        </ul>
+    </nav>
+
+    <p class="tl-key">
+        <span class="tl-key__label">{% include upper.html text=t.buttons %}</span>
+        <span><b>{{ t.explore }}:</b> {{ t.buttons_explore }}</span>
+    </p>
+
+    <section class="tl-ledger" aria-label="{{ t.topics }}">
+        <div class="tl-head" aria-hidden="true">
+            <span class="tl-head__topic">{% include upper.html text=t.topic %}</span>
+            <span>{% include upper.html text=t.data_file %}</span>
+            <span>{% include upper.html text=t.editions %}</span>
+            <span>{% include upper.html text=t.check_data %}</span>
+        </div>
+        {%- for tp in all_topics %}
+        {% include topics-row.html topic=tp n=forloop.index %}
+        {%- endfor %}
+    </section>
+
+    {%- if all_specials.size > 0 %}
+    <section class="band tl-specials" aria-labelledby="specials">
+        <h2 class="band__label" id="specials">{{ t.specials }}</h2>
+        <p class="band__dek">{{ t.specials_dek }}</p>
+        <ol class="tl-sp">
+            {%- for sp in all_specials %}
+            {%- assign spx = sp[lang] -%}
+            {%- assign sp_when = t.special | append: " · " | append: spx.when_label -%}
+            {%- assign sp_href = site.baseurl | append: t.paths.topics | append: sp.key | append: "/" -%}
+            {% include topic-articles.html topic=sp %}
+            {%- assign sp_parent = nil -%}
+            {%- if sp.parent -%}{%- assign sp_parent = site.data.topics | where: "key", sp.parent | first -%}{%- endif -%}
+            <li class="tl-sp__item" id="{{ sp.key }}">
+                <a class="art tl-sp__art" href="{{ sp_href }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ sp.image | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+                </a>
+                <div class="tl-sp__text">
+                    <p class="tl-sp__when">{% include upper.html text=sp_when %}</p>
+                    <h3 class="hl hl--m"><a href="{{ sp_href }}">{{ spx.name }}</a></h3>
+                    <p class="tl-sp__dek">{{ spx.dek }}</p>
+                    {%- if sp_parent %}
+                    <p class="meta">{{ t.topic }}: <a class="tl-sp__parent" href="#{{ sp_parent.key }}">{{ sp_parent[lang].name }}</a></p>
+                    {%- endif %}
+                </div>
+                <div class="tl-sp__act">
+                    <a class="btn btn--sm btn--ghost btn--block" href="{{ sp_href }}#dashboard">{% include upper.html text=t.explore %} <span aria-hidden="true">→</span></a>
+                    {%- if _tarts.size > 0 %}
+                    <a class="tl-more" href="{{ sp_href }}#topic-editions">{{ t.editions }} ({{ _tarts.size }}) <span aria-hidden="true">→</span></a>
+                    {%- else %}
+                    <span class="tl-more tl-more--none">{{ t.no_analysis }}</span>
+                    {%- endif %}
+                </div>
+            </li>
+            {%- endfor %}
+        </ol>
+    </section>
+    {%- endif %}
+</main>
+
+<div class="wrap article-end">{% include newsletter.html wide=true %}</div>
+{% include disclaimer.html %}
+{% include footer.html %}
+</body>
+</html>

@@ -1,86 +1,30 @@
-<footer class="footer footer-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="footer-py-60">
-                    <div class="row">
-                        <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
-                            <a href="#" class="logo-footer">
-                                <img src="/assets/logo.svg" height="40" alt="Data for Greece">
-                            </a>
-                            <p class="mt-4">
-                                {% assign footer_data = site.data.footer[page.lang] %}
-                                {{ footer_data.description }}
-                            </p>
-
-
-                            {% if page.lang == 'en' %}
-                                <a class="btn-custom-purple-solid" href="https://dataforgreececom.substack.com/subscribe" method="get" target="_blank">Subscribe</a>
-                            {% else %}
-                                <a class="btn-custom-purple-solid" href="https://dataforgreece.substack.com/subscribe" method="get" target="_blank">Εγγραφή</a>
-                            {% endif %}
-
-<!--                            <ul class="list-unstyled social-icon social mb-0 mt-4">-->
-<!--                                <li class="list-inline-item mb-0">-->
-<!--                                    <a href="mailto:info@dataforgreece.com" class="rounded">-->
-<!--                                        <i class="uil uil-envelope align-middle" title="email"></i>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                            </ul>&lt;!&ndash;end icon&ndash;&gt;-->
-                        </div><!--end col-->
-
-                        <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        </div>
-                        <div class="col-lg-1 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                            <h5 class="footer-head">
-                                {% if page.lang == 'en' %} Policies {% else %} Πολιτικές {% endif %}
-                            </h5>
-                            <ul class="list-unstyled footer-list mt-4">
-                                {% for item in footer_data.policies %}
-                                <li><a href="{{ item.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ item.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div><!--end col-->
-
-                        <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                            <h5 class="footer-head">
-                                {% if page.lang == 'en' %} Links {% else %} Σύνδεσμοι {% endif %}
-                            </h5>
-
-                            <ul class="list-unstyled footer-list mt-4">
-                                {% for link in footer_data.links %}
-                                <li><a href="{{ link.url }}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{ link.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div><!--end col-->
-                    </div><!--end row-->
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-
-    <div class="footer footer-light">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-6 col-12">
-                    <div class="text-sm-start">
-                        <p class="mb-0">©
-                            <script>document.write(new Date().getFullYear())</script>
-                            Data for Greece.
-                        </p>
-                    </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end container-->
-    </div><!--end footer-->
-
-    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
-    <script src="/assets/libs/tiny-slider/min/tiny-slider.js"></script>
-    <script src="/assets/js/plugins.init.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
-
-</footer><!--end footer-->
-
+{%- assign footer_data = site.data.footer[lang] -%}
+<footer class="colophon">
+    <div class="wrap">
+        <a class="colophon__title" href="{{ site.baseurl }}{{ t.paths.home }}" aria-label="Data for Greece">{% include greece-icon.html %}<span class="masthead__text">Data for Greece</span></a>
+        <div class="colophon__grid">
+            <div class="colophon__about">
+                <p>{{ footer_data.description }}</p>
+                <a class="btn" href="{{ t.substack }}" target="_blank" rel="noopener">{{ t.subscribe }}</a>
+            </div>
+            <nav aria-label="{{ t.policies }}">
+                <h2 class="label">{{ t.policies }}</h2>
+                <ul>
+                    {%- for item in footer_data.policies %}
+                    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+                    {%- endfor %}
+                </ul>
+            </nav>
+            <nav aria-label="{{ t.links }}">
+                <h2 class="label">{{ t.links }}</h2>
+                <ul>
+                    {%- for link in footer_data.links %}
+                    <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                    {%- endfor %}
+                </ul>
+            </nav>
+        </div>
+        <p class="colophon__copy">© <span data-year>{{ site.time | date: '%Y' }}</span> Data for Greece.</p>
+    </div>
+</footer>
+<script src="{{ site.baseurl }}/assets/js/newspaper.js" defer></script>

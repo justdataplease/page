@@ -1,0 +1,11 @@
+{%- comment -%} Localized date: "1 Οκτωβρίου 2026" / "October 1, 2026". Params: date, weekday, upper. {%- endcomment -%}
+{%- assign _dl = include.lang | default: lang | default: 'gr' -%}
+{%- assign _dt = site.data.i18n[_dl] -%}
+{%- assign _dm = include.date | date: "%-m" | minus: 1 -%}
+{%- assign _dw = include.date | date: "%w" | plus: 0 -%}
+{%- capture _dout -%}
+  {%- if include.weekday -%}{{ _dt.days[_dw] }}, {% endif -%}
+  {%- if _dl == 'en' -%}{{ _dt.months[_dm] }} {{ include.date | date: "%-d" }}, {{ include.date | date: "%Y" }}
+  {%- else -%}{{ include.date | date: "%-d" }} {{ _dt.months[_dm] }} {{ include.date | date: "%Y" }}{%- endif -%}
+{%- endcapture -%}
+{%- if include.upper -%}{% include upper.html text=_dout %}{%- else -%}{{ _dout }}{%- endif -%}

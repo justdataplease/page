@@ -1,0 +1,14 @@
+{%- comment -%}
+  Prints a title with an en dash in its year ranges ("2000-2023" -> "2000–2023"), for display only: the article files
+  are mirrored from the original site and keep their hyphens. Only a digit-hyphen-digit joint is touched, so
+  "COVID-19" stays as it is. Usage: {% include years.html text=doc.title %}
+{%- endcomment -%}
+{%- assign _yr = include.text | append: "" -%}
+{%- if _yr contains "-" -%}
+{%- for _d in (0..9) -%}
+{%- assign _y1 = _d | append: "-1" -%}{%- assign _y1n = _d | append: "–1" -%}
+{%- assign _y2 = _d | append: "-2" -%}{%- assign _y2n = _d | append: "–2" -%}
+{%- assign _yr = _yr | replace: _y1, _y1n | replace: _y2, _y2n -%}
+{%- endfor -%}
+{%- endif -%}
+{{- _yr -}}

@@ -1,0 +1,22 @@
+{%- comment -%}
+  "Τριμηνιαία ανάλυση · Γ΄ τρίμηνο 2026" from an article's `edition` (quarterly | semiannual | annual | special)
+  and `period` (2026-Q3 | 2026-H1 | 2026 | 2026-10). Prints nothing when the article has no `edition`.
+{%- endcomment -%}
+{%- assign _ed = include.doc -%}
+{%- if _ed.edition -%}
+{%- assign _pp = _ed.period | append: "" | split: "-" -%}
+{%- assign _py = _pp[0] -%}
+{%- assign _pq = _pp[1] | default: "" -%}
+{%- capture _plabel -%}
+{%- if _pq == "" -%}{{ _py }}
+{%- elsif _pq contains "Q" or _pq contains "H" -%}
+{%- assign _pn = _pq | remove: "Q" | remove: "H" | plus: 0 | minus: 1 -%}
+{%- if lang == "en" -%}{{ _pq }} {{ _py }}
+{%- elsif _pq contains "Q" -%}{{ t.ordinals[_pn] }} {{ t.quarter }} {{ _py }}
+{%- else -%}{{ t.ordinals[_pn] }} {{ t.half }} {{ _py }}{%- endif -%}
+{%- else -%}
+{%- assign _pm = _pq | plus: 0 | minus: 1 -%}{{ t.months_nom[_pm] | default: _pq }} {{ _py }}
+{%- endif -%}
+{%- endcapture -%}
+{{ t.edition_kind[_ed.edition] }}{% if _ed.period %} · {{ _plabel | strip }}{% endif %}
+{%- endif -%}

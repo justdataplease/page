@@ -1,190 +1,54 @@
 {% assign report_data = site.reports | where: "slug", page.slug | where: "lang", page.lang | first %}
-
 {% include head.html %}
+<body class="report-page">
 
-<body>
-<!-- Main content -->
-<style>
-
-    .custom-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-      z-index: 1040; /* Ensures it sits behind the modal */
-      display: none; /* Initially hidden */
-    }
-
-    .modal-header {
-      background-color: #f8d7da;
-      color: #721c24;
-    }
-    .modal-content {
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .modal-body {
-      font-size: 1rem;
-      color: #495057;
-    }
-    .modal-footer {
-      border: none;
-    }
-
-    .text-muted a {
-        color: #8492a6 !important;
-        font-size: 16px;
-    }
-
-    .fullscreen-iframe {
-        width: 100%!important;
-        height: 100%;
-        position: relative; /* Needed for absolute positioning of the iframe */
-        padding: 0;
-        margin: 0;
-    }
-
-    .fullscreen-iframe iframe {
-        width: 100%!important;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        border: none;
-    }
-
-    .modal-backdrop.show {
-        opacity: 0.8!important; /* or any value between 0.0 and 1.0 */
-    }
-
-    @media (max-width: 767px) {
-        .navbar-sm-hide {
-            display: none!important;
-        }
-    }
-</style>
-
-<!-- Modal -->
-<div class="custom-backdrop" id="customBackdrop"></div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <!-- Header with custom styling -->
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    {% if report_data.lang == 'en' %}Notice{% else %}Ειδοποίηση{% endif %}
-                </h5>
-            </div>
-
-            <!-- Body with conditional content based on language -->
-            <div class="modal-body">
-                {% if report_data.lang == 'en' %}
-                <h6>This report is under construction.</h6>
-                <p>Numbers may change significantly, or may not fully reflect reality due to incomplete documentation.</p>
-                {% else %}
-                <h6>Αυτός ο πίνακας είναι υπό κατασκευή.</h6>
-                <p>Οι αριθμοί ενδέχεται να αλλάξουν σημαντικά ή να μην αντικατοπτρίζουν πλήρως την πραγματικότητα λόγω ελλιπούς τεκμηρίωσης.</p>
-                {% endif %}
-            </div>
-
-            <!-- Footer with language-specific button text -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-exit" data-dismiss="modal">
-                    {% if report_data.lang == 'en' %}Ι Understand{% else %}Το Κατάλαβα{% endif %}
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="report">
+    <header class="report__bar">
+        <a class="report__brand" href="{{ site.baseurl }}{{ t.paths.home }}" aria-label="Data for Greece">{% include greece-icon.html %}<span class="masthead__text">Data for Greece</span></a>
+        <nav class="crumbs report__crumbs" aria-label="breadcrumb">
+            <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
+            <a href="{{ site.baseurl }}{{ t.paths.reports }}">{{ t.reports_upper }}</a>
+            <span aria-current="page">{{ report_data.title_upper | default: report_data.title }}</span>
+        </nav>
+        <button type="button" class="btn btn--sm" data-panel-toggle aria-controls="infoPanel" aria-expanded="false">{{ t.info }}</button>
+    </header>
+    <iframe class="report__frame" src="{{ report_data.embedded_url }}" title="{{ report_data.title }}" allowfullscreen></iframe>
 </div>
 
-<div class="d-flex flex-column" style="height: 100vh;">
+<aside class="report__panel" id="infoPanel" hidden>
+    <button type="button" class="report__close" data-panel-toggle aria-label="{{ t.close }}">×</button>
+    <p class="kicker">{% include upper.html text=t.reports %}</p>
+    <h2 class="hl hl--m">{{ report_data.title }}</h2>
+    <p>{{ report_data.description_detailed }}</p>
+    <p class="meta">{{ report_data.update-frequency }}</p>
+    {%- if report_data.wip %}
+    <p class="meta">{{ t.wip_status }}</p>
+    {%- endif %}
+</aside>
 
-    <!-- Navbar -->
-    <nav aria-label="breadcrumb" class="d-inline-block ps-3 border-bottom navbar-sm-hide" style="height:30px!important">
-        <ul class="breadcrumb m-0 p-0">
-            {% if page.lang == 'en' %}
-            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">REPORTS</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ report_data.title }}</li>
-            {% else %}
-            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/reports/">ΠΙΝΑΚΕΣ ΔΕΔΟΜΕΝΩΝ</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ report_data.title_upper | default: report_data.title }}</li>
-            {% endif %}
-        </ul>
-    </nav>
-    <!-- End Navbar -->
-
-    <!-- Offcanvas Toggle Button -->
-    <button class="btn btn-primary rounded-circle position-fixed end-0 m-3 d-flex justify-content-center align-items-center"
-            style="z-index: 100; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); bottom: 60px;"
-            type="button" data-bs-toggle="offcanvas" data-bs-target="#infoPanel" aria-controls="infoPanel">
-        <i class="uil uil-info-circle" style="font-size: 40px;"></i> <!-- Larger Unicon Icon -->
-    </button>
-
-    <!-- Offcanvas Panel -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="infoPanel" aria-labelledby="infoPanelLabel">
-        <div class="offcanvas-header">
-            <h5 id="infoPanelLabel">{{ report_data.title }}</h5>
-            <button type="button" class="position-absolute top-0 end-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close"
-                    style="background: none; border: none;">
-                <i class="uil uil-times" style="font-size: 24px; color: black;"></i>
-            </button>
-        </div>
-        <div class="offcanvas-body">
-            <p>{{ report_data.description_detailed }}</p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item ps-0">{{ report_data.update-frequency }} </a></li>
-            </ul>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item ps-0">
-                    {% if report_data.wip %}
-                    {% if report_data.lang == 'en' %}<strong>Status: </strong> Under Construction {% else %}<strong>Κατάσταση: </strong> Υπό Κατασκευή {% endif %} </a></li>
-                    {% endif %}
-            </ul>
-
-        </div>
-    </div>
-
-    <!-- Main Content - Fullscreen Iframe -->
-    <section class="section fullscreen-iframe">
-        <iframe src="{{ report_data.embedded_url }}" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section><!-- end section -->
-</div>
+{%- if report_data.wip %}
+<dialog class="notice-dialog" id="wipNotice" aria-labelledby="wipTitle">
+    <p class="kicker">{{ t.notice }}</p>
+    <h2 class="hl hl--m" id="wipTitle">{{ t.wip_title }}</h2>
+    <p>{{ t.wip_text }}</p>
+    <form method="dialog"><button class="btn">{{ t.wip_ok }}</button></form>
+</dialog>
+{%- endif %}
 
 <script>
-    window.addEventListener('load', function() {
-      // Create modal instance with backdrop and keyboard disabled
-      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-        backdrop: false,   // No default backdrop
-        keyboard: false    // Disable closing with the Esc key
-      });
-
-      // Show custom backdrop when the modal opens
-      document.getElementById('customBackdrop').style.display = 'block';
-
-      // Show the modal
-      myModal.show();
-
-      // Hide custom backdrop when the modal is closed
-      document.getElementById('exampleModal').addEventListener('hidden.bs.modal', function () {
-        document.getElementById('customBackdrop').style.display = 'none';
-      });
-
-      document.querySelector('.btn-exit').addEventListener('click', function () {
-      myModal.hide();
-      document.getElementById('customBackdrop').style.display = 'none';
-    });
-
-    });
-
+    (function () {
+        var panel = document.getElementById('infoPanel');
+        var opener = document.querySelector('.report__bar [data-panel-toggle]');
+        document.querySelectorAll('[data-panel-toggle]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                panel.hidden = !panel.hidden;
+                opener.setAttribute('aria-expanded', String(!panel.hidden));
+            });
+        });
+        var notice = document.getElementById('wipNotice');
+        if (notice && notice.showModal) notice.showModal();
+    })();
 </script>
-
-<!-- Bootstrap JS (Updated Scripts) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="{{ site.baseurl }}/assets/js/newspaper.js" defer></script>
 </body>
 </html>

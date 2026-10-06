@@ -1,0 +1,15 @@
+{%- comment -%} A topic or special topic as a small front: picture, schedule (or date), name, one line. {%- endcomment -%}
+{%- assign _tc = include.topic -%}
+{%- assign _tcx = _tc[lang] -%}
+{%- assign _tccad = t.cadence[_tc.cadence] -%}
+<article class="topic-card{% if _tc.kind == 'special' %} topic-card--special{% endif %}">
+    <a class="art" href="{{ site.baseurl }}{{ t.paths.topics }}{{ _tc.key }}/" tabindex="-1" aria-hidden="true">
+        <img src="{{ site.baseurl }}/{{ _tc.image | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+    </a>
+    <p class="kicker">{% if _tc.kind == 'special' %}{% include upper.html text=t.special %} · {{ _tcx.when_label }}{% else %}{% include upper.html text=_tccad %}{% endif %}</p>
+    <h3 class="hl hl--s"><a href="{{ site.baseurl }}{{ t.paths.topics }}{{ _tc.key }}/">{{ _tcx.name }}</a></h3>
+    {%- unless include.short %}
+    <p class="topic-card__dek">{{ _tcx.dek }}</p>
+    {%- endunless %}
+    {%- if _tcx.coverage %}<p class="meta">{{ _tcx.coverage }}</p>{% endif %}
+</article>

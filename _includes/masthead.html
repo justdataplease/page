@@ -1,0 +1,89 @@
+{%- assign is_home = false -%}
+{%- if page.url == '/' or page.url == '/en/' -%}{%- assign is_home = true -%}{%- endif -%}
+{%- assign m_datasets = site.data_directory | where: "lang", lang -%}
+{%- assign m_live = 0 -%}
+{%- for d in m_datasets -%}{%- if d.last_update contains 'Live' -%}{%- assign m_live = m_live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- assign m_articles = site.articles | where: "lang", lang -%}
+{%- assign m_charts = site.charts | where: "lang", lang | where_exp: "c", "c.embedded_url contains 'app.powerbi.com'" -%}
+{%- assign m_reports = site.reports | where: "lang", lang -%}
+{%- assign m_vol = site.time | date: '%Y' | minus: site.newspaper.founded -%}
+{%- if lang == 'en' -%}
+  {%- assign m_other = page.url | replace_first: '/en/', '/' -%}
+{%- elsif page.url == '/' -%}
+  {%- assign m_other = '/en/' -%}
+{%- else -%}
+  {%- assign m_other = page.url | prepend: '/en' -%}
+{%- endif -%}
+
+<div class="topbar">
+    <div class="wrap topbar__in">
+        <span class="topbar__date" data-today>{% include date.html date=site.time weekday=true %}</span>
+        <div class="topbar__tools">
+            {%- if site.newspaper.theme_switcher %}
+            <div class="edition" role="group" aria-label="{{ t.edition_label }}">
+                <span class="edition__label">{{ t.edition_label }}</span>
+                {%- for th in site.data.themes %}
+                <button type="button" class="edition__btn" data-set-theme="{{ th[0] }}" title="{{ th[1].blurb[lang] }}" aria-pressed="false">{{ th[1].name }}</button>
+                {%- endfor %}
+            </div>
+            {%- endif %}
+            <a class="topbar__lang" href="{{ site.baseurl }}{{ m_other }}">{{ t.other_lang }}</a>
+            <a class="btn btn--sm" href="{{ t.substack }}" target="_blank" rel="noopener">{{ t.subscribe }}</a>
+        </div>
+    </div>
+</div>
+
+<header class="masthead{% unless is_home %} masthead--compact{% endunless %}">
+    <div class="wrap">
+        <div class="masthead__row">
+            {%- if is_home %}
+            <div class="ear ear--left"><p>{{ t.ear_text }}</p></div>
+            {%- endif %}
+            <a class="masthead__title" href="{{ site.baseurl }}{{ t.paths.home }}" aria-label="Data for Greece">{% include greece-icon.html %}<span class="masthead__text">Data for Greece</span></a>
+            {%- if is_home %}
+            <div class="ear ear--right">
+                <p class="ear__head">{{ t.late_edition }}</p>
+                <p>{{ m_datasets.size }} {{ t.datasets_lower }}{% if m_live > 0 %} · {{ m_live }} {{ t.live_lower }}{% endif %}</p>
+            </div>
+            {%- endif %}
+        </div>
+        {%- if is_home %}
+        <div class="dateline">
+            <span>{{ t.vol }} {{ t.numerals[m_vol] }} · {{ t.issue }} {{ site.documents.size }}</span>
+            <span><span>{{ t.city }}, </span><span data-today-upper>{% include date.html date=site.time weekday=true upper=true %}</span></span>
+            <span>{{ t.price }}</span>
+        </div>
+        {%- endif %}
+        <nav class="sections" aria-label="Sections">
+            <ul>
+                {%- for item in site.data.navbar[lang].links %}
+                {%- if item.submenu %}
+                {%- for sub in item.submenu %}
+                <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
+                {%- endfor %}
+                {%- else %}
+                <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.name }}</a></li>
+                {%- endif %}
+                {%- if forloop.first %}
+                {%- comment -%} Topics are this edition's own section (navbar.yml is shared with the main site). {%- endcomment %}
+                <li><a href="{{ site.baseurl }}{{ t.paths.topics }}"{% if page.url contains t.paths.topics %} aria-current="page"{% endif %}>{{ t.topics_nav }}</a></li>
+                {%- endif %}
+                {%- endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{%- if is_home %}
+<div class="ticker" aria-label="{{ t.in_this_issue }}">
+    <div class="wrap ticker__in">
+        <a href="{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span> <b>{{ m_datasets.size }}</b></a>
+        {%- if m_live > 0 %}
+        <span><span>{{ t.live }}</span> <b class="up">▲ {{ m_live }}</b></span>
+        {%- endif %}
+        <span><span>{{ t.charts }}</span> <b>{{ m_charts.size }}</b></span>
+        <a href="{{ t.paths.news }}"><span>{{ t.research_plural }}</span> <b>{{ m_articles.size }}</b></a>
+        <a href="{{ t.paths.reports }}"><span>{{ t.reports }}</span> <b>{{ m_reports.size }}</b></a>
+    </div>
+</div>
+{%- endif %}

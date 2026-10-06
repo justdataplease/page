@@ -1,0 +1,290 @@
+# The site's topics ("Θέματα") and special topics ("Ειδικά θέματα").
+#
+# kind: topic    an ongoing subject: always-up-to-date dashboards + sources, and an edition of
+#                analysis on a fixed schedule (cadence: quarterly | semiannual | annual | special)
+# kind: special  a one-off, event-like feature (a campaign, an event), with its date
+#
+# Each one gets a page at /themata/<key>/ (and /en/topics/<key>/), made from _topics/<lang>/<key>.md.
+# Links to the rest of the site:
+#   data      data_directory slugs (dataset pages)
+#   charts    chart slugs to embed while the topic's own dashboard is not published yet (Power BI only)
+#   report    a _reports slug, used as the full-screen dashboard page
+#   articles  article slugs that belong here; a new article can instead say `topic: <key>` in its front matter,
+#             plus `edition: quarterly|semiannual|annual|special` and `period: 2026-Q3 | 2026-H1 | 2026 | 2026-10`
+#   dashboards.lite / .full   the Power BI "publish to web" links of <model>_lite.pbix / <model>_full.pbix
+#                             (C:\MyDrive\jdp\models); empty until published
+#   explore   the older detailed reports (<model>_scrapeit.pbix, published as <model>), for inspecting every number
+# Only Power BI is embedded on this site (no Looker Studio).
+
+- key: fuel-prices
+  kind: topic
+  model: gas_prices
+  image: assets/posts/fuel_station.webp
+  since: 2012
+  cadence: quarterly
+  data: [fuel-prices-greece]
+  charts: []
+  report: ""
+  articles: [fuel-prices-greece-timeline]
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZmU1OWQ4MjMtZmQyYS00YzM1LWJhYjEtNzFiOTE4ZjEyYmE0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Τιμές καυσίμων"
+    dek: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, από το 2012 μέχρι σήμερα."
+    coverage: "2012 – σήμερα · 51 νομοί"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Παρατηρητήριο Τιμών Υγρών Καυσίμων, Υπουργείο Ανάπτυξης", url: "https://www.fuelprices.gr", note: "Ημερήσια και εβδομαδιαία δελτία (PDF)" }
+      - { name: "e-katanalotis (αρχείο 2021–2024)", url: "https://e-katanalotis.gov.gr", note: "Τιμές πρατηρίων ανά εταιρεία" }
+    notes:
+      - "Οι τιμές είναι σταθμισμένοι μέσοι όροι του Υπουργείου· δεν προστίθενται μεταξύ τους."
+      - "Οι εθνικές τιμές και οι τιμές ανά νομό είναι διαφορετικές σειρές και δεν αναμειγνύονται."
+  en:
+    name: "Fuel prices"
+    dek: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, from 2012 to today."
+    coverage: "2012 – today · 51 prefectures"
+    updates: "Every quarter"
+    sources:
+      - { name: "Observatory of Liquid Fuel Prices, Ministry of Development", url: "https://www.fuelprices.gr", note: "Daily and weekly bulletins (PDF)" }
+      - { name: "e-katanalotis (2021–2024 archive)", url: "https://e-katanalotis.gov.gr", note: "Station prices by brand" }
+    notes:
+      - "Prices are the Ministry's weighted averages; they are never added together."
+      - "National and per-prefecture prices are separate series and are not mixed."
+
+- key: supermarket-prices
+  kind: topic
+  model: katanalotis
+  image: assets/posts/supermarket.webp
+  since: 2021
+  cadence: quarterly
+  data: [supermarket-prices]
+  charts: [supermarket-prices]
+  report: supermarket-prices-greece
+  articles: [supermarket-prices-olive-oil-2025-01-27]
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDFlZjVjMTEtYWYzOC00OTViLWJkM2ItOTZhZGVmY2I0NGE0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9&pageName=602281e74549b403059d" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: katanalotis_product, url: "https://app.powerbi.com/view?r=eyJrIjoiMjRkNzFhZDctNWZmZS00MDg4LWI4YzQtZmEzNjE3ZGI1MDZmIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές ανά προϊόν και σούπερ μάρκετ", en: "Prices by product and supermarket" }
+  gr:
+    name: "Τιμές σούπερ μάρκετ"
+    dek: "Κάθε τιμή ραφιού που έχουμε για την Ελλάδα από το 2021: κατηγορίες, αλυσίδες, ακρίβεια και τα φθηνότερα καλάθια."
+    coverage: "Σεπτέμβριος 2021 – σήμερα"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "e-katanalotis (2021–2026)", url: "https://e-katanalotis.gov.gr", note: "Η εφαρμογή του Υπουργείου Ανάπτυξης" }
+      - { name: "ΠόσοΚάνει", url: "https://posokanei.gov.gr", note: "Όλες οι αλυσίδες, από τον Σεπτέμβριο 2026" }
+      - { name: "ΑΒ Βασιλόπουλος, Σκλαβενίτης", url: "https://www.ab.gr", note: "Τα ηλεκτρονικά καταστήματα, από τον Νοέμβριο 2024" }
+    notes:
+      - "Τα σύνολα ανά αλυσίδα και κατηγορία μετρούν μία πηγή ανά προϊόν, ώστε να μη διπλομετρώνται τιμές."
+  en:
+    name: "Supermarket prices"
+    dek: "Every shelf price we hold for Greece since 2021: categories, retailers, inflation and the cheapest baskets."
+    coverage: "September 2021 – today"
+    updates: "Every quarter"
+    sources:
+      - { name: "e-katanalotis (2021–2026)", url: "https://e-katanalotis.gov.gr", note: "The Ministry of Development's app" }
+      - { name: "PosoKanei", url: "https://posokanei.gov.gr", note: "Every retailer, from September 2026" }
+      - { name: "AB Vasilopoulos, Sklavenitis", url: "https://www.ab.gr", note: "Their online shops, from November 2024" }
+    notes:
+      - "Totals by retailer and category count one source per product, so no price is counted twice."
+
+- key: airbnb
+  kind: topic
+  model: airbnb
+  image: assets/posts/airbnb.webp
+  since: 2015
+  cadence: quarterly
+  data: [airbnb]
+  charts: [airbnb-greece-overview]
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOThjMzQxZGEtZWMwYS00MWU4LWExYjMtMWY0NDM3YzM2YWQzIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: inside_airbnb, url: "https://app.powerbi.com/view?r=eyJrIjoiOTRlM2M4MzEtYmUyZS00ZDRiLTkwZDItMmM0MmMwZDk0YjkwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Airbnb ανά γειτονιά και μήνα", en: "Airbnb by neighbourhood and month" }
+  gr:
+    name: "Airbnb"
+    dek: "Πόσα καταλύματα και σε ποια τιμή: Αθήνα, Θεσσαλονίκη, Κρήτη και Νότιο Αιγαίο, ανά γειτονιά και δήμο."
+    coverage: "2015 – σήμερα · 4 περιοχές"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Inside Airbnb", url: "https://insideairbnb.com", note: "Άδεια CC BY 4.0" }
+    notes:
+      - "Δεκέμβριος 2025 – Φεβρουάριος 2026: η πηγή δεν δίνει τιμές, γι' αυτό το διάγραμμα έχει κενό."
+      - "Από τον Μάρτιο 2026 η πηγή μετρά την τιμή με νέο τρόπο· οι τιμές πριν και μετά δεν συγκρίνονται άμεσα."
+  en:
+    name: "Airbnb"
+    dek: "How many listings and at what price: Athens, Thessaloniki, Crete and the South Aegean, by neighbourhood and municipality."
+    coverage: "2015 – today · 4 areas"
+    updates: "Every quarter"
+    sources:
+      - { name: "Inside Airbnb", url: "https://insideairbnb.com", note: "Licence CC BY 4.0" }
+    notes:
+      - "December 2025 – February 2026: the source has no prices, so the chart shows a gap."
+      - "From March 2026 the source measures price differently; prices before and after are not directly comparable."
+
+- key: forest-fires
+  kind: topic
+  model: fires
+  image: assets/posts/forest_burning.webp
+  since: 2000
+  cadence: annual
+  data: [forest-fires-greece]
+  charts: []
+  report: ""
+  articles: [forest-fires-greece-timeline]
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDdhNzk0NjktZjJlZi00NjRlLWE0NjctNmQ2YTkzNzRmMzlhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: fires, url: "https://app.powerbi.com/view?r=eyJrIjoiNzc1YTI1OTEtMWFjNi00MjMwLTk0YjYtNmNkMTQzMjM5NDIyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Πυρκαγιές ανά νομό και χρονιά", en: "Fires by prefecture and year" }
+  gr:
+    name: "Δασικές πυρκαγιές"
+    dek: "Κάθε δασική και αστική πυρκαγιά της Πυροσβεστικής από το 2000 και οι καμένες εκτάσεις από δορυφόρο (EFFIS)."
+    coverage: "2000 – σήμερα"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Πυροσβεστικό Σώμα, ανοιχτά δεδομένα", url: "https://www.fireservice.gr", note: "Δασικές πυρκαγιές 2000–, αστικά συμβάντα 2014–" }
+      - { name: "EFFIS (Copernicus)", url: "https://effis.jrc.ec.europa.eu", note: "Καμένες εκτάσεις από δορυφόρο" }
+    notes:
+      - "Οι εκτάσεις της Πυροσβεστικής και του EFFIS μετρώνται διαφορετικά και δεν προστίθενται."
+  en:
+    name: "Forest fires"
+    dek: "Every forest and urban fire recorded by the Fire Service since 2000, and the burnt areas seen by satellite (EFFIS)."
+    coverage: "2000 – today"
+    updates: "Every year"
+    sources:
+      - { name: "Hellenic Fire Service, open data", url: "https://www.fireservice.gr", note: "Forest fires 2000–, urban incidents 2014–" }
+      - { name: "EFFIS (Copernicus)", url: "https://effis.jrc.ec.europa.eu", note: "Burnt areas by satellite" }
+    notes:
+      - "Fire Service and EFFIS areas are measured differently and are never added together."
+
+- key: budget
+  kind: topic
+  model: proypologismos
+  image: assets/posts/athens.webp
+  since: 2005
+  cadence: semiannual
+  data: [athens-municipality-budget]
+  charts: [athens-municipality-budget]
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDBiMGQyNTYtMDc4YS00MmI1LThhODctZDFmY2VmM2M2MTM4IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: athens_municipality_budget, url: "https://app.powerbi.com/view?r=eyJrIjoiOGVmOGIxZDMtYmJlMy00MDc2LWJlNjctOWFlYjcwYzkyZjgxIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Ο προϋπολογισμός γραμμή προς γραμμή", en: "The budget line by line" }
+  gr:
+    name: "Προϋπολογισμός"
+    dek: "Πού πάνε τα χρήματα: ο προϋπολογισμός του Δήμου Αθηναίων από το 2005, η μηνιαία εκτέλεσή του και ο κρατικός προϋπολογισμός."
+    coverage: "2005 – σήμερα"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Δήμος Αθηναίων", url: "https://www.cityofathens.gr", note: "Προϋπολογισμός και μηνιαίες καταστάσεις εκτέλεσης" }
+      - { name: "Διαύγεια", url: "https://diavgeia.gov.gr", note: "Αποφάσεις προϋπολογισμού και αναμορφώσεις από το 2026" }
+      - { name: "Υπουργείο Εθνικής Οικονομίας και Οικονομικών, Eurostat", url: "https://minfin.gov.gr", note: "Κρατικός προϋπολογισμός" }
+    notes:
+      - "Από το 2026 οι κωδικοί αλλάζουν (ΑΛΕ αντί για ΚΑΕ)· οι συγκρίσεις με τα προηγούμενα χρόνια γίνονται μόνο όπου υπάρχει επίσημη αντιστοίχιση."
+  en:
+    name: "Budget"
+    dek: "Where the money goes: the Municipality of Athens budget since 2005, its monthly execution and the Greek state budget."
+    coverage: "2005 – today"
+    updates: "Every year"
+    sources:
+      - { name: "Municipality of Athens", url: "https://www.cityofathens.gr", note: "Budget and monthly execution statements" }
+      - { name: "Diavgeia", url: "https://diavgeia.gov.gr", note: "Budget decisions and amendments from 2026" }
+      - { name: "Ministry of Finance, Eurostat", url: "https://minfin.gov.gr", note: "State budget" }
+    notes:
+      - "From 2026 the budget codes change (ALE instead of KAE); years are compared only where an official crosswalk exists."
+
+- key: elections
+  kind: topic
+  model: ekloges
+  image: assets/cover-syntagma.jpg
+  since: 1974
+  cadence: special
+  data: []
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOGQzNGY0NjItODQ4ZC00YzY0LTkyNTctNDRlN2JlMmNiMmNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Εκλογές"
+    dek: "Όλες οι εκλογές από το 1974: εθνικές, ευρωεκλογές, δημοψηφίσματα, περιφερειακές και δημοτικές, μέχρι το εκλογικό τμήμα, με τα δημογραφικά."
+    coverage: "1974 – 2024"
+    updates: "Μετά από κάθε εκλογή"
+    sources:
+      - { name: "Υπουργείο Εσωτερικών", url: "https://ekloges.ypes.gr", note: "Αποτελέσματα όλων των επιπέδων" }
+      - { name: "Βουλή των Ελλήνων", url: "https://www.hellenicparliament.gr", note: "Ιστορικά αποτελέσματα" }
+      - { name: "ΕΛΣΤΑΤ, iMEdD", url: "https://www.statistics.gr", note: "Απογραφή, εκλογικοί κατάλογοι, συμμετοχή" }
+    notes:
+      - "Κάθε επίπεδο (επικράτεια, περιφέρεια, δήμος, τμήμα) είναι ξεχωριστός πίνακας· τα σύνολα δεν μεταφέρονται από το ένα στο άλλο."
+  en:
+    name: "Elections"
+    dek: "Every election since 1974: national, European, referendums, regional and municipal, down to the polling station, with demographics."
+    coverage: "1974 – 2024"
+    updates: "After every election"
+    sources:
+      - { name: "Ministry of the Interior", url: "https://ekloges.ypes.gr", note: "Results at every level" }
+      - { name: "Hellenic Parliament", url: "https://www.hellenicparliament.gr", note: "Historical results" }
+      - { name: "ELSTAT, iMEdD", url: "https://www.statistics.gr", note: "Census, electoral rolls, turnout" }
+    notes:
+      - "Each level (country, region, municipality, station) is a separate table; totals are not carried from one to another."
+
+- key: businesses
+  kind: topic
+  model: gemi
+  # "Εθνική Τράπεζα της Ελλάδος" facade - photo supplied by the user (2026-10-06)
+  image: assets/topic-businesses-ethniki.jpg
+  since: 2024
+  cadence: semiannual
+  data: []
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDAwNGVkMzctZTZjMy00NmI1LThlZWItNTVkNGQ4Zjg3ZmY4IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: gemi, url: "https://app.powerbi.com/view?r=eyJrIjoiNTIxY2NkMmItNWJjMS00MmU1LWIwZDEtNDI2ZTMzNDMzODJhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Επιχειρήσεις ανά κλάδο και περιοχή", en: "Companies by sector and area" }
+  gr:
+    name: "Επιχειρήσεις"
+    dek: "Το Γενικό Εμπορικό Μητρώο: 1,9 εκατ. επιχειρήσεις, οι νέες εγγραφές και τα λουκέτα, ανά κλάδο και περιοχή."
+    coverage: "Όλο το μητρώο · κινήσεις από τον Νοέμβριο 2024"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "ΓΕΜΗ – Ανοιχτά δεδομένα", url: "https://opendata.businessportal.gr", note: "Άδεια ODC-BY 1.0" }
+      - { name: "ΓΕΜΗ – Δημοσιότητα", url: "https://publicity.businessportal.gr", note: "Εγγραφές, διαγραφές και μεταβολές ανά ημέρα" }
+    notes:
+      - "Οι επιχειρήσεις μετρώνται μία φορά, στην έδρα τους."
+  en:
+    name: "Businesses"
+    dek: "The General Commercial Registry: 1.9 million companies, new registrations and closures, by sector and region."
+    coverage: "The whole registry · events since November 2024"
+    updates: "Every year"
+    sources:
+      - { name: "GEMI – Open data", url: "https://opendata.businessportal.gr", note: "Licence ODC-BY 1.0" }
+      - { name: "GEMI – Publicity portal", url: "https://publicity.businessportal.gr", note: "Registrations, closures and changes by day" }
+    notes:
+      - "Each company is counted once, at its head office."
+
+# ── Special topics: one-off, event-like features ─────────────────────────
+- key: period-products
+  kind: special
+  parent: supermarket-prices
+  image: assets/posts/supermarket_period.webp
+  when: 2025-01
+  data: [supermarket-prices-itsjustperiod]
+  charts: [supermarket-prices-itsjustperiod]
+  report: ""
+  articles: [supermarket-prices-itsjustperiod-announcement-2025-01-20]
+  dashboards: { lite: "", full: "" }
+  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
+    - { model: katanalotis_itsjustperiod, url: "https://app.powerbi.com/view?r=eyJrIjoiN2ZlYjBkMjYtMzkxYi00Y2JkLTlkYTAtMjQxZDg0MDgxNjNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές προϊόντων περιόδου", en: "Period product prices" }
+  gr:
+    name: "Προϊόντα Περιόδου"
+    dek: "Με την πρωτοβουλία It's just period: οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ και ο ΦΠΑ 24% που τα επιβαρύνει."
+    when_label: "Ιανουάριος 2025"
+    sources:
+      - { name: "e-katanalotis, ΑΒ Βασιλόπουλος, Σκλαβενίτης", url: "https://e-katanalotis.gov.gr", note: "Τιμές ραφιού" }
+      - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "Η πρωτοβουλία" }
+    notes: []
+  en:
+    name: "Period products"
+    dek: "With the It's just period initiative: what period products cost in supermarkets, and the 24% VAT on them."
+    when_label: "January 2025"
+    sources:
+      - { name: "e-katanalotis, AB Vasilopoulos, Sklavenitis", url: "https://e-katanalotis.gov.gr", note: "Shelf prices" }
+      - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "The initiative" }
+    notes: []

@@ -1,0 +1,14 @@
+{%- comment -%} One row of a section front: date | kicker, headline, dek, meta | picture. {%- endcomment -%}
+{%- assign _r = include.doc -%}
+<article class="river__item">
+    <p class="river__date">{% if _r.date %}<time datetime="{{ _r.date | date_to_xmlschema }}">{% include date.html date=_r.date %}</time>{% endif %}</p>
+    <div class="river__text">
+        {%- if include.kicker %}<p class="kicker">{{ include.kicker }}</p>{% endif %}
+        <h2 class="hl hl--m"><a href="{{ site.baseurl }}{{ _r.url }}">{% include years.html text=_r.title %}</a></h2>
+        {%- if include.dek and include.dek != '' %}<p class="river__dek">{{ include.dek }}</p>{% endif %}
+        {%- if include.meta and include.meta != '' %}<p class="meta">{{ include.meta }}</p>{% endif %}
+    </div>
+    <a class="art river__art" href="{{ site.baseurl }}{{ _r.url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ site.baseurl }}/{{ _r.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+    </a>
+</article>

@@ -1,0 +1,210 @@
+{%- comment -%}
+  The front page, "Πρωτοσέλιδο" (chosen by the user 2026-10-06 over "Θέματα στο κέντρο"): a refined broadsheet.
+  Used by gr/index.html and en/index.html; styles in assets/css/home.css, loaded by _layouts/default.html on the
+  home pages only (every class here starts with h1-, or reuses a shared one from newspaper.css).
+    Top, three columns:  Νέα δεδομένα (square thumbnails + a ΖΩΝΤΑΝΑ/update line)
+                         | cover photo band + the lead story with a large picture
+                         | Αναλύσεις (one with a big picture, two with side thumbnails) + "Σε αυτό το φύλλο"
+    Θέματα: 4 x 2 tiles (7 topics + the special), 3:2 photos, rows aligned so the buttons share one line.
+    Περισσότερες αναλύσεις: 3-4 equal picture cards (the analyses not shown above, topped up with the data
+    tables and the datasets not in the left column, so the row is never short).
+    A slim newsletter strip.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'gr' -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign h1_articles = site.articles | where: "lang", lang | sort: "date" | reverse -%}
+{%- assign h1_datasets = site.data_directory | where: "lang", lang | where_exp: "d", "d.live != false" | sort: "date" | reverse -%}
+{%- assign h1_reports = site.reports | where: "lang", lang -%}
+{%- assign h1_charts = site.charts | where: "lang", lang | where_exp: "c", "c.embedded_url contains 'app.powerbi.com'" -%}
+{%- assign h1_topics = site.data.topics | where: "kind", "topic" -%}
+{%- assign h1_specials = site.data.topics | where: "kind", "special" -%}
+{%- assign h1_lead = h1_articles.first -%}
+{%- assign h1_img = 'assets/posts/default-blog-cover.webp' -%}
+{%- assign h1_brief_n = 4 -%}
+{%- assign h1_live = 0 -%}
+{%- for d in h1_datasets -%}{%- if d.last_update contains 'Live' -%}{%- assign h1_live = h1_live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+
+{%- comment -%} The closing row: analyses after the first four, then data tables, then the datasets not on the left. {%- endcomment -%}
+{%- assign h1_more = "" | split: "" -%}
+{%- assign h1_more_all_articles = true -%}
+{%- for a in h1_articles offset: 4 -%}{%- assign h1_more = h1_more | push: a -%}{%- endfor -%}
+{%- if h1_more.size < 3 -%}
+{%- assign h1_more_all_articles = false -%}
+{%- for r in h1_reports -%}{%- assign h1_more = h1_more | push: r -%}{%- endfor -%}
+{%- for d in h1_datasets offset: h1_brief_n -%}{%- assign h1_more = h1_more | push: d -%}{%- endfor -%}
+{%- endif -%}
+{%- assign h1_more_n = h1_more.size | at_most: 4 -%}
+{%- comment -%} When the row is topped up with data (the analyses above used them all), it goes typographic: the
+  datasets' pictures are the topic tiles' pictures, so photos here would only repeat the Θέματα band. {%- endcomment -%}
+{%- if h1_more_all_articles -%}
+{%- assign h1_more_label = t.more_analyses -%}{%- assign h1_more_href = t.paths.news -%}{%- assign h1_more_link = t.all_analyses | default: t.more_analyses -%}
+{%- else -%}
+{%- assign h1_more_label = t.more_and_data -%}{%- assign h1_more_href = t.paths.data_directory -%}{%- assign h1_more_link = t.all_data -%}
+{%- endif -%}
+
+<div class="front wrap h1">
+
+    <div class="h1-top">
+
+        {%- comment -%} ── Left: new datasets ── {%- endcomment %}
+        <section class="h1-briefs" aria-labelledby="h1-briefs">
+            <h2 class="label" id="h1-briefs"><a href="{{ site.baseurl }}{{ t.paths.data_directory }}">{{ t.latest_data }}</a></h2>
+            {%- for d in h1_datasets limit: h1_brief_n %}
+            <article class="h1-brief">
+                <a class="art h1-thumb" href="{{ site.baseurl }}{{ d.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ d.image_path | default: h1_img }}" alt="" loading="lazy">
+                </a>
+                <div class="h1-brief__text">
+                    <p class="kicker">{% include upper.html text=d.category %}</p>
+                    <h3 class="hl hl--s"><a href="{{ site.baseurl }}{{ d.url }}">{{ d.title }}</a></h3>
+                </div>
+                <p class="h1-status">{% include update.html doc=d %}</p>
+                {%- assign h1_dek = d.description_detailed | strip_html | strip | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει την ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει τις ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει ' | remove_first: 'Αυτό το σύνολο δεδομένων παρέχει ' | remove_first: 'Το σύνολο δεδομένων παρέχει ' | truncatewords: 14 %}
+                <p class="h1-brief__dek">{{ h1_dek | slice: 0 | upcase }}{{ h1_dek | slice: 1, 600 }}</p>
+            </article>
+            {%- endfor %}
+            <a class="more" href="{{ site.baseurl }}{{ t.paths.data_directory }}">{{ t.all_data }} →</a>
+
+            <aside class="h1-livebox">
+                <p class="h1-livebox__num">{{ h1_live }}<span>/{{ h1_datasets.size }}</span></p>
+                <p class="h1-livebox__text">{{ t.livebox_text }}</p>
+            </aside>
+        </section>
+
+        {%- comment -%} ── Centre: cover band + lead story ── {%- endcomment %}
+        <div class="h1-center">
+            <figure class="cover h1-cover">
+                <div class="cover__photo">
+                    <img src="{{ site.baseurl }}/{{ t.cover_image }}" alt="{{ t.cover_caption }}" fetchpriority="high">
+                    <div class="cover__text">
+                        <p class="cover__title">{{ t.cover_title }}</p>
+                        <a class="btn btn--light" href="{{ t.substack }}" target="_blank" rel="noopener">{{ t.follow }}</a>
+                    </div>
+                </div>
+                <figcaption class="cover__caption">{{ t.cover_caption }} <span>{{ t.cover_credit }}</span></figcaption>
+            </figure>
+
+            {%- if h1_lead %}
+            <article class="h1-lead">
+                <p class="kicker">{% include kicker.html doc=h1_lead edition=true %}</p>
+                <h2 class="hl hl--xl"><a href="{{ site.baseurl }}{{ h1_lead.url }}">{% include years.html text=h1_lead.title %}</a></h2>
+                {% include byline.html doc=h1_lead %}
+                <a class="art h1-lead__art" href="{{ site.baseurl }}{{ h1_lead.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ h1_lead.image_path | default: h1_img }}" alt="" loading="lazy">
+                </a>
+                <div class="excerpt excerpt--cols h1-lead__excerpt">
+                    <p>{{ h1_lead.content | strip_html | normalize_whitespace | truncatewords: 64 }}</p>
+                </div>
+                <a class="more" href="{{ site.baseurl }}{{ h1_lead.url }}">{{ t.continue }} →</a>
+            </article>
+            {%- endif %}
+        </div>
+
+        {%- comment -%} ── Right: analyses + index ── {%- endcomment %}
+        <section class="h1-side" aria-labelledby="h1-analyses">
+            <h2 class="label" id="h1-analyses"><a href="{{ site.baseurl }}{{ t.paths.news }}">{{ t.analyses }}</a></h2>
+            {%- for a in h1_articles offset: 1 limit: 3 %}
+            {%- if forloop.first %}
+            <article class="h1-an h1-an--big">
+                <a class="art" href="{{ site.baseurl }}{{ a.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ a.image_path | default: h1_img }}" alt="" loading="lazy">
+                </a>
+                <p class="kicker">{% include kicker.html doc=a edition=true %}</p>
+                <h3 class="hl hl--m"><a href="{{ site.baseurl }}{{ a.url }}">{% include years.html text=a.title %}</a></h3>
+                <p class="story__dek">{{ a.content | strip_html | normalize_whitespace | truncatewords: 20 }}</p>
+                {% include byline.html doc=a short=true %}
+            </article>
+            {%- else %}
+            <article class="h1-an h1-an--row">
+                {%- capture h1_k %}{% include kicker.html doc=a edition=true %}{% endcapture %}
+                <p class="kicker">{{ h1_k | split: " · " | first | strip }}</p>
+                <div class="h1-an__text">
+                    <h3 class="hl hl--s"><a href="{{ site.baseurl }}{{ a.url }}">{% include years.html text=a.title %}</a></h3>
+                    {% include byline.html doc=a short=true %}
+                </div>
+                <a class="art h1-thumb" href="{{ site.baseurl }}{{ a.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ a.image_path | default: h1_img }}" alt="" loading="lazy">
+                </a>
+            </article>
+            {%- endif %}
+            {%- endfor %}
+
+            <aside class="index-box h1-index">
+                <h2 class="index-box__title">{{ t.in_this_issue }}</h2>
+                <ul>
+                    <li><a href="{{ site.baseurl }}{{ t.paths.news }}"><span>{{ t.research_plural }}</span><i></i><b>{{ h1_articles.size }}</b></a></li>
+                    <li><a href="{{ site.baseurl }}{{ t.paths.topics }}"><span>{{ t.topics }}</span><i></i><b>{{ h1_topics.size }}</b></a></li>
+                    <li><a href="{{ site.baseurl }}{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span><i></i><b>{{ h1_datasets.size }}</b></a></li>
+                    <li><span class="index-box__row"><span>{{ t.charts }}</span><i></i><b>{{ h1_charts.size }}</b></span></li>
+                    <li><a href="{{ site.baseurl }}{{ t.paths.reports }}"><span>{{ t.reports }}</span><i></i><b>{{ h1_reports.size }}</b></a></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    {%- comment -%} ── Θέματα: 4 x 2 tiles ── {%- endcomment %}
+    <section class="band h1-band h1-topics" aria-labelledby="h1-topics">
+        <div class="band__head">
+            <h2 class="band__label" id="h1-topics"><a href="{{ site.baseurl }}{{ t.paths.topics }}">{{ t.topics }}</a></h2>
+            <a class="more" href="{{ site.baseurl }}{{ t.paths.topics }}">{{ t.all_topics }} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="tiles h1-tiles">
+            {%- for tp in h1_topics limit: 7 %}
+            {% include topic-tile.html topic=tp n=forloop.index %}
+            {%- endfor %}
+            {%- for tp in h1_specials limit: 1 %}
+            {% include topic-tile.html topic=tp %}
+            {%- endfor %}
+        </div>
+    </section>
+
+    {%- comment -%} ── More: equal picture cards ── {%- endcomment %}
+    {%- if h1_more_n > 0 %}
+    <section class="band h1-band h1-more" aria-labelledby="h1-more">
+        <div class="band__head">
+            <h2 class="band__label" id="h1-more"><a href="{{ site.baseurl }}{{ h1_more_href }}">{{ h1_more_label | replace: "&", "&amp;" }}</a></h2>
+            <a class="more" href="{{ site.baseurl }}{{ h1_more_href }}">{{ h1_more_link }} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="h1-cards h1-cards--{{ h1_more_n }}{% unless h1_more_all_articles %} h1-cards--text{% endunless %}">
+            {%- for m in h1_more limit: h1_more_n %}
+            <article class="h1-card">
+                {%- if h1_more_all_articles %}
+                <a class="art" href="{{ site.baseurl }}{{ m.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ m.image_path | default: h1_img }}" alt="" loading="lazy">
+                </a>
+                {%- endif %}
+                {%- if m.collection == "articles" %}
+                <p class="kicker">{% include kicker.html doc=m edition=true %}</p>
+                {%- elsif m.collection == "reports" %}
+                <p class="kicker">{% include upper.html text=t.reports %}</p>
+                {%- else %}
+                {%- assign h1_k = t.dataset_one | append: " · " | append: m.category -%}
+                <p class="kicker">{% include upper.html text=h1_k %}</p>
+                {%- endif %}
+                <h3 class="hl hl--m"><a href="{{ site.baseurl }}{{ m.url }}">{% include years.html text=m.title %}</a></h3>
+                {%- if m.collection == "articles" %}
+                <p class="story__dek">{{ m.content | strip_html | normalize_whitespace | truncatewords: 24 }}</p>
+                {% include byline.html doc=m short=true %}
+                {%- elsif m.collection == "reports" %}
+                <p class="story__dek">{{ m.description | strip_html | truncatewords: 24 }}</p>
+                {%- else %}
+                {%- assign h1_dek = m.description_detailed | strip_html | strip | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει την ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει τις ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει ' | remove_first: 'Αυτό το σύνολο δεδομένων παρέχει ' | remove_first: 'Το σύνολο δεδομένων παρέχει ' | truncatewords: 24 %}
+                <p class="story__dek">{{ h1_dek | slice: 0 | upcase }}{{ h1_dek | slice: 1, 600 }}</p>
+                <p class="h1-status">{% include update.html doc=m %}</p>
+                {%- endif %}
+            </article>
+            {%- endfor %}
+        </div>
+    </section>
+    {%- endif %}
+
+    {%- comment -%} ── Newsletter strip ── {%- endcomment %}
+    <aside class="h1-news" aria-label="{{ t.newsletter }}">
+        <p class="h1-news__eyebrow"><span aria-hidden="true">✂</span> {{ t.newsletter }}</p>
+        <div class="h1-news__text">
+            <h2 class="h1-news__title">{{ t.nl_title }}</h2>
+            <p>{{ t.nl_text }}</p>
+        </div>
+        <a class="btn" href="{{ t.substack }}" target="_blank" rel="noopener noreferrer">{{ t.subscribe }}</a>
+    </aside>
+</div>
