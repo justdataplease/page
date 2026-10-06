@@ -941,7 +941,9 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .topic__facts dt { font-family: var(--f-sans); font-size: .66rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); }
 .topic__facts dd { margin: .1rem 0 0; font-family: var(--f-sans); font-size: .92rem; }
 .topic__main { min-width: 0; }
-.frame--dashboard { aspect-ratio: 4 / 3.15; }   /* Power BI lite pages are ~4:3, plus the viewer bar */
+/* The full dashboards' pages are 1520x1000 (dfgkit, every page the same size) plus the ~38px Power BI viewer bar,
+   so the frame is page height (65.79% of the width) + the bar: no empty band under the page. */
+.frame--dashboard { aspect-ratio: auto; height: 0; padding-bottom: calc(65.79% + 38px); }
 .topic__soon { padding-block: 3rem; }
 .topic__dash { margin: 0 0 2rem; scroll-margin-top: 1rem; }
 .topic__open { margin: .5rem 0 0; text-align: right; font-family: var(--f-sans); font-size: .8rem; }
