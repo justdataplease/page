@@ -1,0 +1,20 @@
+{%- comment -%}
+  An article's kicker: its topic (and edition, e.g. "ΤΙΜΕΣ ΚΑΥΣΙΜΩΝ · ΤΡΙΜΗΝΙΑΙΑ ΑΝΑΛΥΣΗ") when it belongs to one
+  (_data/topics.yml), else the category of its first related dataset.
+  edition=true (the front page): when the article has no `edition` of its own, name the topic's kind of edition
+  (its cadence, or "special" for a special topic), so every analysis there shows its topic and edition.
+{%- endcomment -%}
+{%- include topic-of.html doc=include.doc -%}
+{%- if _topic -%}
+{%- assign _kt = _topic[include.doc.lang].name -%}
+{%- assign _kk = include.doc.edition -%}
+{%- if include.edition and _kk == nil -%}
+{%- if _topic.kind == "special" -%}{%- assign _kk = "special" -%}{%- else -%}{%- assign _kk = _topic.cadence -%}{%- endif -%}
+{%- endif -%}
+{%- if _kk and t.edition_kind[_kk] -%}{%- assign _kt = _kt | append: " · " | append: t.edition_kind[_kk] -%}{%- endif -%}
+{%- else -%}
+{%- assign _ks = include.doc.related_dataset_slugs | first -%}
+{%- assign _kd = site.data_directory | where: "slug", _ks | where: "lang", include.doc.lang | first -%}
+{%- assign _kt = _kd.category | default: t.research -%}
+{%- endif -%}
+{%- include upper.html text=_kt -%}

@@ -1,403 +1,135 @@
-{% assign related_articles = site.articles | where: "related_dataset_slugs", page.slug %}
-
 {% include head.html %}
+{%- assign related_articles = site.articles | where: "related_dataset_slugs", page.slug | where: "lang", page.lang -%}
+{%- assign names = page.source_name | split: ',' -%}
+{%- assign urls = page.source_url | split: ',' -%}
+{%- assign last_index = names.size | minus: 1 -%}
+{%- comment -%} Only Power BI charts are embedded on this site: Looker Studio ones are left out. {%- endcomment -%}
+{%- assign chart_ids = "" | split: "" -%}
+{%- assign _all_ids = page.chart_id | split: "," -%}
+{%- for _id in _all_ids -%}
+{%- assign _cid = _id | strip -%}
+{%- assign _c = site.charts | where: "slug", _cid | first -%}
+{%- if _c and _c.embedded_url contains "app.powerbi.com" -%}{%- assign chart_ids = chart_ids | push: _cid -%}{%- endif -%}
+{%- endfor -%}
+{%- assign first_chart_id = chart_ids | first -%}
+{%- assign data_topic = nil -%}
+{%- for _x in site.data.topics -%}{%- if _x.data contains page.slug -%}{%- assign data_topic = _x -%}{%- break -%}{%- endif -%}{%- endfor -%}
 <body>
-{% include navbar.html %}
+{% include masthead.html %}
+
 <main>
-    <section class="bg-half-100 d-flex w-100 pb-3">
+    <article class="dataset wrap">
+        <header class="article__head article__head--wide">
+            <nav class="crumbs" aria-label="breadcrumb">
+                <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
+                <a href="{{ site.baseurl }}{{ t.paths.data_directory }}">{{ t.data_directory_upper }}</a>
+                <span aria-current="page">{{ t.data_upper }}</span>
+            </nav>
+            <p class="kicker">{% include upper.html text=page.category %}</p>
+            <h1 class="hl hl--article">{{ page.title }}</h1>
+            <p class="meta">{% include update.html doc=page %}</p>
+            {% include share.html %}
+        </header>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="row">
+        <div class="dataset__grid">
+            <div class="prose dataset__main">
+                <h2>{{ t.data_description }}</h2>
+                <p>{{ page.description_detailed }}</p>
 
-                        <div class="col-md-1 d-none d-md-block">
-                            <ul class="list-unstyled text-start sticky-bar social-icon social mb-0 pt-1">
-                                <li class="mb-2 h6 text-center">Share</li>
-                                <div class="text-center">
-                                    <!-- Facebook Share -->
-                                    <li class="mt-1">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="facebook" class="uil uil-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Bluesky -->
-                                    <li class="mt-1">
-                                        <a href="https://bsky.app/intent/compose?text=Check%20this%20out!%20{{ site.url }}{{ page.url }}" target="_blank" class="rounded">
-                                            <i class="uil uil-cloud"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Twitter Share -->
-                                    <li class="mt-1">
-                                        <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="twitter" class="uil uil-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <!-- LinkedIn Share -->
-                                    <li class="mt-1">
-                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                                           target="_blank"
-                                           class="rounded">
-                                            <i data-feather="linkedin" class="uil uil-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
+                <h2>{{ t.data_preprocessing }}</h2>
+                <p>{{ page.description_preprocess }}</p>
 
+                <h2>{{ t.data_access }}</h2>
+                <p>{{ t.data_access_text }}</p>
+                {%- if page.description_data_access_sql_bigquery %}
+                <p>{{ t.bigquery_text }}</p>
+                <pre><code>{{ page.description_data_access_sql_bigquery }}</code></pre>
+                {%- endif %}
 
-                        <div class="col-12 col-md-11 fs-5">
-
-                            <div class="row justify-content-center">
-                                <nav aria-label="breadcrumb" class="d-inline-block">
-                                    <ul class="breadcrumb m-0 p-0">
-                                        {% if page.lang == 'en' %}
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">HOME</a></li>
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/en/data-directory/">DATA DIRECTORY</a></li>
-                                        <li class="breadcrumb-item active">DATA</li>
-                                        {% else %}
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">ΑΡΧΙΚΗ</a></li>
-                                        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/data-directory/">ΣΥΛΛΟΓΗ ΔΕΔΟΜΕΝΩΝ</a></li>
-                                        <li class="breadcrumb-item active">ΔΕΔΟΜΕΝΑ</li>
-                                        {% endif %}
-                                    </ul>
-                                </nav>
-                            </div>
-
-                            <h2 class="title">{{ page.title }}</h2>
-
-                            <div class="row align-items-center pt-4">
-                                <!-- Title on the left -->
-                                <div class="col-7">
-                                    <h4><i class="uil uil-tag-alt"></i> {{ page.category }}</h4>
-                                </div>
-
-                                <!-- Download button on the right -->
-                                <div class="col-5 text-end">
-                                    {% if page.download_url %}
-                                    <a href="{{ page.download_url }}" target="_blank" class="btn btn-custom-purple">
-                                        {% if page.lang == 'en' %} Download {% else %} Κατέβασε {% endif %}CSV
-                                    </a>
-                                    {% else %}
-                                    <a href="https://dataforgreece.com/about/" target="_blank" class="btn btn-custom-purple">
-                                        {% if page.lang == 'en' %} Ask {% else %} Ζήτησε {% endif %}
-                                    </a>
-                                    {% endif %}
-                                </div>
-                            </div>
-
-                            <div class="container-fluid ps-0 pe-0">
-                                <table class="custom-table">
-                                    <thead>
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Published by
-                                                {% else %}
-                                                Δημοσιεύθηκε από
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <th>{{ page.published_by }}</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Last Update
-                                                {% else %}
-                                                Τελευταία ενημέρωση
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <td>{{ page.last_update }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Date Added
-                                                {% else %}
-                                                Ημερομηνία προσθήκης
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <td>{{ page.date_added }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Category
-                                                {% else %}
-                                                Κατηγορία
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <td>{{ page.category }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Data dates
-                                                {% else %}
-                                                Ημερομηνίες δεδομένων
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <td>{{ page.data_dates }}</td>
-                                    </tr>
-                                    {% if page.contributed_by %}
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Contributed by
-                                                {% else %}
-                                                Συνεισφορά από
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-                                        <td><a href="{{ page.contributed_by_url }}">🔗 {{ page.contributed_by }}</a></td>
-                                    </tr>
-                                    {% endif %}
-                                    <tr>
-                                        <th>
-                                            <strong>
-                                                {% if page.lang == "en" %}
-                                                Source
-                                                {% else %}
-                                                Πηγή
-                                                {% endif %}
-                                            </strong>
-                                        </th>
-
-                                        {% assign names = page.source_name | split: ',' %}
-                                        {% assign urls = page.source_url | split: ',' %}
-                                        {% assign last_index = names.size | minus: 1 %}
-                                        {% assign chart_ids = page.chart_id | split: "," %}
-
-                                        <td>{% for i in (0..last_index) %}
-                                            <a href="{{ urls[i] | strip }}">🔗 {{ names[i] | strip }}</a>
-                                            {% endfor %}
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class=" ps-0 pe-0">
-                                <br>
-                                <!-- Data Description Section -->
-                                <div class="data-section">
-                                    <h3>
-                                        {% if page.lang == 'en' %}
-                                        Data Description
-                                        {% else %}
-                                        Περιγραφή Δεδομένων
-                                        {% endif %}
-                                    </h3>
-                                    <p>{{ page.description_detailed }}</p>
-                                </div>
-
-                                <!-- Data Preprocessing Section -->
-                                <br>
-                                <div class="data-section">
-                                    <h3>
-                                        {% if page.lang == 'en' %}
-                                        Data Preprocessing
-                                        {% else %}
-                                        Προεπεξεργασία Δεδομένων
-                                        {% endif %}
-                                    </h3>
-                                    <p>{{ page.description_preprocess }}</p>
-                                </div>
-
-                                <!-- Data Accessibility Section -->
-                                <br>
-                                <div class="data-section">
-                                    <h3>
-                                        {% if page.lang == 'en' %}
-                                        Data Accessibility
-                                        {% else %}
-                                        Προσβασιμότητα Δεδομένων
-                                        {% endif %}
-                                    </h3>
-                                    <p>
-                                        {% if page.lang == 'en' %}
-                                        You can download and analyze the data in Excel by clicking the "Download" button at the top of the page. If the download button is unavailable, click the "Ask"
-                                        button to make a request.
-                                        {% else %}
-                                        Μπορείτε να κατεβάσετε και να αναλύσετε τα δεδομένα σε Excel επιλέγοντας το κουμπί "Κατέβασε" στην αρχή της σελίδας. Αν το κουμπί λήψης δεν είναι διαθέσιμο,
-                                        επιλέξτε το κουμπί "Ζήτησε" για να κάνετε αίτημα.
-                                        {% endif %}
-                                        <br><br>
-                                        {% if page.description_data_access_sql_bigquery %}
-                                        {% if page.lang == 'en' %}
-                                        Alternatively, you can analyze the data online using the public dataset directly in <a href="https://console.cloud.google.com/bigquery">Google
-                                        BigQuery</a> with the
-                                        following query
-                                        {% else %}
-                                        Εναλλακτικά, μπορείτε να αναλύσετε τα δεδομένα online χρησιμοποιώντας το δημόσιο dataset απευθείας στο <a href="https://console.cloud.google.com/bigquery">Google
-                                        BigQuery</a> με το εξής ερώτημα:
-                                        {% endif %}
-                                    <pre><code>{{page.description_data_access_sql_bigquery}}</code></pre>
-                                    {% endif %}
-
-                                    </p>
-                                </div>
-
-                                <!-- Dataset Definitions Section -->
-                                {% if content.size > 10 %}
-                                <div>
-                                    <h3>
-                                        {% if page.lang == 'en' %}
-                                        Dataset Definitions
-                                        {% else %}
-                                        Ορισμοί για το Σύνολο Δεδομένων
-                                        {% endif %}
-                                    </h3>
-                                    <div>{{ content }}</div>
-                                </div>
-                                <br>
-                                {% endif %}
-                            </div>
-
-                            {% if page.chart_id %}
-                            <div><h3>{% if page.lang == 'en' %} Related Charts {% else %} Σχετικά Γραφήματα {% endif %}</h3>
-                                {% for id in chart_ids %}
-
-                                <div class="pt-2">
-                                    <div>{{ forloop.index }}. ID: {{id}}</div>
-                                    <iframe
-                                            src="/charts/{{id}}/"
-                                            frameborder="0"
-                                            style="border: 0; width: 100%; aspect-ratio: 4 / 3;"
-                                            allowfullscreen>
-                                    </iframe>
-                                </div>
-                                {% endfor %}
-                            </div>
-
-                            <br>
-                            <div>
-
-                                <h3 id="embed">
-                                    {% if page.lang == 'en' %}
-                                    Embed Charts
-                                    {% else %}
-                                    Χρησιμοποίησε τα Γραφήματα
-                                    {% endif %}
-                                </h3>
-
-
-                                <!-- Input field for chart ID -->
-                                <label for="chartId">
-                                    {% if page.lang == 'en' %} Enter Chart ID: {% else %} Εισαγάγετε το ID του γραφήματος: {% endif %}
-                                </label>
-                                {% assign first_chart_id = chart_ids | first %}
-
-                                <input type="text" id="chartId" placeholder="e.g.,{{ first_chart_id | strip }}" oninput="updateEmbedCode()"/>
-
-                                <p>
-                                    {% if page.lang == 'en' %}
-                                    Paste the following HTML code into your blog (WordPress, HTML, etc.) for the chart to appear.
-                                    {% else %}
-                                    Επικολλήστε τον παρακάτω HTML κώδικα στο blog σας (WordPress, HTML κ.λπ.) για να εμφανιστεί το γράφημα.
-                                    {% endif %}
-                                </p>
-
-                                <!-- Display area for the updated iframe code -->
-                                <pre id="embedCode1"><code>&lt;iframe src="https://dataforgreece.com/charts/{{page.chart_id}}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-
-                                <br>
-
-                                <p>
-                                    {% if page.lang == 'en' %}
-                                    You can specify a specific width in pixels (e.g., 700px), and the height will adjust automatically.
-                                    {% else %}
-                                    Μπορείτε να επιλέξετε ένα συγκεκριμένο πλάτος σε pixels (π.χ., 700px), και το ύψος θα προσαρμοστεί αυτόματα.
-                                    {% endif %}
-                                </p>
-
-                                <!-- Display area for the updated iframe code -->
-                                <pre id="embedCode2"><code>&lt;iframe src="https://dataforgreece.com/charts/{{page.chart_id}}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-
-                                <br>
-                            </div>
-                            {% endif %}
-
-                            {% if related_articles.size > 0 %}
-                            <div class="related-articles">
-                                <h3>
-                                    {% if page.lang == "en" %}
-                                    Related Articles
-                                    {% else %}
-                                    Σχετικά Άρθρα
-                                    {% endif %}
-                                </h3>
-                                <div class="row justify-content-center pt-3 ps-0">
-                                    <div class="col-lg-12">
-                                        <div class="tiny-three-item">
-                                            {% for article in related_articles %}
-                                            {% if article.lang == page.lang %}
-                                            <div class="tiny-slide">
-                                                <div class="d-flex m-2">
-                                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                                        <h6><a href="{{ site.baseurl }}{{ article.url }}" class="h5 title text-dark">{{ article.title }}</a></h6>
-                                                        <a href="{{ site.baseurl }}{{ article.url }}" class="text-muted readmore"><strong>Read More <i
-                                                                class="uil uil-angle-right-b align-middle"></i></strong></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
-                            {% endif %}
-                            <br>
-
-                            {% include footer-newsletter.html %}
-                            {% include data-extra-footer.html %}
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {%- if content.size > 10 %}
+                <h2>{{ t.definitions }}</h2>
+                <div class="definitions">{{ content }}</div>
+                {%- endif %}
             </div>
-    </section>
+
+            <aside class="dataset__aside">
+                <div class="factbox">
+                    <h2 class="factbox__title">{{ t.fact_box }}</h2>
+                    <dl>
+                        <div><dt>{{ t.published_by }}</dt><dd>{{ page.published_by }}</dd></div>
+                        <div><dt>{{ t.last_update }}</dt><dd>{{ page.last_update }}</dd></div>
+                        <div><dt>{{ t.date_added }}</dt><dd>{{ page.date_added }}</dd></div>
+                        <div><dt>{{ t.category }}</dt><dd>{{ page.category }}</dd></div>
+                        <div><dt>{{ t.data_dates }}</dt><dd>{{ page.data_dates }}</dd></div>
+                        {%- if page.contributed_by %}
+                        <div><dt>{{ t.contributed_by }}</dt><dd><a href="{{ page.contributed_by_url }}">{{ page.contributed_by }}</a></dd></div>
+                        {%- endif %}
+                        <div>
+                            <dt>{{ t.source }}</dt>
+                            <dd>{% for i in (0..last_index) %}<a href="{{ urls[i] | strip }}">{{ names[i] | strip }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
+                        </div>
+                    </dl>
+                    {%- if page.download_url %}
+                    <a class="btn btn--block" href="{{ page.download_url }}" target="_blank" rel="noopener">{{ t.download }}</a>
+                    {%- else %}
+                    <a class="btn btn--block" href="https://dataforgreece.com/about/" target="_blank" rel="noopener">{{ t.ask }}</a>
+                    {%- endif %}
+                </div>
+
+                {%- if data_topic %}
+                <div class="aside-list">
+                    <h2 class="label">{{ t.topic }}</h2>
+                    {% include topic-card.html topic=data_topic short=true %}
+                </div>
+                {%- endif %}
+
+                {%- if related_articles.size > 0 %}
+                <div class="aside-list">
+                    <h2 class="label">{{ t.related_articles }}</h2>
+                    {%- for article in related_articles %}
+                    <article class="brief">
+                        <h3 class="hl hl--s"><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></h3>
+                        <p class="meta">{% include date.html date=article.date %}</p>
+                    </article>
+                    {%- endfor %}
+                </div>
+                {%- endif %}
+            </aside>
+        </div>
+
+        {%- if chart_ids.size > 0 %}
+        <section class="band" id="charts">
+            <h2 class="band__label">{{ t.related_charts }}</h2>
+            {%- for id in chart_ids %}
+            <figure class="chart-figure">
+                <figcaption><span class="chart-figure__n">{{ t.chart }} {{ forloop.index }}</span> ID: {{ id | strip }}</figcaption>
+                <div class="frame">
+                    <iframe src="/charts/{{ id | strip }}/" title="{{ t.chart }} {{ forloop.index }}" loading="lazy" allowfullscreen></iframe>
+                </div>
+            </figure>
+            {%- endfor %}
+        </section>
+
+        <section class="band embed" id="embed">
+            <h2 class="band__label">{{ t.embed_title }}</h2>
+            <div class="embed__body">
+                <label for="chartId">{{ t.embed_label }}</label>
+                <input type="text" id="chartId" placeholder="e.g.,{{ first_chart_id }}" data-default="{{ first_chart_id }}" autocomplete="off">
+                <p>{{ t.embed_help_1 }}</p>
+                <pre id="embedCode1"><code>&lt;iframe src="https://dataforgreece.com/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+                <p>{{ t.embed_help_2 }}</p>
+                <pre id="embedCode2"><code>&lt;iframe src="https://dataforgreece.com/charts/{{ first_chart_id }}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+            </div>
+        </section>
+        {%- endif %}
+    </article>
+
+    <div class="wrap article-end">
+        {% include newsletter.html wide=true %}
+    </div>
+    {% include disclaimer.html %}
 </main>
 
 {% include footer.html %}
-
-
-<!-- JavaScript to update iframe -->
-<script>
-    function updateEmbedCode() {
-        // Get the input value for chart ID
-        const chartId = document.getElementById("chartId").value.trim();
-
-        // Construct the iframe code dynamically with different widths
-        const iframeCode100 = `&lt;iframe src="https://dataforgreece.com/charts/${chartId}/" frameborder="0" style="border: 0; width: 100%; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;`;
-        const iframeCode700 = `&lt;iframe src="https://dataforgreece.com/charts/${chartId}/" frameborder="0" style="border: 0; width: 700px; aspect-ratio: 4 / 3;" allowfullscreen&gt;&lt;/iframe&gt;`;
-
-        // Update the embed code blocks
-        document.querySelector("#embedCode1").innerHTML = `<code>${iframeCode100}</code>`; // width 100%
-        document.querySelector("#embedCode2").innerHTML = `<code>${iframeCode700}</code>`; // width 700px
-
-    }
-</script>
 </body>
 </html>
-
-

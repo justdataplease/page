@@ -1,0 +1,74 @@
+---
+layout: page
+title: "Αναφορά Πηγής & Πολιτική Χρήσης"
+description: "Πώς να αποδίδετε σωστά το DataForGreece όταν χρησιμοποιείτε τα δεδομένα και τις οπτικοποιήσεις μας"
+lang: "gr"
+permalink: /attribution/
+---
+<p>
+    Ενθαρρύνουμε τη χρήση των δεδομένων και των οπτικοποιήσεών μας, αλλά απαιτείται η σωστή αναφορά πηγής.
+    Εάν χρησιμοποιείτε οποιοδήποτε δεδομένο, γράφημα ή ανάλυση από το <strong>DataForGreece</strong>, είτε ενσωματωμένο, τροποποιημένο, είτε ως στιγμιότυπο οθόνης,
+    πρέπει να συμπεριλάβετε μια αναφορά με σύνδεσμο προς την πηγή.
+</p>
+
+<h2>Πώς να Αναφέρετε το DataForGreece</h2>
+<h3>Σωστή Μορφή Αναφοράς</h3>
+<p>
+    Εάν ενσωματώνετε ή αναφέρεστε σε ένα συγκεκριμένο σύνολο δεδομένων ή οπτικοποίηση, συμπεριλάβετε έναν άμεσο σύνδεσμο προς αυτά.
+    Για παράδειγμα, αν επιλέγατε να χρησιμοποιήσετε αυτό το <a href="https://dataforgreece.com/data-directory/supermarket-prices/">γράφημα</a>, θα έπρεπε να χρησιμοποιήσετε ένα από τα παρακάτω.
+</p>
+
+<div class="callout">
+    <p><strong>Πηγή:</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">DataForGreece</a></p>
+    <p><strong>Τα δεδομένα παρέχονται από</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">DataForGreece</a></p>
+</div>
+
+<h2>Παράδειγμα Χρήσης</h2>
+<p>Εάν ενσωματώσετε ή τραβήξετε ένα στιγμιότυπο οθόνης ενός γραφήματος, η αναφορά πηγής πρέπει να εμφανίζεται καθαρά στη δημοσίευση. Παράδειγμα:</p>
+
+<p><strong>Παράδειγμα Αναφοράς:</strong></p>
+<p>
+    Τα πιο πρόσφατα δεδομένα από το <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">DataForGreece</a> δείχνουν αύξηση των τιμών του ελαιολάδου κατά τον Ιούλιο του 2023.
+</p>
+
+<p><strong>Παράδειγμα Γραφήματος:</strong></p>
+<figure>
+    <img src="https://dataforgreece.com/assets/posts/supermarket-prices-olive-oil-2025-01.png" alt="Γράφημα Τιμών Σούπερ Μάρκετ">
+    <figcaption><strong>Πηγή:</strong> <a href="https://dataforgreece.com/data-directory/supermarket-prices/" target="_blank">DataForGreece</a></figcaption>
+</figure>
+
+<h2>Κατευθυντήριες Οδηγίες Επωνυμίας</h2>
+<p>
+    Για να διασφαλίσετε τη σωστή αναπαράσταση του <strong>DataForGreece</strong>, ακολουθήστε τις εξής οδηγίες:
+</p>
+<ul>
+    <li>Χρησιμοποιείτε το επίσημο λογότυπό μας χωρίς τροποποιήσεις.</li>
+    <li>Διατηρήστε την καθαρή αναγνωσιμότητα του ονόματος της επωνυμίας.</li>
+    <li>Διασφαλίστε σωστή αντίθεση και φόντο για ορατότητα.</li>
+</ul>
+
+<p><a href="https://dataforgreece.com/assets/dataforgreece-brand-assets.zip" class="btn" download>Λήψη Εικαστικών Επωνυμίας</a></p>
+
+<h2>Επιπλέον Σημειώσεις</h2>
+<ul>
+    <li>Η εμπορική χρήση των δεδομένων μας απαιτεί άδεια. Επικοινωνήστε μαζί μας στο <a href="mailto:info@dataforgreece.com">info@dataforgreece.com</a>.</li>
+    <li>Τα δεδομένα και οι οπτικοποιήσεις δεν πρέπει να αλλοιώνονται με παραπλανητικό τρόπο.</li>
+    <li>Η σωστή αναφορά ενισχύει τη διαφάνεια και υποστηρίζει τις πρωτοβουλίες ανοιχτών δεδομένων.</li>
+</ul>
+
+{%- comment -%} Photo credits (CC licences need them). The pictures carry no caption (user, 2026-10-06), so every
+  topics.yml entry with an image_credit is credited here. {%- endcomment %}
+{%- assign _credited = site.data.topics | where_exp: "tp", "tp.image_credit" -%}
+{%- if _credited.size > 0 %}
+<h2 id="photos">Φωτογραφίες</h2>
+<p>Φωτογραφίες τρίτων που χρησιμοποιούμε στις σελίδες των θεμάτων, με την άδεια χρήσης τους:</p>
+<ul>
+    {%- for tp in site.data.topics %}{% if tp.image_credit and tp.image_credit != "" %}
+    <li>{{ tp[page.lang].name }}: {{ tp.image_credit }}{% if tp.image_source %} (<a href="{{ tp.image_source }}" target="_blank" rel="noopener">Πηγή</a>){% endif %}</li>
+    {%- endif %}{% endfor %}
+</ul>
+{%- endif %}
+
+<p>
+    Σας ευχαριστούμε που σέβεστε το έργο μας και συμβάλλετε στη διαφάνεια των ανοιχτών δεδομένων στην Ελλάδα!
+</p>

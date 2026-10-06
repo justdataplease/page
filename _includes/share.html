@@ -1,0 +1,8 @@
+{%- assign _share_url = site.url | append: page.url -%}
+<p class="share">
+    <span class="share__label">{{ t.share }}</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ _share_url }}" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://bsky.app/intent/compose?text=Check%20this%20out!%20{{ _share_url }}" target="_blank" rel="noopener">Bluesky</a>
+    <a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&amp;url={{ _share_url }}" target="_blank" rel="noopener">X</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ _share_url }}" target="_blank" rel="noopener">LinkedIn</a>
+</p>

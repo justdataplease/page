@@ -1,0 +1,8 @@
+<header class="section-head">
+    <nav class="crumbs" aria-label="breadcrumb">
+        <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
+        <span aria-current="page">{{ include.crumb }}</span>
+    </nav>
+    <h1 class="section-head__title">{{ include.title }}</h1>
+    {%- if include.dek %}<p class="section-head__dek">{{ include.dek }}</p>{% endif %}
+</header>

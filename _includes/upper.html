@@ -1,0 +1,5 @@
+{%- comment -%}
+  Uppercase that is correct for Greek: drops the tonos first (ΤΕΤΑΡΤΗ, not ΤΕΤΆΡΤΗ),
+  which CSS text-transform does not do reliably in every browser.
+{%- endcomment -%}
+{{- include.text | replace: 'ά','α' | replace: 'έ','ε' | replace: 'ή','η' | replace: 'ί','ι' | replace: 'ό','ο' | replace: 'ύ','υ' | replace: 'ώ','ω' | replace: 'ΐ','ϊ' | replace: 'ΰ','ϋ' | replace: 'Ά','Α' | replace: 'Έ','Ε' | replace: 'Ή','Η' | replace: 'Ί','Ι' | replace: 'Ό','Ο' | replace: 'Ύ','Υ' | replace: 'Ώ','Ω' | upcase -}}

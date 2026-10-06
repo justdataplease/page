@@ -1,0 +1,16 @@
+{%- comment -%}
+  The analyses of one topic, newest first, in the page's language. Leaves:
+    _tarts    the articles (front matter `topic: <key>`, or listed in the topic's `articles`)
+    _tlatest  the newest one (nil when none)
+  Usage: {% include topic-articles.html topic=tp %}
+{%- endcomment -%}
+{%- assign _ta_tp = include.topic -%}
+{%- assign _ta_key = _ta_tp.key -%}
+{%- assign _ta_lang = page.lang | default: lang -%}
+{%- assign _ta_all = site.articles | where: "lang", _ta_lang -%}
+{%- assign _tarts = "" | split: "" -%}
+{%- for _a in _ta_all -%}
+{%- if _a.topic == _ta_key or _ta_tp.articles contains _a.slug -%}{%- assign _tarts = _tarts | push: _a -%}{%- endif -%}
+{%- endfor -%}
+{%- assign _tarts = _tarts | sort: "date" | reverse -%}
+{%- assign _tlatest = _tarts | first -%}

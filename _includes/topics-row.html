@@ -1,0 +1,66 @@
+{%- comment -%}
+  One row of the topics index (_layouts/topics.html): picture, name + short line, the data file (sources, period,
+  updates), the analysis schedule with the latest analysis, and the dashboard: one primary button to the full
+  dashboard embedded on the topic page (#dashboard), the older explore reports as secondary buttons.
+  Params: topic (a topics.yml entry), n (row number).
+{%- endcomment -%}
+{%- assign _r = include.topic -%}
+{%- assign _rx = _r[lang] -%}
+{%- assign _r_href = site.baseurl | append: t.paths.topics | append: _r.key | append: "/" -%}
+{% include topic-articles.html topic=_r %}
+{%- assign _r_ex = "" | split: "" -%}
+{%- for _ex in _r.explore -%}{%- if _ex.url != "" -%}{%- assign _r_ex = _r_ex | push: _ex -%}{%- endif -%}{%- endfor -%}
+{%- assign _r_cad = t.cadence[_r.cadence] | downcase -%}
+<article class="tl-row" id="{{ _r.key }}" aria-labelledby="{{ _r.key }}-name">
+    <a class="art tl-row__art" href="{{ _r_href }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ site.baseurl }}/{{ _r.image | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+    </a>
+
+    <div class="tl-row__text">
+        <p class="tl-row__no">{{ include.n | prepend: "0" | slice: -2, 2 }}</p>
+        <h2 class="hl hl--m tl-row__name" id="{{ _r.key }}-name"><a href="{{ _r_href }}">{{ _rx.name }}</a></h2>
+        <p class="tl-row__dek">{{ _rx.dek }}</p>
+    </div>
+
+    <dl class="tl-row__data tl-facts">
+        <div>
+            <dt>{% include upper.html text=t.sources_file %}</dt>
+            <dd>
+                <ul class="tl-sources">
+                    {%- for s in _rx.sources %}
+                    <li><a href="{{ s.url }}" target="_blank" rel="noopener" title="{{ s.note }}">{{ s.name }}</a></li>
+                    {%- endfor %}
+                </ul>
+            </dd>
+        </div>
+        <div class="tl-facts__line"><dt>{% include upper.html text=t.coverage %}</dt><dd>{{ _rx.coverage }}</dd></div>
+        <div class="tl-facts__line"><dt>{% include upper.html text=t.updates_short %}</dt><dd>{{ _rx.updates }}</dd></div>
+    </dl>
+
+    <div class="tl-row__ana">
+        <p class="tl-cadence">{{ t.editions_every }} {{ _r_cad }}</p>
+        <dl class="tl-facts">
+            <div>
+                <dt>{% include upper.html text=t.latest_analysis %}</dt>
+                {%- if _tlatest %}
+                <dd class="tl-latest">
+                    <a href="{{ site.baseurl }}{{ _tlatest.url }}">{% include years.html text=_tlatest.title %}</a>
+                    <span class="tl-latest__date">{% include date.html date=_tlatest.date %}</span>
+                </dd>
+                {%- else %}
+                <dd class="tl-latest tl-latest--none">{{ t.no_editions }}</dd>
+                {%- endif %}
+            </div>
+        </dl>
+        {%- if _tarts.size > 0 %}
+        <a class="tl-more" href="{{ _r_href }}#topic-editions">{{ t.editions }} ({{ _tarts.size }}) <span aria-hidden="true">→</span></a>
+        {%- endif %}
+    </div>
+
+    <div class="tl-row__act">
+        {%- comment -%} one button only, "Εξερεύνηση" (user), to the FULL dashboard embedded on the topic page
+          (#dashboard) - never a separate report tab {%- endcomment -%}
+        <a class="btn btn--sm btn--ghost btn--block" href="{{ _r_href }}#dashboard">{% include upper.html text=t.explore %} <span aria-hidden="true">→</span></a>
+        <a class="tl-back" href="#tl-index">{{ t.index }} <span aria-hidden="true">↑</span></a>
+    </div>
+</article>

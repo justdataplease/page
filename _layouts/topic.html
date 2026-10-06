@@ -1,0 +1,167 @@
+{%- comment -%}
+  A topic (or special topic) page, /themata/<key>/: the dashboard, the sources, the datasets, and every analysis
+  published on it. Everything comes from _data/topics.yml; the page file only says `topic: <key>`.
+{%- endcomment -%}
+{% include head.html %}
+{%- assign tp = site.data.topics | where: "key", page.topic | first -%}
+{%- assign tx = tp[lang] -%}
+{%- assign tkey = tp.key -%}
+
+{%- comment -%} Analyses: articles that say `topic: <key>`, or that the topic lists by slug. {%- endcomment -%}
+{%- assign lang_articles = site.articles | where: "lang", page.lang -%}
+{%- assign t_arts = "" | split: "" -%}
+{%- for a in lang_articles -%}
+{%- if a.topic == tkey or tp.articles contains a.slug -%}{%- assign t_arts = t_arts | push: a -%}{%- endif -%}
+{%- endfor -%}
+{%- assign t_arts = t_arts | sort: "date" | reverse -%}
+
+{%- comment -%}
+  The dashboard on the page (#dashboard, where every "Πλήρες dashboard" button points): the topic's ONE dashboard,
+  its full Power BI report, else an existing Power BI chart, else the first explore report.
+{%- endcomment -%}
+{%- assign dash_src = tp.dashboards.full -%}
+{%- if dash_src == nil or dash_src == "" -%}
+{%- for cid in tp.charts -%}
+{%- assign c = site.charts | where: "slug", cid | where: "lang", page.lang | first -%}
+{%- unless c -%}{%- assign c = site.charts | where: "slug", cid | first -%}{%- endunless -%}
+{%- if c and c.embedded_url contains "app.powerbi.com" -%}{%- assign dash_src = c.url | prepend: site.baseurl -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- comment -%} Nothing newer: show the first published explore (older, detailed) report. {%- endcomment -%}
+{%- if dash_src == nil or dash_src == "" -%}
+{%- for ex in tp.explore -%}{%- if ex.url != "" -%}{%- assign dash_src = ex.url -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
+{%- assign explore_live = tp.explore | where_exp: "e", "e.url != ''" -%}
+{%- assign parent = nil -%}
+{%- if tp.parent -%}{%- assign parent = site.data.topics | where: "key", tp.parent | first -%}{%- endif -%}
+{%- assign t_specials = site.data.topics | where: "parent", tkey -%}
+<body>
+{% include masthead.html %}
+
+<main>
+    <article class="topic wrap">
+        <header class="article__head article__head--wide topic__head">
+            <nav class="crumbs" aria-label="breadcrumb">
+                <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
+                <a href="{{ site.baseurl }}{{ t.paths.topics }}">{% include upper.html text=t.topics %}</a>
+                <span aria-current="page">{% include upper.html text=tx.name %}</span>
+            </nav>
+            <p class="kicker">{% if tp.kind == 'special' %}{% include upper.html text=t.special %} · {{ tx.when_label }}{% else %}{% include upper.html text=t.topic %}{% endif %}</p>
+            <h1 class="hl hl--article">{{ tx.name }}</h1>
+            <p class="topic__dek">{{ tx.dek }}</p>
+            {%- if tp.kind != 'special' %}
+            <dl class="topic__facts">
+                <div><dt>{{ t.coverage }}</dt><dd>{{ tx.coverage }}</dd></div>
+                <div><dt>{{ t.updates }}</dt><dd>{{ tx.updates }}</dd></div>
+                <div><dt>{{ t.editions_every }}</dt><dd>{{ t.cadence[tp.cadence] }}</dd></div>
+            </dl>
+            {%- endif %}
+        </header>
+
+        <section class="topic__dash" id="dashboard" aria-label="{{ t.full_dashboard }}">
+            {%- if dash_src and dash_src != "" %}
+            <div class="frame frame--dashboard">
+                <iframe src="{{ dash_src }}" title="{{ t.full_dashboard }}: {{ tx.name }}" loading="lazy" allowfullscreen></iframe>
+            </div>
+            {%- if dash_src contains "://" %}
+            <p class="topic__open"><a href="{{ dash_src }}" target="_blank" rel="noopener">{{ t.open_new_tab }} <span aria-hidden="true">↗</span></a></p>
+            {%- endif %}
+            {%- else %}
+            <div class="notice-box topic__soon">
+                <p class="notice-box__title">{{ t.dashboard }}</p>
+                <p>{{ t.dashboard_soon }}</p>
+            </div>
+            {%- endif %}
+        </section>
+
+        <div class="dataset__grid">
+            <div class="topic__main">
+                <section aria-labelledby="topic-editions">
+                    <h2 class="band__label" id="topic-editions">{{ t.editions }}</h2>
+                    {%- if t_arts.size > 0 %}
+                    <div class="river">
+                        {%- for item in t_arts %}
+                        {%- capture k %}{% include edition-label.html doc=item %}{% endcapture %}
+                        {%- assign k = k | strip -%}
+                        {%- if k == "" %}{% capture k %}{% include upper.html text=tx.name %}{% endcapture %}{% endif %}
+                        {%- capture dk %}{{ item.description | default: item.content | strip_html | normalize_whitespace | truncatewords: 40 }}{% endcapture %}
+                        {% include river-item.html doc=item kicker=k dek=dk %}
+                        {%- endfor %}
+                    </div>
+                    {%- else %}
+                    <p class="topic__empty">{{ t.no_editions }}</p>
+                    {%- endif %}
+                </section>
+
+                {%- if tx.notes.size > 0 %}
+                <section class="topic__notes-block" aria-labelledby="topic-notes">
+                    <h2 class="band__label" id="topic-notes">{{ t.topic_notes }}</h2>
+                    <ul class="prose topic__notes">
+                        {%- for n in tx.notes %}
+                        <li>{{ n }}</li>
+                        {%- endfor %}
+                    </ul>
+                </section>
+                {%- endif %}
+            </div>
+
+            <aside class="dataset__aside">
+                <div class="factbox">
+                    <h2 class="factbox__title">{{ t.sources_file }}</h2>
+                    <ul class="topic__sources">
+                        {%- for s in tx.sources %}
+                        <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% if s.note %}<span>{{ s.note }}</span>{% endif %}</li>
+                        {%- endfor %}
+                    </ul>
+                    {%- assign shown = 0 -%}
+                    {%- capture ds_list -%}
+                    {%- for slug in tp.data -%}
+                    {%- assign d = site.data_directory | where: "slug", slug | where: "lang", page.lang | first -%}
+                    {%- if d -%}{%- assign shown = shown | plus: 1 -%}<li><a href="{{ site.baseurl }}{{ d.url }}">{{ d.title }}</a> <span>{% include update.html doc=d %}</span></li>{%- endif -%}
+                    {%- endfor -%}
+                    {%- endcapture -%}
+                    {%- if shown > 0 %}
+                    <h3 class="factbox__sub">{{ t.topic_data }}</h3>
+                    <ul class="topic__sources">{{ ds_list }}</ul>
+                    {%- endif %}
+                </div>
+
+                {%- if explore_live.size > 0 %}
+                <div class="topic__explore">
+                    <h2 class="label">{{ t.explore_title }}</h2>
+                    <p>{{ t.explore_dek }}</p>
+                    <ul>
+                        {%- for ex in explore_live %}
+                        <li><a href="{{ ex.url }}" target="_blank" rel="noopener">{{ ex[lang] }} <span aria-hidden="true">↗</span></a></li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+                {%- endif %}
+
+                {%- if parent %}
+                <div class="aside-list">
+                    <h2 class="label">{{ t.topic }}</h2>
+                    {% include topic-card.html topic=parent short=true %}
+                </div>
+                {%- endif %}
+                {%- if t_specials.size > 0 %}
+                <div class="aside-list">
+                    <h2 class="label">{{ t.specials }}</h2>
+                    {%- for sp in t_specials %}
+                    {% include topic-card.html topic=sp short=true %}
+                    {%- endfor %}
+                </div>
+                {%- endif %}
+            </aside>
+        </div>
+    </article>
+
+    <div class="wrap article-end">
+        {% include newsletter.html wide=true %}
+    </div>
+    {% include disclaimer.html %}
+</main>
+
+{% include footer.html %}
+</body>
+</html>

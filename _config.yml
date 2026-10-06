@@ -4,7 +4,21 @@ baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
 url: "https://dataforgreece.com"
 author: DataForGreece
 email: support@justdataplease.com
-include: [ '_shortlinks','_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr' ]
+include: [ '_shortlinks','_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr','_topics/en','_topics/gr' ]
+exclude: [ 'README.md', 'sync-content.ps1', 'Gemfile', 'Gemfile.lock', 'node_modules', 'vendor',
+           # posts left out of this edition (kept in the main site, so sync-content still copies them)
+           '_articles/gr/forest-fires-greece-dv-2025-04.md', '_articles/en/forest-fires-greece-dv-2025-04.md' ]
+
+# ── Newspaper edition ───────────────────────────────────────────────
+# Two looks for the same content (definitions in _data/themes.yml):
+#   classic – black ink on white, column rules
+#   salmon  – "pink paper" financial daily: salmon paper, data ticker
+newspaper:
+  theme: classic
+  theme_switcher: true   # "Edition" picker in the top bar; set false once you pick one
+  founded: 2024          # first year of publication, drives the "Vol." in the dateline
+
+google_analytics: G-VT1VMYFGDL
 
 collections:
   articles:
@@ -15,8 +29,22 @@ collections:
     output: true
   charts:
     output: true
+  topics:            # newspaper only: topic pages (data in _data/topics.yml)
+    output: true
 
 defaults:
+  - scope:
+      path: "_topics/gr"
+    values:
+      lang: "gr"
+      layout: "topic"
+      permalink: /themata/:slug/
+  - scope:
+      path: "_topics/en"
+    values:
+      lang: "en"
+      layout: "topic"
+      permalink: /en/topics/:slug/
   - scope:
       path: "_articles/en"
     values:

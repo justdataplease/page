@@ -1,0 +1,29 @@
+{%- comment -%}
+  A topic as a front-page tile, in the look of the topics index: number (or special date), picture, name, two lines,
+  the latest analysis, and the one dashboard button (the full dashboard on the topic page, #dashboard; a special
+  topic without one gets its explore report). Params: topic (a topics.yml entry), n (tile number).
+{%- endcomment -%}
+{%- assign _tt = include.topic -%}
+{%- assign _ttx = _tt[lang] -%}
+{%- assign _tt_href = site.baseurl | append: t.paths.topics | append: _tt.key | append: "/" -%}
+{%- assign _tt_cad = t.cadence[_tt.cadence] -%}
+{%- assign _tt_sp = t.special | append: " · " | append: _ttx.when_label -%}
+{% include topic-articles.html topic=_tt %}
+<article class="tile{% if _tt.kind == 'special' %} tile--special{% endif %}">
+    <a class="art tile__art" href="{{ _tt_href }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ site.baseurl }}/{{ _tt.image | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+    </a>
+    <div class="tile__body">
+        <p class="tile__no">{% if _tt.kind == 'special' %}{% include upper.html text=_tt_sp %}{% else %}<b>{{ include.n | prepend: "0" | slice: -2, 2 }}</b> · {% include upper.html text=_tt_cad %}{% endif %}</p>
+        <h3 class="hl tile__name"><a href="{{ _tt_href }}">{{ _ttx.name }}</a></h3>
+        <p class="tile__dek">{{ _ttx.dek }}</p>
+        {%- if _tlatest %}
+        <p class="tile__latest"><span>{{ t.latest_analysis }}:</span> <a href="{{ site.baseurl }}{{ _tlatest.url }}">{% include years.html text=_tlatest.title %}</a></p>
+        {%- endif %}
+        {%- comment -%} one button only, "Εξερεύνηση" (user), to the FULL dashboard embedded on the topic page
+          (#dashboard; a topic without one embeds its explore report there) - never a separate report tab {%- endcomment -%}
+        <div class="tile__act">
+            <a class="btn btn--sm btn--ghost" href="{{ _tt_href }}#dashboard">{% include upper.html text=t.explore %} <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</article>

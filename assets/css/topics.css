@@ -1,0 +1,368 @@
+/* ==========================================================================
+   /themata/ and /en/topics/ — the topics index, a ruled ledger
+   (_layouts/topics.html, _includes/topics-row.html).
+   One ruled row per topic with aligned columns on desktop; cards on tablet (two
+   across) and phone (one). Built only from the newspaper tokens, so Classic and
+   Salmon both work.
+   ========================================================================== */
+
+.tl {
+    --tl-cols: 15rem minmax(0, 1.1fr) minmax(0, 1.2fr) minmax(0, 1fr) 10.5rem;
+    --tl-gap: var(--gutter);
+}
+
+/* ---------- Jump index under the section head ---------- */
+.tl-jump {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: .3rem 1rem;
+    margin: 0 0 1.1rem;
+    padding: .55rem 0;
+    border-block: 1px solid var(--rule);
+    font-family: var(--f-sans);
+    font-size: .8rem;
+}
+.tl-jump__label {
+    flex: none;
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--ink-3);
+}
+.tl-jump ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .3rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tl-jump li { font-weight: 600; }
+.tl-jump a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.tl-jump__sp a { color: var(--accent); }
+
+/* ---------- How to read the buttons: one line over the ledger ---------- */
+.tl-key {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .2rem .8rem;
+    margin: 0 0 .7rem;
+    font-family: var(--f-sans);
+    font-size: .78rem;
+    line-height: 1.45;
+    color: var(--ink-2);
+}
+.tl-key__label {
+    margin-right: .4rem;
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--ink-3);
+}
+.tl-key__sep { color: var(--ink-3); }
+.tl-key b { color: var(--ink); font-weight: 700; }
+
+/* ---------- The ledger ---------- */
+.tl-ledger { border-top: 2px solid var(--rule-ink); }
+
+.tl-head,
+.tl-row {
+    display: grid;
+    grid-template-columns: var(--tl-cols);
+    column-gap: var(--tl-gap);
+}
+.tl-head {
+    padding: .5rem 0 .45rem;
+    border-bottom: 1px solid var(--rule-ink);
+    font-family: var(--f-sans);
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--ink-3);
+}
+.tl-head__topic { grid-column: 1 / span 2; }
+
+.tl-row {
+    grid-template-areas: "art text data ana act";
+    align-items: start;
+    padding: 1.4rem 0 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    scroll-margin-top: 1rem;
+}
+.tl-row:target { background: linear-gradient(var(--paper-2), var(--paper-2)) no-repeat 0 0 / 100% 100%; }
+
+.tl-row__art { grid-area: art; margin: 0; }
+.tl-row__art img { aspect-ratio: 3 / 2; }
+.tl-row__text { grid-area: text; min-width: 0; }
+.tl-row__data { grid-area: data; }
+.tl-row__ana { grid-area: ana; }
+.tl-row__act { grid-area: act; }
+
+/* Thin column rules, like a printed table of contents. */
+.tl-row__data,
+.tl-row__ana,
+.tl-row__act {
+    position: relative;
+    min-width: 0;
+}
+.tl-row__data::before,
+.tl-row__ana::before,
+.tl-row__act::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--tl-gap) * -.5);
+    border-left: 1px solid var(--rule);
+}
+
+.tl-row__no {
+    margin: 0 0 .15rem;
+    font-family: var(--f-sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-3);
+}
+.tl-row__name { margin: 0 0 .4rem; font-size: clamp(1.2rem, 1.7vw, 1.5rem); }
+.tl-row__dek {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+    margin: 0;
+    font-size: .93rem;
+    line-height: 1.45;
+    color: var(--ink-2);
+}
+
+/* Data file + analysis columns: small label over value. */
+.tl-facts { margin: 0; }
+.tl-facts > div + div { margin-top: .6rem; }
+.tl-facts dt {
+    font-family: var(--f-sans);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    color: var(--ink-3);
+}
+.tl-facts dd {
+    margin: .12rem 0 0;
+    font-family: var(--f-sans);
+    font-size: .84rem;
+    line-height: 1.35;
+    color: var(--ink);
+}
+/* Period and updates: label and value on one line each, so the data file stays short. */
+.tl-facts > .tl-facts__line + .tl-facts__line { margin-top: .2rem; }
+.tl-facts__line {
+    display: grid;
+    grid-template-columns: 4.6rem minmax(0, 1fr);
+    column-gap: .5rem;
+    align-items: baseline;
+}
+.tl-facts__line dd { margin: 0; }
+
+.tl-sources { margin: 0; padding: 0; list-style: none; font-family: var(--f-body); font-size: .9rem; line-height: 1.38; }
+.tl-sources li { display: inline; }
+.tl-sources li + li::before { content: " · "; color: var(--ink-3); }
+.tl-sources a { color: var(--accent); }
+.tl-sources a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.tl-cadence {
+    margin: 0 0 .6rem;
+    padding-left: .7rem;
+    border-left: 3px solid var(--accent);
+    font-family: var(--f-sans);
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ink);
+}
+.tl-latest a {
+    display: block;
+    font-family: var(--f-head);
+    font-size: 1rem;
+    font-weight: var(--hl-weight);
+    font-stretch: var(--hl-stretch);
+    line-height: 1.22;
+    text-wrap: balance;
+}
+.tl-latest a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .12em; }
+.tl-latest__date { display: block; margin-top: .2rem; font-size: .74rem; color: var(--ink-3); }
+.tl-latest--none { font-family: var(--f-body); font-style: italic; font-size: .9rem; color: var(--ink-3); }
+
+/* ---------- Actions: one outline button, "Εξερεύνηση →" to the full dashboard on the topic page ---------- */
+.tl-row__act,
+.tl-sp__act { display: flex; flex-direction: column; gap: .6rem; }
+.tl-row__act .btn,
+.tl-sp__act .btn { white-space: nowrap; text-align: center; }
+.tl-btn { padding: .8rem .9rem; font-size: .76rem; letter-spacing: .08em; }
+.tl-row__act .btn--ghost,
+.tl-sp__act .btn--ghost { padding: .75rem 1.1rem; font-size: .74rem; letter-spacing: .1em; }
+.tl-soon { font-family: var(--f-body); font-style: italic; font-size: .86rem; line-height: 1.35; color: var(--ink-3); }
+
+.tl-more {
+    display: inline-block;
+    margin-top: .5rem;
+    font-family: var(--f-sans);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: var(--accent);
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+.tl-more:hover { text-decoration-thickness: 2px; }
+.tl-more--none { font-weight: 600; color: var(--ink-3); text-decoration: none; }
+
+/* Back to the index: phones only, where the list is long. */
+.tl-back { display: none; }
+
+/* ---------- Special topics: a short dated list, with smaller pictures ---------- */
+.tl-specials { margin-top: 2.6rem; }
+.tl-sp { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-ink); }
+.tl-sp__item {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr) 10.5rem;
+    gap: .9rem var(--tl-gap);
+    align-items: start;
+    padding: 1.2rem 0 1.3rem;
+    border-bottom: 1px solid var(--rule);
+}
+.tl-sp__art { margin: 0; }
+.tl-sp__when {
+    margin: 0 0 .3rem;
+    font-family: var(--f-sans);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--accent);
+}
+.tl-sp__text .hl { margin: 0 0 .3rem; }
+.tl-sp__dek { margin: 0; max-width: 46rem; font-size: .93rem; line-height: 1.45; color: var(--ink-2); }
+.tl-sp__text .meta { margin-top: .4rem; }
+.tl-sp__parent { color: var(--accent); }
+.tl-sp__parent:hover { text-decoration: underline; }
+.tl-sp__act .tl-more { margin-top: .2rem; }
+
+/* ---------- Salmon: the financial daily ---------- */
+[data-theme="salmon"] .tl-jump,
+[data-theme="salmon"] .tl-jump ul { justify-content: flex-start; }
+[data-theme="salmon"] .tl-ledger { position: relative; border-top: 1px solid var(--rule-ink); }
+[data-theme="salmon"] .tl-ledger::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 2.6rem;
+    height: 4px;
+    background: var(--accent);
+}
+[data-theme="salmon"] .tl-head { border-bottom-color: var(--rule); }
+[data-theme="salmon"] .tl-row__no { color: var(--accent); }
+[data-theme="salmon"] .tl-sp { border-top-color: var(--rule); }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+/* Tablet: two cards across, each with its picture full width on top. */
+@media (max-width: 1080px) {
+    .tl-head { display: none; }
+    .tl-ledger {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: calc(var(--gutter) * 2);
+        border-top: 0;
+    }
+    [data-theme="salmon"] .tl-ledger { border-top: 0; }
+    [data-theme="salmon"] .tl-ledger::before { display: none; }
+    /* Each card spans five rows of the ledger (subgrid), so the parts of two cards side by side line up:
+       picture, name, data file, analysis and the dashboard button all start at the same height. */
+    .tl-row {
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "art" "text" "data" "ana" "act";
+        align-items: stretch;
+        row-gap: 0;
+        padding: 1.1rem 0 1.5rem;
+        border-top: 2px solid var(--rule-ink);
+        border-bottom: 0;
+    }
+    [data-theme="salmon"] .tl-row { border-top-width: 1px; }
+    .tl-row__art { margin-bottom: .9rem; }
+    .tl-row__art img { aspect-ratio: 3 / 2; }
+    .tl-row__data::before,
+    .tl-row__ana::before,
+    .tl-row__act::before { display: none; }
+    .tl-row__data,
+    .tl-row__ana { margin-top: .9rem; padding-top: .8rem; border-top: 1px dotted var(--rule); }
+    .tl-row__act { padding-top: 1.1rem; }
+    .tl-row__dek { -webkit-line-clamp: 3; line-clamp: 3; }
+    /* An odd last card takes the whole width: picture on the left, the rest beside it. */
+    article.tl-row:last-of-type:nth-of-type(odd) {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "art text" "art data" "art ana" "art act";
+        column-gap: calc(var(--gutter) * 2);
+        align-content: start;
+    }
+    article.tl-row:last-of-type:nth-of-type(odd) .tl-row__art { margin: 0; }
+
+    .tl-sp__item { grid-template-columns: 10rem minmax(0, 1fr); }
+    .tl-sp__act {
+        grid-column: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .5rem 1rem;
+    }
+    .tl-sp__act .btn--block { display: inline-block; width: auto; }
+}
+
+/* Phone: one card per topic, the picture full width. */
+@media (max-width: 720px) {
+    .tl-jump { flex-direction: column; align-items: center; gap: .3rem; }
+    [data-theme="salmon"] .tl-jump { align-items: flex-start; }
+    .tl-jump ul { gap: .35rem 1rem; font-size: .78rem; }
+
+    .tl-ledger { grid-template-columns: minmax(0, 1fr); }
+    .tl-row,
+    article.tl-row:last-of-type:nth-of-type(odd) {
+        grid-column: auto;
+        grid-row: auto;
+        grid-template-rows: none;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "art" "text" "data" "ana" "act";
+        padding-bottom: 1.6rem;
+    }
+    article.tl-row:last-of-type:nth-of-type(odd) .tl-row__art { margin-bottom: .9rem; }
+    .tl-back {
+        display: block;
+        align-self: flex-end;
+        margin-top: .2rem;
+        font-family: var(--f-sans);
+        font-size: .72rem;
+        font-weight: 600;
+        color: var(--ink-3);
+        white-space: nowrap;
+    }
+    .tl-key { gap: .15rem .6rem; font-size: .76rem; }
+    .tl-key__label { flex-basis: 100%; }
+    .tl-key__sep { display: none; }
+    .tl-key > span:not(.tl-key__label) { flex-basis: 100%; }
+
+    .tl-sp__item { grid-template-columns: 7.5rem minmax(0, 1fr); gap: .8rem 1rem; }
+    .tl-sp__act { grid-column: 1 / -1; flex-direction: column; align-items: stretch; }
+    .tl-sp__act .btn--block { display: block; width: 100%; }
+}
