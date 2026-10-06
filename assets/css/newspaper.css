@@ -52,7 +52,7 @@
     --img-filter: none;
 
     --gutter: clamp(1rem, 1.8vw, 1.5rem);
-    --maxw: 106rem; /* wider (user, 2026-10-06): was 76rem, then 90rem */
+    --maxw: 90rem; /* 1440px (user, 2026-10-06): 76rem was too narrow, 106rem too wide */
 }
 
 /* ---------- Edition: Salmon (pink-paper financial daily) ---------- */
