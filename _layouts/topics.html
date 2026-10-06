@@ -1,5 +1,6 @@
 {%- comment -%}
-  /themata/ and /en/topics/: the topics index, a ruled ledger. One row per topic (picture, name, the data file,
+  /themata/ and /en/topics/: the "Δεδομένα" page (user, 2026-10-06: the topics index and the old data directory are
+  ONE page, in the topics design; /data-directory/ redirects here). The topics as a ruled ledger. One row per topic (picture, name, the data file,
   the analysis schedule, the dashboard), then the special topics as a short dated list.
   Everything comes from _data/topics.yml, in its order; the UI strings from _data/i18n.yml.
   Styles: assets/css/topics.css. One row: _includes/topics-row.html.
@@ -12,7 +13,7 @@
 {% include masthead.html %}
 
 <main class="wrap tl">
-    {% include section-head.html title=t.topics crumb=t.topics dek=t.topics_dek %}
+    {% include section-head.html title=t.data_directory crumb=t.data_directory_upper dek=t.topics_dek %}
 
     <nav class="tl-jump" id="tl-index" aria-label="{{ t.index }}">
         <span class="tl-jump__label">{% include upper.html text=t.index %}</span>
@@ -78,6 +79,22 @@
             </li>
             {%- endfor %}
         </ol>
+    </section>
+    {%- endif %}
+
+    {%- comment -%} The datasets (the former data directory), each to its own page. {%- endcomment %}
+    {%- assign tl_datasets = site.data_directory | where: "lang", lang | where_exp: "d", "d.live != false" | sort: "date" | reverse %}
+    {%- if tl_datasets.size > 0 %}
+    <section class="band tl-datasets" id="datasets" aria-labelledby="datasets-h">
+        <h2 class="label" id="datasets-h">{% include upper.html text=t.datasets %} ({{ tl_datasets.size }})</h2>
+        <div class="river">
+            {%- for item in tl_datasets %}
+            {%- capture k %}{% include upper.html text=item.category %}{% endcapture %}
+            {%- capture dk %}{{ item.description_detailed | strip_html | truncatewords: 40 }}{% endcapture %}
+            {%- capture mt %}{% include update.html doc=item %}{% endcapture %}
+            {% include river-item.html doc=item kicker=k dek=dk meta=mt %}
+            {%- endfor %}
+        </div>
     </section>
     {%- endif %}
 </main>

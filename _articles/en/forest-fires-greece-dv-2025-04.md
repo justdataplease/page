@@ -14,4 +14,4 @@ Greece has faced devastating wildfires in the last 24 years. The deadliest event
 area destroyed, the Municipality of Evros has suffered the most extensive forest loss, totaling 95,454 hectares, with a staggering 83% of that damage occurring during the 2023 fires. Significant
 losses were also seen in 2021, when fires on the island of Evia burned 34,283 hectares of forest, accounting for 47% of the total area burned in Greece that year.
 
-You can find the graph and related data [here](https://dataforgreece.com/en/data-directory/forest-fires-greece/).
+You can find the graph and related data [here](https://dataforgreece.gr/en/data-directory/forest-fires-greece/).

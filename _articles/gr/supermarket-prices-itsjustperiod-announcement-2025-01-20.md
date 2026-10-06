@@ -36,4 +36,4 @@ image_path: assets/posts/supermarket_period.webp
 - τα social ([tiktok](https://www.tiktok.com/@_itsjustperiod?) & [Instagram](https://www.instagram.com/_itsjustperiod)) 
 - η βοηθώντας ενεργά υπογράφοντας το [ψήφισμα](https://shorturl.at/cRhM1 )
 
-**Μπορείτε να βρείτε το γράφημα [εδώ](https://dataforgreece.com/data-directory/supermarket-prices-itsjustperiod/).**
+**Μπορείτε να βρείτε το γράφημα [εδώ](https://dataforgreece.gr/data-directory/supermarket-prices-itsjustperiod/).**

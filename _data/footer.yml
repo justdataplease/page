@@ -8,8 +8,8 @@ gr:
   links:
     - name: "Ποιοι Είμαστε"
       url: "/about/"
-    - name: "Συλλογή Δεδομένων"
-      url: "/data-directory/"
+    - name: "Δεδομένα"
+      url: "/themata/"
     - name: "Νέα"
       url: "/news/"
     - name: "Astylab"
@@ -31,8 +31,8 @@ en:
   links:
     - name: "About Us"
       url: "/en/about/"
-    - name: "Data Directory"
-      url: "/en/data-directory/"
+    - name: "Data"
+      url: "/en/topics/"
     - name: "News"
       url: "/en/news/"
     - name: "Astylab"

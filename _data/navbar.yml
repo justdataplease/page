@@ -4,8 +4,6 @@ gr:
       url: "/"
     - name: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
       url: "/about/"
-    - name: "ΔΕΔΟΜΕΝΑ"
-      url: "/data-directory/"
     - name: "ΝΕΑ"
       url: "https://dataforgreece.substack.com/"
 
@@ -19,8 +17,6 @@ en:
       url: "/en/"
     - name: "ABOUT"
       url: "/en/about/"
-    - name: "DATASETS"
-      url: "/en/data-directory/"
     - name: "NEWS"
       url: "https://dataforgreececom.substack.com/"
 
