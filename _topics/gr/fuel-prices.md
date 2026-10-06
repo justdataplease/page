@@ -1,4 +1,5 @@
 ---
+redirect_from: /themata/fuel-prices/
 topic: fuel-prices
 title: "Τιμές καυσίμων"
 description: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, από το 2012 μέχρι σήμερα."

@@ -4,7 +4,7 @@
 #                analysis on a fixed schedule (cadence: quarterly | semiannual | annual | special)
 # kind: special  a one-off, event-like feature (a campaign, an event), with its date
 #
-# Each one gets a page at /themata/<key>/ (and /en/topics/<key>/), made from _topics/<lang>/<key>.md.
+# Each one gets a page at /dedomena/<key>/ (and /en/data/<key>/), made from _topics/<lang>/<key>.md.
 # Links to the rest of the site:
 #   data      data_directory slugs (dataset pages)
 #   charts    chart slugs to embed while the topic's own dashboard is not published yet (Power BI only)
