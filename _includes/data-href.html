@@ -1,0 +1,6 @@
+{%- comment -%} The link for a dataset (data_directory doc): its topic page's "Τα δεδομένα" section (#data-<slug>).
+  The separate dataset pages were removed (user, 2026-10-06) and redirect there. Param: doc. {%- endcomment -%}
+{%- assign _dh = nil -%}
+{%- for _x in site.data.topics -%}{%- if _x.data contains include.doc.slug -%}{%- assign _dh = _x -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- assign _dht = site.data.i18n[include.doc.lang] -%}
+{%- if _dh -%}{{ site.baseurl }}{{ _dht.paths.topics }}{{ _dh.key }}/#data-{{ include.doc.slug }}{%- else -%}{{ site.baseurl }}{{ include.doc.url }}{%- endif -%}

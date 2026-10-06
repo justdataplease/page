@@ -1,0 +1,65 @@
+{%- comment -%}
+  "Τα δεδομένα" at the bottom of a topic page (the former data directory, user 2026-10-06): for each dataset of the
+  topic its description, processing, access (BigQuery query) and fact box, with "Κατέβασε CSV" or "Ζήτησε τα
+  δεδομένα"; a topic without a dataset gets only the request box. Param: topic (topics.yml entry).
+{%- endcomment -%}
+{%- assign _tdl = "" | split: "" -%}
+{%- for _s in include.topic.data -%}
+{%- assign _d = site.data_directory | where: "slug", _s | where: "lang", page.lang | first -%}
+{%- if _d -%}{%- assign _tdl = _tdl | push: _d -%}{%- endif -%}
+{%- endfor -%}
+<section class="band topic-data" id="data" aria-labelledby="data-h">
+    <h2 class="band__label" id="data-h">{{ t.data_section }}</h2>
+    {%- for d in _tdl %}
+    {%- assign _names = d.source_name | split: ',' -%}
+    {%- assign _urls = d.source_url | split: ',' -%}
+    {%- assign _last = _names.size | minus: 1 -%}
+    <article class="topic-data__set" id="data-{{ d.slug }}">
+        <div class="prose topic-data__text">
+            <p class="kicker">{% include upper.html text=d.category %}</p>
+            <h3 class="hl hl--m">{{ d.title }}</h3>
+            <p class="meta">{% include update.html doc=d %}</p>
+            <h4>{{ t.data_description }}</h4>
+            <p>{{ d.description_detailed }}</p>
+            {%- if d.description_preprocess %}
+            <h4>{{ t.data_preprocessing }}</h4>
+            <p>{{ d.description_preprocess }}</p>
+            {%- endif %}
+            <h4>{{ t.data_access }}</h4>
+            <p>{{ t.data_access_text }}</p>
+            {%- if d.description_data_access_sql_bigquery %}
+            <p>{{ t.bigquery_text }}</p>
+            <pre><code>{{ d.description_data_access_sql_bigquery }}</code></pre>
+            {%- endif %}
+            {%- if d.content.size > 10 %}
+            <h4>{{ t.definitions }}</h4>
+            <div class="definitions">{{ d.content }}</div>
+            {%- endif %}
+        </div>
+        <aside class="factbox topic-data__box">
+            <h4 class="factbox__title">{{ t.fact_box }}</h4>
+            <dl>
+                <div><dt>{{ t.published_by }}</dt><dd>{{ d.published_by }}</dd></div>
+                <div><dt>{{ t.last_update }}</dt><dd>{{ d.last_update }}</dd></div>
+                <div><dt>{{ t.date_added }}</dt><dd>{{ d.date_added }}</dd></div>
+                <div><dt>{{ t.data_dates }}</dt><dd>{{ d.data_dates }}</dd></div>
+                {%- if d.contributed_by %}
+                <div><dt>{{ t.contributed_by }}</dt><dd><a href="{{ d.contributed_by_url }}">{{ d.contributed_by }}</a></dd></div>
+                {%- endif %}
+                <div><dt>{{ t.source }}</dt><dd>{% for i in (0.._last) %}<a href="{{ _urls[i] | strip }}" target="_blank" rel="noopener">{{ _names[i] | strip }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd></div>
+            </dl>
+            {%- if d.download_url %}
+            <a class="btn btn--block" href="{{ d.download_url }}" target="_blank" rel="noopener">{{ t.download }}</a>
+            {%- endif %}
+            <a class="btn btn--block{% if d.download_url %} btn--ghost{% endif %}" href="{{ site.baseurl }}{{ t.paths.about }}">{{ t.ask_data }}</a>
+        </aside>
+    </article>
+    {%- endfor %}
+    {%- if _tdl.size == 0 %}
+    <div class="notice-box topic-data__ask">
+        <p class="notice-box__title">{{ t.ask_data }}</p>
+        <p>{{ t.ask_data_dek }}</p>
+        <a class="btn" href="{{ site.baseurl }}{{ t.paths.about }}">{{ t.ask_data }} <span aria-hidden="true">→</span></a>
+    </div>
+    {%- endif %}
+</section>
