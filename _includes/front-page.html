@@ -51,12 +51,12 @@
             <h2 class="label" id="h1-briefs"><a href="{{ site.baseurl }}{{ t.paths.data_directory }}">{{ t.latest_data }}</a></h2>
             {%- for d in h1_datasets limit: h1_brief_n %}
             <article class="h1-brief">
-                <a class="art h1-thumb" href="{{ site.baseurl }}{{ d.url }}" tabindex="-1" aria-hidden="true">
+                <a class="art h1-thumb" href="{% include data-href.html doc=d %}" tabindex="-1" aria-hidden="true">
                     <img src="{{ site.baseurl }}/{{ d.image_path | default: h1_img }}" alt="" loading="lazy">
                 </a>
                 <div class="h1-brief__text">
                     <p class="kicker">{% include upper.html text=d.category %}</p>
-                    <h3 class="hl hl--s"><a href="{{ site.baseurl }}{{ d.url }}">{{ d.title }}</a></h3>
+                    <h3 class="hl hl--s"><a href="{% include data-href.html doc=d %}">{{ d.title }}</a></h3>
                 </div>
                 <p class="h1-status">{% include update.html doc=d %}</p>
                 {%- assign h1_dek = d.description_detailed | strip_html | strip | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει την ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει τις ' | remove_first: 'Αυτό το σύνολο δεδομένων παρουσιάζει ' | remove_first: 'Αυτό το σύνολο δεδομένων παρέχει ' | remove_first: 'Το σύνολο δεδομένων παρέχει ' | truncatewords: 14 %}
@@ -180,7 +180,7 @@
                 {%- assign h1_k = t.dataset_one | append: " · " | append: m.category -%}
                 <p class="kicker">{% include upper.html text=h1_k %}</p>
                 {%- endif %}
-                <h3 class="hl hl--m"><a href="{{ site.baseurl }}{{ m.url }}">{% include years.html text=m.title %}</a></h3>
+                <h3 class="hl hl--m"><a href="{% if m.collection == "data_directory" %}{% include data-href.html doc=m %}{% else %}{{ site.baseurl }}{{ m.url }}{% endif %}">{% include years.html text=m.title %}</a></h3>
                 {%- if m.collection == "articles" %}
                 <p class="story__dek">{{ m.content | strip_html | normalize_whitespace | truncatewords: 24 }}</p>
                 {% include byline.html doc=m short=true %}

@@ -30,7 +30,7 @@
                 {%- for slug in page.related_dataset_slugs %}
                 {%- assign rd = site.data_directory | where: "slug", slug | where: "lang", page.lang | first %}
                 {%- if rd %}
-                <a class="related__item" href="{{ site.baseurl }}{{ rd.url }}">
+                <a class="related__item" href="{% include data-href.html doc=rd %}">
                     <span class="art"><img src="{{ site.baseurl }}/{{ rd.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy"></span>
                     <span class="related__text">
                         <span class="kicker">{% include upper.html text=rd.category %}</span>

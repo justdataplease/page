@@ -1,3 +1,20 @@
+{%- comment -%} Dataset pages were folded into the topic pages ("Τα δεδομένα", user 2026-10-06): a dataset that
+  belongs to a topic only redirects there; the full page below is kept for a dataset without a topic. {%- endcomment -%}
+{%- assign data_topic = nil -%}
+{%- for _x in site.data.topics -%}{%- if _x.data contains page.slug -%}{%- assign data_topic = _x -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- if data_topic -%}
+{%- capture _to %}{{ site.url }}{% include data-href.html doc=page %}{% endcapture -%}
+<!DOCTYPE html>
+<html lang="el">
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<link rel="canonical" href="{{ _to }}">
+<meta http-equiv="refresh" content="0; url={{ _to }}">
+<meta name="robots" content="noindex">
+<script>location.replace("{{ _to }}")</script>
+<a href="{{ _to }}">{{ page.title }}</a>
+</html>
+{%- else -%}
 {% include head.html %}
 {%- assign related_articles = site.articles | where: "related_dataset_slugs", page.slug | where: "lang", page.lang -%}
 {%- assign names = page.source_name | split: ',' -%}
@@ -133,3 +150,4 @@
 {% include footer.html %}
 </body>
 </html>
+{%- endif -%}

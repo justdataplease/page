@@ -117,7 +117,7 @@
                     {%- capture ds_list -%}
                     {%- for slug in tp.data -%}
                     {%- assign d = site.data_directory | where: "slug", slug | where: "lang", page.lang | first -%}
-                    {%- if d -%}{%- assign shown = shown | plus: 1 -%}<li><a href="{{ site.baseurl }}{{ d.url }}">{{ d.title }}</a> <span>{% include update.html doc=d %}</span></li>{%- endif -%}
+                    {%- if d -%}{%- assign shown = shown | plus: 1 -%}<li><a href="#data-{{ d.slug }}">{{ d.title }}</a> <span>{% include update.html doc=d %}</span></li>{%- endif -%}
                     {%- endfor -%}
                     {%- endcapture -%}
                     {%- if shown > 0 %}
@@ -126,17 +126,6 @@
                     {%- endif %}
                 </div>
 
-                {%- if explore_live.size > 0 %}
-                <div class="topic__explore">
-                    <h2 class="label">{{ t.explore_title }}</h2>
-                    <p>{{ t.explore_dek }}</p>
-                    <ul>
-                        {%- for ex in explore_live %}
-                        <li><a href="{{ ex.url }}" target="_blank" rel="noopener">{{ ex[lang] }} <span aria-hidden="true">↗</span></a></li>
-                        {%- endfor %}
-                    </ul>
-                </div>
-                {%- endif %}
 
                 {%- if parent %}
                 <div class="aside-list">
@@ -154,6 +143,8 @@
                 {%- endif %}
             </aside>
         </div>
+
+        {% include topic-data.html topic=tp %}
     </article>
 
     <div class="wrap article-end">
