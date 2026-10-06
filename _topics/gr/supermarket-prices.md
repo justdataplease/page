@@ -1,4 +1,5 @@
 ---
+redirect_from: /themata/supermarket-prices/
 topic: supermarket-prices
 title: "Τιμές σούπερ μάρκετ"
 description: "Κάθε τιμή ραφιού που έχουμε για την Ελλάδα από το 2021: κατηγορίες, αλυσίδες, ακρίβεια και τα φθηνότερα καλάθια."

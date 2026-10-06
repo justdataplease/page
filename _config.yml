@@ -38,13 +38,13 @@ defaults:
     values:
       lang: "gr"
       layout: "topic"
-      permalink: /themata/:slug/
+      permalink: /dedomena/:slug/
   - scope:
       path: "_topics/en"
     values:
       lang: "en"
       layout: "topic"
-      permalink: /en/topics/:slug/
+      permalink: /en/data/:slug/
   - scope:
       path: "_articles/en"
     values:

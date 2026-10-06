@@ -1,4 +1,5 @@
 ---
+redirect_from: /themata/airbnb/
 topic: airbnb
 title: "Airbnb"
 description: "Πόσα καταλύματα και σε ποια τιμή: Αθήνα, Θεσσαλονίκη, Κρήτη και Νότιο Αιγαίο, ανά γειτονιά και δήμο."
