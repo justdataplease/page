@@ -967,6 +967,7 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .topic-end { max-width: 40rem; margin: 2.4rem auto 0; padding-top: 1rem; border-top: 4px double var(--rule-ink); }
 .topic-end .topic-card { display: grid; grid-template-columns: 9rem minmax(0, 1fr); column-gap: 1.1rem; }
 .topic-end .topic-card .art { grid-row: span 4; margin: 0; }
+.topic-end--uses .topic-card + .topic-card { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); }
 
 /* ==========================================================================
    Salmon overrides — the financial daily

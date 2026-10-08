@@ -6,12 +6,15 @@
 {%- assign tp = site.data.topics | where: "key", page.topic | first -%}
 {%- assign tx = tp[lang] -%}
 {%- assign tkey = tp.key -%}
+{%- assign tcat = nil -%}
+{%- assign tcat_name = "" -%}
+{%- if tp.category -%}{%- assign tcat = site.data.categories | where: "key", tp.category | first -%}{%- assign tcat_name = tcat[lang].name -%}{%- endif -%}
 
-{%- comment -%} Analyses: articles that say `topic: <key>`, or that the topic lists by slug. {%- endcomment -%}
+{%- comment -%} Analyses: articles that say `topic: <key>` or list it in `uses: [..]`, or that the topic lists by slug. {%- endcomment -%}
 {%- assign lang_articles = site.articles | where: "lang", page.lang -%}
 {%- assign t_arts = "" | split: "" -%}
 {%- for a in lang_articles -%}
-{%- if a.topic == tkey or tp.articles contains a.slug -%}{%- assign t_arts = t_arts | push: a -%}{%- endif -%}
+{%- if a.topic == tkey or a.uses contains tkey or tp.articles contains a.slug -%}{%- assign t_arts = t_arts | push: a -%}{%- endif -%}
 {%- endfor -%}
 {%- assign t_arts = t_arts | sort: "date" | reverse -%}
 
@@ -44,9 +47,12 @@
             <nav class="crumbs" aria-label="breadcrumb">
                 <a href="{{ site.baseurl }}{{ t.paths.home }}">{{ t.home }}</a>
                 <a href="{{ site.baseurl }}{{ t.paths.topics }}">{% include upper.html text=t.data_directory %}</a>
+                {%- if tcat %}
+                <a href="{{ site.baseurl }}{{ t.paths.topics }}#cat-{{ tcat.key }}">{% include upper.html text=tcat_name %}</a>
+                {%- endif %}
                 <span aria-current="page">{% include upper.html text=tx.name %}</span>
             </nav>
-            <p class="kicker">{% if tp.kind == 'special' %}{% include upper.html text=t.special %} · {{ tx.when_label }}{% else %}{% include upper.html text=t.topic %}{% endif %}</p>
+            <p class="kicker">{% if tp.kind == 'special' %}{% include upper.html text=t.special %} · {{ tx.when_label }}{% elsif tcat %}<a href="{{ site.baseurl }}{{ t.paths.topics }}#cat-{{ tcat.key }}">{% include upper.html text=tcat_name %}</a>{% else %}{% include upper.html text=t.topic %}{% endif %}</p>
             <h1 class="hl hl--article">{{ tx.name }}</h1>
             <p class="topic__dek">{{ tx.dek }}</p>
             {%- if tp.kind != 'special' %}

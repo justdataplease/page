@@ -44,7 +44,20 @@
         </aside>
         {%- endif %}
 
-        {%- if post_topic %}
+        {%- if page.uses and page.uses.size > 1 %}
+        {%- comment -%}
+          A combined analysis (`uses: [<key>, ..]`): every topic whose data it uses, each with its dashboard and sources.
+        {%- endcomment %}
+        <aside class="topic-end topic-end--uses">
+            <h2 class="label">{{ t.data_used }}</h2>
+            {%- for _uk in page.uses %}
+            {%- assign _ut = site.data.topics | where: "key", _uk | first -%}
+            {%- if _ut %}
+            {% include topic-card.html topic=_ut %}
+            {%- endif %}
+            {%- endfor %}
+        </aside>
+        {%- elsif post_topic %}
         {%- comment -%} Every analysis points back to its topic: the dashboards, the sources, the other editions. {%- endcomment %}
         <aside class="topic-end">
             <h2 class="label">{{ t.see_topic }}</h2>

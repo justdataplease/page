@@ -5,7 +5,9 @@
     Top, three columns:  Νέα δεδομένα (square thumbnails + a ΖΩΝΤΑΝΑ/update line)
                          | cover photo band + the lead story with a large picture
                          | Αναλύσεις (one with a big picture, two with side thumbnails) + "Σε αυτό το φύλλο"
-    Θέματα: 4 x 2 tiles (7 topics + the special), 3:2 photos, rows aligned so the buttons share one line.
+    Δεδομένα: the topics as tiles, 4 per row (8 topics = 4 x 2), 3:2 photos, rows aligned so the buttons share one
+    line; the special features under them as a slim dated strip (thumbnail, name, one line, button), so a new topic
+    never leaves a lone tile on a third row.
     Περισσότερες αναλύσεις: 3-4 equal picture cards (the analyses not shown above, topped up with the data
     tables and the datasets not in the left column, so the row is never short).
     A slim newsletter strip.
@@ -141,20 +143,41 @@
         </section>
     </div>
 
-    {%- comment -%} ── Θέματα: 4 x 2 tiles ── {%- endcomment %}
+    {%- comment -%} ── Δεδομένα: the topics as 4-across tiles, then the special features as a strip ── {%- endcomment %}
     <section class="band h1-band h1-topics" aria-labelledby="h1-topics">
         <div class="band__head">
             <h2 class="band__label" id="h1-topics"><a href="{{ site.baseurl }}{{ t.paths.topics }}">{{ t.topics }}</a></h2>
             <a class="more" href="{{ site.baseurl }}{{ t.paths.topics }}">{{ t.all_topics }} <span aria-hidden="true">→</span></a>
         </div>
         <div class="tiles h1-tiles">
-            {%- for tp in h1_topics limit: 7 %}
+            {%- for tp in h1_topics limit: 8 %}
             {% include topic-tile.html topic=tp n=forloop.index %}
             {%- endfor %}
-            {%- for tp in h1_specials limit: 1 %}
-            {% include topic-tile.html topic=tp %}
-            {%- endfor %}
         </div>
+        {%- if h1_specials.size > 0 %}
+        <div class="h1-specials">
+            <h3 class="h1-specials__label"><a href="{{ site.baseurl }}{{ t.paths.topics }}#specials">{% include upper.html text=t.specials %}</a></h3>
+            <p class="h1-specials__dek">{{ t.specials_dek }}</p>
+            <div class="h1-specials__list">
+                {%- for sp in h1_specials limit: 2 %}
+                {%- assign spx = sp[lang] -%}
+                {%- assign sp_href = site.baseurl | append: t.paths.topics | append: sp.key | append: "/" -%}
+                {%- assign sp_when = t.special | append: " · " | append: spx.when_label -%}
+                <article class="h1-sp">
+                    <a class="art h1-sp__art" href="{{ sp_href }}" tabindex="-1" aria-hidden="true">
+                        <img src="{{ site.baseurl }}/{{ sp.image | default: h1_img }}" alt="" loading="lazy">
+                    </a>
+                    <div class="h1-sp__text">
+                        <p class="h1-sp__when">{% include upper.html text=sp_when %}</p>
+                        <h4 class="hl h1-sp__name"><a href="{{ sp_href }}">{{ spx.name }}</a></h4>
+                        <p class="h1-sp__dek">{{ spx.dek }}</p>
+                    </div>
+                    <a class="btn btn--sm btn--ghost h1-sp__btn" href="{{ sp_href }}#dashboard">{% include upper.html text=t.explore %} <span aria-hidden="true">→</span></a>
+                </article>
+                {%- endfor %}
+            </div>
+        </div>
+        {%- endif %}
     </section>
 
     {%- comment -%} ── More: equal picture cards ── {%- endcomment %}

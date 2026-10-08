@@ -18,6 +18,7 @@
 
 - key: fuel-prices
   kind: topic
+  category: prices
   model: gas_prices
   image: assets/posts/fuel_station.webp
   since: 2012
@@ -52,6 +53,7 @@
 
 - key: supermarket-prices
   kind: topic
+  category: prices
   model: katanalotis
   image: assets/posts/supermarket.webp
   since: 2021
@@ -88,6 +90,7 @@
 
 - key: airbnb
   kind: topic
+  category: business
   model: airbnb
   image: assets/posts/airbnb.webp
   since: 2015
@@ -122,6 +125,7 @@
 
 - key: forest-fires
   kind: topic
+  category: energy
   model: fires
   image: assets/posts/forest_burning.webp
   since: 2000
@@ -156,6 +160,7 @@
 
 - key: budget
   kind: topic
+  category: state
   model: proypologismos
   image: assets/posts/athens.webp
   since: 2005
@@ -192,11 +197,12 @@
 
 - key: elections
   kind: topic
+  category: state
   model: ekloges
   image: assets/cover-syntagma.jpg
   since: 1974
   cadence: special
-  data: []
+  data: [elections-greece]
   charts: []
   report: ""
   articles: []
@@ -226,12 +232,13 @@
 
 - key: businesses
   kind: topic
+  category: business
   model: gemi
   # "Εθνική Τράπεζα της Ελλάδος" facade - photo supplied by the user (2026-10-06)
   image: assets/topic-businesses-ethniki.jpg
   since: 2024
   cadence: semiannual
-  data: []
+  data: [gemi-businesses]
   charts: []
   report: ""
   articles: []
@@ -259,7 +266,484 @@
     notes:
       - "Each company is counted once, at its head office."
 
+- key: population
+  kind: topic
+  category: society
+  model: population
+  # "City of Athens, Greece" (Lycabettus from the Acropolis), Matt Kieffer, CC BY-SA 2.0, via Wikimedia Commons;
+  # resized to 1600px (2026-10-07). Credited on /attribution/#photos.
+  image: assets/topic-population-athens.jpg
+  image_credit: "Matt Kieffer, «City of Athens, Greece» (2017), CC BY-SA 2.0"
+  image_source: "https://commons.wikimedia.org/wiki/File:City_of_Athens,_Greece_(41359470621).jpg"
+  since: 2001          # the annual series; historical milestones go back to 1821
+  cadence: annual
+  data: [population-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "" }
+  gr:
+    name: "Πληθυσμός"
+    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και των 13 περιφερειών κατά ηλικία και φύλο, η μετανάστευση, οι απογραφές από το 1821 και οι εκλογές."
+    coverage: "2001 – 2025 · 13 περιφέρειες · απογραφές από το 1821"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "ΕΛΣΤΑΤ – Εκτιμήσεις πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SPO18/-", note: "Πληθυσμός 1ης Ιανουαρίου κατά φύλο και ηλικία: χώρα 2001–2025, περιφέρειες 2011–2025" }
+      - { name: "ΕΛΣΤΑΤ – Μετανάστευση", url: "https://www.statistics.gr/el/statistics/-/publication/SPO15/-", note: "Εισερχόμενοι και εξερχόμενοι μετανάστες κατά φύλο και ηλικία, 2008–2024" }
+      - { name: "ΕΛΣΤΑΤ – Ιστορικές απογραφές", url: "https://www.statistics.gr/el/census_priv_results_1821-2021", note: "Ορόσημα πληθυσμού 1821–2011" }
+      - { name: "Υπουργείο Εσωτερικών", url: "https://ekloges.ypes.gr", note: "Εκλογικά αποτελέσματα ανά περιφέρεια, 2012–2024" }
+    notes:
+      - "Ο μόνιμος πληθυσμός δεν είναι ο εκλογικός κατάλογος: οι εγγεγραμμένοι εκλογείς μιας περιοχής μπορεί να είναι πολύ περισσότεροι από τους κατοίκους της."
+      - "Η μεταβολή του πληθυσμού μιας περιφέρειας δεν είναι εσωτερική μετανάστευση: περιλαμβάνει γεννήσεις, θανάτους και μετακινήσεις από και προς το εξωτερικό. Η μετανάστευση εδώ είναι μόνο η διεθνής."
+      - "Το 1821 είναι αναδρομική εκτίμηση, όχι απογραφή, και τα ιστορικά ορόσημα αφορούν άλλη επικράτεια κάθε φορά· δεν συνδέονται σε συνεχή σειρά."
+      - "Οι ηλικίες δίνονται σε πενταετείς ομάδες: η διάμεση ηλικία είναι ομάδα (π.χ. 45–49), όχι ακριβής αριθμός."
+  en:
+    name: "Population"
+    dek: "How many we are and how we are ageing: the population of the country and its 13 regions by age and sex, migration, the censuses since 1821 and the elections."
+    coverage: "2001 – 2025 · 13 regions · censuses since 1821"
+    updates: "Every year"
+    sources:
+      - { name: "ELSTAT – Population estimates", url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-", note: "Population on 1 January by sex and age: country 2001–2025, regions 2011–2025" }
+      - { name: "ELSTAT – Migration", url: "https://www.statistics.gr/en/statistics/-/publication/SPO15/-", note: "Immigrants and emigrants by sex and age, 2008–2024" }
+      - { name: "ELSTAT – Historical censuses", url: "https://www.statistics.gr/en/census_priv_results_1821-2021", note: "Population milestones 1821–2011" }
+      - { name: "Ministry of the Interior", url: "https://ekloges.ypes.gr", note: "Election results by region, 2012–2024" }
+    notes:
+      - "The resident population is not the electoral roll: an area's registered voters can far outnumber its residents."
+      - "A region's change in population is not internal migration: it includes births, deaths and moves to and from abroad. Migration here is international only."
+      - "1821 is a retrospective estimate, not a census, and the historical milestones each cover a different territory; they do not form a continuous series."
+      - "Ages come in five-year groups: the median age is a group (e.g. 45–49), not an exact number."
+
 # ── Special topics: one-off, event-like features ─────────────────────────
+- key: inflation
+  kind: topic
+  category: prices
+  model: stats
+  image: assets/posts/topic-inflation.webp
+  since: 1996
+  cadence: quarterly
+  data: [inflation-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiODkxNWY3ZDYtN2EzYi00Y2UwLTlmMTMtNmJjNGVlYjEzZmYwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Πληθωρισμός"
+    dek: "Πόσο ακριβαίνει η ζωή, κατηγορία προς κατηγορία: τρόφιμα, ενέργεια, ενοίκια, εστιατόρια. Και πού βρίσκεται η Ελλάδα στην ΕΕ."
+    coverage: "1996 – σήμερα · Ελλάδα και 27 χώρες ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "Eurostat, Εναρμονισμένος Δείκτης Τιμών Καταναλωτή", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Μηνιαίος δείκτης και ετήσια μεταβολή ανά κατηγορία (COICOP)" }
+      - { name: "Eurostat, επίπεδα τιμών", url: "https://ec.europa.eu/eurostat/web/purchasing-power-parities", note: "Πόσο ακριβή είναι η Ελλάδα σε σχέση με τον μέσο όρο της ΕΕ" }
+      - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/DKT87/-", note: "Ο εθνικός ΔΤΚ, για όποιον θέλει τον επίσημο ελληνικό δείκτη" }
+    notes:
+      - "Ο εναρμονισμένος δείκτης (ΕνΔΤΚ) είναι αυτός που συγκρίνεται ανάμεσα στις χώρες της ΕΕ· διαφέρει λίγο από τον εθνικό ΔΤΚ της ΕΛΣΤΑΤ."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Inflation"
+    dek: "How much more life costs, category by category: food, energy, rents, restaurants. And where Greece stands in the EU."
+    coverage: "1996 – today · Greece and the 27 EU countries"
+    updates: "Every month"
+    sources:
+      - { name: "Eurostat, Harmonised Index of Consumer Prices", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Monthly index and annual rate by category (COICOP)" }
+      - { name: "Eurostat, price levels", url: "https://ec.europa.eu/eurostat/web/purchasing-power-parities", note: "How expensive Greece is compared with the EU average" }
+      - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/DKT87/-", note: "The national CPI" }
+    notes:
+      - "The harmonised index (HICP) is the one comparable across EU countries; it differs slightly from ELSTAT's national CPI."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: housing
+  kind: topic
+  category: prices
+  model: stats
+  image: assets/posts/topic-housing.webp
+  since: 1993
+  cadence: quarterly
+  data: [housing-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDhjM2MyYTMtNmIwOC00YjM4LTgwMDctMTdlMDdiNTBiNGFhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Κατοικία"
+    dek: "Τιμές διαμερισμάτων, ενοίκια, στεγαστικά δάνεια και πόσα νοικοκυριά «πνίγονται» από το κόστος στέγασης, στην Ελλάδα και την ΕΕ."
+    coverage: "1993 – σήμερα · Αθήνα, Θεσσαλονίκη, άλλες πόλεις · 27 χώρες ΕΕ"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr/statistika/agora-akinhtwn", note: "Δείκτες τιμών διαμερισμάτων ανά περιοχή, νέα και παλαιά" }
+      - { name: "Ευρωπαϊκή Κεντρική Τράπεζα", url: "https://data.ecb.europa.eu", note: "Στεγαστικά δάνεια και επιτόκια" }
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Βάρος κόστους στέγασης, ιδιοκατοίκηση, συνωστισμός" }
+      - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Ο δείκτης των ενοικίων" }
+    notes:
+      - "Ο δείκτης ενοικίων του ΕνΔΤΚ μετρά ενοίκια όλων των μισθώσεων, παλαιών και νέων· οι νέες μισθώσεις ακριβαίνουν πιο γρήγορα."
+      - "Τα στοιχεία της Eurostat, της ΕΚΤ και της ΤτΕ τα μεταφράσαμε και τα αναδιατάξαμε εμείς· δεν ευθύνονται για τις αλλαγές."
+  en:
+    name: "Housing"
+    dek: "Apartment prices, rents, mortgages and how many households are overburdened by housing costs, in Greece and the EU."
+    coverage: "1993 – today · Athens, Thessaloniki, other cities · 27 EU countries"
+    updates: "Every quarter"
+    sources:
+      - { name: "Bank of Greece", url: "https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices", note: "Apartment price indices by area, new and old" }
+      - { name: "European Central Bank", url: "https://data.ecb.europa.eu", note: "Mortgages and interest rates" }
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Housing cost overburden, home ownership, overcrowding" }
+      - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "The rents index" }
+    notes:
+      - "The HICP rents index covers all leases, old and new; new leases rise faster."
+      - "We translated and rearranged the Eurostat, ECB and Bank of Greece data; they are not responsible for the changes."
+
+- key: energy
+  kind: topic
+  category: energy
+  model: stats
+  image: assets/posts/topic-energy.webp
+  since: 2007
+  cadence: semiannual
+  data: [energy-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDJkY2Q1ZGItZTUyNi00MDE2LWEyNzUtMWI4ZGI3NzA4MjEwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Ηλεκτρισμός & ενέργεια"
+    dek: "Πόσο πληρώνουμε το ρεύμα και το φυσικό αέριο σε σχέση με την Ευρώπη, πόσο είναι φόροι, από τι παράγεται το ρεύμα κάθε μήνα και πόσοι δυσκολεύονται να ζεστάνουν το σπίτι τους."
+    coverage: "2007 – σήμερα · 27 χώρες ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "Eurostat, τιμές ενέργειας", url: "https://ec.europa.eu/eurostat/web/energy", note: "Τιμές ρεύματος και φυσικού αερίου για νοικοκυριά και επιχειρήσεις, με και χωρίς φόρους" }
+      - { name: "Eurostat, ενεργειακές στατιστικές", url: "https://ec.europa.eu/eurostat/web/energy", note: "Παραγωγή ρεύματος ανά καύσιμο, μερίδιο ΑΠΕ" }
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Ενεργειακή φτώχεια: θέρμανση και απλήρωτοι λογαριασμοί" }
+    notes:
+      - "Οι τιμές για τα νοικοκυριά αφορούν τη μεσαία κατανάλωση (2.500–5.000 kWh τον χρόνο)."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Electricity & energy"
+    dek: "What we pay for electricity and gas compared with Europe, how much of it is tax, what our power is made from every month, and how many struggle to heat their home."
+    coverage: "2007 – today · 27 EU countries"
+    updates: "Every month"
+    sources:
+      - { name: "Eurostat, energy prices", url: "https://ec.europa.eu/eurostat/web/energy", note: "Electricity and gas prices for households and businesses, with and without taxes" }
+      - { name: "Eurostat, energy statistics", url: "https://ec.europa.eu/eurostat/web/energy", note: "Electricity generation by fuel, renewables share" }
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Energy poverty: heating and unpaid bills" }
+    notes:
+      - "Household prices are for medium consumption (2,500–5,000 kWh a year)."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: economy
+  kind: topic
+  category: economy
+  model: stats
+  image: assets/posts/topic-economy.webp
+  since: 1995
+  cadence: quarterly
+  data: [economy-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiY2NkMzUwN2EtODQ5Ni00NjliLTk5NzEtMGYyZmM0MjI3M2MyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Οικονομία & ΑΕΠ"
+    dek: "Ανάπτυξη κάθε τρίμηνο, τι την κινεί, ποιοι κλάδοι μεγαλώνουν, πόσο πλούσια είναι κάθε περιφέρεια και κάθε περιφερειακή ενότητα, και το κλίμα στην αγορά."
+    coverage: "1995 – σήμερα · 13 περιφέρειες, 52 περιφερειακές ενότητες · 27 χώρες ΕΕ"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Eurostat, εθνικοί και περιφερειακοί λογαριασμοί", url: "https://ec.europa.eu/eurostat/web/national-accounts", note: "ΑΕΠ, συνιστώσες, κλάδοι, κατά κεφαλήν και ανά περιφέρεια" }
+      - { name: "ΕΛΣΤΑΤ, τριμηνιαίοι εθνικοί λογαριασμοί", url: "https://www.statistics.gr/el/statistics/-/publication/SEL84/-", note: "Η ελληνική πηγή του ΑΕΠ" }
+      - { name: "Ευρωπαϊκή Επιτροπή, δείκτης οικονομικού κλίματος", url: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/business-and-consumer-surveys_en", note: "Οικονομικό κλίμα και καταναλωτική εμπιστοσύνη, κάθε μήνα" }
+    notes:
+      - "Η ανάπτυξη μετριέται σε σταθερές τιμές (χωρίς τον πληθωρισμό)· τα τριμηνιαία είναι εποχικά διορθωμένα."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Economy & GDP"
+    dek: "Growth every quarter, what drives it, which sectors grow, how rich every region and regional unit is, and the mood in the market."
+    coverage: "1995 – today · 13 regions, 52 regional units · 27 EU countries"
+    updates: "Every quarter"
+    sources:
+      - { name: "Eurostat, national and regional accounts", url: "https://ec.europa.eu/eurostat/web/national-accounts", note: "GDP, components, sectors, per capita and by region" }
+      - { name: "ELSTAT, quarterly national accounts", url: "https://www.statistics.gr/en/statistics/-/publication/SEL84/-", note: "The Greek source of GDP" }
+      - { name: "European Commission, economic sentiment", url: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/business-and-consumer-surveys_en", note: "Economic sentiment and consumer confidence, monthly" }
+    notes:
+      - "Growth is measured in constant prices (inflation removed); quarterly figures are seasonally adjusted."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: tourism
+  kind: topic
+  category: business
+  model: stats
+  image: assets/posts/topic-tourism.webp
+  since: 2000
+  cadence: quarterly
+  data: [tourism-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYmJkYTQ4NjgtN2IxOS00MGMxLTllMzgtMTI1MzU0NWM5ZjFkIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Τουρισμός"
+    dek: "Αφίξεις, διανυκτερεύσεις και έσοδα κάθε μήνα, ποιες περιφέρειες γεμίζουν, πόσες κλίνες υπάρχουν και πού είμαστε στην Ευρώπη."
+    coverage: "1994 – σήμερα · 13 περιφέρειες, 52 περιφερειακές ενότητες · 27 χώρες ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "Eurostat, στατιστικές τουρισμού", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Αφίξεις και διανυκτερεύσεις σε καταλύματα, κλίνες, ανά περιφέρεια" }
+      - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr", note: "Ταξιδιωτικές εισπράξεις (ισοζύγιο πληρωμών)" }
+      - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/STO12/-", note: "Η ελληνική πηγή των στοιχείων καταλυμάτων" }
+    notes:
+      - "Οι διανυκτερεύσεις αφορούν τα καταλύματα της έρευνας (ξενοδοχεία, κάμπινγκ, ενοικιαζόμενα)· η βραχυχρόνια μίσθωση φαίνεται στο θέμα Airbnb."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Tourism"
+    dek: "Arrivals, nights and receipts every month, which regions fill up, how many beds there are and where we stand in Europe."
+    coverage: "1994 – today · 13 regions, 52 regional units · 27 EU countries"
+    updates: "Every month"
+    sources:
+      - { name: "Eurostat, tourism statistics", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Arrivals and nights in accommodation, bed places, by region" }
+      - { name: "Bank of Greece", url: "https://www.bankofgreece.gr", note: "Travel receipts (balance of payments)" }
+      - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/STO12/-", note: "The Greek source of the accommodation data" }
+    notes:
+      - "Nights cover the surveyed accommodation (hotels, campsites, rented rooms); short-term rentals are in the Airbnb topic."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: poverty
+  kind: topic
+  category: society
+  model: stats
+  image: assets/posts/topic-poverty.webp
+  since: 2003
+  cadence: annual
+  data: [poverty-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjMzNGFmZDctNDE2NS00YzA1LTkwNDUtZGY1MjgzMTRiMzk3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Εισόδημα & φτώχεια"
+    dek: "Μέσο εισόδημα, ανισότητα, κίνδυνος φτώχειας και στερήσεις: ποιοι ζουν δύσκολα και πώς αλλάζει από χρόνο σε χρόνο."
+    coverage: "2003 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Εισόδημα, φτώχεια, ανισότητα και στερήσεις" }
+      - { name: "ΕΛΣΤΑΤ, Έρευνα Εισοδήματος και Συνθηκών Διαβίωσης", url: "https://www.statistics.gr/el/statistics/-/publication/SFA10/-", note: "Η ελληνική πηγή της έρευνας" }
+    notes:
+      - "Η έρευνα κάθε έτους μετρά το εισόδημα του προηγούμενου έτους."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Income & poverty"
+    dek: "Average income, inequality, the risk of poverty and deprivation: who lives in hardship and how it changes year by year."
+    coverage: "2003 – today · 13 regions · 27 EU countries"
+    updates: "Every year"
+    sources:
+      - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Income, poverty, inequality and deprivation" }
+      - { name: "ELSTAT, Survey on Income and Living Conditions", url: "https://www.statistics.gr/en/statistics/-/publication/SFA10/-", note: "The Greek source of the survey" }
+    notes:
+      - "Each year's survey measures the previous year's income."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: work
+  kind: topic
+  category: work
+  model: stats
+  image: assets/posts/topic-jobs.webp
+  since: 1999
+  cadence: quarterly
+  data: [work-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNzgxMDhhNDctYjRlYS00MjkxLThiNzgtZmJhZTBjMmM5OTZiIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Εργασία & μισθοί"
+    dek: "Πόσοι δουλεύουν, πόσοι ψάχνουν δουλειά και πόσα παίρνουν: ανεργία κάθε μήνα, κατώτατος και μέσος μισθός, πραγματικοί μισθοί, κάθε περιφέρεια, δίπλα στην ΕΕ."
+    coverage: "1999 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "Eurostat, Έρευνα Εργατικού Δυναμικού", url: "https://ec.europa.eu/eurostat/web/lfs", note: "Ανεργία και απασχόληση, μηνιαία, τριμηνιαία και ανά περιφέρεια" }
+      - { name: "Eurostat, μισθοί και κόστος εργασίας", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Κατώτατος μισθός, μέσος μισθός πλήρους απασχόλησης, καθαρές αποδοχές" }
+      - { name: "ΕΛΣΤΑΤ, Έρευνα Εργατικού Δυναμικού", url: "https://www.statistics.gr/el/statistics/-/publication/SJO01/-", note: "Η ελληνική πηγή της έρευνας" }
+    notes:
+      - "Τα μηνιαία ποσοστά ανεργίας είναι εποχικά διορθωμένα· τα περιφερειακά είναι ετήσια."
+      - "Οι πραγματικοί μισθοί υπολογίζονται με τον εναρμονισμένο δείκτη τιμών (βλ. Πληθωρισμός). Ο κατώτατος μισθός είναι σε 12 μηνιαίες δόσεις, όπως τον μετρά η Eurostat."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Work & pay"
+    dek: "How many work, how many are looking for work and what they earn: monthly unemployment, minimum and average wage, real wages, every region, next to the EU."
+    coverage: "1999 – today · 13 regions · 27 EU countries"
+    updates: "Every month"
+    sources:
+      - { name: "Eurostat, Labour Force Survey", url: "https://ec.europa.eu/eurostat/web/lfs", note: "Unemployment and employment, monthly, quarterly and by region" }
+      - { name: "Eurostat, earnings and labour costs", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Minimum wage, average full-time salary, net earnings" }
+      - { name: "ELSTAT, Labour Force Survey", url: "https://www.statistics.gr/en/statistics/-/publication/SJO01/-", note: "The Greek source of the survey" }
+    notes:
+      - "Monthly unemployment rates are seasonally adjusted; regional rates are annual."
+      - "Real wages use the harmonised price index (see Inflation). The minimum wage is in 12 monthly payments, as Eurostat measures it."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: farm-to-shelf
+  kind: topic
+  category: prices
+  model: stats
+  image: assets/posts/topic-farm-to-shelf.webp
+  since: 2000
+  cadence: quarterly
+  data: [farm-to-shelf-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjY3ODQwNjEtYWIyYS00YjU1LWExOTAtNGU2Y2E1YzNmYjg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Από το χωράφι στο ράφι"
+    dek: "Πόσο πληρώνεται ο αγρότης και πόσο πληρώνουμε εμείς: τιμές παραγωγού για λάδι, γάλα, φρούτα και λαχανικά, το κόστος λιπασμάτων και ενέργειας, και οι τιμές στο ράφι."
+    coverage: "2000 – σήμερα · Ελλάδα και ΕΕ"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Eurostat, τιμές γεωργικών προϊόντων", url: "https://ec.europa.eu/eurostat/web/agriculture", note: "Δείκτες τιμών παραγωγού και κόστους παραγωγής, τιμές πώλησης" }
+      - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Οι τιμές καταναλωτή για τα ίδια τρόφιμα" }
+    notes:
+      - "Οι τιμές παραγωγού και οι τιμές καταναλωτή είναι δείκτες με διαφορετική βάση· συγκρίνουμε μόνο τη μεταβολή τους, όχι τα επίπεδα."
+      - "Οι τιμές ραφιού ανά προϊόν είναι στο θέμα Τιμές σούπερ μάρκετ."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "From farm to shelf"
+    dek: "What farmers are paid and what we pay: producer prices for olive oil, milk, fruit and vegetables, the cost of fertiliser and energy, and shelf prices."
+    coverage: "2000 – today · Greece and the EU"
+    updates: "Every quarter"
+    sources:
+      - { name: "Eurostat, agricultural prices", url: "https://ec.europa.eu/eurostat/web/agriculture", note: "Producer and input price indices, selling prices" }
+      - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Consumer prices for the same foods" }
+    notes:
+      - "Producer and consumer prices are indices on different bases; we compare only how they change, not their levels."
+      - "Shelf prices by product are in the Supermarket prices topic."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: public-debt
+  kind: topic
+  category: state
+  model: stats
+  image: assets/posts/topic-public-debt.webp
+  since: 1995
+  cadence: semiannual
+  data: [public-debt-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYzkxY2VkMDMtNDVlNy00NjJlLTgyMTYtZGI5MGI2Y2U1YzhhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Χρέος, έλλειμμα & φόροι"
+    dek: "Το δημόσιο χρέος και το έλλειμμα, πού πάνε οι δημόσιες δαπάνες και από πού έρχονται τα έσοδα: ΦΠΑ, φόρος εισοδήματος, εισφορές, δίπλα στην ΕΕ."
+    coverage: "1995 – σήμερα · 27 χώρες ΕΕ"
+    updates: "Κάθε τρίμηνο"
+    sources:
+      - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Χρέος, έλλειμμα, έσοδα, δαπάνες ανά λειτουργία, φόροι" }
+    notes:
+      - "Τα στοιχεία αφορούν τη γενική κυβέρνηση (κράτος, δήμοι, ασφαλιστικά ταμεία), όπως τα κοινοποιεί η Ελλάδα στην ΕΕ· ο κρατικός προϋπολογισμός είναι στο θέμα Προϋπολογισμός."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Debt, deficit & taxes"
+    dek: "Public debt and the deficit, where public spending goes and where revenue comes from: VAT, income tax, contributions, next to the EU."
+    coverage: "1995 – today · 27 EU countries"
+    updates: "Every quarter"
+    sources:
+      - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Debt, deficit, revenue, spending by function, taxes" }
+    notes:
+      - "The data covers general government (state, municipalities, social security funds) as Greece reports it to the EU; the state budget is in the Budget topic."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: health
+  kind: topic
+  category: society
+  model: stats
+  image: assets/posts/topic-health.webp
+  since: 2000
+  cadence: annual
+  data: [health-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjA5YmNiZGEtNDNlYS00ZWRjLWFlZDItYjA1ZTYzOGI5YjAyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Υγεία"
+    dek: "Προσδόκιμο ζωής, πόσα πληρώνουμε από την τσέπη μας για την υγεία, γιατροί, νοσηλευτές και κρεβάτια, και πόσοι μένουν χωρίς γιατρό λόγω κόστους."
+    coverage: "2000 – σήμερα · 27 χώρες ΕΕ"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Eurostat, στατιστικές υγείας", url: "https://ec.europa.eu/eurostat/web/health", note: "Δαπάνες υγείας, προσωπικό, κλίνες, ανεκπλήρωτες ανάγκες" }
+      - { name: "Eurostat, δημογραφία", url: "https://ec.europa.eu/eurostat/web/population-demography", note: "Προσδόκιμο ζωής" }
+    notes:
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Health"
+    dek: "Life expectancy, how much we pay out of pocket for health, doctors, nurses and beds, and how many go without care because of the cost."
+    coverage: "2000 – today · 27 EU countries"
+    updates: "Every year"
+    sources:
+      - { name: "Eurostat, health statistics", url: "https://ec.europa.eu/eurostat/web/health", note: "Health spending, staff, beds, unmet needs" }
+      - { name: "Eurostat, demography", url: "https://ec.europa.eu/eurostat/web/population-demography", note: "Life expectancy" }
+    notes:
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: education
+  kind: topic
+  category: society
+  model: stats
+  image: assets/posts/topic-education.webp
+  since: 2000
+  cadence: annual
+  data: [education-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYjZlYzgyZjktZWNjZi00ZTIwLTk1NTAtZmE5ZGVhZTk2NzI1IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Παιδεία"
+    dek: "Πόσοι νέοι τελειώνουν πανεπιστήμιο, πόσοι εγκαταλείπουν το σχολείο, πόσοι ούτε δουλεύουν ούτε σπουδάζουν, πόσοι μαθητές ανά δάσκαλο και πόσα ξοδεύει το κράτος."
+    coverage: "2000 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Eurostat, εκπαίδευση", url: "https://ec.europa.eu/eurostat/web/education-and-training", note: "Επίπεδο εκπαίδευσης, πρόωρη εγκατάλειψη, NEET, μαθητές ανά εκπαιδευτικό" }
+      - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Δημόσια δαπάνη για την παιδεία" }
+    notes:
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Education"
+    dek: "How many young people finish university, how many leave school early, how many neither work nor study, pupils per teacher and what the state spends."
+    coverage: "2000 – today · 13 regions · 27 EU countries"
+    updates: "Every year"
+    sources:
+      - { name: "Eurostat, education", url: "https://ec.europa.eu/eurostat/web/education-and-training", note: "Attainment, early leavers, NEET, pupils per teacher" }
+      - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Public spending on education" }
+    notes:
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: environment
+  kind: topic
+  category: energy
+  model: stats
+  image: assets/posts/topic-environment.webp
+  since: 1990
+  cadence: annual
+  data: [environment-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiN2I3YjY3MTctYTM3Mi00NGM4LWI1MmItNDVkMTVlZWZiZTViIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Περιβάλλον"
+    dek: "Εκπομπές αερίων του θερμοκηπίου, πόσα σκουπίδια παράγουμε και πόσα ανακυκλώνουμε, και πού βρίσκεται η Ελλάδα στην ΕΕ."
+    coverage: "1990 – σήμερα · 27 χώρες ΕΕ"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Eurostat, περιβάλλον", url: "https://ec.europa.eu/eurostat/web/environment", note: "Εκπομπές αερίων του θερμοκηπίου, αστικά απόβλητα και ανακύκλωση" }
+    notes:
+      - "Οι καμένες εκτάσεις είναι στο θέμα Δασικές πυρκαγιές."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Environment"
+    dek: "Greenhouse gas emissions, how much waste we produce and how much we recycle, and where Greece stands in the EU."
+    coverage: "1990 – today · 27 EU countries"
+    updates: "Every year"
+    sources:
+      - { name: "Eurostat, environment", url: "https://ec.europa.eu/eurostat/web/environment", note: "Greenhouse gas emissions, municipal waste and recycling" }
+    notes:
+      - "Burnt areas are in the Forest fires topic."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
 - key: period-products
   kind: special
   parent: supermarket-prices
