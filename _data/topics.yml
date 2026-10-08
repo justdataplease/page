@@ -110,6 +110,7 @@
     notes:
       - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Για τις τιμές συναλλαγών δείτε το θέμα Κατοικία (Τράπεζα της Ελλάδος)."
       - "Οι δήμοι με λίγες αγγελίες δεν εμφανίζονται, ώστε μία-δύο ακριβές βίλες να μη «φτιάχνουν» την τιμή ενός ολόκληρου δήμου."
+      - "Τα ενοίκια συγκρίνονται με το Airbnb στη σελίδα «Airbnb & ενοίκια» του θέματος Airbnb."
   en:
     name: "Property asking prices"
     dek: "What sellers and landlords ask for a home, by region and municipality, every month since 2022: price per m², the typical home and rental yield."
@@ -120,6 +121,7 @@
     notes:
       - "These are asking prices from listings, not sale prices; deals usually close lower. For transaction prices see the Housing topic (Bank of Greece)."
       - "Municipalities with few listings are left out, so one or two expensive villas cannot set a whole municipality's price."
+      - "Rents are compared with Airbnb on the «Airbnb & ενοίκια» page of the Airbnb topic."
 
 - key: airbnb
   kind: topic
@@ -145,6 +147,7 @@
     notes:
       - "Δεκέμβριος 2025 – Φεβρουάριος 2026: η πηγή δεν δίνει τιμές, γι' αυτό το διάγραμμα έχει κενό."
       - "Από τον Μάρτιο 2026 η πηγή μετρά την τιμή με νέο τρόπο· οι τιμές πριν και μετά δεν συγκρίνονται άμεσα."
+      - "Η σελίδα «Airbnb & ενοίκια» του dashboard συγκρίνει ανά δήμο τα σπίτια στο Airbnb με τις δικές μας αγγελίες μακροχρόνιας ενοικίασης."
   en:
     name: "Airbnb"
     dek: "How many listings and at what price: Athens, Thessaloniki, Crete and the South Aegean, by neighbourhood and municipality."
@@ -155,6 +158,7 @@
     notes:
       - "December 2025 – February 2026: the source has no prices, so the chart shows a gap."
       - "From March 2026 the source measures price differently; prices before and after are not directly comparable."
+      - "The dashboard page «Airbnb & ενοίκια» compares, per municipality, the homes on Airbnb with our own long-term rental listings."
 
 - key: forest-fires
   kind: topic
