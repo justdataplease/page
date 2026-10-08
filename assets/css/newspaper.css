@@ -947,6 +947,8 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .topic__soon { padding-block: 3rem; }
 .topic__dash { margin: 0 0 2rem; scroll-margin-top: 1rem; }
 .topic__open { margin: .5rem 0 0; text-align: right; font-family: var(--f-sans); font-size: .8rem; }
+.topic__phone { display: none; align-items: center; justify-content: space-between; gap: .8rem; margin: 0 0 .6rem; padding: .6rem .75rem; border: 1px solid var(--rule-ink); font-family: var(--f-sans); font-size: .82rem; line-height: 1.35; color: var(--ink-2); }
+.topic__phone a { flex: none; padding: .45rem .7rem; background: var(--ink); color: var(--paper); font-weight: 700; text-decoration: none; }
 .topic__open a { color: var(--accent); }
 .topic__notes-block { margin-top: 2rem; }
 .topic__actions { margin: .9rem 0 0; }
@@ -1083,7 +1085,9 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
     .tile__dek { grid-column: 2; margin-bottom: .2rem; }
     .tile__latest { grid-column: 1 / -1; margin: .7rem 0 0; }
     .tile__act { grid-column: 1 / -1; margin-top: .75rem; }
-    .frame--dashboard { aspect-ratio: 3 / 4; }
+    /* Phones: keep the frame full width (an aspect-ratio next to height: 0 shrank its WIDTH, 2026-10-08) and show the
+       rotate / full-screen hint: Publish to web has no phone layout, it scales the 1520px page to the screen. */
+    .topic__phone { display: flex; }
     .topic-end .topic-card { grid-template-columns: 6rem minmax(0, 1fr); }
 
     .cols, .cols--4 { grid-template-columns: minmax(0, 1fr); }

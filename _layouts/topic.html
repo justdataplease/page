@@ -66,6 +66,9 @@
 
         <section class="topic__dash" id="dashboard" aria-label="{{ t.full_dashboard }}">
             {%- if dash_src and dash_src != "" %}
+            {%- if dash_src contains "://" %}
+            <p class="topic__phone">{{ t.dash_phone_hint }} <a href="{{ dash_src }}" target="_blank" rel="noopener">{{ t.dash_full_screen }} <span aria-hidden="true">↗</span></a></p>
+            {%- endif %}
             <div class="frame frame--dashboard">
                 <iframe src="{{ dash_src }}" title="{{ t.full_dashboard }}: {{ tx.name }}" loading="lazy" allowfullscreen></iframe>
             </div>
