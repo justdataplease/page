@@ -1,0 +1,31 @@
+# The categories of the Δεδομένα page, in order. Every topic in topics.yml says `category: <key>`.
+# The Δεδομένα page groups its ledger under these headings (a category with no topic yet is not shown);
+# a topic page's breadcrumb and kicker name its category. Anchor on /dedomena/: #cat-<key>.
+
+- key: economy
+  gr: { name: "Οικονομία", dek: "Ανάπτυξη, περιφέρειες, τράπεζες και εμπόριο: η εικόνα της ελληνικής οικονομίας δίπλα στην ΕΕ." }
+  en: { name: "Economy", dek: "Growth, regions, banks and trade: the Greek economy next to the EU." }
+
+- key: prices
+  gr: { name: "Τιμές & ακρίβεια", dek: "Από το ράφι και την αντλία μέχρι το ενοίκιο: τι πληρώνουμε και πώς αλλάζει." }
+  en: { name: "Prices & cost of living", dek: "From the shelf and the pump to the rent: what we pay and how it changes." }
+
+- key: work
+  gr: { name: "Εργασία & μισθοί", dek: "Ποιοι δουλεύουν, ποιοι ψάχνουν δουλειά και πόσα παίρνουν." }
+  en: { name: "Work & pay", dek: "Who works, who is looking for work, and what they earn." }
+
+- key: state
+  gr: { name: "Κράτος & πολιτική", dek: "Προϋπολογισμοί, χρέος, φόροι και εκλογές." }
+  en: { name: "State & politics", dek: "Budgets, debt, taxes and elections." }
+
+- key: society
+  gr: { name: "Κοινωνία", dek: "Πληθυσμός, εισόδημα, φτώχεια, υγεία και παιδεία." }
+  en: { name: "Society", dek: "Population, income, poverty, health and education." }
+
+- key: business
+  gr: { name: "Επιχειρήσεις & τουρισμός", dek: "Οι εταιρείες της χώρας, ο τουρισμός και η βραχυχρόνια μίσθωση." }
+  en: { name: "Business & tourism", dek: "The country's companies, tourism and short-term rentals." }
+
+- key: energy
+  gr: { name: "Ενέργεια & περιβάλλον", dek: "Ρεύμα, ενεργειακό μείγμα, εκπομπές και πυρκαγιές." }
+  en: { name: "Energy & environment", dek: "Electricity, the energy mix, emissions and wildfires." }
