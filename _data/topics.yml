@@ -284,7 +284,7 @@
     - { model: gemi, url: "https://app.powerbi.com/view?r=eyJrIjoiNTIxY2NkMmItNWJjMS00MmU1LWIwZDEtNDI2ZTMzNDMzODJhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Επιχειρήσεις ανά κλάδο και περιοχή", en: "Companies by sector and area" }
   gr:
     name: "Επιχειρήσεις"
-    dek: "Το Γενικό Εμπορικό Μητρώο: 1,9 εκατ. επιχειρήσεις, οι νέες εγγραφές και τα λουκέτα, ανά κλάδο και περιοχή."
+    dek: "Το Γενικό Εμπορικό Μητρώο: κάθε εγγεγραμμένη επιχείρηση, οι νέες εγγραφές και τα λουκέτα, ανά κλάδο και περιοχή."
     coverage: "Όλο το μητρώο · κινήσεις από τον Νοέμβριο 2024"
     updates: "Κάθε χρόνο"
     sources:
@@ -294,7 +294,7 @@
       - "Οι επιχειρήσεις μετρώνται μία φορά, στην έδρα τους."
   en:
     name: "Businesses"
-    dek: "The General Commercial Registry: 1.9 million companies, new registrations and closures, by sector and region."
+    dek: "The General Commercial Registry: every registered company, new registrations and closures, by sector and region."
     coverage: "The whole registry · events since November 2024"
     updates: "Every year"
     sources:
@@ -791,7 +791,7 @@
     - { model: katanalotis_itsjustperiod, url: "https://app.powerbi.com/view?r=eyJrIjoiN2ZlYjBkMjYtMzkxYi00Y2JkLTlkYTAtMjQxZDg0MDgxNjNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές προϊόντων περιόδου", en: "Period product prices" }
   gr:
     name: "Προϊόντα Περιόδου"
-    dek: "Με την πρωτοβουλία It's just period: οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ και ο ΦΠΑ 24% που τα επιβαρύνει."
+    dek: "Με την πρωτοβουλία It's just period: οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ και ο ΦΠΑ που τα επιβαρύνει."
     when_label: "Ιανουάριος 2025"
     sources:
       - { name: "e-katanalotis, ΑΒ Βασιλόπουλος, Σκλαβενίτης", url: "https://e-katanalotis.gov.gr", note: "Τιμές ραφιού" }
@@ -799,7 +799,7 @@
     notes: []
   en:
     name: "Period products"
-    dek: "With the It's just period initiative: what period products cost in supermarkets, and the 24% VAT on them."
+    dek: "With the It's just period initiative: what period products cost in supermarkets, and the VAT charged on them."
     when_label: "January 2025"
     sources:
       - { name: "e-katanalotis, AB Vasilopoulos, Sklavenitis", url: "https://e-katanalotis.gov.gr", note: "Shelf prices" }

@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "1996/01 - 2026/09 · price levels 1995 - 2025"
 source_name: "Eurostat – Harmonised index of consumer prices (prc_hicp_minr),Eurostat – Price levels (prc_ppp_ind_1)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_ppp_ind_1/default/table?lang=en"
-description_detailed: "The harmonised index of consumer prices, the inflation measure used across the EU, every month from 1996 to September 2026, for every member state. In September inflation in Greece reached 5.1% on the flash estimate, the highest since March 2023. Price levels are here too: in 2025 food in Greece stood at 105.3, with the EU at 100."
+description_detailed: "The harmonised index of consumer prices, the inflation measure used across the EU, every month since 1996, for every member state and every category of goods and services. Price levels are here too: how much dearer or cheaper each country is than the EU average."
 description_preprocess: "The data come straight from Eurostat's API and update automatically. Each time we reload every month, because Eurostat revises older figures and replaces the flash estimate with the final one. We wrote the Greek names of the categories ourselves."
 image_path: assets/posts/topic-inflation.webp
 ---

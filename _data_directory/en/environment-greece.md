@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "emissions 1990 - 2024 · waste 1995 - 2023 · renewables 2004 - 2025"
 source_name: "Eurostat – Greenhouse gas emissions by source (env_air_gge),Eurostat – Greenhouse gas emissions SDG indicator (sdg_13_10),Eurostat – Municipal waste (env_wasmun),Eurostat – Renewables share (nrg_ind_ren)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/env_wasmun/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table?lang=en"
-description_detailed: "Greenhouse gas emissions every year from 1990 to 2024, in total, by source and per inhabitant, along with municipal waste and the renewables share, for Greece and the EU countries. In 2024 Greece emitted 73.3 million tonnes, 29.5% less than in 1990. Yet in 2023 it recycled just 17.4% of its municipal waste and sent 80.7% to landfill."
+description_detailed: "Greenhouse gas emissions every year since 1990, in total, by source and per inhabitant, along with municipal waste (how much we produce, recycle and send to landfill) and the renewables share, for Greece and the EU countries."
 description_preprocess: "The data come from Eurostat's API and update automatically. Each time we reload them in full, because emissions are recalculated every year back to 1990. We work out the recycling and landfill rates ourselves, and wrote the Greek names too."
 image_path: assets/posts/topic-environment.webp
 ---

@@ -10,7 +10,7 @@ date_added: "2026-10-07"
 data_dates: "2001 - 2025 · historical 1821 - 2011"
 source_name: "ELSTAT – Population estimates,ELSTAT – Migration,ELSTAT – Historical censuses,Ministry of the Interior"
 source_url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-,https://www.statistics.gr/en/statistics/-/publication/SPO15/-,https://www.statistics.gr/en/census_priv_results_1821-2021,https://ekloges.ypes.gr"
-description_detailed: "The population of Greece by sex and age on 1 January of each year, from ELSTAT's estimates: for the whole country since 2001 and for the 13 regions since 2011. Alongside it are migration, the historical censuses since 1821 and the voters in each region. On 1 January 2025 Greece had 10,372,335 residents, and 23.7% were 65 or older."
+description_detailed: "The population of Greece by sex and age on 1 January of each year, from ELSTAT's estimates: for the whole country since 2001 and for the 13 regions since 2011. Alongside it are international migration, the historical censuses since 1821 and the voters in each region."
 description_preprocess: "ELSTAT's Excel files are downloaded in full at every update, because ELSTAT revises its estimates within the same files, and we keep every version. If the age groups do not add up to the total, the update stops. For the regions, ages 85 and over are merged into one group."
 image_path: assets/topic-population-athens.jpg
 ---
