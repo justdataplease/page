@@ -1,7 +1,7 @@
 ---
 title: From farm to shelf, producer and consumer prices
 slug: farm-to-shelf-greece
-description: "What farmers are paid for olive oil, milk, cereals, fruit and vegetables, what energy, fertiliser and feed cost them, and what we pay for the same foods on the shelf, in Greece and the EU"
+description: "What farmers earn, what their inputs cost and what we pay on the shelf, in Greece and the EU"
 category: Prices & cost of living
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,28 +10,21 @@ date_added: "2026-10-08"
 data_dates: "indices 2020/Q1 - 2026/Q2 · farm-gate prices 2000 - 2024 · shelf 1996/01 - 2026/08"
 source_name: "Eurostat – Agricultural output prices (apri_pi_outq),Eurostat – Agricultural input prices (apri_pi_inq),Eurostat – Farm-gate prices of crops (apri_ap_crpouta),Eurostat – Farm-gate prices of milk and eggs (apri_ap_anouta),Eurostat – Harmonised index of consumer prices (prc_hicp_minr)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en"
-description_detailed: "Three views of the same price. First, the producer price index (2020 = 100) every quarter and every year since 2020, for all agricultural output, crop and animal products, cereals, fresh vegetables, tomatoes, potatoes, fruit, oranges, olive oil, milk and eggs, for Greece and the EU27. Second, the index of what farmers pay for their inputs: total, energy, fertilisers, feed. Third, consumer prices (HICP) for the same foods every month since 1996: food, bread and cereals, meat, milk-dairy-eggs, oils, vegetables. Alongside them are farm-gate selling prices in euro, every year 2000–2024, for olive oil, soft and durum wheat, tomatoes, potatoes, oranges, cow's, sheep's and goat's milk and eggs, for the EU countries that publish them. In the second quarter of 2026 farmers in Greece were selling at prices 58.5% higher than in 2020 (EU27: 36.4%), while their inputs had risen 34.1% and food on the shelf 37.6%. In 2024 extra virgin olive oil sold at the farm gate for €811.52 per 100 litres, 25.9% more than in 2023."
-description_preprocess: "The Eurostat tables are read in full from its API at every update, every period, because recent values are often estimates and get revised. Each value is first kept exactly as it arrived, with all the source codes, and the final table is checked to have exactly the same rows per table; every code we request must come back, because the API silently ignores codes that do not exist (the indices, for example, are now coded apri_pi_* instead of apri_pi20_*). Spot check against Eurostat's figure: olive oil at €811.52 per 100 litres in 2024. The Greek names of products and inputs are our own. To sit next to the producer indices, the consumer indices are rebased: each category is divided by its own 2020 average (= 100), never combined with another; a shelf quarter is the average of its three months and is shown only when all three are out (food, second quarter of 2026: 137.6). The farm-to-shelf pairs: olive oil with oils and fats, milk and eggs with dairy and eggs, cereals with bread and cereals, vegetables and potatoes with vegetables, animals with meat, all agriculture with food. Producer and consumer indices have different bases and cover different products (the shelf price adds processing, transport, retail and taxes), so we compare only how much they changed, never their levels. The indices are nominal, not adjusted for inflation. Gaps: producer and input indices exist only from 2020 and only for Greece and the EU27; farm-gate prices stop in 2024 (Eurostat has published nothing newer); only 6 countries publish the olive oil price, 23 the cow's milk price; there is no EU average for farm-gate prices."
+description_detailed: "One price at three points: what farmers get, what they pay for energy, fertiliser and feed, and what we pay on the shelf, in Greece and the EU. Farm-gate prices for olive oil, wheat, milk and more cover 2000 to 2024. In the second quarter of 2026 farmers were selling 58.5% higher than in 2020, while food on the shelf had risen 37.6%."
+description_preprocess: "The data come from Eurostat's API and update automatically, revisions included. To set them side by side, we rebase shelf prices to 2020 = 100 as well. We wrote the Greek names of the products ourselves."
 image_path: assets/posts/topic-farm-to-shelf.webp
 ---
 
-| **Column**           | **Description**                                                                                                 |
-|----------------------|-----------------------------------------------------------------------------------------------------------------|
-| series_id, series_key | Number and code of the series: the source codes, e.g. `freq=Q;am_item=AM080000;p_adj=NI;unit=I20` (am_item: product or input; p_adj=NI nominal index) or `freq=A;currency=EUR;prod_veg=08100000` (prod_veg / prod_ani: product). One series covers every area. |
-| dataset, dataset_name_en | apri_pi_outq / apri_pi_outa (producer prices), apri_pi_inq / apri_pi_ina (inputs), apri_ap_crpouta / apri_ap_anouta (farm-gate prices), prc_hicp_minr (shelf) and their names. |
-| series_name_en, series_title_en | What the series measures, e.g. “Olive oil”, “Fertilisers and soil improvers”.                         |
-| coicop               | On the shelf: CP011 food, CP0111 bread and cereals, CP0112 meat, CP0114 milk-dairy-eggs, CP0115 oils and fats, CP0117 vegetables. |
-| currency             | EUR, in farm-gate prices.                                                                                       |
-| unit, unit_label_en  | I20 index (2020 = 100), I25 index (2025 = 100), RCH_A annual rate (%), EUR € per 100 kg (olive oil per 100 litres, eggs per 100 units). |
-| geo, geo_name_en     | EL Greece, EU27_2020 the EU27, and the EU countries that publish farm-gate prices.                               |
-| geo_level            | country or eu_aggregate; filter on it before any comparison or ranking.                                         |
-| is_greece            | TRUE on the rows for Greece.                                                                                    |
-| freq, time_period    | Frequency (M, Q, A) and the period as the source writes it (2026-08, 2026-Q2, 2024).                             |
-| period_date, year, quarter, month | The first day of the period (2026-Q2 → 2026-04-01) and its parts.                                   |
-| value                | The value as Eurostat publishes it, in the series' unit.                                                        |
-| value_prev_year      | The value of the same series and area in the same period of the previous year.                                  |
-| status_flag          | e estimated, p provisional, b break in series.                                                                  |
-| is_latest            | TRUE on the latest period of each series in each area.                                                          |
-| source_url, dataset_updated | The table's page at Eurostat and when Eurostat last updated it.                                          |
+| **Column**                        | **Description** |
+|-----------------------------------|-----------------|
+| series_name_en                    | What the series measures, e.g. “Olive oil” or “Fertilisers”. |
+| dataset_name_en                   | Producer price, input cost, farm-gate price or shelf price. |
+| coicop                            | On the shelf: food, bread, meat, dairy, oils or vegetables. |
+| unit_label_en                     | Index (2020 = 100), annual rate (%) or € per 100 kg. |
+| geo, geo_name_en, geo_level       | Greece, the EU27, the euro area or an EU country, and whether it is a country or a total. |
+| is_greece                         | TRUE on the rows for Greece. |
+| period_date, year, quarter, month | The first day of the period and its parts. |
+| value, value_prev_year            | The value as the source publishes it, and the same period a year earlier. |
+| is_latest                         | TRUE on the latest value of each series. |
 
-**NOTE** - Eurostat tables: apri_pi_outq and apri_pi_outa (producer price indices, quarterly and annual), apri_pi_inq and apri_pi_ina (input price indices), apri_ap_crpouta (selling prices of crop products), apri_ap_anouta (selling prices of milk and eggs) and, from the Inflation topic, the HICP food categories (prc_hicp_minr). Farm-gate prices are what producers get when they sell, before any processing. Shelf prices by product and by supermarket are in the Supermarket prices topic. The stats_eu_rank table gives Greece's position among the countries that publish each price (members_reporting). Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged it, and Eurostat is not responsible for the changes.
+**NOTE** - Source: Eurostat. Processing, transport and retail are added on the way to the shelf, so producer and consumer prices compare only as changes. Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged them, and Eurostat is not responsible for the changes.

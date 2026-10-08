@@ -88,6 +88,39 @@
     notes:
       - "Totals by retailer and category count one source per product, so no price is counted twice."
 
+- key: real-estate
+  kind: topic
+  category: prices
+  model: akinita
+  image: assets/posts/topic-real-estate.webp
+  since: 2022
+  cadence: monthly
+  data: [real-estate-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDU3ZmQxMWMtZjk1Yy00YzgzLWE5ZTItZjkyZDU3ZTA4MjM3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Ακίνητα: τιμές αγγελιών"
+    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα από το 2022: τιμή ανά τ.μ., τυπικό σπίτι και απόδοση ενοικίου."
+    coverage: "2022 – σήμερα · όλη η Ελλάδα · 13 περιφέρειες · δήμοι"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/real-estate/", note: "Δικές μας συλλογές αγγελιών πώλησης και ενοικίασης κατοικιών" }
+    notes:
+      - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Για τις τιμές συναλλαγών δείτε το θέμα Κατοικία (Τράπεζα της Ελλάδος)."
+      - "Οι δήμοι με λίγες αγγελίες δεν εμφανίζονται, ώστε μία-δύο ακριβές βίλες να μη «φτιάχνουν» την τιμή ενός ολόκληρου δήμου."
+  en:
+    name: "Property asking prices"
+    dek: "What sellers and landlords ask for a home, by region and municipality, every month since 2022: price per m², the typical home and rental yield."
+    coverage: "2022 – today · all of Greece · 13 regions · municipalities"
+    updates: "Every month"
+    sources:
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/real-estate/", note: "Our own collection of homes listed for sale and for rent" }
+    notes:
+      - "These are asking prices from listings, not sale prices; deals usually close lower. For transaction prices see the Housing topic (Bank of Greece)."
+      - "Municipalities with few listings are left out, so one or two expensive villas cannot set a whole municipality's price."
+
 - key: airbnb
   kind: topic
   category: business
