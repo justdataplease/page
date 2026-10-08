@@ -321,31 +321,27 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOTM3ZTlhMmUtODVkMi00MWY1LWI3MzMtZmVkMTMzYzZiMDg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Πληθυσμός"
-    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και των 13 περιφερειών κατά ηλικία και φύλο, η μετανάστευση, οι απογραφές από το 1821 και οι εκλογές."
+    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και των 13 περιφερειών κατά ηλικία και φύλο, η μετανάστευση και οι απογραφές από το 1821."
     coverage: "2001 – 2025 · 13 περιφέρειες · απογραφές από το 1821"
     updates: "Κάθε χρόνο"
     sources:
       - { name: "ΕΛΣΤΑΤ – Εκτιμήσεις πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SPO18/-", note: "Πληθυσμός 1ης Ιανουαρίου κατά φύλο και ηλικία: χώρα 2001–2025, περιφέρειες 2011–2025" }
       - { name: "ΕΛΣΤΑΤ – Μετανάστευση", url: "https://www.statistics.gr/el/statistics/-/publication/SPO15/-", note: "Εισερχόμενοι και εξερχόμενοι μετανάστες κατά φύλο και ηλικία, 2008–2024" }
       - { name: "ΕΛΣΤΑΤ – Ιστορικές απογραφές", url: "https://www.statistics.gr/el/census_priv_results_1821-2021", note: "Ορόσημα πληθυσμού 1821–2011" }
-      - { name: "Υπουργείο Εσωτερικών", url: "https://ekloges.ypes.gr", note: "Εκλογικά αποτελέσματα ανά περιφέρεια, 2012–2024" }
     notes:
-      - "Ο μόνιμος πληθυσμός δεν είναι ο εκλογικός κατάλογος: οι εγγεγραμμένοι εκλογείς μιας περιοχής μπορεί να είναι πολύ περισσότεροι από τους κατοίκους της."
       - "Η μεταβολή του πληθυσμού μιας περιφέρειας δεν είναι εσωτερική μετανάστευση: περιλαμβάνει γεννήσεις, θανάτους και μετακινήσεις από και προς το εξωτερικό. Η μετανάστευση εδώ είναι μόνο η διεθνής."
       - "Το 1821 είναι αναδρομική εκτίμηση, όχι απογραφή, και τα ιστορικά ορόσημα αφορούν άλλη επικράτεια κάθε φορά· δεν συνδέονται σε συνεχή σειρά."
       - "Οι ηλικίες δίνονται σε πενταετείς ομάδες: η διάμεση ηλικία είναι ομάδα (π.χ. 45–49), όχι ακριβής αριθμός."
   en:
     name: "Population"
-    dek: "How many we are and how we are ageing: the population of the country and its 13 regions by age and sex, migration, the censuses since 1821 and the elections."
+    dek: "How many we are and how we are ageing: the population of the country and its 13 regions by age and sex, migration and the censuses since 1821."
     coverage: "2001 – 2025 · 13 regions · censuses since 1821"
     updates: "Every year"
     sources:
       - { name: "ELSTAT – Population estimates", url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-", note: "Population on 1 January by sex and age: country 2001–2025, regions 2011–2025" }
       - { name: "ELSTAT – Migration", url: "https://www.statistics.gr/en/statistics/-/publication/SPO15/-", note: "Immigrants and emigrants by sex and age, 2008–2024" }
       - { name: "ELSTAT – Historical censuses", url: "https://www.statistics.gr/en/census_priv_results_1821-2021", note: "Population milestones 1821–2011" }
-      - { name: "Ministry of the Interior", url: "https://ekloges.ypes.gr", note: "Election results by region, 2012–2024" }
     notes:
-      - "The resident population is not the electoral roll: an area's registered voters can far outnumber its residents."
       - "A region's change in population is not internal migration: it includes births, deaths and moves to and from abroad. Migration here is international only."
       - "1821 is a retrospective estimate, not a census, and the historical milestones each cover a different territory; they do not form a continuous series."
       - "Ages come in five-year groups: the median age is a group (e.g. 45–49), not an exact number."
