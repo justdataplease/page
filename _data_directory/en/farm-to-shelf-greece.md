@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "indices 2020/Q1 - 2026/Q2 · farm-gate prices 2000 - 2024 · shelf 1996/01 - 2026/08"
 source_name: "Eurostat – Agricultural output prices (apri_pi_outq),Eurostat – Agricultural input prices (apri_pi_inq),Eurostat – Farm-gate prices of crops (apri_ap_crpouta),Eurostat – Farm-gate prices of milk and eggs (apri_ap_anouta),Eurostat – Harmonised index of consumer prices (prc_hicp_minr)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en"
-description_detailed: "One price at three points: what farmers get, what they pay for energy, fertiliser and feed, and what we pay on the shelf, in Greece and the EU. Farm-gate prices for olive oil, wheat, milk and more cover 2000 to 2024. In the second quarter of 2026 farmers were selling 58.5% higher than in 2020, while food on the shelf had risen 37.6%."
+description_detailed: "One price at three points: what farmers get, what they pay for energy, fertiliser and feed, and what we pay on the shelf, in Greece and the EU. Farm-gate prices for olive oil, wheat, milk and more go back to 2000."
 description_preprocess: "The data come from Eurostat's API and update automatically, revisions included. To set them side by side, we rebase shelf prices to 2020 = 100 as well. We wrote the Greek names of the products ourselves."
 image_path: assets/posts/topic-farm-to-shelf.webp
 ---

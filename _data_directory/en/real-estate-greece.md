@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "2022/01 - 2026/09"
 source_name: "DataForGreece – home listings"
 source_url: "https://dataforgreece.gr/en/data/real-estate/"
-description_detailed: "What sellers and landlords ask for a home across Greece, from the sale and rental listings we collect every week. In September 2026 the asking price was €2,602 per m², 3.2% higher than a year earlier, and rent was €10.23 per m² a month. The typical home for sale had 90 m² and asked €220,000."
+description_detailed: "What sellers and landlords ask for a home across Greece, from the sale and rental listings we collect every week. For the country, every region and every municipality with enough listings: price per m², a price index, the typical home (price and size) and the gross rental yield."
 description_preprocess: "Each home counts once, even when several agencies list it, at the price it asked that month. The index holds the mix of homes steady (size, age, type), so it does not rise just because bigger or newer homes came to market. Extreme prices and municipalities with few listings are left out."
 image_path: assets/posts/topic-real-estate.webp
 ---

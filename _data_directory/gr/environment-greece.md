@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "εκπομπές 1990 - 2024 · απόβλητα 1995 - 2023 · ΑΠΕ 2004 - 2025"
 source_name: "Eurostat – Εκπομπές αερίων θερμοκηπίου ανά πηγή (env_air_gge),Eurostat – Εκπομπές αερίων θερμοκηπίου δείκτης ΣΒΑ (sdg_13_10),Eurostat – Αστικά απόβλητα (env_wasmun),Eurostat – Μερίδιο ΑΠΕ (nrg_ind_ren)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/env_wasmun/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table?lang=en"
-description_detailed: "Οι εκπομπές αερίων του θερμοκηπίου κάθε χρόνο από το 1990 έως το 2024, συνολικά, ανά πηγή και ανά κάτοικο, μαζί με τα αστικά απόβλητα και το μερίδιο των ΑΠΕ, για την Ελλάδα και τις χώρες της ΕΕ. Το 2024 η Ελλάδα εξέπεμψε 73,3 εκατ. τόνους, 29,5% λιγότερους από το 1990. Το 2023 όμως ανακύκλωσε μόλις το 17,4% των αστικών αποβλήτων και έθαψε το 80,7%."
+description_detailed: "Οι εκπομπές αερίων του θερμοκηπίου κάθε χρόνο από το 1990, συνολικά, ανά πηγή και ανά κάτοικο, μαζί με τα αστικά απόβλητα (πόσα παράγουμε, ανακυκλώνουμε και θάβουμε) και το μερίδιο των ΑΠΕ, για την Ελλάδα και τις χώρες της ΕΕ."
 description_preprocess: "Τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί οι εκπομπές ξαναϋπολογίζονται κάθε χρόνο ως το 1990. Τα ποσοστά ανακύκλωσης και ταφής τα υπολογίζουμε εμείς, όπως και τα ελληνικά ονόματα που γράψαμε."
 image_path: assets/posts/topic-environment.webp
 ---
