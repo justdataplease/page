@@ -281,7 +281,7 @@
   charts: []
   report: ""
   articles: []
-  dashboards: { lite: "", full: "" }
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOTM3ZTlhMmUtODVkMi00MWY1LWI3MzMtZmVkMTMzYzZiMDg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Πληθυσμός"
     dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και των 13 περιφερειών κατά ηλικία και φύλο, η μετανάστευση, οι απογραφές από το 1821 και οι εκλογές."
@@ -431,7 +431,7 @@
   kind: topic
   category: economy
   model: stats
-  image: assets/posts/topic-economy.webp
+  image: assets/posts/topic-economy-piraeus.webp
   since: 1995
   cadence: quarterly
   data: [economy-greece]
@@ -540,7 +540,7 @@
   kind: topic
   category: work
   model: stats
-  image: assets/posts/topic-jobs.webp
+  image: assets/posts/topic-work-fisherman.webp
   since: 1999
   cadence: quarterly
   data: [work-greece]
