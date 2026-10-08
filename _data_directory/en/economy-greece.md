@@ -1,7 +1,7 @@
 ---
 title: GDP and the Greek economy, every quarter and every region
 slug: economy-greece
-description: "GDP every quarter since 1995 and its components, the sectors, GDP per head in every region and regional unit, and economic sentiment, next to the EU"
+description: "GDP every quarter since 1995, the sectors, GDP in every region and economic sentiment, next to the EU"
 category: Economy
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,30 +10,21 @@ date_added: "2026-10-08"
 data_dates: "1995/Q1 - 2026/Q2 · regions 2000 - 2024 · sentiment 1982/01 - 2026/09"
 source_name: "Eurostat – GDP and main components quarterly (namq_10_gdp),Eurostat – GDP per capita (nama_10_pc),Eurostat – GDP by region (nama_10r_2gdp),Eurostat – GDP by regional unit (nama_10r_3gdp),Eurostat – Economic sentiment (ei_bssi_m_r2),ELSTAT – Quarterly national accounts"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/namq_10_gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ei_bssi_m_r2/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SEL84/-"
-description_detailed: "Greece's GDP every quarter from the first quarter of 1995 to the second quarter of 2026, in constant prices (inflation removed) and current prices, seasonally adjusted and unadjusted, with its components: household and government consumption, investment, exports and imports, and the value added of ten sectors (agriculture, industry, construction, trade-transport-tourism and so on). Alongside it are annual GDP and GDP per head in euro and in purchasing power standards for Greece, the EU27, the euro area and the other 26 countries, GDP per head in the 13 regions (2000–2024) and the 52 regional units (2000–2023), the economic sentiment indicator and the confidence indicators for consumers, industry, retail, services and construction every month, industrial production and the volume of retail sales. In the second quarter of 2026 Greece's GDP was 1.9% larger in real terms than a year earlier (EU27: 1.4%, euro area: 1.2%), but still 13.6% below its peak in the second quarter of 2007. In 2025 GDP per head, in purchasing power standards, was 68.3% of the EU average, the second lowest of the 27 countries after Bulgaria; in 2024 Attica stood at 96% and the North Aegean at 42%."
-description_preprocess: "The Eurostat tables are read in full from its API at every update, every quarter and year, because national accounts are revised often and backwards. Each value is first kept exactly as it arrived, with all the source codes, and the final table is checked to have exactly the same rows per table; every code we request must come back, because the API silently ignores codes that do not exist and Eurostat renames codes (the unit of regional GDP, for example, is now called PPS_HAB_EU27_2020). Spot check against Eurostat's figure: GDP growth of 1.9% in the second quarter of 2026. The Greek names of components, sectors and units are our own. The gap to the peak is measured on GDP in constant 2020 prices, seasonally adjusted: the peak is the highest quarter before 2010 (second quarter of 2007, €59,974 million) and the latest is €51,838 million a quarter. From the regional-unit table we keep only the 52 units, because its regions repeat the regional table. Growth rates, indices and per-head figures never add up; countries, regions and regional units are different levels and never go into the same sum. A region's GDP is measured where it is produced, not where its workers live, which is why the Central Athens sector comes out so high (€42,800 per inhabitant in 2023). Gaps: the latest values are provisional (flag p); regional units stop in 2023 and regions in 2024; Greek industrial production and retail sales often come out a month after the EU; sectors are given for Greece only."
+description_detailed: "Greece's GDP every quarter since 1995, with its components and sectors, GDP per head in every region and EU country, and economic sentiment. In the second quarter of 2026 the economy was 1.9% larger than a year earlier, but still 13.6% below its 2007 peak. In 2025 GDP per head stood at 68.3% of the EU average."
+description_preprocess: "The data come from Eurostat's API and update automatically. Each time we reload them in full, because national accounts are revised often, and backwards. We wrote the Greek names of the items, sectors and units ourselves."
 image_path: assets/posts/topic-economy-piraeus.webp
 ---
 
-| **Column**           | **Description**                                                                                                 |
-|----------------------|-----------------------------------------------------------------------------------------------------------------|
-| series_id, series_key | Number and code of the series: the source codes, e.g. `freq=Q;unit=CLV_PCH_SM;s_adj=SCA;na_item=B1GQ`. One series covers every area. |
-| dataset, dataset_name_en | The Eurostat table code (e.g. namq_10_gdp) and its name.                                                     |
-| series_name_en, series_title_en | What the series measures, e.g. “Gross domestic product at market prices · Chain linked volumes, percentage change compared to same period in previous year · Seasonally and calendar adjusted data”. |
-| na_item              | B1GQ GDP, P31_S14_S15 household consumption, P3_S13 government consumption, P51G investment, P6 exports, P7 imports, B1G value added. |
-| nace_r2              | The ten value-added sectors (A agriculture, B-E industry, F construction, G-I trade-transport-tourism and so on, TOTAL); B-D and G47 in industrial production and retail. |
-| s_adj                | SCA seasonally and calendar adjusted, SA seasonally adjusted, CA calendar adjusted, NSA unadjusted.              |
-| indicator            | Sentiment and confidence indicators (BS-ESI-I economic sentiment, BS-CSMCI-BAL consumers and so on), PRD production, VOL_SLS sales volume. |
-| unit, unit_label_en  | CLV_PCH_SM real change on a year earlier (%), CLV20_MEUR constant 2020 prices (€ million), CP_MEUR current prices, PPS_HAB_EU27_2020 and PC_EU27_2020_HAB_MPPS_CP per head as % of the EU27, EUR_HAB € per inhabitant, I_LTA (long-term average = 100). |
-| geo, geo_name_en     | EL Greece, EL30 Attica … EL65 Peloponnese (13 regions), EL301 … (52 regional units), EU27_2020 the EU27, EA / EA20 / EA21 the euro area, the EU countries. |
-| geo_level            | country, nuts2 (region), nuts3 (regional unit) or eu_aggregate; filter on it before any sum or comparison.        |
-| is_greece            | TRUE for Greece, its regions and regional units.                                                                |
-| freq, time_period    | Frequency (M, Q, A) and the period as the source writes it (2026-09, 2026-Q2, 2025).                             |
-| period_date, year, quarter, month | The first day of the period (2026-Q2 → 2026-04-01) and its parts.                                   |
-| value                | The value as Eurostat publishes it, in the series' unit.                                                        |
-| value_prev_year      | The value of the same series and area in the same period of the previous year.                                  |
-| status_flag          | p provisional, e estimated, b break in series, i see the source's metadata.                                     |
-| is_latest            | TRUE on the latest period of each series in each area.                                                          |
-| source_url, dataset_updated | The table's page at Eurostat and when Eurostat last updated it.                                          |
+| **Column**                        | **Description** |
+|-----------------------------------|-----------------|
+| series_name_en                    | What the series measures, e.g. GDP, real change on a year earlier. |
+| na_item, nace_r2                  | GDP, consumption, investment, exports, imports or a sector's value added. |
+| unit_label_en                     | Change (%), € million, € per inhabitant or a share of the EU27. |
+| geo, geo_name_en                  | Greece, a region, a regional unit, the EU27, the euro area or an EU country. |
+| geo_level                         | Country, region, regional unit or EU total. Never add them together. |
+| is_greece                         | TRUE for Greece, its regions and regional units. |
+| period_date, year, quarter, month | The first day of the period and its parts. |
+| value, value_prev_year            | The value as the source publishes it, and the same period a year earlier. |
+| is_latest                         | TRUE on the latest value of each series. |
 
-**NOTE** - Eurostat tables: namq_10_gdp (GDP and components, quarterly), namq_10_a10 (value added by sector, Greece only), nama_10_gdp (annual GDP), nama_10_pc (per head), nama_10r_2gdp (13 regions), nama_10r_3gdp (52 regional units), ei_bssi_m_r2 (the European Commission's business and consumer surveys), sts_inpr_m (industrial production), sts_trtu_m (retail sales) and the per-head volume indices in PPS of prc_ppp_ind_1. The stats_eu_rank table gives Greece's position in the EU for each series and period. ELSTAT compiles the Greek figures, and we read them as Eurostat distributes them. Purchasing power standards (PPS) remove price differences between countries; the EU27 is always 100. A sentiment indicator above 100 means a mood better than the country's own long-term average, not better than other countries. Eurostat data may be reused freely with acknowledgement of the source; figures that come from ELSTAT are credited to ELSTAT. We translated and rearranged them; Eurostat and ELSTAT are not responsible for the changes.
+**NOTE** - Source: Eurostat, with ELSTAT compiling the Greek figures. An economic sentiment reading above 100 means a better mood than the country's long-term average. The data may be reused with Eurostat and ELSTAT credited as sources; we translated and rearranged them, and neither is responsible for the changes.

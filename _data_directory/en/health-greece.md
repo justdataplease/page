@@ -1,7 +1,7 @@
 ---
 title: Health in Greece and the EU
 slug: health-greece
-description: "Life expectancy, health spending and how much we pay out of pocket, doctors, nurses and hospital beds, and how many go without a doctor, for Greece, its 13 regions and the EU countries"
+description: "Life expectancy, health spending, doctors, nurses and beds, and how many go without a doctor, for Greece, its regions and the EU"
 category: Society
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,28 +10,21 @@ date_added: "2026-10-08"
 data_dates: "1961 - 2025 · spending 2009 - 2024 · regions 1990 - 2024"
 source_name: "Eurostat – Life expectancy (demo_mlexpec),Eurostat – Life expectancy by region (demo_r_mlifexp),Eurostat – Health expenditure (hlth_sha11_hf),Eurostat – Unmet needs for medical examination (hlth_silc_08),Eurostat – Hospital beds (hlth_rs_bds1),Eurostat – Doctors and nurses (hlth_rs_prs2)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/demo_r_mlifexp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_sha11_hf/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_silc_08/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_rs_bds1/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_rs_prs2/default/table?lang=en"
-description_detailed: "Life expectancy at birth and at 65, for men, women and in total, every year to 2024 for Greece (from 1961), the EU27, the euro area and the EU countries, and at birth for the 13 regions since 1990. Alongside it are current health spending as a share of GDP and per inhabitant, split into government and compulsory schemes and households' out-of-pocket payments; doctors and nurses per 100,000 inhabitants; hospital beds per 100,000 inhabitants, also by region; government spending on health; and, from the EU-SILC survey, how many people aged 16 and over did not see a doctor when they needed to, because of cost, distance or a waiting list (2008–2025). In 2024 life expectancy at birth in Greece was 81.9 years (EU27: 81.5); 84.4 for women and 79.4 for men, ranging from 83.6 in Epirus to 80.4 in Eastern Macedonia and Thrace. Households paid 34.2% of health spending out of their own pocket, the highest share of the 25 countries with data (EU27: 15.2% in 2023), and in 2025, 11.5% went without a medical examination they needed, almost five times the EU average (2.4%) and the highest in the EU."
-description_preprocess: "The Eurostat tables are read in full from its API at every update, every year, because health and mortality statistics are revised and completed late. Each value is first kept exactly as it arrived, with all the source codes, and the final table is checked to have exactly the same rows per table; every code we request must come back, because the API silently ignores codes that do not exist and Eurostat replaces tables (beds are now read from hlth_rs_bds1 and hlth_rs_bdsrg2, because the old tables became historical). Spot check against Eurostat's figure: life expectancy of 81.9 years in 2024. The Greek names of indicators and regions are our own. Figures per 100,000 inhabitants, years of life and percentages never add up across countries or regions; the spending shares (government, out of pocket) do not cover every financing source and do not add up to 100%. For the euro area in EU-SILC EA20 is used, because the changing-composition euro area stops there in 2021. Gaps: Greece reports doctors as “professionally active” (including those who do not treat patients, e.g. in administration or research), and “practising” doctors, the measure compared across countries, exist only from 2023 (627 per 100,000 in 2024); doctors and nurses by region stop in 2020 and only the current region codes are kept; Greek health spending starts in 2009, and the EU27 has values to 2023 while Greece has them to 2024."
+description_detailed: "Life expectancy, health spending, doctors, nurses and hospital beds, for Greece, its 13 regions and the EU countries. In 2024 life expectancy at birth was 81.9 years, just above the EU27 (81.5). Yet households paid 34.2% of health spending out of their own pocket, the highest share among the countries with data."
+description_preprocess: "The data come from Eurostat's API and update automatically. Each time we reload them in full, because health statistics are revised and filled in late. We wrote the Greek names of the indicators and regions ourselves."
 image_path: assets/posts/topic-health.webp
 ---
 
-| **Column**           | **Description**                                                                                                 |
-|----------------------|-----------------------------------------------------------------------------------------------------------------|
-| series_id, series_key | Number and code of the series: the source codes, e.g. `freq=A;unit=PC_CHE;icha11_hf=HF3` (icha11_hf: HF1 government and compulsory, HF3 out of pocket, TOT_HF total; med_spec: PHYS doctors, NRS nurses; wstatus: PRACT practising, PACT professionally active). One series covers every area. |
-| dataset, dataset_name_en | The Eurostat table code (e.g. demo_mlexpec) and its name.                                                    |
-| series_name_en, series_title_en | What the series measures, e.g. “Household out-of-pocket payment · % of current health expenditure”. |
-| sex                  | T total, M men, F women.                                                                                        |
-| age                  | Y_LT1 at birth, Y65 at 65, Y_GE16 aged 16 and over (unmet needs).                                               |
-| unit, unit_label_en  | YR years, PC_GDP % of GDP, PC_CHE % of current health expenditure, EUR_HAB € per inhabitant, P_HTHAB per 100,000 inhabitants, PC percentage. |
-| geo, geo_name_en     | EL Greece, EL30 Attica … EL65 Peloponnese (13 regions), EU27_2020 the EU27, EA / EA20 / EA21 the euro area, the EU countries. |
-| geo_level            | country, nuts2 (region) or eu_aggregate; filter on it before any comparison or ranking.                         |
-| is_greece            | TRUE for Greece and its regions.                                                                                |
-| freq, time_period    | A (annual) and the year (2024).                                                                                 |
-| period_date, year    | The first day of the year (2024-01-01) and the year.                                                            |
-| value                | The value as Eurostat publishes it, in the series' unit.                                                        |
-| value_prev_year      | The value of the same series and area in the previous year.                                                     |
-| status_flag          | p provisional, e estimated, b break in series, d definition differs, n not significant.                         |
-| is_latest            | TRUE on the latest year of each series in each area.                                                            |
-| source_url, dataset_updated | The table's page at Eurostat and when Eurostat last updated it.                                          |
+| **Column**                  | **Description** |
+|-----------------------------|-----------------|
+| series_name_en              | What the series measures, e.g. “Household out-of-pocket payment · % of current health expenditure”. |
+| sex, age                    | Total, men or women, at birth or at 65. |
+| unit_label_en               | Years, % of GDP, € per inhabitant or per 100,000 inhabitants. |
+| geo, geo_name_en, geo_level | Greece, a region, the EU27, the euro area or an EU country, and its level. |
+| is_greece                   | TRUE for Greece and its regions. |
+| period_date, year           | The first day of the year, and the year. |
+| value, value_prev_year      | The value as the source publishes it, and the same period a year earlier. |
+| status_flag                 | p provisional, e estimated, b break in series. |
+| is_latest                   | TRUE on the latest value of each series. |
 
-**NOTE** - Eurostat tables: demo_mlexpec (life expectancy), demo_r_mlifexp (by region), hlth_sha11_hf (health spending by financing scheme), hlth_silc_08 (unmet needs for medical examination, EU-SILC), hlth_rs_bds1 and hlth_rs_bdsrg2 (hospital beds, countries and regions), hlth_rs_prs2 (doctors and nurses), hlth_rs_prsrg (doctors and nurses by region, to 2020) and, from the Debt, deficit & taxes topic, government spending on health (gov_10a_exp, function GF07). “Out of pocket” is what households pay directly, co-payments and private visits, excluding private insurance. The stats_eu_rank table gives Greece's position among the countries that publish each series (members_reporting). Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged it, and Eurostat is not responsible for the changes.
+**NOTE** - Source: Eurostat. Greece reports doctors as ‘professionally active’, including those who do not see patients, so compare with other countries carefully. Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged them, and Eurostat is not responsible for the changes.
