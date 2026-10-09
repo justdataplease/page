@@ -1,7 +1,7 @@
 ---
 title: Elections in Greece, 1974–2024
 slug: elections-greece
-description: The results of every election since 1974, at every level, with demographics
+description: "The results of every election since the restoration of democracy, at every level, with demographics"
 category: Politics
 date: 2026-10-07
 published_by: "DataForGreece"
@@ -10,8 +10,8 @@ date_added: "2026-10-07"
 data_dates: "1974/11 - 2024/06"
 source_name: "Ministry of the Interior,Hellenic Parliament,iMEdD Lab,ELSTAT,Eurostat"
 source_url: "https://ekloges.ypes.gr,https://www.hellenicparliament.gr,https://lab.imedd.org,https://www.statistics.gr,https://ec.europa.eu/eurostat"
-description_detailed: "The results of every election since 1974: parliamentary, European, referendums, regional or prefectural and municipal. For every election it gives registered voters, ballots cast, valid, invalid and blank ballots, and the votes, shares and seats of every party or ticket, at every level that is published: the whole country, region, electoral district, regional unit, municipality, municipal unit and polling station. With them come candidates' preference votes (since 2007), the electoral rolls by sex and age, and the population of each area from the ELSTAT censuses and Eurostat. At national level, the 1974–1993 parliamentary elections list only the parties that won seats and local elections have turnout only; full party lists start in 1996, and below national level the data also start in 1996."
-description_preprocess: "The results are collected from the Ministry of the Interior results sites (2010–2024), the SingularLogic and Ministry archives (1996–2009), the official ypes.gr files, the Hellenic Parliament's results series (1974–2023) and iMEdD Lab's turnout series. For every election and every level we keep a single source, in order of priority, so no vote is counted twice. Parties get one code across all years (for example, Synaspismos counts as SYRIZA from 2004) and areas are matched to today's administrative map, with the municipal unit as the stable unit since 1997. Where a source publishes no totals for a level, they are summed from the level below (municipal units or polling stations) and flagged as derived (is_derived); they come out slightly below the official figures, because special polling stations and votes from abroad belong to no area. Each level is a separate table and totals are never carried from one to another. Every update checks that party votes equal valid ballots (±0.5%) and that electoral districts, municipal units and polling stations agree with the national total."
+description_detailed: "Election results since the restoration of democracy: parliamentary, European, referendums, regional and municipal. For every election: registered voters, ballots cast, and every party's votes and seats, from the whole country down to the polling station where published. Alongside them are candidates' preference votes, the electoral rolls and the population of each area."
+description_preprocess: "The results are collected from the Ministry of the Interior, Parliament and other official sources. For every election we keep one source, so no vote is counted twice; parties keep one name across the years and areas are matched to today's map. Every update checks that the totals agree."
 image_path: assets/cover-syntagma.jpg
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Population of Greece by age and sex
 slug: population-greece
-description: The population of the country and its 13 regions by age and sex, international migration and the historical censuses
+description: "The population of the country and its regions by age and sex, international migration and the historical censuses"
 category: Society
 date: 2026-10-07
 published_by: "DataForGreece"
@@ -10,8 +10,8 @@ date_added: "2026-10-07"
 data_dates: "2001 - 2025 · historical 1821 - 2011"
 source_name: "ELSTAT – Population estimates,ELSTAT – Migration,ELSTAT – Historical censuses,Ministry of the Interior"
 source_url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-,https://www.statistics.gr/en/statistics/-/publication/SPO15/-,https://www.statistics.gr/en/census_priv_results_1821-2021,https://ekloges.ypes.gr"
-description_detailed: "The population of Greece by sex and age on 1 January of each year, from ELSTAT's estimates: for the whole country since 2001 and for the 13 regions since 2011. Alongside it are international migration, the historical censuses since 1821 and the voters in each region."
-description_preprocess: "ELSTAT's Excel files are downloaded in full at every update, because ELSTAT revises its estimates within the same files, and we keep every version. If the age groups do not add up to the total, the update stops. For the regions, ages 85 and over are merged into one group."
+description_detailed: "The population of Greece by sex and age, for the whole country and every region, from ELSTAT's estimates. Alongside it are international migration, the historical censuses and the voters in each region."
+description_preprocess: "The data come from ELSTAT and update with every new release, revisions included. Before publishing, we check that the age groups add up to the total."
 image_path: assets/topic-population-athens.jpg
 ---
 

@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "τιμές 2007/S1 - 2026/S1 · παραγωγή 2008/01 - 2026/07 · ετήσια 1990 - 2025"
 source_name: "Eurostat – Τιμή ρεύματος για νοικοκυριά (nrg_pc_204),Eurostat – Τιμή ρεύματος για επιχειρήσεις (nrg_pc_205),Eurostat – Τιμή φυσικού αερίου για νοικοκυριά (nrg_pc_202),Eurostat – Μηνιαία παραγωγή ρεύματος (nrg_cb_pem),Eurostat – Ετήσια παραγωγή ρεύματος (nrg_bal_peh),Eurostat – Μερίδιο ΑΠΕ (nrg_ind_ren),Eurostat – Αδυναμία θέρμανσης (ilc_mdes01),Eurostat – Απλήρωτοι λογαριασμοί (ilc_mdes07)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_202/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_cb_pem/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_peh/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes01/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes07/default/table?lang=en"
-description_detailed: "Οι τιμές του ρεύματος και του φυσικού αερίου κάθε εξάμηνο από το 2007, με και χωρίς φόρους, σε όλη την ΕΕ. Μαζί από τι παράγεται το ρεύμα στην Ελλάδα κάθε μήνα, το μερίδιο των ΑΠΕ και πόσοι δεν μπορούν να ζεστάνουν το σπίτι τους."
-description_preprocess: "Όλα τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί οι τιμές και τα ενεργειακά ισοζύγια αναθεωρούνται. Τα ελληνικά ονόματα των καυσίμων και των φόρων τα γράψαμε εμείς."
+description_detailed: "Οι τιμές του ρεύματος και του φυσικού αερίου, με και χωρίς φόρους, σε όλη την ΕΕ. Μαζί από τι παράγεται το ρεύμα στην Ελλάδα κάθε μήνα, το μερίδιο των ΑΠΕ και πόσοι δεν μπορούν να ζεστάνουν το σπίτι τους."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, μαζί με τις αναθεωρήσεις των τιμών και των ενεργειακών ισοζυγίων. Τα ελληνικά ονόματα τα γράψαμε εμείς."
 image_path: assets/posts/topic-energy.webp
 ---
 

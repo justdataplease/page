@@ -1,7 +1,7 @@
 ---
 title: Inflation in Greece and the EU
 slug: inflation-greece
-description: "Inflation every month since 1996, category by category, for Greece and every EU country"
+description: "Inflation every month, category by category, for Greece and every EU country"
 category: Prices & cost of living
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1996/01 - 2026/09 · price levels 1995 - 2025"
 source_name: "Eurostat – Harmonised index of consumer prices (prc_hicp_minr),Eurostat – Price levels (prc_ppp_ind_1)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_ppp_ind_1/default/table?lang=en"
-description_detailed: "The harmonised index of consumer prices, the inflation measure used across the EU, every month since 1996, for every member state and every category of goods and services. Price levels are here too: how much dearer or cheaper each country is than the EU average."
-description_preprocess: "The data come straight from Eurostat's API and update automatically. Each time we reload every month, because Eurostat revises older figures and replaces the flash estimate with the final one. We wrote the Greek names of the categories ourselves."
+description_detailed: "The harmonised index of consumer prices, the inflation measure used across the EU, every month, for every member state and every category of goods and services. Price levels are here too: how much dearer or cheaper each country is than the EU average."
+description_preprocess: "The data come from Eurostat and update automatically, because the flash estimate is replaced by the final one and old values get corrected. We wrote the Greek category names ourselves."
 image_path: assets/posts/topic-inflation.webp
 ---
 

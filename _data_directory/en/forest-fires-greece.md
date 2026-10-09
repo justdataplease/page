@@ -1,7 +1,7 @@
 ---
 title: Forest Fires in Greece
 slug: forest-fires-greece
-description: Forest Fires in Greece
+description: "Forest fires in Greece: when, where, how much burned and what was sent to fight them"
 category: Environment
 date: 2024-10-14
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
@@ -14,8 +14,8 @@ source_name: "Hellenic Fire Service Dataset"
 source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
 
 chart_id: "forest-fires-greece-monthly"
-description_detailed: "The dataset provides information on forest and urban fire incidents where the Hellenic Fire Service (HFS) intervened. The data is available in a machine-readable format, and is governed by the terms of Annex C of the related circular (ADA: ΩΩΡΜΧ-ΜΒΛ). The terms include attribution to the creator, non-commercial use, and sharing alike."
-description_preprocess: "The individual files are merged into a single dataset and cleaned to ensure consistency. Additionally, several helper columns are added to facilitate the analysis."
+description_detailed: "Every fire and incident the Fire Service attended: when it started and was put out, where, how much land burned and what kind, and how many firefighters and aircraft were sent. Alongside them are the burnt areas seen by satellite (EFFIS)."
+description_preprocess: "The data come from the Fire Service's open data and from EFFIS. We join the files into one set, clean names and dates, and keep the two sources apart, because they measure differently."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.forest_fires_greece_v"
 image_path: assets/posts/forest_burning.webp
 

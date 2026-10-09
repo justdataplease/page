@@ -13,8 +13,8 @@ data_dates: "Athens from 2015/07 · South Aegean from 2019/03 · Crete, Thessalo
 source_name: "Inside Airbnb,DataForGreece – rental listings"
 source_url: "https://insideairbnb.com/,https://dataforgreece.gr/en/data/real-estate/"
 chart_id: "airbnb-greece-overview"
-description_detailed: "Airbnb listings in the four areas Inside Airbnb covers, month by month: how many there are, what a night costs, how full the calendars are and who rents them out. We also compare them, municipality by municipality, with our own long-term rental listings, to show how many homes go to Airbnb instead of to tenants."
-description_preprocess: "We keep one Inside Airbnb snapshot per month and count each listing once. Prices before and after the 2026 change of method are kept apart, because they do not compare. The comparison with rents is made per municipality, only where both sides have enough listings."
+description_detailed: "Airbnb listings in the areas Inside Airbnb covers, month by month: how many there are, what a night costs, how full the calendars are and who rents them out. Next to them are our own long-term rental listings, to show how many homes go to Airbnb instead of to tenants."
+description_preprocess: "The data come from Inside Airbnb and update every month. We count each listing once and compare with rents only where there are enough listings."
 image_path: assets/posts/airbnb.webp
 ---
 

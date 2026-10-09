@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1995 - 2025 · τριμηνιαίο χρέος 2000/Q1 - 2026/Q1"
 source_name: "Eurostat – Έλλειμμα και δημόσιο χρέος (gov_10dd_edpt1),Eurostat – Δημόσιο χρέος τριμηνιαίο (gov_10q_ggdebt),Eurostat – Δημόσια έσοδα και δαπάνες (gov_10a_main),Eurostat – Φορολογικά έσοδα (gov_10a_taxag),Eurostat – Δημόσιες δαπάνες ανά λειτουργία (gov_10a_exp)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10q_ggdebt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_taxag/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table?lang=en"
-description_detailed: "Τα δημόσια οικονομικά της Ελλάδας και των χωρών της ΕΕ από το 1995: χρέος, έλλειμμα ή πλεόνασμα, τόκοι, έσοδα, δαπάνες, φόροι και σε τι ξοδεύει το κράτος. Το χρέος δίνεται και κάθε τρίμηνο από το 2000."
-description_preprocess: "Τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί αναθεωρούνται σε κάθε κοινοποίηση, τον Απρίλιο και τον Οκτώβριο. Τα ελληνικά ονόματα των φόρων και των λειτουργιών τα γράψαμε εμείς."
+description_detailed: "Τα δημόσια οικονομικά της Ελλάδας και των χωρών της ΕΕ: χρέος, έλλειμμα ή πλεόνασμα, τόκοι, έσοδα, δαπάνες, φόροι και σε τι ξοδεύει το κράτος. Το χρέος δίνεται και κάθε τρίμηνο."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, γιατί αναθεωρούνται σε κάθε κοινοποίηση προς την ΕΕ. Τα ελληνικά ονόματα των φόρων και των δαπανών τα γράψαμε εμείς."
 image_path: assets/posts/topic-public-debt.webp
 ---
 

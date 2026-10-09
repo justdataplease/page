@@ -1,7 +1,7 @@
 ---
 title: Budget of the Municipality of Athens
 slug: athens-municipality-budget
-description: Budget of the Municipality of Athens
+description: "The City of Athens budget: what was voted, what was spent and where the money went"
 category: Economy
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
@@ -16,8 +16,8 @@ contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 
 chart_id: "athens-municipality-budget"
-description_detailed: "This dataset provides detailed information on the budget and expenditure for the Municipality of Athens since 2005. It includes the initial budget allocations, adjustments, committed funds, authorized payments, and actual payments made across various departments. The data includes expenses such as legal fees, office supplies, public relations costs, and maintenance of equipment."
-description_preprocess: "The data was downloaded and combined into a single file."
+description_detailed: "The City of Athens budget and how it was carried out, year by year and month by month: what was voted, how it was amended, what was committed and what was paid or collected, by category and department."
+description_preprocess: "The data come from the City of Athens and Diavgeia and update regularly. We join them into one set and give the categories consistent names."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
 image_path: assets/posts/athens.webp
 

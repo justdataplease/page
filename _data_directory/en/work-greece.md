@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1998/04 - 2026/08 · regions 1999 - 2025 · pay 1995 - 2026"
 source_name: "Eurostat – Monthly unemployment (une_rt_m),Eurostat – Employment rate (lfsi_emp_q),Eurostat – Unemployment by region (lfst_r_lfu3rt),Eurostat – Minimum wage (earn_mw_cur),Eurostat – Average full-time salary (nama_10_fte),ELSTAT – Labour Force Survey"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/earn_mw_cur/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_fte/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SJO01/-"
-description_detailed: "Unemployment every month, employment and job vacancies, for Greece, its 13 regions and the EU countries, along with the minimum and average wage, labour costs and what wages are worth once rising prices are taken out."
-description_preprocess: "The data come from Eurostat's API and update automatically, in full each time, because unemployment is revised every month. We calculate real wages ourselves using the harmonised price index. We wrote the Greek names of the age groups, sectors and regions ourselves."
+description_detailed: "Unemployment every month, employment and job vacancies, for Greece, its regions and the EU countries, along with the minimum and average wage, labour costs and what wages are worth once rising prices are taken out."
+description_preprocess: "The data come from Eurostat and update automatically, because unemployment is revised every month. We work out the real wage ourselves with the consumer price index."
 image_path: assets/posts/topic-work-fisherman.webp
 ---
 
