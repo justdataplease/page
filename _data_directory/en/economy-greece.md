@@ -1,7 +1,7 @@
 ---
 title: GDP and the Greek economy, every quarter and every region
 slug: economy-greece
-description: "GDP every quarter since 1995, the sectors, GDP in every region and economic sentiment, next to the EU"
+description: "GDP every quarter, the sectors, GDP in every region and economic sentiment, next to the EU"
 category: Economy
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1995/Q1 - 2026/Q2 · regions 2000 - 2024 · sentiment 1982/01 - 2026/09"
 source_name: "Eurostat – GDP and main components quarterly (namq_10_gdp),Eurostat – GDP per capita (nama_10_pc),Eurostat – GDP by region (nama_10r_2gdp),Eurostat – GDP by regional unit (nama_10r_3gdp),Eurostat – Economic sentiment (ei_bssi_m_r2),ELSTAT – Quarterly national accounts"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/namq_10_gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ei_bssi_m_r2/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SEL84/-"
-description_detailed: "Greece's GDP every quarter since 1995, with its components and sectors, GDP per head in every region and EU country, and economic sentiment. It shows how fast the economy grows, how far it is from its pre-crisis peak and where income per head stands against the EU."
-description_preprocess: "The data come from Eurostat's API and update automatically. Each time we reload them in full, because national accounts are revised often, and backwards. We wrote the Greek names of the items, sectors and units ourselves."
+description_detailed: "Greece's GDP every quarter, with its components and sectors, GDP per head in every region and EU country, and economic sentiment. It shows how fast the economy grows and where income per head stands against the EU."
+description_preprocess: "The data come from Eurostat and update automatically, because national accounts are often revised backwards. We wrote the Greek names ourselves."
 image_path: assets/posts/topic-economy-piraeus.webp
 ---
 

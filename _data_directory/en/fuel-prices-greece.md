@@ -1,7 +1,7 @@
 ---
 title: Fuel Prices in Greece
 slug: fuel-prices-greece
-description: Fuel Prices in Greece
+description: "Motor and heating fuel prices in Greece, in every prefecture"
 category: Economy
 date: 2025-02-01
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip
@@ -14,8 +14,8 @@ source_name: "Ministry of Development and Competitiveness"
 source_url: "http://www.fuelprices.gr/"
 
 chart_id: "fuel-prices-greece-daily"
-description_detailed: "This dataset shows daily fuel prices across Greece, including fuel types, station counts, average prices, and report IDs to help consumers understand pricing trends. Shared by the Ministry of Development on fuelprices.gr, it aims to keep consumers informed. While efforts are made to ensure accuracy, the Ministry publishes data as received from stations and does not guarantee completeness."
-description_preprocess: "The individual pdf files are merged into a single dataset and cleaned to ensure consistency."
+description_detailed: "Prices of petrol, diesel, heating oil and autogas as the Ministry of Development publishes them from filling stations, for the whole country and every prefecture. Alongside them are wholesale prices, to show how much of the price stays at the pump."
+description_preprocess: "The Ministry's bulletins come as PDF; we read them, join them into one set and check that the prices make sense. The Ministry does not guarantee that the stations' data are complete."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.fuel_prices_greece_v"
 image_path: assets/posts/fuel_station.webp
 

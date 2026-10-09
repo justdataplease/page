@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1995 - 2025 · quarterly debt 2000/Q1 - 2026/Q1"
 source_name: "Eurostat – Government deficit and debt (gov_10dd_edpt1),Eurostat – Quarterly government debt (gov_10q_ggdebt),Eurostat – Government revenue and expenditure (gov_10a_main),Eurostat – Tax revenue (gov_10a_taxag),Eurostat – Government expenditure by function (gov_10a_exp)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10q_ggdebt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_taxag/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table?lang=en"
-description_detailed: "The public finances of Greece and the EU countries since 1995: debt, deficit or surplus, interest, revenue, spending, taxes and what the state spends on. Debt is also quarterly from 2000."
-description_preprocess: "The data come from Eurostat's API and update automatically. Each time we reload them in full, because they are revised at every notification, in April and October. We wrote the Greek names of the taxes and functions ourselves."
+description_detailed: "The public finances of Greece and the EU countries: debt, deficit or surplus, interest, revenue, spending, taxes and what the state spends on. Debt is also given every quarter."
+description_preprocess: "The data come from Eurostat and update automatically, because they are revised at every notification to the EU. We wrote the Greek names of taxes and spending ourselves."
 image_path: assets/posts/topic-public-debt.webp
 ---
 

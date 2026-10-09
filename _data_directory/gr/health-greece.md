@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1961 - 2025 · δαπάνες 2009 - 2024 · περιφέρειες 1990 - 2024"
 source_name: "Eurostat – Προσδόκιμο ζωής (demo_mlexpec),Eurostat – Προσδόκιμο ζωής ανά περιφέρεια (demo_r_mlifexp),Eurostat – Δαπάνες υγείας (hlth_sha11_hf),Eurostat – Ανεκπλήρωτες ανάγκες ιατρικής εξέτασης (hlth_silc_08),Eurostat – Νοσοκομειακές κλίνες (hlth_rs_bds1),Eurostat – Γιατροί και νοσηλευτές (hlth_rs_prs2)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/demo_r_mlifexp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_sha11_hf/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_silc_08/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_rs_bds1/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/hlth_rs_prs2/default/table?lang=en"
-description_detailed: "Το προσδόκιμο ζωής, οι δαπάνες υγείας και πόσο από αυτές πληρώνουν τα νοικοκυριά από την τσέπη τους, οι γιατροί, οι νοσηλευτές και οι νοσοκομειακές κλίνες, για την Ελλάδα, τις 13 περιφέρειες και τις χώρες της ΕΕ."
-description_preprocess: "Τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί οι στατιστικές υγείας αναθεωρούνται και συμπληρώνονται με καθυστέρηση. Τα ελληνικά ονόματα των δεικτών και των περιφερειών τα γράψαμε εμείς."
+description_detailed: "Το προσδόκιμο ζωής, οι δαπάνες υγείας και πόσο από αυτές πληρώνουν τα νοικοκυριά από την τσέπη τους, οι γιατροί, οι νοσηλευτές και οι νοσοκομειακές κλίνες, για την Ελλάδα, τις περιφέρειές της και τις χώρες της ΕΕ."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, γιατί οι στατιστικές υγείας αναθεωρούνται και συμπληρώνονται με καθυστέρηση. Τα ελληνικά ονόματα τα γράψαμε εμείς."
 image_path: assets/posts/topic-health.webp
 ---
 

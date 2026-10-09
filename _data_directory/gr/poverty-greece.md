@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "2003 - 2025 · ορισμένες σειρές από 1995 · περιφέρειες 2018 - 2025"
 source_name: "Eurostat – Κίνδυνος φτώχειας ή κοινωνικού αποκλεισμού (ilc_peps01n),Eurostat – Κίνδυνος φτώχειας (ilc_li02),Eurostat – Ανισότητα Gini (ilc_di12),Eurostat – Μέσο και διάμεσο εισόδημα (ilc_di03),Eurostat – Φτώχεια ανά περιφέρεια (ilc_peps11n),ΕΛΣΤΑΤ – Έρευνα Εισοδήματος και Συνθηκών Διαβίωσης"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_di12/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_di03/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_peps11n/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SFA10/-"
-description_detailed: "Τα βασικά αποτελέσματα της ευρωπαϊκής έρευνας εισοδήματος και συνθηκών διαβίωσης κάθε χρόνο: εισόδημα, φτώχεια, ανισότητα και στερήσεις, για την Ελλάδα, τις περιφέρειές της και τις χώρες της ΕΕ, με χωριστά στοιχεία για τα παιδιά και τους 65+."
-description_preprocess: "Τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί οι χώρες αναθεωρούν και παλαιότερα έτη. Τα ελληνικά ονόματα των δεικτών, των ηλικιών και των περιφερειών τα γράψαμε εμείς."
+description_detailed: "Τα βασικά αποτελέσματα της ευρωπαϊκής έρευνας εισοδήματος και συνθηκών διαβίωσης κάθε χρόνο: εισόδημα, φτώχεια, ανισότητα και στερήσεις, για την Ελλάδα, τις περιφέρειές της και τις χώρες της ΕΕ, με χωριστά στοιχεία για τα παιδιά και τους ηλικιωμένους."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, γιατί οι χώρες αναθεωρούν και παλαιότερα έτη. Τα ελληνικά ονόματα τα γράψαμε εμείς."
 image_path: assets/posts/topic-poverty.webp
 ---
 

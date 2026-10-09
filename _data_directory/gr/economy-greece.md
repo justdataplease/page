@@ -1,7 +1,7 @@
 ---
 title: ΑΕΠ και οικονομία της Ελλάδας, κάθε τρίμηνο και κάθε περιφέρεια
 slug: economy-greece
-description: "Το ΑΕΠ κάθε τρίμηνο από το 1995, οι κλάδοι, το ΑΕΠ κάθε περιφέρειας και το οικονομικό κλίμα, δίπλα στην ΕΕ"
+description: "Το ΑΕΠ κάθε τρίμηνο, οι κλάδοι, το ΑΕΠ κάθε περιφέρειας και το οικονομικό κλίμα, δίπλα στην ΕΕ"
 category: Οικονομία
 date: 2026-10-08
 published_by: "DataForGreece"
@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1995/Q1 - 2026/Q2 · περιφέρειες 2000 - 2024 · κλίμα 1982/01 - 2026/09"
 source_name: "Eurostat – ΑΕΠ και συνιστώσες τριμηνιαίο (namq_10_gdp),Eurostat – ΑΕΠ κατά κεφαλή (nama_10_pc),Eurostat – ΑΕΠ ανά περιφέρεια (nama_10r_2gdp),Eurostat – ΑΕΠ ανά περιφερειακή ενότητα (nama_10r_3gdp),Eurostat – Οικονομικό κλίμα (ei_bssi_m_r2),ΕΛΣΤΑΤ – Τριμηνιαίοι εθνικοί λογαριασμοί"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/namq_10_gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ei_bssi_m_r2/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SEL84/-"
-description_detailed: "Το ΑΕΠ της Ελλάδας κάθε τρίμηνο από το 1995, με τις συνιστώσες και τους κλάδους του, το ΑΕΠ κατά κεφαλή κάθε περιφέρειας και κάθε χώρας της ΕΕ και το οικονομικό κλίμα. Δείχνει πόσο γρήγορα μεγαλώνει η οικονομία, πόσο απέχει από την κορυφή πριν από την κρίση και πού βρίσκεται το εισόδημα ανά κάτοικο σε σχέση με την ΕΕ."
-description_preprocess: "Τα στοιχεία έρχονται από το API της Eurostat και ενημερώνονται αυτόματα. Κάθε φορά τα παίρνουμε ολόκληρα, γιατί οι εθνικοί λογαριασμοί αναθεωρούνται συχνά και προς τα πίσω. Τα ελληνικά ονόματα των μεγεθών, των κλάδων και των μονάδων τα γράψαμε εμείς."
+description_detailed: "Το ΑΕΠ της Ελλάδας κάθε τρίμηνο, με τις συνιστώσες και τους κλάδους του, το ΑΕΠ κατά κεφαλή κάθε περιφέρειας και κάθε χώρας της ΕΕ και το οικονομικό κλίμα. Δείχνει πόσο γρήγορα μεγαλώνει η οικονομία και πού βρίσκεται το εισόδημα ανά κάτοικο σε σχέση με την ΕΕ."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, γιατί οι εθνικοί λογαριασμοί αναθεωρούνται συχνά και προς τα πίσω. Τα ελληνικά ονόματα τα γράψαμε εμείς."
 image_path: assets/posts/topic-economy-piraeus.webp
 ---
 

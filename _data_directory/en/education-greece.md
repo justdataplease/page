@@ -10,8 +10,8 @@ date_added: "2026-10-08"
 data_dates: "1992 - 2025 · regions 2000 - 2025 · pupils per teacher 2013 - 2024"
 source_name: "Eurostat – Tertiary attainment ages 25-34 (edat_lfse_03),Eurostat – Early leavers from education and training (edat_lfse_14),Eurostat – Young people neither in employment nor in education (edat_lfse_20),Eurostat – Pupils per teacher (educ_uoe_perp04),Eurostat – Government expenditure by function (gov_10a_exp)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_14/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_20/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_perp04/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table?lang=en"
-description_detailed: "Five education indicators every year, for Greece, its regions and the EU countries: graduates aged 25–34, early school leavers, young people not in work or education, pupils per teacher and public spending on education."
-description_preprocess: "The data come from Eurostat's API and update automatically, revisions included. Most indicators come from a sample survey, so small year-to-year changes may be noise. We wrote the Greek names of the indicators and regions ourselves."
+description_detailed: "Education indicators every year, for Greece, its regions and the EU countries: graduates, early school leavers, young people not in work or education, pupils per teacher and public spending on education."
+description_preprocess: "The data come from Eurostat and update automatically, revisions included. Most indicators come from surveys, so small year-to-year changes can be noise."
 image_path: assets/posts/topic-education.webp
 ---
 

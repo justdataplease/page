@@ -1,7 +1,7 @@
 ---
 title: Προϋπολογισμός Δήμου Αθηναίων
 slug: athens-municipality-budget
-description: Προϋπολογισμός Δήμου Αθηναίων
+description: "Ο προϋπολογισμός του Δήμου Αθηναίων: τι ψηφίστηκε, τι εκτελέστηκε και πού πήγαν τα χρήματα"
 category: Οικονομία
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
@@ -16,9 +16,8 @@ contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 
 chart_id: "athens-municipality-budget"
-description_detailed: "Αυτό το σύνολο δεδομένων παρέχει λεπτομερείς πληροφορίες για τον προϋπολογισμό και τις δαπάνες του Δήμου Αθηναίων από το 2005. Περιλαμβάνει τις αρχικές κατανομές προϋπολογισμού,
-αναμορφώσεις, δεσμευθέντα ποσά, ενταλθέντα και πληρωθέντα ποσά ανά υπηρεσία. Τα δεδομένα αφορούν έξοδα όπως νομικές αμοιβές, προμήθειες γραφείου, έξοδα δημοσίων σχέσεων και συντήρηση εξοπλισμού."
-description_preprocess: "Τα δεδομένα κατέβηκαν και συνδυάστηκαν σε ένα αρχείο."
+description_detailed: "Ο προϋπολογισμός του Δήμου Αθηναίων και η εκτέλεσή του, έτος προς έτος και μήνα προς μήνα: τι ψηφίστηκε, πώς τροποποιήθηκε, τι δεσμεύτηκε και τι πληρώθηκε ή εισπράχθηκε, ανά κατηγορία και διεύθυνση."
+description_preprocess: "Τα στοιχεία έρχονται από τον Δήμο Αθηναίων και τη Διαύγεια και ενημερώνονται τακτικά. Τα ενώνουμε σε ενιαίο σύνολο και δίνουμε κοινά ονόματα στις κατηγορίες."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
 image_path: assets/posts/athens.webp
 ---
