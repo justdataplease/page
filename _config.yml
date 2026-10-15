@@ -14,7 +14,7 @@ exclude: [ 'README.md', 'sync-content.ps1', 'Gemfile', 'Gemfile.lock', 'node_mod
 #   classic – black ink on white, column rules
 #   salmon  – "pink paper" financial daily: salmon paper, data ticker
 newspaper:
-  theme: classic
+  theme: salmon        # default edition (user, 2026-10-15); readers can still switch
   theme_switcher: true   # "Edition" picker in the top bar; set false once you pick one
   founded: 2024          # first year of publication, drives the "Vol." in the dateline
 
