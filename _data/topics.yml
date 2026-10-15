@@ -148,6 +148,7 @@
       - "Δεκέμβριος 2025 – Φεβρουάριος 2026: η πηγή δεν δίνει τιμές, γι' αυτό το διάγραμμα έχει κενό."
       - "Από τον Μάρτιο 2026 η πηγή μετρά την τιμή με νέο τρόπο· οι τιμές πριν και μετά δεν συγκρίνονται άμεσα."
       - "Η σελίδα «Airbnb & ενοίκια» του dashboard συγκρίνει ανά δήμο τα σπίτια στο Airbnb με τις δικές μας αγγελίες μακροχρόνιας ενοικίασης."
+      - "Η σελίδα «Ενοίκιο ή Airbnb ανά γειτονιά» δείχνει, γειτονιά προς γειτονιά, αν ένα σπίτι αποδίδει περισσότερο στο Airbnb ή με ενοίκιο και αν τα ενοίκια ανέβηκαν περισσότερο όπου υπάρχει περισσότερο Airbnb."
   en:
     name: "Airbnb"
     dek: "How many listings and at what price: Athens, Thessaloniki, Crete and the South Aegean, by neighbourhood and municipality."
@@ -159,6 +160,7 @@
       - "December 2025 – February 2026: the source has no prices, so the chart shows a gap."
       - "From March 2026 the source measures price differently; prices before and after are not directly comparable."
       - "The dashboard page «Airbnb & ενοίκια» compares, per municipality, the homes on Airbnb with our own long-term rental listings."
+      - "The dashboard page «Ενοίκιο ή Airbnb ανά γειτονιά» shows, neighbourhood by neighbourhood, whether a home earns more on Airbnb or rented out, and whether rents rose faster where there is more Airbnb."
 
 - key: forest-fires
   kind: topic
