@@ -195,6 +195,42 @@
     notes:
       - "Fire Service and EFFIS areas are measured differently and are never added together."
 
+- key: athens-neighbourhoods
+  kind: topic
+  category: energy
+  model: geitonies
+  # "Athens from above under thick haze", Chengyu Wang (Unsplash License), the unused alternate environment cover
+  image: assets/posts/topic-athens-neighbourhoods.webp
+  since: 2025
+  cadence: quarterly
+  data: [athens-neighbourhoods]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMTBjY2NmYTEtZTJmZi00Nzk2LTlmNzMtMGFiYmYyNDVhOTQ3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Γειτονιές της Αθήνας: αέρας και κίνηση"
+    dek: "Τι αναπνέουμε στις πλατείες, τα πάρκα και τα γήπεδα της Αθήνας, πότε μέσα στη μέρα ανεβαίνει η ρύπανση, πόσο ζεσταίνεται κάθε γειτονιά και πόσος κόσμος περνά, από τους αισθητήρες του Δήμου."
+    coverage: "2025 – σήμερα · Δήμος Αθηναίων · επτά δημοτικά διαμερίσματα"
+    updates: "Κάθε μέρα"
+    sources:
+      - { name: "Δήμος Αθηναίων – Έξυπνη Γειτονιά", url: "https://opendata.cityofathens.gr/", note: "Αισθητήρες αέρα ανά ώρα και συσκευές WiFi ανά ημέρα, σε πλατείες, πάρκα και γήπεδα" }
+    notes:
+      - "Είναι αισθητήρες χαμηλού κόστους: δείχνουν διαφορές ανάμεσα σε γειτονιές, ώρες και εποχές, όχι τις επίσημες μετρήσεις του δικτύου του Υπουργείου. Οι ενδείξεις χαλασμένων αισθητήρων αφαιρούνται."
+      - "Η θερμοκρασία μετριέται στο ύψος του δρόμου και δείχνει πιο ψηλά από τους επίσημους μετεωρολογικούς σταθμούς."
+      - "Το WiFi μετρά διαφορετικές συσκευές ανά σταθμό και ημέρα, όχι ανθρώπους· ένα κινητό που περνά από δύο σταθμούς μετριέται και στους δύο."
+  en:
+    name: "Athens neighbourhoods: air and footfall"
+    dek: "What we breathe in Athens' squares, parks and sports grounds, when pollution rises during the day, how hot each neighbourhood gets and how many people pass through, from the City's own sensors."
+    coverage: "2025 – today · City of Athens · seven municipal districts"
+    updates: "Every day"
+    sources:
+      - { name: "City of Athens – Smart Neighbourhood", url: "https://opendata.cityofathens.gr/", note: "Air sensors by hour and WiFi devices by day, in squares, parks and sports grounds" }
+    notes:
+      - "These are low-cost sensors: they show differences between neighbourhoods, hours and seasons, not the official readings of the Ministry's network. Readings from broken sensors are removed."
+      - "Temperature is measured at street level and reads higher than the official weather stations."
+      - "WiFi counts different devices per station and day, not people; a phone that passes two stations is counted at both."
+
 - key: budget
   kind: topic
   category: state
