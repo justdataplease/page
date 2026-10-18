@@ -1,7 +1,7 @@
 {%- assign _words = include.doc.content | strip_html | number_of_words -%}
 {%- assign _mins = _words | divided_by: 200 | at_least: 1 -%}
 <p class="byline">
-    <span class="byline__name">{% if t.by != '' %}{{ t.by }} {% endif %}{{ include.doc.author | default: site.author }}</span>
+    <span class="byline__name">{% if t.by != '' %}{{ t.by }} {% endif %}{% if include.doc.author_url %}<a href="{{ include.doc.author_url }}" target="_blank" rel="noopener author">{{ include.doc.author }}</a>{% else %}{{ include.doc.author | default: site.author }}{% endif %}</span>
     <time datetime="{{ include.doc.date | date_to_xmlschema }}">{% include date.html date=include.doc.date %}</time>
     {%- unless include.short %}
     <span class="byline__read">{{ _mins }} {% if _mins == 1 %}{{ t.min_read_one }}{% else %}{{ t.min_read }}{% endif %}</span>

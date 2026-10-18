@@ -815,6 +815,42 @@
       - "Burnt areas are in the Forest fires topic."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
+- key: women-in-business
+  kind: special
+  parent: businesses
+  # TODO own photo: for now the businesses photo (supplied by the user)
+  image: assets/topic-businesses-ethniki.jpg
+  when: 2026-10
+  data: [gemi-women]
+  charts: []
+  report: ""
+  articles: [women-in-business-greece-2026-10]
+  # the gemi-women Power BI report (workspace dataforgreece), its existing Publish-to-web link
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOTE1ZmZmZjQtZDEwNy00ODBiLThhZmUtNGJhODRhMmE2MmFlIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  explore: []
+  gr:
+    name: "Γυναίκες στις επιχειρήσεις"
+    dek: "Πόσες επιχειρήσεις ανήκουν σε γυναίκες, πόσες διοικούν και σε ποιους κλάδους, από τα πρόσωπα και τους ρόλους του Γενικού Εμπορικού Μητρώου."
+    when_label: "Οκτώβριος 2026"
+    sources:
+      - { name: "ΓΕΜΗ – Ανοιχτά δεδομένα", url: "https://opendata.businessportal.gr", note: "Άδεια ODC-BY 1.0" }
+      - { name: "ΓΕΜΗ – Δημοσιότητα", url: "https://publicity.businessportal.gr", note: "Τα πρόσωπα και οι ρόλοι τους σε κάθε επιχείρηση" }
+    notes:
+      - "Το φύλο εκτιμάται από το όνομα, γιατί το μητρώο δεν το καταγράφει."
+      - "Ιδιοκτήτρια στο μητρώο δεν σημαίνει πάντα ότι η γυναίκα διοικεί την επιχείρηση."
+      - "Οι πιο νέες επιχειρήσεις δεν έχουν ακόμη πρόσωπα στα δεδομένα."
+  en:
+    name: "Women in business"
+    dek: "How many companies women own, how many they run and in which sectors, from the people and roles in the General Commercial Registry."
+    when_label: "October 2026"
+    sources:
+      - { name: "GEMI – Open data", url: "https://opendata.businessportal.gr", note: "Licence ODC-BY 1.0" }
+      - { name: "GEMI – Publicity portal", url: "https://publicity.businessportal.gr", note: "The people of every company and their roles" }
+    notes:
+      - "Gender is inferred from the name, because the registry does not record it."
+      - "A woman listed as owner does not always run the company."
+      - "The newest companies do not have people in the data yet."
+
 - key: period-products
   kind: special
   parent: supermarket-prices
