@@ -37,5 +37,6 @@ image_path: assets/topic-businesses-ethniki.jpg
 | capital_eur            | Capital in euros, the column to sum (not capital, which is in its own currency).                               |
 | n_financial_periods, last_financial_year | How many financial years have been filed, and the last one.                                   |
 | has_website            | Whether the company lists a website.                                                                           |
+| owner_gender_class     | Whether it is owned by women, by men or by a mixed group; gender is inferred from the owners' names.            |
 
 **NOTE** - Three tables: gemi_companies (one row per GEMI number), gemi_events (one row per company, event type and day: event_type = registration, closing or alteration, event_date) and gemi_company_activities (one row per company and activity: kad_code, activity_type, kad_2026_section). The last two join the first on ar_gemi.

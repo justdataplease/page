@@ -37,5 +37,6 @@ image_path: assets/topic-businesses-ethniki.jpg
 | capital_eur            | Κεφάλαιο (€)             | Το κεφάλαιο σε ευρώ, η στήλη που αθροίζεται (όχι η capital, που είναι στο δικό της νόμισμα).                 |
 | n_financial_periods, last_financial_year | Οικονομικές καταστάσεις | Πόσες χρήσεις έχουν κατατεθεί και ποιο ήταν το τελευταίο έτος.                                  |
 | has_website            | Ιστότοπος                | Αν η επιχείρηση δηλώνει ιστότοπο.                                                                          |
+| owner_gender_class     | Φύλο ιδιοκτησίας         | Αν ανήκει σε γυναίκες, σε άνδρες ή σε μικτή ομάδα· το φύλο εκτιμάται από τα ονόματα των ιδιοκτητών.          |
 
 **ΣΗΜΕΙΩΣΗ** - Τρεις πίνακες: gemi_companies (μία γραμμή ανά αριθμό ΓΕΜΗ), gemi_events (μία γραμμή ανά επιχείρηση, είδος κίνησης και ημέρα: event_type = registration, closing ή alteration, event_date) και gemi_company_activities (μία γραμμή ανά επιχείρηση και δραστηριότητα: kad_code, activity_type, kad_2026_section). Οι δύο τελευταίοι συνδέονται με τον πρώτο μέσω του ar_gemi.
