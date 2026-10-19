@@ -770,6 +770,8 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .callout p:last-child { margin-bottom: 0; }
 
 .related { max-width: 40rem; margin: 2.6rem auto 0; }
+/* Articles read 1.5x wider than the 40rem default (user, 2026-10-19); other pages keep 40rem. */
+.article .article__head, .article .prose, .article .related { max-width: 60rem; }
 .related__list { display: grid; gap: 1rem; }
 .related__item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; align-items: start; }
 .related__item .art { margin: 0; }
