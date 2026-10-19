@@ -370,7 +370,8 @@
 
     // 18px line icons drawn in currentColor
     var ICONS = {
-        share: '<path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>',
+        share: '<circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/>' +
+               '<path d="m8.3 13.3 7.4 4.4"/><path d="m15.7 6.3-7.4 4.4"/>',
         png: '<path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/>',
         done: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
         wait: '<circle cx="12" cy="12" r="8" stroke-dasharray="12 38"/>'
