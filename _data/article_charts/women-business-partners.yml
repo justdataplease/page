@@ -1,0 +1,13 @@
+# women-in-business-greece-2026-10: partnerships (OE, EE), women among the partners (active, checked 2026-10-19)
+type: bar
+unit: "%"
+max: 100
+decimals: 0
+title:
+  gr: "Γυναίκες στους εταίρους των προσωπικών εταιρειών (%)"
+  en: "Women among the partners of partnerships (%)"
+rows:
+  - label: {gr: "Δεν διοικούν", en: "Do not manage"}
+    value: 42.6
+  - label: {gr: "Διοικούν", en: "Manage"}
+    value: 26.0

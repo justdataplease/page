@@ -1,0 +1,37 @@
+# women-in-business-greece-2026-10: women among owners, by sector (KAD section) or activity (KAD class), active (checked 2026-10-19)
+type: bar
+unit: "%"
+max: 100
+decimals: 0
+title:
+  gr: "Δύο οικονομίες: ποσοστό γυναικών στους ιδιοκτήτες, ανά κλάδο"
+  en: "Two economies: share of women among owners, by sector"
+note:
+  gr: "Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
+  en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
+reference:
+  value: 32.5
+  label: {gr: "όλοι οι κλάδοι 32,5%", en: "all sectors 32.5%"}
+rows:
+  - label: {gr: "Βρεφονηπιακοί και παιδικοί σταθμοί", en: "Nurseries and day care"}
+    value: 66.0
+  - label: {gr: "Κομμωτήρια, κουρεία, κέντρα αισθητικής", en: "Hairdressers, barbers, beauty salons"}
+    value: 64.9
+  - label: {gr: "Λιανικό εμπόριο ενδυμάτων", en: "Clothing retail"}
+    value: 58.9
+  - label: {gr: "Υγεία και κοινωνική μέριμνα", en: "Health and social care"}
+    value: 50.2
+  - label: {gr: "Εκπαίδευση", en: "Education"}
+    value: 49.9
+  - label: {gr: "Πληροφορική και τηλεπικοινωνίες", en: "IT and telecoms"}
+    value: 23.0
+  - label: {gr: "Προγραμματισμός λογισμικού", en: "Software programming"}
+    value: 20.9
+  - label: {gr: "Μεταφορές και αποθήκευση", en: "Transport and storage"}
+    value: 17.7
+  - label: {gr: "Κατασκευές", en: "Construction"}
+    value: 16.7
+  - label: {gr: "Ηλεκτρολογικές εγκαταστάσεις", en: "Electrical installation"}
+    value: 6.4
+  - label: {gr: "Υδραυλικές και κλιματιστικές εγκαταστάσεις", en: "Plumbing, heating and air conditioning"}
+    value: 5.8

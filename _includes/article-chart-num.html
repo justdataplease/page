@@ -1,0 +1,5 @@
+{%- comment -%} A chart value as text: n, dec (optional fixed decimals), lang (gr gets a decimal comma), unit. {%- endcomment -%}
+{%- if include.dec != nil and include.dec != "" -%}{%- assign _n = include.n | round: include.dec -%}{%- else -%}{%- assign _n = include.n -%}{%- endif -%}
+{%- assign _n = _n | append: "" -%}
+{%- if include.lang == "gr" -%}{%- assign _n = _n | replace: ".", "," -%}{%- endif -%}
+{{ _n }}{{ include.unit }}

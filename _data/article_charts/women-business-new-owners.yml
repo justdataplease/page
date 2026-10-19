@@ -1,0 +1,21 @@
+# women-in-business-greece-2026-10: share of women among the owners of active firms, by year founded, per person
+# (gemi_analysis.gemi_women_companies, checked 2026-10-19). Per person on purpose: "firms with at least one woman"
+# rises with the number of owners per firm (1.19 in 2013, 1.57 in 2024), so it would overstate the change.
+type: line
+unit: "%"
+max: 50
+decimals: 1
+fallback_step: 5
+title:
+  gr: "Ποσοστό γυναικών στους ιδιοκτήτες, ανά έτος ίδρυσης της επιχείρησης"
+  en: "Share of women among owners, by the year the business was founded"
+note:
+  gr: "Ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Πηγή: ΓΕΜΗ. Επεξεργασία: Data for Greece."
+  en: "Active companies, people as of January 2025. Source: GEMI. Processing: Data for Greece."
+x_label: {gr: "Έτος ίδρυσης", en: "Year founded"}
+x: [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+series:
+  - name: {gr: "Ατομικές επιχειρήσεις", en: "Sole proprietors"}
+    values: [15.0, 16.2, 15.1, 16.8, 18.5, 20.4, 22.8, 25.0, 26.3, 26.7, 23.6, 24.5, 25.0, 22.9, 25.3, 24.3, 25.8, 25.3, 27.3, 29.0, 29.5, 30.8, 29.4, 29.8, 29.6, 31.1, 31.8, 32.8, 33.2, 35.1, 37.4, 35.1, 35.6, 39.1, 37.8, 37.0, 38.0, 38.3, 39.3, 38.8, 37.9, 39.8, 39.4, 39.6, 38.8]
+  - name: {gr: "Εταίροι και μέτοχοι", en: "Partners and shareholders"}
+    values: [34.3, 34.0, 34.3, 31.8, 31.3, 32.6, 34.2, 32.8, 32.4, 34.1, 32.6, 30.7, 32.7, 31.4, 33.1, 32.9, 34.7, 31.3, 33.0, 31.5, 31.8, 31.7, 32.3, 31.3, 31.7, 31.0, 32.4, 32.8, 33.2, 31.9, 32.5, 32.4, 31.8, 32.4, 32.3, 31.0, 33.5, 33.3, 33.0, 32.2, 30.9, 30.8, 31.3, 32.1, 33.7]

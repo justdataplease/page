@@ -1,0 +1,68 @@
+{%- comment -%}
+  A chart from the library _data/article_charts/<id>.yml (see the README there):  {% include article-chart.html id="women-business-roles" %}
+  Writes the chart as plain HTML bars (readable with no JS, in feeds and print) plus its spec as JSON;
+  assets/js/article-charts.js then redraws it with ECharts (tooltips, hover).
+{%- endcomment -%}
+{%- assign _ch = site.data.article_charts[include.id] -%}
+{%- assign _lang = include.lang | default: page.lang | default: "gr" -%}
+{%- if _ch -%}
+{%- assign _max = _ch.max | default: 100 | times: 1.0 -%}
+<figure class="bars dfg-chart{% if _ch.type == 'range' %} bars--range{% endif %}" id="chart-{{ include.id }}" data-chart="{{ include.id }}" data-lang="{{ _lang }}">
+<figcaption class="bars__title">{{ _ch.title[_lang] }}</figcaption>
+{%- if _ch.type == 'line' or _ch.type == 'dumbbell' or _ch.type == 'treemap' %}
+{%- comment -%} These have no HTML-bar form: without the script they read as a table. {%- endcomment %}
+<div class="bars__plot"><table class="bars__table">
+{%- if _ch.type == 'line' %}
+{%- assign _step = _ch.fallback_step | default: 1 %}
+<thead><tr><th>{{ _ch.x_label[_lang] }}</th>{% for _s in _ch.series %}<th>{{ _s.name[_lang] }}</th>{% endfor %}</tr></thead><tbody>
+{%- for _x in _ch.x %}
+{%- assign _i = forloop.index0 -%}
+{%- assign _m = _i | modulo: _step -%}
+{%- if _m == 0 or forloop.last %}
+<tr><td>{{ _x }}</td>{% for _s in _ch.series %}{% assign _v = _s.values[_i] %}<td>{% include article-chart-num.html n=_v dec=_ch.decimals lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
+{%- endif %}
+{%- endfor %}
+{%- elsif _ch.type == 'dumbbell' %}
+<thead><tr><th></th>{% for _s in _ch.series %}<th>{{ _s.name[_lang] }}</th>{% endfor %}</tr></thead><tbody>
+{%- for _r in _ch.rows %}
+<tr><td>{{ _r.label[_lang] }}</td>{% for _v in _r.values %}<td>{% include article-chart-num.html n=_v dec=_ch.decimals lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
+{%- endfor %}
+{%- else %}
+<tbody>
+{%- assign _sorted = _ch.rows | sort: "value" | reverse %}
+{%- for _r in _sorted %}
+<tr><td>{{ _r.label[_lang] }}</td><td>{% include article-chart-num.html n=_r.value dec=_ch.decimals lang=_lang unit=_ch.unit %}</td></tr>
+{%- endfor %}
+{%- endif %}
+</tbody></table></div>
+{%- else %}
+<div class="bars__plot"{% if _ch.reference %} style="--ref: {{ _ch.reference.value | times: 100.0 | divided_by: _max }}%"{% endif %}>
+{%- if _ch.reference %}
+<div class="bars__row bars__row--ref" aria-hidden="true"><span class="bars__label"></span><span class="bars__track"><span class="bars__ref-label">{{ _ch.reference.label[_lang] }}</span></span></div>
+{%- endif %}
+{%- for _r in _ch.rows %}
+{%- assign _dec = _r.decimals | default: _ch.decimals -%}
+{%- if _ch.type == 'range' %}
+{%- capture _from %}{% include article-chart-num.html n=_r.from dec=_dec lang=_lang unit=_ch.unit %}{% endcapture -%}
+{%- capture _to %}{% include article-chart-num.html n=_r.to dec=_dec lang=_lang unit=_ch.unit %}{% endcapture %}
+<div class="bars__row"><span class="bars__label">{{ _r.label[_lang] }}</span><span class="bars__track"><span class="bars__span" style="left: {{ _r.from | times: 100.0 | divided_by: _max }}%; width: {{ _r.to | minus: _r.from | times: 100.0 | divided_by: _max }}%"><span class="bars__end bars__end--from">{{ _from }}</span><span class="bars__end bars__end--to">{{ _to }}</span></span></span></div>
+{%- else %}
+{%- if _r.text -%}{%- assign _txt = _r.text[_lang] -%}{%- else -%}{%- capture _txt %}{% include article-chart-num.html n=_r.value dec=_dec lang=_lang unit=_ch.unit %}{% endcapture -%}{%- endif %}
+<div class="bars__row"><span class="bars__label">{{ _r.label[_lang] }}</span><span class="bars__track"><span class="bars__bar" style="width: {{ _r.value | times: 100.0 | divided_by: _max }}%"></span><span class="bars__val" style="left: {{ _r.value | times: 100.0 | divided_by: _max }}%">{{ _txt }}</span></span></div>
+{%- endif %}
+{%- endfor %}
+</div>
+{%- endif %}
+<div class="dfg-chart__canvas" aria-hidden="true"></div>
+{%- if _ch.note %}
+<p class="bars__note">{{ _ch.note[_lang] }}</p>
+{%- endif %}
+<div class="bars__foot">
+<span class="bars__brand">{% include greece-icon.html %}DataForGreece</span>
+</div>
+<script type="application/json" class="dfg-chart__spec">{{ _ch | jsonify }}</script>
+</figure>
+{%- unless _dfg_chart_js %}{% assign _dfg_chart_js = true %}
+<script src="{{ site.baseurl }}/assets/js/article-charts.js?v={{ site.time | date: '%s' }}" defer></script>
+{%- endunless %}
+{%- endif -%}

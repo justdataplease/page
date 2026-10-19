@@ -1,0 +1,35 @@
+# women-in-business-greece-2026-10: every sector (KAD section), box size = active firms, colour = women among owners
+# (checked 2026-10-19; left out: firms with no KAD, "no activity", public administration)
+type: treemap
+unit: "%"
+decimals: 1
+color_min: 15
+color_max: 50
+title:
+  gr: "Όλοι οι κλάδοι: μέγεθος = αριθμός επιχειρήσεων, χρώμα = ποσοστό γυναικών στους ιδιοκτήτες"
+  en: "Every sector: size = number of businesses, colour = share of women among owners"
+note:
+  gr: "Πιο σκούρο = περισσότερες γυναίκες. Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις. Επεξεργασία: Data for Greece."
+  en: "Darker = more women. Source: GEMI, active companies. Processing: Data for Greece."
+size_label: {gr: "επιχειρήσεις", en: "businesses"}
+# short: optional box text for small boxes; the tooltip shows the full label
+rows:
+  - {label: {gr: "Εμπόριο", en: "Trade"}, value: 36.3, size: 277828}
+  - {label: {gr: "Καταλύματα και εστίαση", en: "Accommodation and food"}, value: 36.2, size: 158565}
+  - {label: {gr: "Κατασκευές", en: "Construction"}, value: 16.7, size: 94253}
+  - {label: {gr: "Μεταποίηση", en: "Manufacturing"}, value: 27.0, size: 77471}
+  - {label: {gr: "Επαγγελματικές και επιστημονικές υπηρεσίες", en: "Professional and scientific"}, short: {gr: "Επαγγελματικές υπηρεσίες", en: "Professional services"}, value: 32.8, size: 76448}
+  - {label: {gr: "Άλλες υπηρεσίες", en: "Other services"}, value: 38.2, size: 62728}
+  - {label: {gr: "Μεταφορές και αποθήκευση", en: "Transport and storage"}, short: {gr: "Μεταφορές", en: "Transport"}, value: 17.7, size: 56665}
+  - {label: {gr: "Διοικητικές και υποστηρικτικές υπηρεσίες", en: "Administrative and support"}, short: {gr: "Υποστηρικτικές υπηρεσίες", en: "Support services"}, value: 32.5, size: 35064}
+  - {label: {gr: "Ακίνητα", en: "Real estate"}, value: 36.6, size: 32009}
+  - {label: {gr: "Χρηματοοικονομικά και ασφάλειες", en: "Finance and insurance"}, short: {gr: "Τράπεζες, ασφάλειες", en: "Finance"}, value: 35.4, size: 23867}
+  - {label: {gr: "Τέχνες και ψυχαγωγία", en: "Arts and recreation"}, short: {gr: "Τέχνες, ψυχαγωγία", en: "Arts, recreation"}, value: 35.8, size: 22520}
+  - {label: {gr: "Πληροφορική και τηλεπικοινωνίες", en: "IT and telecoms"}, short: {gr: "Πληροφορική", en: "IT, telecoms"}, value: 23.0, size: 21860}
+  - {label: {gr: "Εκπαίδευση", en: "Education"}, value: 49.9, size: 20585}
+  - {label: {gr: "Ενέργεια", en: "Energy"}, value: 32.1, size: 17648}
+  - {label: {gr: "Υγεία και κοινωνική μέριμνα", en: "Health and social care"}, short: {gr: "Υγεία, πρόνοια", en: "Health, care"}, value: 50.2, size: 17614}
+  - {label: {gr: "Γεωργία, δασοκομία, αλιεία", en: "Agriculture, forestry, fishing"}, short: {gr: "Γεωργία, αλιεία", en: "Farming, fishing"}, value: 28.8, size: 13273}
+  - {label: {gr: "Εκδόσεις και μέσα", en: "Publishing and media"}, short: {gr: "Μέσα", en: "Media"}, value: 29.5, size: 11221}
+  - {label: {gr: "Νερό και απόβλητα", en: "Water and waste"}, value: 20.9, size: 2487}
+  - {label: {gr: "Ορυχεία και λατομεία", en: "Mining and quarrying"}, value: 22.1, size: 911}

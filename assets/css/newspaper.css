@@ -812,6 +812,66 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .chart-figure figcaption { margin: 0 0 .5rem; font-size: .78rem; }
 .chart-figure__n { margin-right: .5rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
 
+/* Article charts (_includes/article-chart.html, values in _data/article_charts/): plain HTML bars, one ink colour,
+   values as text, 0-based scale; assets/js/article-charts.js swaps them for an interactive ECharts canvas. */
+.prose figure.bars { margin: 1.6rem 0 1.8rem; padding: 1rem 0 .7rem; border-top: 2px solid var(--rule-ink); border-bottom: 1px solid var(--rule); font-family: var(--f-sans); }
+.prose .bars__title { margin: 0 0 .8rem; text-align: left; font-size: .9rem; font-weight: 700; line-height: 1.35; color: var(--ink); }
+.bars__plot { display: grid; gap: .4rem; }
+.bars__row { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: .8rem; align-items: center; font-size: .82rem; line-height: 1.25; }
+.bars__label { color: var(--ink-2); }
+.bars__track { position: relative; height: 1.15rem; margin-right: 3.2rem; }
+.bars__track::before { content: ""; position: absolute; inset: 0 auto 0 0; border-left: 1px solid var(--ink-3); }
+.bars__plot[style*="--ref"] .bars__track::after { content: ""; position: absolute; top: -.2rem; bottom: -.2rem; left: var(--ref); border-left: 1px dashed var(--ink-3); }
+.bars__bar { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 0 4px 4px 0; }
+.bars__val { position: absolute; top: 0; padding-left: .4rem; line-height: 1.15rem; font-weight: 600; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bars__row--ref .bars__track { height: .9rem; }
+.bars__row--ref .bars__track::before { content: none; }
+.bars__ref-label { position: absolute; left: var(--ref); bottom: 0; transform: translateX(-50%); font-size: .72rem; color: var(--ink-3); white-space: nowrap; }
+.bars--range .bars__track { margin-left: 2.8rem; }
+.bars__span { position: absolute; top: 50%; height: 4px; margin-top: -2px; background: var(--accent); border-radius: 2px; }
+.bars__span::before, .bars__span::after { content: ""; position: absolute; top: 50%; width: .7rem; height: .7rem; margin-top: -.35rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px var(--paper); }
+.bars__span::before { left: -.35rem; }
+.bars__span::after { right: -.35rem; }
+.bars__end { position: absolute; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bars__end--from { right: 100%; padding-right: .6rem; }
+.bars__end--to { left: 100%; padding-left: .6rem; }
+.dfg-chart__canvas { display: none; width: 100%; }
+.prose .bars__table { margin: 0; font-size: .8rem; }   /* line, dumbbell and treemap charts without the script */
+.prose .bars__table td, .prose .bars__table th { min-width: 0; padding-right: 1.2rem; }
+.prose .bars__table td + td, .prose .bars__table th + th { text-align: right; font-variant-numeric: tabular-nums; }
+.dfg-chart--live .bars__plot { display: none; }
+.dfg-chart--live .dfg-chart__canvas { display: block; }
+.prose .bars__note { margin: .7rem 0 0; font-size: .72rem; color: var(--ink-3); }
+.bars__foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1rem; margin-top: .6rem; }
+/* The logo on every chart, bottom left, so a chart that is screenshotted or shared still says where it is from:
+   purple disc, black name (user, 2026-10-19), also in the Salmon edition, whose masthead logo is black and white. */
+.bars__brand { display: inline-flex; align-items: center; gap: .35em; white-space: nowrap;
+               font-family: var(--f-sans); font-size: .8rem; font-weight: 700; line-height: 1; color: #121212; }
+.bars__brand .mast-icon { top: 0; width: 1.35em; height: 1.35em; }
+.bars__brand .mast-icon__disc { fill: #5E4FE6; }
+.bars__brand .mast-icon__land { fill: #D8E2FF; }
+/* Share and download, bottom right: round icon buttons (added by article-charts.js once the chart is live) */
+.dfg-chart__actions { display: inline-flex; align-items: center; gap: .4rem; margin-left: auto; }
+.dfg-chart__status { font-family: var(--f-sans); font-size: .72rem; color: var(--ink-3); }
+.dfg-chart__btn { display: inline-grid; place-items: center; width: 2.1rem; height: 2.1rem; padding: 0;
+                  border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--ink-2);
+                  cursor: pointer; transition: background-color .15s, color .15s, border-color .15s; }
+.dfg-chart__btn:hover { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.dfg-chart__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.dfg-chart__btn:disabled { cursor: progress; }
+.dfg-chart__btn.is-busy svg { animation: dfg-chart-spin .9s linear infinite; }
+@keyframes dfg-chart-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .dfg-chart__btn, .dfg-chart__btn.is-busy svg { transition: none; animation: none; } }
+.bars-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.6rem; }
+.bars-pair .bars__row { grid-template-columns: 8.5rem minmax(0, 1fr); }
+.bars-pair .bars { display: flex; flex-direction: column; }   /* both footers on one line */
+.bars-pair .bars__foot { margin-top: auto; padding-top: .7rem; }
+@media (max-width: 720px) {
+    .bars__row, .bars-pair .bars__row { grid-template-columns: minmax(0, 1fr); gap: .2rem; }
+    .bars__row--ref .bars__label { display: none; }
+    .bars-pair { grid-template-columns: 1fr; }
+}
+
 .embed__body { max-width: 46rem; }
 .embed label { display: block; margin-bottom: .35rem; font-family: var(--f-sans); font-size: .85rem; font-weight: 700; }
 .embed input {

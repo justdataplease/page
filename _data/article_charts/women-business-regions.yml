@@ -1,0 +1,41 @@
+# women-in-business-greece-2026-10: women among owners, by region (active, checked 2026-10-19)
+type: bar
+unit: "%"
+max: 100
+decimals: 1
+title:
+  gr: "Η περιοχή αλλάζει λίγα: ποσοστό γυναικών στους ιδιοκτήτες, ανά περιφέρεια"
+  en: "Region changes little: share of women among owners, by region"
+note:
+  gr: "Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
+  en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
+reference:
+  value: 32.5
+  label: {gr: "σύνολο 32,5%", en: "all 32.5%"}
+rows:
+  - label: {gr: "Ανατολική Μακεδονία και Θράκη", en: "Eastern Macedonia and Thrace"}
+    value: 36.0
+  - label: {gr: "Νότιο Αιγαίο", en: "South Aegean"}
+    value: 34.8
+  - label: {gr: "Βόρειο Αιγαίο", en: "North Aegean"}
+    value: 34.0
+  - label: {gr: "Αττική", en: "Attica"}
+    value: 33.0
+  - label: {gr: "Στερεά Ελλάδα", en: "Central Greece"}
+    value: 32.7
+  - label: {gr: "Κρήτη", en: "Crete"}
+    value: 32.5
+  - label: {gr: "Ιόνιοι Νήσοι", en: "Ionian Islands"}
+    value: 32.4
+  - label: {gr: "Κεντρική Μακεδονία", en: "Central Macedonia"}
+    value: 32.2
+  - label: {gr: "Θεσσαλία", en: "Thessaly"}
+    value: 31.9
+  - label: {gr: "Πελοπόννησος", en: "Peloponnese"}
+    value: 31.6
+  - label: {gr: "Ήπειρος", en: "Epirus"}
+    value: 30.3
+  - label: {gr: "Δυτική Μακεδονία", en: "Western Macedonia"}
+    value: 30.1
+  - label: {gr: "Δυτική Ελλάδα", en: "Western Greece"}
+    value: 28.6

@@ -1,0 +1,27 @@
+# women-in-business-greece-2026-10: women among owners vs among leaders, by legal form (active, checked 2026-10-19)
+type: dumbbell
+unit: "%"
+max: 50
+decimals: 1
+title:
+  gr: "Ιδιοκτήτριες και επικεφαλής, ανά νομική μορφή (% γυναικών)"
+  en: "Women as owners and as leaders, by legal form (%)"
+note:
+  gr: "Επικεφαλής: όποιος διοικεί την επιχείρηση. Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
+  en: "Leaders: whoever runs the company. Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
+series:
+  - name: {gr: "Ιδιοκτήτες", en: "Owners"}
+  - name: {gr: "Επικεφαλής", en: "Leaders"}
+rows:
+  - label: {gr: "Ανώνυμες εταιρείες (ΑΕ)", en: "Public limited (AE)"}
+    values: [36.4, 21.3]
+  - label: {gr: "Ετερόρρυθμες (ΕΕ)", en: "Limited partnerships (EE)"}
+    values: [34.8, 24.4]
+  - label: {gr: "ΕΠΕ", en: "Limited liability (EPE)"}
+    values: [28.8, 23.6]
+  - label: {gr: "Ιδιωτικές κεφαλαιουχικές (ΙΚΕ)", en: "Private companies (IKE)"}
+    values: [30.2, 25.9]
+  - label: {gr: "Ομόρρυθμες (ΟΕ)", en: "General partnerships (OE)"}
+    values: [30.0, 26.6]
+  - label: {gr: "Ατομικές επιχειρήσεις", en: "Sole proprietorships"}
+    values: [32.8, 32.7]

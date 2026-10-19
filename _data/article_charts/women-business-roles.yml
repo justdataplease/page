@@ -1,0 +1,27 @@
+# women-in-business-greece-2026-10: women by role (gemi_analysis.gemi_women_companies, active, checked 2026-10-19)
+type: bar
+unit: "%"
+max: 100
+decimals: 1
+title:
+  gr: "Πολλές στη μετοχή, λίγες στην κορυφή: ποσοστό γυναικών ανά ρόλο"
+  en: "Many among the owners, few at the top: share of women by role"
+note:
+  gr: "Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
+  en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
+reference:
+  value: 50
+  label: {gr: "ισότητα 50%", en: "parity 50%"}
+rows:
+  - label: {gr: "Ιδιοκτήτες χωρίς ρόλο στη διοίκηση", en: "Owners with no management role"}
+    value: 39.7
+  - label: {gr: "Μέλη και αντιπρόεδροι ΔΣ", en: "Board members and vice-chairs"}
+    value: 37.7
+  - label: {gr: "Όλοι οι ιδιοκτήτες", en: "All owners"}
+    value: 32.5
+  - label: {gr: "Ιδιοκτήτες που διοικούν", en: "Owners who run the company"}
+    value: 30.5
+  - label: {gr: "Διαχειριστές", en: "Managers"}
+    value: 23.4
+  - label: {gr: "Πρόεδροι και διευθύνοντες σύμβουλοι", en: "Chairs and chief executives"}
+    value: 21.3

@@ -1,0 +1,15 @@
+# women-in-business-greece-2026-10: who owns the partnerships (OE, EE), active with owner gender known (checked 2026-10-19)
+type: bar
+unit: "%"
+max: 100
+decimals: 1
+title:
+  gr: "Ποιοι έχουν τις προσωπικές εταιρείες (%)"
+  en: "Who owns the partnerships (%)"
+rows:
+  - label: {gr: "Μόνο άνδρες", en: "Men only"}
+    value: 42.9
+  - label: {gr: "Άνδρες και γυναίκες", en: "Men and women"}
+    value: 48.4
+  - label: {gr: "Μόνο γυναίκες", en: "Women only"}
+    value: 8.6
