@@ -12,7 +12,6 @@ use_cover_image: true
 image_path: assets/women-business-gemi-2026-10.png
 image_aspect_ratio: "16 / 9"
 image_alt: "Γυναίκα με σακάκι, από πίσω, με τα χέρια υψωμένα μπροστά σε σύγχρονα κτίρια γραφείων."
-image_caption: "Εικόνα δημιουργημένη με τεχνητή νοημοσύνη."
 related_dataset_slugs:
   - gemi-women
   - gemi-businesses

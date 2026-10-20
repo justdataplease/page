@@ -12,7 +12,6 @@ use_cover_image: true
 image_path: assets/women-business-gemi-2026-10.png
 image_aspect_ratio: "16 / 9"
 image_alt: "A woman in a blazer, seen from behind with her arms raised in front of modern office buildings."
-image_caption: "AI-generated illustration."
 related_dataset_slugs:
   - gemi-women
   - gemi-businesses
