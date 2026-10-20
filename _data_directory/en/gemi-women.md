@@ -13,7 +13,6 @@ source_url: "https://opendata.businessportal.gr,https://publicity.businessportal
 description_detailed: "For every company in GEMI: how many of its owners and of the people who run it are women, and whether it is owned by women, by men or by a mixed group. The registry does not record gender, so we infer it from the name."
 description_preprocess: "We read the people and their roles from the GEMI publicity portal and infer gender from the first name and the surname ending. We keep only totals per company, with no names or tax numbers. The newest companies do not have people yet."
 image_path: assets/women-business-gemi-2026-10.png
-use_cover_image: true
 image_alt: "A woman in a blazer, seen from behind with her arms raised in front of modern office buildings."
 ---
 
