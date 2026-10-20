@@ -15,7 +15,8 @@
 
         {%- if page.use_cover_image %}
         <figure class="art art--cover">
-            <img src="{{ site.baseurl }}/{{ page.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="">
+            <img src="{{ site.baseurl }}/{{ page.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="{{ page.image_alt | default: '' | escape }}"{% if page.image_aspect_ratio %} style="aspect-ratio: {{ page.image_aspect_ratio | escape }}"{% endif %}>
+            {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
         </figure>
         {%- endif %}
 

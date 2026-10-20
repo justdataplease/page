@@ -65,35 +65,48 @@
     function lineOption(spec, lang, width, t) {
         var unit = spec.unit || '', colors = [t.accent, SECOND];
         var fmt = function (v) { return numberText(v, spec.decimals, lang, unit); };
-        var names = spec.series.map(function (s) { return s.name[lang]; });
+        var series = spec.select_series ? [spec.series[spec.selected_series], spec.series[0]] : spec.series;
+        var names = series.map(function (s) { return s.name[lang]; });
         var narrow = width < 520;
+        var stackedLegend = narrow && spec.select_series;
         var tooltip = baseTooltip(t, 'axis');
         tooltip.axisPointer = { type: 'line', lineStyle: { color: t.ink3, type: 'dashed' } };
         tooltip.formatter = function (ps) {
             return '<b>' + esc(ps[0].axisValue) + '</b><br>' + ps.map(function (p) {
-                return p.marker + esc(p.seriesName) + ': <b>' + esc(fmt(p.value)) + '</b>';
+                var s = series[p.seriesIndex];
+                var count = s.denominators ? '<br>' + esc(numberText(s.denominators[p.dataIndex], 0, lang, '')) +
+                    (lang === 'gr' ? ' ιδιοκτήτες με προσδιορισμένο φύλο' : ' owners with inferred gender') : '';
+                var value = p.value == null || p.value === '-' ? '—' : fmt(p.value);
+                return p.marker + esc(p.seriesName) + ': <b>' + esc(value) + '</b>' + count;
             }).join('<br>');
         };
+        var legend = legendOf(t, names);
+        if (stackedLegend) { legend.orient = 'vertical'; legend.itemGap = 9; }
         return {
             animationDuration: 600,
             textStyle: { fontFamily: t.font },
-            legend: legendOf(t, names),
-            grid: { left: 4, right: narrow ? 12 : 120, top: 34, bottom: 4, containLabel: true },
+            legend: legend,
+            grid: { left: 4, right: narrow ? (spec.select_series ? 28 : 16) : 70,
+                top: stackedLegend ? 58 : 34, bottom: 30, containLabel: true },
             tooltip: tooltip,
             xAxis: {
                 type: 'category', boundaryGap: false, data: spec.x.map(String),
+                name: spec.x_label[lang], nameLocation: 'middle', nameGap: 28,
+                nameTextStyle: { color: t.ink2, fontFamily: t.font, fontSize: 12 },
                 axisTick: { show: false }, axisLine: { lineStyle: { color: t.ink3 } },
-                axisLabel: { color: t.ink3, fontFamily: t.font, fontSize: 11, interval: narrow ? 9 : 4 }
+                axisLabel: { color: t.ink3, fontFamily: t.font, fontSize: 11,
+                    interval: spec.select_series ? (narrow ? 1 : 0) : (narrow ? 9 : 4) }
             },
             yAxis: {
-                type: 'value', min: 0, max: spec.max || 100, interval: (spec.max || 100) / 5,
+                type: 'value', min: 0, max: spec.max || 100, interval: spec.y_interval || (spec.max || 100) / 5,
                 axisLabel: { formatter: function (v) { return numberText(v, 0, lang, unit); }, color: t.ink3, fontFamily: t.font, fontSize: 11 },
                 splitLine: { lineStyle: { color: t.rule, type: 'dotted' } }
             },
-            series: spec.series.map(function (s, i) {
+            series: series.map(function (s, i) {
                 return {
                     type: 'line', name: names[i], data: s.values,
-                    showSymbol: false, symbolSize: 8, lineStyle: { width: 2.5, color: colors[i] },
+                    showSymbol: false, symbolSize: 8,
+                    lineStyle: { width: 2.5, color: colors[i], type: s.dashed ? 'dashed' : 'solid' },
                     itemStyle: { color: colors[i], borderColor: t.paper, borderWidth: 2 },
                     emphasis: { focus: 'series' },
                     endLabel: { show: !narrow, color: t.ink, fontFamily: t.font, fontSize: 12, fontWeight: 600, distance: 6,
@@ -115,7 +128,7 @@
             var gap = Math.abs(r.values[0] - r.values[1]);
             return '<b>' + esc(labels[p.dataIndex]) + '</b><br>' +
                 names.map(function (n, i) { return esc(n) + ': <b>' + esc(fmt(r.values[i])) + '</b>'; }).join('<br>') +
-                '<br>' + (lang === 'gr' ? 'Απόσταση: ' : 'Gap: ') + esc(numberText(gap, 1, lang, '')) + (lang === 'gr' ? ' μονάδες' : ' points');
+                '<br>' + (lang === 'gr' ? 'Απόσταση: ' : 'Gap: ') + esc(numberText(gap, spec.decimals == null ? 1 : spec.decimals, lang, '')) + (lang === 'gr' ? ' μονάδες' : ' points');
         };
         function dots(i) {
             return {
@@ -162,37 +175,75 @@
         return '#' + ((1 << 24) + (ch(16) << 16) + (ch(8) << 8) + ch(0)).toString(16).slice(1);
     }
 
+    function labelInk(color) {
+        var rgb = color.slice(1).match(/.{2}/g).map(function (c) {
+            var v = parseInt(c, 16) / 255;
+            return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+        });
+        var luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+        return luminance > 0.179 ? '#000000' : '#ffffff';
+    }
+
     function treemapOption(spec, lang, width, t) {
         var unit = spec.unit || '';
         var fmt = function (v) { return numberText(v, spec.decimals, lang, unit); };
         var lo = spec.color_min, hi = spec.color_max;
-        // one hue, light to dark: the share of women
+        var areaField = spec.area_field || 'size', colorField = spec.color_field || 'value';
+        var colorUnit = spec.color_unit == null ? unit : spec.color_unit;
+        // Area and colour can encode different measures; labels always show the main value.
         var light = mix(t.paper.length === 7 ? t.paper : '#ffffff', t.accent, 0.18);
         var count = new Intl.NumberFormat(lang === 'gr' ? 'el-GR' : 'en-GB');
         var total = spec.rows.reduce(function (s, r) { return s + r.size; }, 0);
+        var areaTotal = spec.rows.reduce(function (s, r) { return s + r[areaField]; }, 0);
+        var legendWidth = Math.min(260, width - 36);
+        var legend = [{
+            type: 'text', style: { text: spec.color_label[lang], x: 0, y: 0,
+                fill: t.ink2, font: '12px ' + t.font }
+        }, {
+            type: 'rect', shape: { x: 0, y: 22, width: legendWidth, height: 10 },
+            style: { fill: { type: 'linear', x: 0, y: 0, x2: 1, y2: 0,
+                colorStops: [{ offset: 0, color: light }, { offset: 1, color: t.accent }] } }
+        }];
+        for (var tick = 0; tick <= 3; tick++) {
+            legend.push({ type: 'text', style: {
+                text: numberText(lo + (hi - lo) * tick / 3, spec.color_decimals || 0, lang, colorUnit),
+                x: legendWidth * tick / 3, y: 38, align: tick === 0 ? 'left' : tick === 3 ? 'right' : 'center',
+                fill: t.ink2, font: '11px ' + t.font
+            } });
+        }
         var tooltip = baseTooltip(t);
         tooltip.formatter = function (p) {
             return '<b>' + esc(p.name) + '</b><br>' + (lang === 'gr' ? 'Γυναίκες στους ιδιοκτήτες: ' : 'Women among owners: ') +
-                '<b>' + esc(fmt(p.data.share)) + '</b><br>' + esc(count.format(p.value)) + ' ' + esc(spec.size_label[lang]);
+                '<b>' + esc(fmt(p.data.share)) + '</b><br>' + esc(count.format(p.data.size)) + ' ' + esc(spec.size_label[lang]) +
+                '<br>' + (lang === 'gr' ? 'Μερίδιο επιχειρήσεων του χάρτη: ' : 'Share of businesses shown: ') +
+                '<b>' + esc(numberText(p.data.size / total * 100, spec.decimals == null ? 1 : spec.decimals, lang, '%')) + '</b>';
         };
         return {
             animationDuration: 500,
             tooltip: tooltip,
+            graphic: [
+                { type: 'text', left: 0, top: 0, silent: true,
+                  style: { text: spec.area_label[lang], fill: t.ink2, font: '12px ' + t.font } },
+                { type: 'group', left: 'center', bottom: 0, silent: true, children: legend }
+            ],
             series: [{
                 type: 'treemap', roam: false, nodeClick: false, breadcrumb: { show: false },
-                left: 0, right: 0, top: 0, bottom: 0, squareRatio: 0.7,
+                left: 0, right: 0, top: 24, bottom: 72, squareRatio: 0.7,
                 itemStyle: { borderColor: t.paper, borderWidth: 2, gapWidth: 2 },
                 emphasis: { itemStyle: { borderColor: t.ink } },
                 data: spec.rows.map(function (r) {
-                    var f = Math.max(0, Math.min(1, (r.value - lo) / (hi - lo)));
+                    var f = Math.max(0, Math.min(1, (r[colorField] - lo) / (hi - lo)));
+                    var color = mix(light, t.accent, f);
                     return {
-                        name: r.label[lang], short: r.short ? r.short[lang] : null, value: r.size, share: r.value,
-                        itemStyle: { color: mix(light, t.accent, f) },
+                        name: r.label[lang], short: r.short ? r.short[lang] : null,
+                        value: r[areaField], share: r.value, size: r.size,
+                        itemStyle: { color: color },
                         label: {
                             // plain text, name then value: rich text mis-places values once names wrap
-                            // boxes under 1% of all firms are too small for text; their tooltip still has it
-                            show: r.size / total >= 0.01, color: f > 0.45 ? '#ffffff' : t.ink, fontFamily: t.font, fontSize: width < 520 ? 10 : 11,
-                            fontWeight: 600, overflow: 'break', lineHeight: 14, padding: [4, 3],
+                            // Small boxes stay available in tooltips and in the full data table.
+                            show: r[areaField] / areaTotal >= 0.01, color: labelInk(color), fontFamily: t.font,
+                            fontSize: width >= 520 && r[areaField] / areaTotal >= 0.04 ? 12 : 10,
+                            fontWeight: 600, overflow: 'truncate', lineHeight: 13, padding: [2, 2],
                             formatter: function (p) { return (p.data.short || p.name) + '\n' + fmt(p.data.share); }
                         }
                     };
@@ -222,11 +273,14 @@
         });
         var labelWidth = Math.round(Math.min(220, width * (width < 520 ? 0.36 : 0.4)));
         var ref = spec.reference;
+        var refLabel = ref && (ref.label_prefix ?
+            ref.label_prefix[lang] + ' ' + numberText(ref.value, ref.decimals == null ? spec.decimals : ref.decimals, lang, unit) :
+            ref.label[lang]);
         var refLine = ref ? {
             symbol: 'none', silent: true, z: 1,   // under the bars and their value labels
             lineStyle: { type: 'dashed', color: t.ink3, width: 1 },
             // the y-axis runs top to bottom, so the line's start is at the top
-            label: { formatter: ref.label[lang], position: 'start', distance: 6, color: t.ink3, fontFamily: t.font, fontSize: 11 },
+            label: { formatter: refLabel, position: 'start', distance: 6, color: t.ink3, fontFamily: t.font, fontSize: 11 },
             data: [{ xAxis: ref.value }]
         } : undefined;
         // paper behind the value, so a reference line passing under it does not cross the digits
@@ -323,6 +377,13 @@
     function draw(fig) {
         var spec;
         try { spec = JSON.parse(fig.querySelector('.dfg-chart__spec').textContent); } catch (e) { return; }
+        // Presentation-only override: preserve source values, geometry and calculations.
+        if (fig.hasAttribute('data-decimals')) {
+            var decimals = Number(fig.getAttribute('data-decimals'));
+            spec.decimals = decimals;
+            (spec.rows || []).forEach(function (r) { r.decimals = decimals; });
+            if (spec.reference) spec.reference.decimals = decimals;
+        }
         var lang = fig.getAttribute('data-lang') || 'gr';
         var box = fig.querySelector('.dfg-chart__canvas');
         loadEcharts().then(function (echarts) {
@@ -330,7 +391,7 @@
             var heights = {
                 column: 260,
                 line: 320,
-                treemap: box.clientWidth < 520 ? 520 : 480,
+                treemap: fig.clientWidth < 520 ? 520 : 480,
                 dumbbell: spec.rows ? spec.rows.length * 42 + 58 : 0
             };
             box.style.height = (heights[spec.type] ||
@@ -343,15 +404,46 @@
             var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var render = function () {
                 var o = option(spec, lang, box.clientWidth);
-                if (reduce) o.animation = false;
+                if (reduce) {
+                    o.animation = false;
+                    o.series.forEach(function (s) { s.animation = false; });
+                }
                 chart.setOption(o, { notMerge: true });
             };
             render();
+            if (spec.select_series) {
+                var controls = document.createElement('label');
+                controls.className = 'dfg-chart__select';
+                controls.textContent = spec.selector_label ? spec.selector_label[lang] :
+                    (lang === 'gr' ? 'Περιφέρεια' : 'Region');
+                var select = document.createElement('select');
+                spec.series.slice(1).forEach(function (s, i) {
+                    var item = document.createElement('option');
+                    item.value = i + 1;
+                    item.textContent = s.name[lang];
+                    select.appendChild(item);
+                });
+                select.value = spec.selected_series;
+                controls.appendChild(select);
+                fig.insertBefore(controls, box);
+                var describe = function () {
+                    box.setAttribute('aria-label', spec.title[lang] + ': ' + spec.series[spec.selected_series].name[lang]);
+                };
+                select.addEventListener('change', function () {
+                    spec.selected_series = Number(select.value);
+                    render();
+                    describe();
+                });
+                describe();
+            }
+            var dataTable = fig.querySelector('.bars__data');
+            if (dataTable) dataTable.open = false;
             var lastWidth = box.clientWidth;
             if (window.ResizeObserver) {
                 new ResizeObserver(function () {
                     if (box.clientWidth === lastWidth) return;
                     lastWidth = box.clientWidth;
+                    if (spec.type === 'treemap') box.style.height = (lastWidth < 520 ? 520 : 480) + 'px';
                     chart.resize();
                     render();
                 }).observe(box);
@@ -416,6 +508,8 @@
         var copy = echarts.init(off, null, { renderer: 'canvas', devicePixelRatio: scale });
         var o = option(spec, lang, width);
         o.animation = false;
+        // Treemap has a series-level animation default; otherwise labels are still transparent in the PNG.
+        o.series.forEach(function (s) { s.animation = false; });
         copy.setOption(o);
         var plot = copy.getRenderedCanvas({ pixelRatio: scale, backgroundColor: t.paper });
 

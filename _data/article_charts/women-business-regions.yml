@@ -11,6 +11,8 @@ note:
   en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
 reference:
   value: 32.5
+  decimals: 1
+  label_prefix: {gr: "σύνολο", en: "all"}
   label: {gr: "σύνολο 32,5%", en: "all 32.5%"}
 rows:
   - label: {gr: "Ανατολική Μακεδονία και Θράκη", en: "Eastern Macedonia and Thrace"}

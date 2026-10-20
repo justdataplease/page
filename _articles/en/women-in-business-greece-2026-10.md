@@ -1,78 +1,92 @@
 ---
-title: "Women in Greek business: a third of the owners, a fifth of the bosses"
+title: "Women in business: what the GEMI data show"
 slug: women-in-business-greece-2026-10
+chart_decimals: 0
 date: 2026-10-18
 topic: women-in-business
 edition: special
 period: 2026-10
 author: "Dora Andreadi"
 author_url: "https://www.linkedin.com/in/theodora-andreadi-2426a1184/"
-use_cover_image: false
-image_path: assets/topic-businesses-ethniki.jpg
+use_cover_image: true
+image_path: assets/women-business-gemi-2026-10.png
+image_aspect_ratio: "16 / 9"
+image_alt: "A woman in a blazer, seen from behind with her arms raised in front of modern office buildings."
+image_caption: "AI-generated illustration."
 related_dataset_slugs:
   - gemi-women
   - gemi-businesses
 ---
 
-In the active companies of the GEMI registry, **one owner in three is a woman (32.5%)**. The closer we get to management, the lower the share. Women are **23.4%** of managers and only **21.3%** of chairs and chief executives.
+Women's participation in business differs sharply by **founding year and sector**. It is higher among newer sole proprietorships, while among active businesses, health and education are far apart from construction and transport.
 
-Counted by company rather than by person, **27%** are owned by women only, 12% by men and women together and 61% by men only.
+- **Founding year:** among sole proprietorships with owner data, including both active and inactive firms, women account for 5% of owners for businesses founded in the 1970s, versus 39–42% by founding year for 2013–2024. Among partners and shareholders, the share is around one third.
+- **Sector:** around 50% in health and education, 23% in IT and telecommunications, 18% in transport and 17% in construction.
+- **Market size:** health and education together account for just 4% of businesses in the sectors shown; construction and transport account for 15%.
 
-## Owners, but not always in charge
+## More women among newer sole proprietors
 
-Some owners have no role in running the company: partners or shareholders with a stake but no signature. In this group women reach **39.7%**. Among owners who run the company themselves they are 30.5%.
+Across sole proprietorships of all statuses, the gap between older and newer founding cohorts is large: 5% women for the 1970s, 19% for the 1980s and 36% for the 2000s. For businesses founded in **2013–2024, the share ranges from 39% to 42% by founding year**.
 
-Boards show the same pattern. In capital companies women are 38% of board members, but only 21% of chairs and chief executives. They sit at the table, but rarely at its head.
+Among companies, women account for around **29–34% of partners and shareholders** for founding years 1980–2024. The difference by founding year is concentrated in sole proprietorships.
+
+{% include article-chart.html id="women-business-new-owners-all-statuses" %}
+
+**Inactive businesses are included**, provided owner data are available in the January 2025 person snapshot. The year refers to when the business was founded: these data do not tell us who owned it in each earlier year.
+
+## From 50% in health to 17% in construction
+
+Among active businesses, women account for **50% of owners** in health and social care and 50% in education. In construction the share is 17%, and in transport 18%: a gap of up to **34 percentage points** between broad sectors.
+
+Trade accounts for 27% of businesses in the treemap and has 36% women among owners. In the chart, **a larger box means a higher share of women; a darker colour means more businesses**.
+
+{% include article-chart.html id="women-business-sector-map" %}
+
+**Sector and founding year together:** in construction, women account for 7% of owners for businesses founded in 1980–84 and 23% for 2020–24. This comparison includes active and inactive businesses. Select a sector to compare its founding cohorts with the national total.
+
+{% include article-chart.html id="women-business-sectors-cohorts" %}
+
+Among active businesses, specific activities are even further apart: **66% in nurseries and day care**, 65% in hairdressing and beauty services, and 59% in clothing retail. The share is 21% in software programming, 6% in electrical installation and 6% in plumbing, heating and air conditioning.
+
+{% include article-chart.html id="women-business-sectors" %}
+
+## Regions by five-year founding cohort
+
+For businesses founded in **2020–2024**, the share of women among owners ranges from **31% in Western Macedonia to 38% in Eastern Macedonia and Thrace**, across all business statuses. Select a region to compare it with the national total for the same founding cohorts.
+
+{% include article-chart.html id="women-business-regions-cohorts" %}
+
+This comparison covers businesses of different ages, using the same available person data from January 2025. Gaps in gender inference affect coverage: in Rhodope and Xanthi, gender could not be inferred for around one in four people.
+
+<details>
+<summary>All active businesses by region</summary>
+<p>Among active businesses across all founding years, the share ranges from <strong>29% in Western Greece to 36% in Eastern Macedonia and Thrace</strong>: a range of 7 points, smaller than the sector gap.</p>
+{% include article-chart.html id="women-business-regions" %}
+</details>
+
+## Another difference: participation in management
+
+Ownership does not always entail management. Women account for **33% of owners**, 23% of managers and 21% of chairs and chief executives. Among businesses with owners' gender data, 27% are recorded with women only, 12% with mixed ownership and 61% with men only.
 
 {% include article-chart.html id="women-business-roles" %}
 
-The gap is widest in partnerships (OE, EE). There, women are 43% of the partners who do not manage and 26% of those who do. Almost half of these partnerships (48%) have both men and women partners, but only 8.6% are owned by women alone. One possible explanation is the family business, where a wife or daughter is registered as a partner while someone else runs the firm. The registry cannot prove this, but the picture fits it.
-
+<details>
+<summary>More on management and legal form</summary>
+<p>In partnerships (OE and EE), women account for <strong>43% of partners who do not manage the company and 26% of those who do</strong>. Mixed ownership accounts for 48% of these companies, while just 9% have women owners only.</p>
 <div class="bars-pair">
 {% include article-chart.html id="women-business-partners" %}
 {% include article-chart.html id="women-business-partnership-owners" %}
 </div>
-
-Comparing owners and leaders by legal form, the widest gap is in public limited companies (AE). There, women are 36% of the recorded shareholders but only 21% of the people running the company. Limited partnerships follow, at 35% and 24%. Sole proprietorships have no gap, since owner and leader are the same person.
-
+<p>The largest gap by legal form is in <strong>SA companies: 36% women among recorded shareholders, versus 21% among leaders</strong>. Limited partnerships (EE) follow at 35% and 24%. In sole proprietorships, the shares are almost identical.</p>
 {% include article-chart.html id="women-business-legal-forms" %}
-
-## Two different economies
-
-In health, social care and education **half of all owners are women**. These are also the only sectors where women are half of the people running the companies. In nurseries and day care they reach 66%, in hairdressing and beauty 65% and in clothing retail 59%.
-
-At the other end are construction (17%), transport (18%) and IT and telecoms (23%). In software programming women are 21% of owners. In electrical installation they are 6.4%, and in plumbing, heating and air conditioning 5.8%. Only **1.7%** and 2.1% of these firms respectively are owned by women alone.
-
-{% include article-chart.html id="women-business-sectors" %}
-
-The size of each sector changes the picture. Health and education, the two sectors where women are half of the owners, together make up less than 4% of businesses. Construction and transport, the most male sectors, make up almost 15%. The largest sector, trade, holds more than one business in four and sits a little above the average, at 36%.
-
-{% include article-chart.html id="women-business-sector-map" %}
-
-## The new generation
-
-Sole proprietorships show the change most clearly, because they have a single owner. Of those founded in the 1970s and still active, only 12% belong to women. Of those founded in the 1980s, 23%, and in the 2000s, 31.5%. Since 2013 the share has stayed flat, between 37% and 40% every year.
-
-Companies tell a different story. Among partners and shareholders, women are between 31% and 35% in every founding year from 1980 to today. The rise in women owners came almost entirely from sole proprietorships. One caveat: we only see the businesses that survived, not those that closed in between.
-
-{% include article-chart.html id="women-business-new-owners" %}
-
-Regions differ little. Women are 28.6% of owners in Western Greece and 36.0% in Eastern Macedonia and Thrace, a gap of 7 points. Across the sectors in the previous chart the gap is 60 points. One caveat about first place: in Rodopi and Xanthi we could not find the gender of about one person in four, far more than elsewhere, so the figure for Eastern Macedonia and Thrace is less certain.
-
-{% include article-chart.html id="women-business-regions" %}
-
-## What it means
-
-- Women hold a third of ownership, but a much smaller share of management. The gap is widest in public limited companies, in partnerships and at the head of boards.
-- Sector matters far more than region. Trades remain almost entirely male, and the sectors with the most women are among the smallest.
-- The rise came from sole proprietorships, where the share of women has more than tripled since the 1970s and has held steady since 2013. Among partners and shareholders it has stayed around one third for 40 years.
+</details>
 
 ## How we measured it
 
-- **Gender:** GEMI lists the people of every company and their roles, but not their gender. We inferred it from the first name and the surname ending, which in Greek differs for men and women. We found a gender for 96.6% of individuals. In a random check of 120 people, 116 were right.
-- **Owners:** the sole proprietor, and the partners or shareholders listed in the registry. **Runs the company:** a sole proprietor, manager, chair, chief executive or legal representative. **Board members** are the members and vice-chairs of the board.
-- **Shares:** women as a share of the people whose gender we know, in active companies. Shares by company (women only, mixed, men only) cover the companies whose owners' gender we know.
-- **Sectors:** each company's main activity code (KAD), sometimes as a broad sector (e.g. construction) and sometimes as a specific activity (e.g. electrical installation).
-- **Caveats:** the people are as they stood in the registry in January 2025, so companies founded later do not count yet. Public limited companies (AE) do not always publish their shareholders.
+- **Data:** the October 2026 GEMI registry and January 2025 person snapshot. The three charts by founding year or five-year cohort include all business statuses; sector boxes and bars, management figures and the overall regional bars cover active businesses. Founding-cohort comparisons end in 2024, the last full year before the person snapshot. SA companies do not always publish their shareholders.
+- **Gender:** inferred from first and last names for 97% of natural persons; in a random check, 116 of 120 inferences were correct. This is an inference from names, not self-reported gender identity.
+- **Roles:** owners are sole proprietors, partners and recorded shareholders. Leaders are sole proprietors, managers, chairs, chief executives and legal representatives.
+- **Percentages:** women's share of people with inferred gender, not their share of capital. Business ownership categories use owners with inferred gender. Sectors use the main activity code; the bar chart also includes specific activities.
+- **Rounding:** percentages are displayed without decimal places; calculations use the original values.
 
-We do not publish names or tax numbers of individuals, only totals. We processed the GEMI data ourselves and GEMI is not responsible for the calculations. The [dashboard](/en/data/women-in-business/#dashboard) has the figures by sector, legal form and region.
+We publish aggregates only, without names or tax identifiers. Processing: Data for Greece; GEMI is not responsible for the calculations. Explore sectors, legal forms and regions in the [dashboard](/en/data/women-in-business/#dashboard).

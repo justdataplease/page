@@ -4,13 +4,15 @@ unit: "%"
 max: 100
 decimals: 0
 title:
-  gr: "Δύο οικονομίες: ποσοστό γυναικών στους ιδιοκτήτες, ανά κλάδο"
-  en: "Two economies: share of women among owners, by sector"
+  gr: "Γυναίκες στους ιδιοκτήτες: κλάδοι και επιμέρους δραστηριότητες"
+  en: "Women among owners: sectors and specific activities"
 note:
   gr: "Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
   en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
 reference:
   value: 32.5
+  decimals: 1
+  label_prefix: {gr: "όλοι οι κλάδοι", en: "all sectors"}
   label: {gr: "όλοι οι κλάδοι 32,5%", en: "all sectors 32.5%"}
 rows:
   - label: {gr: "Βρεφονηπιακοί και παιδικοί σταθμοί", en: "Nurseries and day care"}

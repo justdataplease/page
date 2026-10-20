@@ -7,9 +7,13 @@
 {%- assign _lang = include.lang | default: page.lang | default: "gr" -%}
 {%- if _ch -%}
 {%- assign _max = _ch.max | default: 100 | times: 1.0 -%}
-<figure class="bars dfg-chart{% if _ch.type == 'range' %} bars--range{% endif %}" id="chart-{{ include.id }}" data-chart="{{ include.id }}" data-lang="{{ _lang }}">
+{%- assign _ch_dec_override = include.decimals | default: page.chart_decimals -%}
+{%- assign _ch_dec = _ch_dec_override | default: _ch.decimals -%}
+<figure class="bars dfg-chart{% if _ch.type == 'range' %} bars--range{% endif %}" id="chart-{{ include.id }}" data-chart="{{ include.id }}" data-lang="{{ _lang }}"{% if _ch_dec_override != nil %} data-decimals="{{ _ch_dec_override }}"{% endif %}>
 <figcaption class="bars__title">{{ _ch.title[_lang] }}</figcaption>
-{%- if _ch.type == 'line' or _ch.type == 'dumbbell' or _ch.type == 'treemap' %}
+{%- if _ch.type == 'treemap' or _ch.select_series %}
+{%- comment -%} Full data tables stay available below treemaps and selectable line charts. {%- endcomment -%}
+{%- elsif _ch.type == 'line' or _ch.type == 'dumbbell' %}
 {%- comment -%} These have no HTML-bar form: without the script they read as a table. {%- endcomment %}
 <div class="bars__plot"><table class="bars__table">
 {%- if _ch.type == 'line' %}
@@ -19,29 +23,24 @@
 {%- assign _i = forloop.index0 -%}
 {%- assign _m = _i | modulo: _step -%}
 {%- if _m == 0 or forloop.last %}
-<tr><td>{{ _x }}</td>{% for _s in _ch.series %}{% assign _v = _s.values[_i] %}<td>{% include article-chart-num.html n=_v dec=_ch.decimals lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
+<tr><td>{{ _x }}</td>{% for _s in _ch.series %}{% assign _v = _s.values[_i] %}<td>{% include article-chart-num.html n=_v dec=_ch_dec lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
 {%- endif %}
 {%- endfor %}
 {%- elsif _ch.type == 'dumbbell' %}
 <thead><tr><th></th>{% for _s in _ch.series %}<th>{{ _s.name[_lang] }}</th>{% endfor %}</tr></thead><tbody>
 {%- for _r in _ch.rows %}
-<tr><td>{{ _r.label[_lang] }}</td>{% for _v in _r.values %}<td>{% include article-chart-num.html n=_v dec=_ch.decimals lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
-{%- endfor %}
-{%- else %}
-<tbody>
-{%- assign _sorted = _ch.rows | sort: "value" | reverse %}
-{%- for _r in _sorted %}
-<tr><td>{{ _r.label[_lang] }}</td><td>{% include article-chart-num.html n=_r.value dec=_ch.decimals lang=_lang unit=_ch.unit %}</td></tr>
+<tr><td>{{ _r.label[_lang] }}</td>{% for _v in _r.values %}<td>{% include article-chart-num.html n=_v dec=_ch_dec lang=_lang unit=_ch.unit %}</td>{% endfor %}</tr>
 {%- endfor %}
 {%- endif %}
 </tbody></table></div>
 {%- else %}
 <div class="bars__plot"{% if _ch.reference %} style="--ref: {{ _ch.reference.value | times: 100.0 | divided_by: _max }}%"{% endif %}>
 {%- if _ch.reference %}
-<div class="bars__row bars__row--ref" aria-hidden="true"><span class="bars__label"></span><span class="bars__track"><span class="bars__ref-label">{{ _ch.reference.label[_lang] }}</span></span></div>
+{%- assign _ref_dec = _ch_dec_override | default: _ch.reference.decimals | default: _ch_dec -%}
+<div class="bars__row bars__row--ref" aria-hidden="true"><span class="bars__label"></span><span class="bars__track"><span class="bars__ref-label">{% if _ch.reference.label_prefix %}{{ _ch.reference.label_prefix[_lang] }} {% include article-chart-num.html n=_ch.reference.value dec=_ref_dec lang=_lang unit=_ch.unit %}{% else %}{{ _ch.reference.label[_lang] }}{% endif %}</span></span></div>
 {%- endif %}
 {%- for _r in _ch.rows %}
-{%- assign _dec = _r.decimals | default: _ch.decimals -%}
+{%- assign _dec = _ch_dec_override | default: _r.decimals | default: _ch.decimals -%}
 {%- if _ch.type == 'range' %}
 {%- capture _from %}{% include article-chart-num.html n=_r.from dec=_dec lang=_lang unit=_ch.unit %}{% endcapture -%}
 {%- capture _to %}{% include article-chart-num.html n=_r.to dec=_dec lang=_lang unit=_ch.unit %}{% endcapture %}
@@ -54,6 +53,36 @@
 </div>
 {%- endif %}
 <div class="dfg-chart__canvas" aria-hidden="true"></div>
+{%- if _ch.select_series %}
+<details class="bars__data" open>
+<summary>{% if _ch.table_label %}{{ _ch.table_label[_lang] }}{% elsif _lang == 'gr' %}Όλες οι περιφέρειες σε πίνακα{% else %}All regions in a table{% endif %}</summary>
+<div class="bars__data-scroll">
+<table class="bars__table">
+<thead><tr><th scope="col">{{ _ch.x_label[_lang] }}</th>{% for _x in _ch.x %}<th scope="col">{{ _x }}</th>{% endfor %}</tr></thead>
+<tbody>
+{%- for _s in _ch.series %}
+<tr><th scope="row">{{ _s.name[_lang] }}</th>{% for _v in _s.values %}<td>{% if _v == nil %}—{% else %}{% include article-chart-num.html n=_v dec=_ch_dec lang=_lang unit=_ch.unit %}{% endif %}</td>{% endfor %}</tr>
+{%- endfor %}
+</tbody></table>
+</div>
+</details>
+{%- endif %}
+{%- if _ch.type == 'treemap' %}
+<details class="bars__data" open>
+<summary>{% if _lang == 'gr' %}Όλοι οι κλάδοι σε πίνακα{% else %}All sectors in a table{% endif %}</summary>
+<div class="bars__data-scroll">
+<table class="bars__table">
+<thead><tr><th scope="col">{% if _lang == 'gr' %}Κλάδος{% else %}Sector{% endif %}</th><th scope="col">{{ _ch.size_label[_lang] | capitalize }}</th><th scope="col">{{ _ch.value_label[_lang] | default: _ch.color_label[_lang] }}</th></tr></thead>
+<tbody>
+{%- assign _area_field = _ch.area_field | default: "size" %}
+{%- assign _sorted = _ch.rows | sort: _area_field | reverse %}
+{%- for _r in _sorted %}
+<tr><th scope="row">{{ _r.label[_lang] }}</th><td>{% include article-chart-num.html n=_r.size dec=0 lang=_lang %}</td><td>{% include article-chart-num.html n=_r.value dec=_ch_dec lang=_lang unit=_ch.unit %}</td></tr>
+{%- endfor %}
+</tbody></table>
+</div>
+</details>
+{%- endif %}
 {%- if _ch.note %}
 <p class="bars__note">{{ _ch.note[_lang] }}</p>
 {%- endif %}

@@ -4,8 +4,8 @@ unit: "%"
 max: 100
 decimals: 1
 title:
-  gr: "Πολλές στη μετοχή, λίγες στην κορυφή: ποσοστό γυναικών ανά ρόλο"
-  en: "Many among the owners, few at the top: share of women by role"
+  gr: "Η συμμετοχή των γυναικών στην ιδιοκτησία και τη διοίκηση"
+  en: "Women's participation in ownership and management"
 note:
   gr: "Πηγή: ΓΕΜΗ, ενεργές επιχειρήσεις, πρόσωπα Ιανουαρίου 2025. Επεξεργασία: Data for Greece."
   en: "Source: GEMI, active companies, people as of January 2025. Processing: Data for Greece."
