@@ -1185,9 +1185,9 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .topic-data { margin-top: 2.6rem; scroll-margin-top: 1rem; }
 .topic-data__set { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem); gap: calc(var(--gutter) * 2); padding-block: 1.4rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
 .topic-data__set:first-of-type { border-top: 0; }
-.topic-data__text { max-width: 46rem; margin: 0; }
+.topic-data__text { min-width: 0; max-width: 46rem; margin: 0; }
 .topic-data__text h3 { margin: .2rem 0 .3rem; }
-.topic-data__image img { aspect-ratio: 16 / 9; }
+.topic-data__image img { aspect-ratio: 16 / 9; margin: 0; }
 .topic-data__text h4 { margin: 1.2rem 0 .3rem; font-family: var(--f-sans); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
 .topic-data__text pre { overflow-x: auto; }
 .topic-data__box { align-self: start; }
