@@ -19,6 +19,11 @@
             <p class="kicker">{% include upper.html text=d.category %}</p>
             <h3 class="hl hl--m">{{ d.title }}</h3>
             <p class="meta">{% include update.html doc=d %}</p>
+            {%- if d.use_cover_image and d.image_path %}
+            <figure class="art topic-data__image">
+                <img src="{{ site.baseurl }}/{{ d.image_path }}" alt="{{ d.image_alt | default: d.title | escape }}" loading="lazy">
+            </figure>
+            {%- endif %}
             <h4>{{ t.data_description }}</h4>
             <p>{{ d.description_detailed }}</p>
             {%- if d.description_preprocess %}

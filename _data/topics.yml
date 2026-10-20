@@ -818,8 +818,7 @@
 - key: women-in-business
   kind: special
   parent: businesses
-  # TODO own photo: for now the businesses photo (supplied by the user)
-  image: assets/topic-businesses-ethniki.jpg
+  image: assets/women-business-gemi-2026-10.png
   when: 2026-10
   data: [gemi-women]
   charts: []
