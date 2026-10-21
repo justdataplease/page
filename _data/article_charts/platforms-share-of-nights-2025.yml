@@ -1,0 +1,42 @@
+# airbnb-census-housing-2026-10: guest nights booked through the online platforms (Eurostat tour_ce_oan3, experimental)
+# as a share of those + the nights at hotels and other tourist accommodation (tour_occ_nin2), 2025, NUTS-3 areas with
+# the most platform nights. BigQuery akinita.airbnb_platforms_nuts3.platform_share_of_nights (year 2025; Greece =
+# 52,146,759 / (52,146,759 + 156,347,283)), checked 2026-10-21.
+type: bar
+unit: "%"
+max: 60
+decimals: 0
+title:
+  gr: "Πόσες διανυκτερεύσεις κλείνονται μέσω πλατφορμών, 2025"
+  en: "How many guest nights are booked through platforms, 2025"
+note:
+  gr: "Διανυκτερεύσεις μέσω Airbnb, Booking, Expedia και Tripadvisor ως ποσοστό αυτών και των διανυκτερεύσεων σε ξενοδοχεία και λοιπά τουριστικά καταλύματα. Πηγή: Eurostat (πειραματικά στοιχεία). Επεξεργασία: DataForGreece."
+  en: "Nights booked through Airbnb, Booking, Expedia and Tripadvisor as a share of those plus the nights at hotels and other tourist accommodation. Source: Eurostat (experimental statistics). Processing: DataForGreece."
+reference:
+  value: 25.0
+  decimals: 0
+  label_prefix: {gr: "Ελλάδα", en: "Greece"}
+  label: {gr: "Ελλάδα 25%", en: "Greece 25%"}
+rows:
+  - label: {gr: "Κεντρικός Τομέας Αθηνών", en: "Central Athens"}
+    value: 47.4
+  - label: {gr: "Κεφαλονιά, Ιθάκη", en: "Kefalonia, Ithaca"}
+    value: 42.5
+  - label: {gr: "Θεσσαλονίκη", en: "Thessaloniki"}
+    value: 39.8
+  - label: {gr: "Κυκλάδες", en: "Cyclades"}
+    value: 30.8
+  - label: {gr: "Κέρκυρα", en: "Corfu"}
+    value: 29.3
+  - label: {gr: "Χανιά", en: "Chania"}
+    value: 28.2
+  - label: {gr: "Χαλκιδική", en: "Chalkidiki"}
+    value: 23.7
+  - label: {gr: "Ρέθυμνο", en: "Rethymno"}
+    value: 23.6
+  - label: {gr: "Ζάκυνθος", en: "Zakynthos"}
+    value: 21.1
+  - label: {gr: "Ηράκλειο", en: "Heraklion"}
+    value: 12.6
+  - label: {gr: "Ρόδος, Κως, Κάλυμνος, Κάρπαθος", en: "Rhodes, Kos, Kalymnos, Karpathos"}
+    value: 10.4

@@ -1,0 +1,44 @@
+# airbnb-census-housing-2026-10: Airbnb entire homes (September 2026) per dwelling the 2021 census found empty and for
+# rent (ELSTAT SAM05 Γ01), municipalities with 500+ Airbnb homes + the three big cities. BigQuery
+# akinita.airbnb_rent_official.airbnb_homes_per_vacant_for_rent, checked 2026-10-21.
+type: bar
+unit: ""
+max: 4
+decimals: 1
+title:
+  gr: "Σπίτια στο Airbnb για κάθε άδειο σπίτι προς ενοικίαση"
+  en: "Homes on Airbnb for every empty home for rent"
+note:
+  gr: "Ολόκληρα σπίτια στο Airbnb (Σεπτέμβριος 2026) ÷ κατοικίες που η απογραφή του 2021 βρήκε κενές και προς ενοικίαση. Πηγές: Inside Airbnb, ΕΛΣΤΑΤ. Επεξεργασία: DataForGreece."
+  en: "Entire homes on Airbnb (September 2026) ÷ dwellings the 2021 census found empty and for rent. Sources: Inside Airbnb, ELSTAT. Processing: DataForGreece."
+reference:
+  value: 1
+  decimals: 0
+  label: {gr: "όσα και τα άδεια", en: "as many as the empty ones"}
+rows:
+  - label: {gr: "Μήλος", en: "Milos"}
+    value: 3.38
+  - label: {gr: "Τήνος", en: "Tinos"}
+    value: 3.37
+  - label: {gr: "Σίφνος", en: "Sifnos"}
+    value: 3.25
+  - label: {gr: "Νάξος", en: "Naxos"}
+    value: 3.0
+  - label: {gr: "Πάρος", en: "Paros"}
+    value: 2.19
+  - label: {gr: "Αποκόρωνας", en: "Apokoronas"}
+    value: 1.92
+  - label: {gr: "Μύκονος", en: "Mykonos"}
+    value: 1.68
+  - label: {gr: "Θήρα", en: "Thira (Santorini)"}
+    value: 1.44
+  - label: {gr: "Χανιά", en: "Chania"}
+    value: 0.80
+  - label: {gr: "Ρόδος", en: "Rhodes"}
+    value: 0.77
+  - label: {gr: "Αθήνα", en: "Athens"}
+    value: 0.28
+  - label: {gr: "Θεσσαλονίκη", en: "Thessaloniki"}
+    value: 0.19
+  - label: {gr: "Ηράκλειο", en: "Heraklion"}
+    value: 0.18

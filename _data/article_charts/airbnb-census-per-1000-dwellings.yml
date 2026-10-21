@@ -1,0 +1,40 @@
+# airbnb-census-housing-2026-10: Airbnb entire homes (Inside Airbnb, September 2026) per 1,000 dwellings of the 2021
+# census (ELSTAT SAM05), municipalities with 500+ Airbnb homes + the three big cities. BigQuery
+# akinita.airbnb_rent_official.airbnb_homes_per_1000_dwellings, checked 2026-10-21.
+type: bar
+unit: ""
+max: 400
+decimals: 0
+title:
+  gr: "Σπίτια στο Airbnb ανά 1.000 κατοικίες"
+  en: "Homes on Airbnb per 1,000 dwellings"
+note:
+  gr: "Ολόκληρα σπίτια στο Airbnb τον Σεπτέμβριο 2026 ανά 1.000 κατοικίες της απογραφής 2021. Πηγές: Inside Airbnb, ΕΛΣΤΑΤ. Επεξεργασία: DataForGreece."
+  en: "Entire homes on Airbnb in September 2026 per 1,000 dwellings of the 2021 census. Sources: Inside Airbnb, ELSTAT. Processing: DataForGreece."
+rows:
+  - label: {gr: "Μύκονος", en: "Mykonos"}
+    value: 322.1
+  - label: {gr: "Θήρα", en: "Thira (Santorini)"}
+    value: 280.2
+  - label: {gr: "Μήλος", en: "Milos"}
+    value: 227.8
+  - label: {gr: "Πάρος", en: "Paros"}
+    value: 212.9
+  - label: {gr: "Σίφνος", en: "Sifnos"}
+    value: 195.2
+  - label: {gr: "Κίσσαμος", en: "Kissamos"}
+    value: 165.6
+  - label: {gr: "Νάξος", en: "Naxos"}
+    value: 158.2
+  - label: {gr: "Αποκόρωνας", en: "Apokoronas"}
+    value: 155.6
+  - label: {gr: "Χανιά", en: "Chania"}
+    value: 89.2
+  - label: {gr: "Ρόδος", en: "Rhodes"}
+    value: 79.1
+  - label: {gr: "Αθήνα", en: "Athens"}
+    value: 32.0
+  - label: {gr: "Θεσσαλονίκη", en: "Thessaloniki"}
+    value: 20.3
+  - label: {gr: "Ηράκλειο", en: "Heraklion"}
+    value: 19.8

@@ -107,10 +107,14 @@
     updates: "Κάθε μήνα"
     sources:
       - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/real-estate/", note: "Δικές μας συλλογές αγγελιών πώλησης και ενοικίασης κατοικιών" }
+      - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices", note: "Δείκτης τιμών διαμερισμάτων (συναλλαγές)" }
+      - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/SJU24/-", note: "Αγοραπωλησίες ακινήτων και οικοδομικές άδειες" }
+      - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Εισόδημα νοικοκυριών και επιβάρυνση από το κόστος στέγασης ανά περιφέρεια" }
     notes:
       - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Για τις τιμές συναλλαγών δείτε το θέμα Κατοικία (Τράπεζα της Ελλάδος)."
       - "Οι δήμοι με λίγες αγγελίες δεν εμφανίζονται, ώστε μία-δύο ακριβές βίλες να μη «φτιάχνουν» την τιμή ενός ολόκληρου δήμου."
       - "Τα ενοίκια συγκρίνονται με το Airbnb στη σελίδα «Airbnb & ενοίκια» του θέματος Airbnb."
+      - "Η σελίδα «Αγγελίες και επίσημα στοιχεία» βάζει τις ζητούμενες τιμές δίπλα στις τιμές συναλλαγών της Τράπεζας της Ελλάδος, στις αγοραπωλησίες και τις άδειες της ΕΛΣΤΑΤ και στο εισόδημα των νοικοκυριών."
   en:
     name: "Property asking prices"
     dek: "What sellers and landlords ask for a home, by region and municipality, every month since 2022: price per m², the typical home and rental yield."
@@ -118,10 +122,14 @@
     updates: "Every month"
     sources:
       - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/real-estate/", note: "Our own collection of homes listed for sale and for rent" }
+      - { name: "Bank of Greece", url: "https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices", note: "Apartment price index (transactions)" }
+      - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/SJU24/-", note: "Property sales and building permits" }
+      - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Household income and housing cost overburden by region" }
     notes:
       - "These are asking prices from listings, not sale prices; deals usually close lower. For transaction prices see the Housing topic (Bank of Greece)."
       - "Municipalities with few listings are left out, so one or two expensive villas cannot set a whole municipality's price."
       - "Rents are compared with Airbnb on the «Airbnb & ενοίκια» page of the Airbnb topic."
+      - "The page «Αγγελίες και επίσημα στοιχεία» puts asking prices next to the Bank of Greece transaction prices, ELSTAT's property sales and building permits, and household income."
 
 - key: airbnb
   kind: topic
@@ -144,10 +152,12 @@
     updates: "Κάθε τρίμηνο"
     sources:
       - { name: "Inside Airbnb", url: "https://insideairbnb.com", note: "Άδεια CC BY 4.0" }
+      - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/SAM05/-", note: "Απογραφή 2021: κατοικίες ανά δήμο" }
+      - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Διανυκτερεύσεις μέσω πλατφορμών βραχυχρόνιας μίσθωσης" }
     notes:
       - "Δεκέμβριος 2025 – Φεβρουάριος 2026: η πηγή δεν δίνει τιμές, γι' αυτό το διάγραμμα έχει κενό."
       - "Από τον Μάρτιο 2026 η πηγή μετρά την τιμή με νέο τρόπο· οι τιμές πριν και μετά δεν συγκρίνονται άμεσα."
-      - "Η σελίδα «Airbnb & ενοίκια» του dashboard συγκρίνει ανά δήμο τα σπίτια στο Airbnb με τις δικές μας αγγελίες μακροχρόνιας ενοικίασης."
+      - "Η σελίδα «Airbnb & ενοίκια» του dashboard συγκρίνει ανά δήμο τα σπίτια στο Airbnb με τις δικές μας αγγελίες μακροχρόνιας ενοικίασης και με τις κατοικίες της απογραφής 2021 (ΕΛΣΤΑΤ)."
       - "Η σελίδα «Ενοίκιο ή Airbnb ανά γειτονιά» δείχνει, γειτονιά προς γειτονιά, αν ένα σπίτι αποδίδει περισσότερο στο Airbnb ή με ενοίκιο και αν τα ενοίκια ανέβηκαν περισσότερο όπου υπάρχει περισσότερο Airbnb."
   en:
     name: "Airbnb"
@@ -156,10 +166,12 @@
     updates: "Every quarter"
     sources:
       - { name: "Inside Airbnb", url: "https://insideairbnb.com", note: "Licence CC BY 4.0" }
+      - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/SAM05/-", note: "Census 2021: dwellings by municipality" }
+      - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Guest nights booked through short-term rental platforms" }
     notes:
       - "December 2025 – February 2026: the source has no prices, so the chart shows a gap."
       - "From March 2026 the source measures price differently; prices before and after are not directly comparable."
-      - "The dashboard page «Airbnb & ενοίκια» compares, per municipality, the homes on Airbnb with our own long-term rental listings."
+      - "The dashboard page «Airbnb & ενοίκια» compares, per municipality, the homes on Airbnb with our own long-term rental listings and with the dwellings of the 2021 census (ELSTAT)."
       - "The dashboard page «Ενοίκιο ή Airbnb ανά γειτονιά» shows, neighbourhood by neighbourhood, whether a home earns more on Airbnb or rented out, and whether rents rose faster where there is more Airbnb."
 
 - key: forest-fires
@@ -556,8 +568,12 @@
       - { name: "Eurostat, στατιστικές τουρισμού", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Αφίξεις και διανυκτερεύσεις σε καταλύματα, κλίνες, ανά περιφέρεια" }
       - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr", note: "Ταξιδιωτικές εισπράξεις (ισοζύγιο πληρωμών)" }
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/STO12/-", note: "Η ελληνική πηγή των στοιχείων καταλυμάτων" }
+      - { name: "Eurostat, πλατφόρμες βραχυχρόνιας μίσθωσης", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Διανυκτερεύσεις μέσω Airbnb, Booking, Expedia και Tripadvisor ανά περιοχή" }
+      - { name: "Eurostat, αεροπορικές και θαλάσσιες μεταφορές", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Επιβάτες ανά αεροδρόμιο και λιμάνι" }
     notes:
       - "Οι διανυκτερεύσεις αφορούν τα καταλύματα της έρευνας (ξενοδοχεία, κάμπινγκ, ενοικιαζόμενα)· η βραχυχρόνια μίσθωση φαίνεται στο θέμα Airbnb."
+      - "Η σελίδα «Πίεση ανά κάτοικο» δείχνει τις διανυκτερεύσεις ανά κάτοικο σε κάθε περιοχή και πόσες κλείνονται μέσω πλατφορμών, με τα πειραματικά στοιχεία της Eurostat."
+      - "Η σελίδα «Αφίξεις: αεροδρόμια και λιμάνια» δείχνει τους επιβάτες σε κάθε αεροδρόμιο (μηνιαία) και στα κύρια λιμάνια (τριμηνιαία, χωρίς τους επιβάτες κρουαζιέρας)."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Tourism"
@@ -568,8 +584,12 @@
       - { name: "Eurostat, tourism statistics", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Arrivals and nights in accommodation, bed places, by region" }
       - { name: "Bank of Greece", url: "https://www.bankofgreece.gr", note: "Travel receipts (balance of payments)" }
       - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/STO12/-", note: "The Greek source of the accommodation data" }
+      - { name: "Eurostat, short-term rental platforms", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Nights booked through Airbnb, Booking, Expedia and Tripadvisor by area" }
+      - { name: "Eurostat, air and sea transport", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Passengers by airport and port" }
     notes:
       - "Nights cover the surveyed accommodation (hotels, campsites, rented rooms); short-term rentals are in the Airbnb topic."
+      - "The page «Πίεση ανά κάτοικο» shows the nights per resident in each area and how many are booked through the platforms, from Eurostat's experimental statistics."
+      - "The page «Αφίξεις: αεροδρόμια και λιμάνια» shows the passengers at each airport (monthly) and at the main ports (quarterly, without cruise passengers)."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: poverty
