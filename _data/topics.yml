@@ -867,7 +867,7 @@
   charts: []
   report: ""
   articles: []
-  dashboards: { lite: "", full: "" }
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiODMyNWFiMzgtOTg1OC00OGY5LTk2YzMtMzdjMmJlZDVhNjk0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Ασφάλεια"
     dek: "Πόσοι χάνουν τη ζωή τους στους δρόμους, πόσες ληστείες, διαρρήξεις και ανθρωποκτονίες καταγράφει η αστυνομία, σε κάθε περιοχή, και πού βρίσκεται η Ελλάδα στην Ευρώπη."
@@ -903,7 +903,7 @@
   charts: []
   report: ""
   articles: []
-  dashboards: { lite: "", full: "" }
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMTVmY2U4OGQtNGJlMC00MDg4LThiMzktNWYyZTQ2ZTBhZjJlIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Τροχαία"
     dek: "Πόσοι σκοτώνονται και τραυματίζονται στους δρόμους, πότε και πού, με ποιο όχημα, και πώς συγκρίνεται η Ελλάδα με την Ευρώπη σε νεκρούς, αυτοκίνητα και μοτοσικλέτες."
@@ -943,7 +943,7 @@
   charts: []
   report: ""
   articles: []
-  dashboards: { lite: "", full: "" }
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYTNlNWI1Y2QtMjFhYi00ZjUwLTkzOWYtYzZiMmYxYjE5MWFlIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Αυτοκίνητα"
     dek: "Τι ζητούν οι πωλητές για ένα μεταχειρισμένο, από τις δικές μας αγγελίες, δίπλα στις ταξινομήσεις καινούργιων ανά καύσιμο, στα ηλεκτρικά και στα αυτοκίνητα ανά κάτοικο."
