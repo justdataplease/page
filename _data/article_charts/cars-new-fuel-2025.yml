@@ -1,0 +1,22 @@
+# cars-used-new-2026-10: new passenger cars registered in 2025 by fuel, % of all (Eurostat road_eqr_carpda), Greece vs
+# the EU-27; hybrids = petrol + diesel hybrids, plug-ins = petrol + diesel plug-ins. LPG left out (no EU-27 value).
+# Checked 2026-10-21 on the live API.
+type: dumbbell
+unit: "%"
+max: 60
+decimals: 1
+title:
+  gr: "Καινούργια αυτοκίνητα ανά καύσιμο (2025, % των ταξινομήσεων)"
+  en: "New cars by fuel (2025, % of registrations)"
+note:
+  gr: "Υβριδικά: βενζίνης και πετρελαίου, χωρίς τα plug-in. Πηγή: Eurostat. Επεξεργασία: DataForGreece."
+  en: "Hybrids: petrol and diesel, without plug-ins. Source: Eurostat. Processing: DataForGreece."
+series:
+  - name: {gr: "Ελλάδα", en: "Greece"}
+  - name: {gr: "ΕΕ-27", en: "EU-27"}
+rows:
+  - {label: {gr: "Υβριδικά", en: "Hybrids"}, values: [50.8, 33.1]}
+  - {label: {gr: "Βενζίνη", en: "Petrol"}, values: [28.4, 27.3]}
+  - {label: {gr: "Plug-in υβριδικά", en: "Plug-in hybrids"}, values: [8.1, 9.4]}
+  - {label: {gr: "Ηλεκτρικά", en: "Electric"}, values: [6.2, 17.3]}
+  - {label: {gr: "Πετρέλαιο", en: "Diesel"}, values: [3.4, 9.8]}

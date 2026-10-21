@@ -839,6 +839,116 @@
       - "Burnt areas are in the Forest fires topic."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
+- key: safety
+  kind: topic
+  category: society
+  model: stats
+  since: 2000
+  cadence: annual
+  data: [safety-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "" }
+  gr:
+    name: "Ασφάλεια"
+    dek: "Πόσοι χάνουν τη ζωή τους στους δρόμους, πόσες ληστείες, διαρρήξεις και ανθρωποκτονίες καταγράφει η αστυνομία, σε κάθε περιοχή, και πού βρίσκεται η Ελλάδα στην Ευρώπη."
+    coverage: "Τροχαία 2000 – σήμερα · εγκλήματα 2008 – σήμερα · περιφέρειες και ΕΕ"
+    updates: "Κάθε χρόνο"
+    sources:
+      - { name: "Eurostat, οδική ασφάλεια", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en", note: "Νεκροί σε τροχαία ανά χώρα και κατηγορία χρήστη, τροχαία ατυχήματα ανά περιοχή" }
+      - { name: "ΕΛΣΤΑΤ, οδικά τροχαία ατυχήματα", url: "https://www.statistics.gr/el/statistics/-/publication/SDT03/-", note: "Τροχαία, νεκροί και τραυματίες κάθε μήνα" }
+      - { name: "Eurostat, εγκληματικότητα", url: "https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en", note: "Αδικήματα που κατέγραψε η αστυνομία, ανά κατηγορία και περιοχή" }
+    notes:
+      - "Τα εγκλήματα είναι όσα κατέγραψε η αστυνομία: όσα δεν καταγγέλλονται δεν φαίνονται, και οι χώρες καταγράφουν με διαφορετικούς κανόνες."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Safety"
+    dek: "How many people die on the roads, how many robberies, burglaries and homicides the police record, in every area, and where Greece stands in Europe."
+    coverage: "Road deaths 2000 – today · crime 2008 – today · regions and the EU"
+    updates: "Every year"
+    sources:
+      - { name: "Eurostat, road safety", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en", note: "Road deaths by country and road user, road accidents by area" }
+      - { name: "ELSTAT, road traffic accidents", url: "https://www.statistics.gr/en/statistics/-/publication/SDT03/-", note: "Accidents, deaths and injuries every month" }
+      - { name: "Eurostat, crime", url: "https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en", note: "Police-recorded offences by category and area" }
+    notes:
+      - "Crime means what the police recorded: unreported crime is missing, and countries record by different rules."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: road-safety
+  kind: topic
+  category: society
+  model: stats
+  since: 2000
+  cadence: monthly
+  data: [road-safety-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "" }
+  gr:
+    name: "Τροχαία"
+    dek: "Πόσοι σκοτώνονται και τραυματίζονται στους δρόμους, πότε και πού, με ποιο όχημα, και πώς συγκρίνεται η Ελλάδα με την Ευρώπη σε νεκρούς, αυτοκίνητα και μοτοσικλέτες."
+    coverage: "Κάθε μήνα 2010 – σήμερα · κάθε χρόνο 2000 – σήμερα · περιφέρειες, περιφερειακές ενότητες και ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "ΕΛΣΤΑΤ, οδικά τροχαία ατυχήματα", url: "https://www.statistics.gr/el/statistics/-/publication/SDT03/-", note: "Τροχαία, νεκροί, βαριά και ελαφρά τραυματίες κάθε μήνα" }
+      - { name: "Eurostat, οδική ασφάλεια", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en", note: "Νεκροί ανά χώρα, ηλικία, φύλο, όχημα και τύπο δρόμου" }
+      - { name: "Eurostat, τροχαία ανά περιφέρεια", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_r_acci/default/table?lang=en", note: "Νεκροί, τραυματίες και τροχαία ανά περιφέρεια και περιφερειακή ενότητα" }
+      - { name: "Eurostat, οχήματα σε κυκλοφορία", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en", note: "Αυτοκίνητα ανά κάτοικο, αυτοκίνητα και μοτοσικλέτες σε κυκλοφορία" }
+    notes:
+      - "Τα μηνιαία στοιχεία της ΕΛΣΤΑΤ για τους τελευταίους μήνες είναι προσωρινά και αναθεωρούνται."
+      - "Τις μοτοσικλέτες ανά κάτοικο και τους νεκρούς ανά όχημα τους υπολογίζουμε εμείς από τα στοιχεία της Eurostat για την ίδια χρονιά."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Road safety"
+    dek: "How many people are killed and injured on the roads, when and where, in which vehicle, and how Greece compares with Europe on deaths, cars and motorcycles."
+    coverage: "Every month 2010 – today · every year 2000 – today · regions, regional units and the EU"
+    updates: "Every month"
+    sources:
+      - { name: "ELSTAT, road traffic accidents", url: "https://www.statistics.gr/en/statistics/-/publication/SDT03/-", note: "Accidents, deaths, serious and slight injuries every month" }
+      - { name: "Eurostat, road safety", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en", note: "Deaths by country, age, sex, vehicle and road type" }
+      - { name: "Eurostat, road accidents by region", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_r_acci/default/table?lang=en", note: "Deaths, injuries and accidents by region and regional unit" }
+      - { name: "Eurostat, vehicles in use", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en", note: "Cars per inhabitant, cars and motorcycles in use" }
+    notes:
+      - "ELSTAT's monthly figures for the latest months are provisional and get revised."
+      - "Motorcycles per inhabitant and deaths per vehicle are our calculation from Eurostat's figures for the same year."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: cars
+  kind: topic
+  category: business
+  model: autokinita
+  since: 2013
+  cadence: monthly
+  data: [cars-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "" }
+  gr:
+    name: "Αυτοκίνητα"
+    dek: "Τι ζητούν οι πωλητές για ένα μεταχειρισμένο, από τις δικές μας αγγελίες, δίπλα στις ταξινομήσεις καινούργιων ανά καύσιμο, στα ηλεκτρικά και στα αυτοκίνητα ανά κάτοικο."
+    coverage: "Αγγελίες 2025 – σήμερα · ταξινομήσεις 2013 – σήμερα · περιφέρειες και ΕΕ"
+    updates: "Κάθε μήνα"
+    sources:
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/cars/", note: "Δικές μας συλλογές αγγελιών μεταχειρισμένων αυτοκινήτων" }
+      - { name: "Eurostat, οδικές μεταφορές", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en", note: "Καινούργια αυτοκίνητα και αυτοκίνητα σε κυκλοφορία ανά καύσιμο, ανά κάτοικο και ανά περιφέρεια" }
+    notes:
+      - "Οι τιμές των αγγελιών είναι ζητούμενες, όχι τιμές πώλησης."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Cars"
+    dek: "What sellers ask for a used car, from our own listings, next to new registrations by fuel, electric cars and cars per inhabitant."
+    coverage: "Listings 2025 – today · registrations 2013 – today · regions and the EU"
+    updates: "Every month"
+    sources:
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/cars/", note: "Our own collection of used-car listings" }
+      - { name: "Eurostat, road transport", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en", note: "New cars and cars on the road by fuel, per inhabitant and by region" }
+    notes:
+      - "Listing prices are asking prices, not sale prices."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
 - key: women-in-business
   kind: special
   parent: businesses

@@ -1,0 +1,21 @@
+# cars-used-new-2026-10: median asking price of used cars in our listings, September 2026, by fuel (BigQuery
+# autokinita.listings_monthly, month 2026-09: used, not crashed, 500-200,000 euro, registered 1990 or later).
+# Checked 2026-10-21 (dev build; same SQL as prod).
+type: bar
+unit: " €"
+max: 35000
+decimals: 0
+title:
+  gr: "Διάμεση ζητούμενη τιμή μεταχειρισμένου ανά καύσιμο (Σεπτέμβριος 2026)"
+  en: "Median asking price of a used car by fuel (September 2026)"
+note:
+  gr: "Μεταχειρισμένα χωρίς ζημιά στις αγγελίες μας, από 500 έως 200.000 €. Ζητούμενες τιμές, όχι τιμές πώλησης. Πηγή και επεξεργασία: DataForGreece."
+  en: "Undamaged used cars in our listings, 500 to 200,000 euro. Asking prices, not sale prices. Source and processing: DataForGreece."
+rows:
+  - {label: {gr: "Plug-in υβριδικά", en: "Plug-in hybrids"}, value: 32490}
+  - {label: {gr: "Ηλεκτρικά", en: "Electric"}, value: 22990}
+  - {label: {gr: "Υβριδικά", en: "Hybrids"}, value: 20500}
+  - {label: {gr: "Πετρέλαιο", en: "Diesel"}, value: 11900}
+  - {label: {gr: "Όλα", en: "All"}, value: 9500}
+  - {label: {gr: "Βενζίνη", en: "Petrol"}, value: 7500}
+  - {label: {gr: "Υγραέριο / φυσικό αέριο", en: "LPG / natural gas"}, value: 4500}

@@ -1,0 +1,30 @@
+# road-safety-motorcycles-2026-10: motorcycles in use per 1,000 inhabitants, 2024, a selection of member states;
+# reference = the median of the 25 member states with data (France and Portugal publish no motorcycle stock).
+# Computed as motorcycles (road_eqs_motorc) x cars per 1,000 (road_eqs_carhab) / cars (road_eqs_carpda), same year.
+# Checked 2026-10-21 (BigQuery stats_observations; same values as the road-safety dashboard).
+type: bar
+unit: ""
+max: 200
+decimals: 0
+title:
+  gr: "Μοτοσικλέτες ανά 1.000 κατοίκους (2024)"
+  en: "Motorcycles per 1,000 inhabitants (2024)"
+note:
+  gr: "Μοτοσικλέτες σε κυκλοφορία. Υπολογισμός από τα στοιχεία της Eurostat. Επεξεργασία: DataForGreece."
+  en: "Motorcycles in use. Calculated from Eurostat data. Processing: DataForGreece."
+reference:
+  value: 39
+  decimals: 0
+  label_prefix: {gr: "Διάμεσος ΕΕ", en: "EU median"}
+rows:
+  - {label: {gr: "Ελλάδα", en: "Greece"}, value: 178}
+  - {label: {gr: "Ιταλία", en: "Italy"}, value: 131}
+  - {label: {gr: "Τσεχία", en: "Czechia"}, value: 123}
+  - {label: {gr: "Ισπανία", en: "Spain"}, value: 89}
+  - {label: {gr: "Αυστρία", en: "Austria"}, value: 75}
+  - {label: {gr: "Γερμανία", en: "Germany"}, value: 59}
+  - {label: {gr: "Ολλανδία", en: "Netherlands"}, value: 40}
+  - {label: {gr: "Σουηδία", en: "Sweden"}, value: 30}
+  - {label: {gr: "Βουλγαρία", en: "Bulgaria"}, value: 25}
+  - {label: {gr: "Ρουμανία", en: "Romania"}, value: 12}
+  - {label: {gr: "Ιρλανδία", en: "Ireland"}, value: 9}

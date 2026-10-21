@@ -1,0 +1,25 @@
+# road-safety-motorcycles-2026-10: average road deaths per calendar month, Greece, January 2010 - July 2026 (ELSTAT
+# SDT03 monthly, killed; the mean of each month over the years). Checked 2026-10-21.
+type: bar
+unit: ""
+max: 100
+decimals: 0
+title:
+  gr: "Νεκροί σε τροχαία ανά μήνα του χρόνου (μέσος όρος)"
+  en: "Road deaths by month of the year (average)"
+note:
+  gr: "Μέσος όρος από το 2010. Πηγή: ΕΛΣΤΑΤ. Επεξεργασία: DataForGreece."
+  en: "Average since 2010. Source: ELSTAT. Processing: DataForGreece."
+rows:
+  - {label: {gr: "Ιανουάριος", en: "January"}, value: 54}
+  - {label: {gr: "Φεβρουάριος", en: "February"}, value: 47}
+  - {label: {gr: "Μάρτιος", en: "March"}, value: 51}
+  - {label: {gr: "Απρίλιος", en: "April"}, value: 57}
+  - {label: {gr: "Μάιος", en: "May"}, value: 61}
+  - {label: {gr: "Ιούνιος", en: "June"}, value: 68}
+  - {label: {gr: "Ιούλιος", en: "July"}, value: 79}
+  - {label: {gr: "Αύγουστος", en: "August"}, value: 86}
+  - {label: {gr: "Σεπτέμβριος", en: "September"}, value: 75}
+  - {label: {gr: "Οκτώβριος", en: "October"}, value: 71}
+  - {label: {gr: "Νοέμβριος", en: "November"}, value: 61}
+  - {label: {gr: "Δεκέμβριος", en: "December"}, value: 63}

@@ -1,0 +1,29 @@
+# cars-used-new-2026-10: electric cars as % of the new passenger cars registered in 2025 (Eurostat road_eqr_carpda,
+# ELC / TOTAL), a selection of member states; reference = the EU-27 (17.3). Checked 2026-10-21 on the live API.
+type: bar
+unit: "%"
+max: 70
+decimals: 1
+title:
+  gr: "Ηλεκτρικά στα καινούργια αυτοκίνητα (2025)"
+  en: "Electric cars among new cars (2025)"
+note:
+  gr: "Αμιγώς ηλεκτρικά, χωρίς τα plug-in. Πηγή: Eurostat. Επεξεργασία: DataForGreece."
+  en: "Battery electric only, without plug-ins. Source: Eurostat. Processing: DataForGreece."
+reference:
+  value: 17.3
+  decimals: 1
+  label_prefix: {gr: "ΕΕ-27", en: "EU-27"}
+rows:
+  - {label: {gr: "Δανία", en: "Denmark"}, value: 67.8}
+  - {label: {gr: "Ολλανδία", en: "Netherlands"}, value: 40.2}
+  - {label: {gr: "Σουηδία", en: "Sweden"}, value: 36.4}
+  - {label: {gr: "Πορτογαλία", en: "Portugal"}, value: 23.3}
+  - {label: {gr: "Γαλλία", en: "France"}, value: 19.6}
+  - {label: {gr: "Γερμανία", en: "Germany"}, value: 19.1}
+  - {label: {gr: "Κύπρος", en: "Cyprus"}, value: 10.1}
+  - {label: {gr: "Ισπανία", en: "Spain"}, value: 8.7}
+  - {label: {gr: "Ελλάδα", en: "Greece"}, value: 6.2}
+  - {label: {gr: "Ιταλία", en: "Italy"}, value: 6.1}
+  - {label: {gr: "Βουλγαρία", en: "Bulgaria"}, value: 4.9}
+  - {label: {gr: "Κροατία", en: "Croatia"}, value: 1.9}

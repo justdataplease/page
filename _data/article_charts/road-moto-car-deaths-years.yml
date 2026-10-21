@@ -1,0 +1,21 @@
+# road-safety-motorcycles-2026-10: road deaths in Greece by the victim's vehicle, motorcycles + mopeds vs passenger cars,
+# 2010-2024 (Eurostat tran_sf_roadve, NR: MOTO_NSP + MOTO_LE125 + MOTO_GT125 + MOP vs CAR). Checked 2026-10-21.
+type: line
+unit: ""
+max: 600
+y_interval: 100
+decimals: 0
+title:
+  gr: "Νεκροί σε μοτοσικλέτες και σε αυτοκίνητα, Ελλάδα"
+  en: "Road deaths on motorcycles and in cars, Greece"
+note:
+  gr: "Οδηγοί και επιβάτες κάθε οχήματος. Μοτοσικλέτες μαζί με τα μοτοποδήλατα. Πηγή: Eurostat. Επεξεργασία: DataForGreece."
+  en: "Drivers and passengers of each vehicle. Motorcycles include mopeds. Source: Eurostat. Processing: DataForGreece."
+x_label: {gr: "Έτος", en: "Year"}
+x: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+fallback_step: 2
+series:
+  - name: {gr: "Μοτοσικλέτες και μοτοποδήλατα", en: "Motorcycles and mopeds"}
+    values: [403, 339, 317, 296, 298, 269, 265, 248, 217, 247, 212, 235, 211, 247, 287]
+  - name: {gr: "Επιβατικά αυτοκίνητα", en: "Passenger cars"}
+    values: [545, 474, 383, 347, 289, 314, 340, 285, 267, 202, 205, 226, 261, 245, 236]
