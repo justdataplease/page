@@ -5,12 +5,12 @@ description: "Τιμές διαμερισμάτων σε Αθήνα, Θεσσα�
 category: Τιμές & ακρίβεια
 date: 2026-10-08
 published_by: "DataForGreece"
-last_update: "2026-10-08"
+last_update: "2026-10-21"
 date_added: "2026-10-08"
 data_dates: "2006/Q1 - 2026/Q2 · ιστορικές σειρές από 1993 · κόστος στέγασης 2003 - 2025"
-source_name: "Τράπεζα της Ελλάδος – Δείκτες τιμών οικιστικών ακινήτων,ΕΚΤ – Τιμές κατοικιών (RESR),ΕΚΤ – Τραπεζικά επιτόκια (MIR),ΕΚΤ – Δάνεια και καταθέσεις (BSI),Eurostat – Υπερβολικό κόστος στέγασης (ilc_lvho07a),Eurostat – Εναρμονισμένος δείκτης τιμών καταναλωτή (prc_hicp_minr)"
-source_url: "https://www.bankofgreece.gr/statistika/agora-akinhtwn/deiktes-timwn-oikistikwn-kai-epaggelmatikwn-akinhtwnwn,https://data.ecb.europa.eu/data/datasets/RESR,https://data.ecb.europa.eu/data/datasets/MIR,https://data.ecb.europa.eu/data/datasets/BSI,https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07a/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en"
-description_detailed: "Ο δείκτης τιμών διαμερισμάτων της Τράπεζας της Ελλάδος κάθε τρίμηνο, για την Αθήνα, τη Θεσσαλονίκη και την υπόλοιπη χώρα. Δίπλα του τα ενοίκια, τα στεγαστικά δάνεια και τα επιτόκιά τους και πόσα νοικοκυριά «πνίγονται» από το κόστος στέγασης, σε όλη την ΕΕ."
+source_name: "Τράπεζα της Ελλάδος – Δείκτες τιμών οικιστικών ακινήτων,ΕΚΤ – Τιμές κατοικιών (RESR),ΕΚΤ – Τραπεζικά επιτόκια (MIR),ΕΚΤ – Δάνεια και καταθέσεις (BSI),Eurostat – Υπερβολικό κόστος στέγασης (ilc_lvho07a),Eurostat – Εναρμονισμένος δείκτης τιμών καταναλωτή (prc_hicp_minr),ΕΛΣΤΑΤ – Οικοδομική δραστηριότητα (SOP03),Eurostat – Άδειες οικοδομής (sts_cobp_m),Eurostat – Παραγωγή στις κατασκευές (sts_copr_q),Eurostat – Κόστος και τιμές νέων κατοικιών (sts_copi_q)"
+source_url: "https://www.bankofgreece.gr/statistika/agora-akinhtwn/deiktes-timwn-oikistikwn-kai-epaggelmatikwn-akinhtwnwn,https://data.ecb.europa.eu/data/datasets/RESR,https://data.ecb.europa.eu/data/datasets/MIR,https://data.ecb.europa.eu/data/datasets/BSI,https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07a/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SOP03/-,https://ec.europa.eu/eurostat/databrowser/view/sts_cobp_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/sts_copr_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/sts_copi_q/default/table?lang=en"
+description_detailed: "Ο δείκτης τιμών διαμερισμάτων της Τράπεζας της Ελλάδος κάθε τρίμηνο, για την Αθήνα, τη Θεσσαλονίκη και την υπόλοιπη χώρα. Δίπλα του τα ενοίκια, τα στεγαστικά δάνεια και τα επιτόκιά τους και πόσα νοικοκυριά «πνίγονται» από το κόστος στέγασης, σε όλη την ΕΕ. Μαζί οι οικοδομικές άδειες, η παραγωγή στις κατασκευές και το κόστος για να χτιστεί ένα νέο σπίτι."
 description_preprocess: "Τα στοιχεία της Eurostat και της ΕΚΤ ενημερώνονται αυτόματα, μαζί με τις αναθεωρήσεις. Τον δείκτη της Τράπεζας της Ελλάδος τον διαβάζουμε από τις δημοσιεύσεις της."
 image_path: assets/posts/topic-housing.webp
 ---
@@ -26,5 +26,6 @@ image_path: assets/posts/topic-housing.webp
 | value, value_prev_year            | Τιμή                       | Η τιμή της πηγής και η τιμή της ίδιας περιόδου έναν χρόνο πριν. |
 | status_flag                       | Σήμανση                    | p προσωρινή, e εκτίμηση, b διακοπή σειράς. |
 | is_latest                         | Πιο πρόσφατη               | TRUE στην πιο πρόσφατη τιμή κάθε σειράς. |
+| indic_bt                          | Κατασκευές                 | Άδειες, παραγωγή, κόστος κατασκευής ή τιμές νέων κατοικιών. |
 
-**ΣΗΜΕΙΩΣΗ** - Πηγές: Τράπεζα της Ελλάδος, ΕΚΤ και Eurostat. Δείκτες με διαφορετική βάση συγκρίνονται μόνο ως μεταβολές, και ο δείκτης ενοικίων μετρά όλα τα ενοίκια, όχι μόνο τις νέες μισθώσεις. Τα στοιχεία επαναχρησιμοποιούνται με αναφορά της πηγής· τα μεταφράσαμε και τα αναδιατάξαμε εμείς και οι φορείς δεν ευθύνονται για τις αλλαγές.
+**ΣΗΜΕΙΩΣΗ** - Πηγές: Τράπεζα της Ελλάδος, ΕΚΤ, Eurostat και ΕΛΣΤΑΤ. Δείκτες με διαφορετική βάση συγκρίνονται μόνο ως μεταβολές, και ο δείκτης ενοικίων μετρά όλα τα ενοίκια, όχι μόνο τις νέες μισθώσεις. Τα στοιχεία επαναχρησιμοποιούνται με αναφορά της πηγής· τα μεταφράσαμε και τα αναδιατάξαμε εμείς και οι φορείς δεν ευθύνονται για τις αλλαγές.

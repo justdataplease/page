@@ -5,11 +5,11 @@ description: "Ανεργία κάθε μήνα, απασχόληση, κατώτ
 category: Εργασία & μισθοί
 date: 2026-10-08
 published_by: "DataForGreece"
-last_update: "2026-10-08"
+last_update: "2026-10-21"
 date_added: "2026-10-08"
 data_dates: "1998/04 - 2026/08 · περιφέρειες 1999 - 2025 · μισθοί 1995 - 2026"
-source_name: "Eurostat – Ανεργία μηνιαία (une_rt_m),Eurostat – Ποσοστό απασχόλησης (lfsi_emp_q),Eurostat – Ανεργία ανά περιφέρεια (lfst_r_lfu3rt),Eurostat – Κατώτατος μισθός (earn_mw_cur),Eurostat – Μέσος μισθός πλήρους απασχόλησης (nama_10_fte),ΕΛΣΤΑΤ – Έρευνα Εργατικού Δυναμικού"
-source_url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/earn_mw_cur/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_fte/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SJO01/-"
+source_name: "Eurostat – Ανεργία μηνιαία (une_rt_m),Eurostat – Ποσοστό απασχόλησης (lfsi_emp_q),Eurostat – Ανεργία ανά περιφέρεια (lfst_r_lfu3rt),Eurostat – Κατώτατος μισθός (earn_mw_cur),Eurostat – Μέσος μισθός πλήρους απασχόλησης (nama_10_fte),ΕΛΣΤΑΤ – Έρευνα Εργατικού Δυναμικού,Eurostat – Κενές θέσεις εργασίας (jvs_q_r21),Eurostat – Απασχολούμενοι ανά κλάδο (lfsq_egan2),Eurostat – Απασχόληση ανά περιφέρεια (lfst_r_lfe2emprt)"
+source_url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/earn_mw_cur/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_fte/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SJO01/-,https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsq_egan2/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfe2emprt/default/table?lang=en"
 description_detailed: "Η ανεργία κάθε μήνα, η απασχόληση και οι κενές θέσεις, για την Ελλάδα, τις περιφέρειές της και τις χώρες της ΕΕ, μαζί με τον κατώτατο και τον μέσο μισθό, το κόστος εργασίας και το τι αξίζει ο μισθός όταν αφαιρέσουμε την άνοδο των τιμών."
 description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, γιατί η ανεργία αναθεωρείται κάθε μήνα. Τον πραγματικό μισθό τον υπολογίζουμε εμείς με τον δείκτη τιμών καταναλωτή."
 image_path: assets/posts/topic-work-fisherman.webp

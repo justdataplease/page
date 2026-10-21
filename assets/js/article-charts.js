@@ -98,7 +98,7 @@
                     interval: spec.x_interval != null ? spec.x_interval : spec.select_series ? (narrow ? 1 : 0) : (narrow ? 9 : 4) }
             },
             yAxis: {
-                type: 'value', min: 0, max: spec.max || 100, interval: spec.y_interval || (spec.max || 100) / 5,
+                type: 'value', min: spec.min || 0, max: spec.max || 100, interval: spec.y_interval || ((spec.max || 100) - (spec.min || 0)) / 5,
                 axisLabel: { formatter: function (v) { return numberText(v, 0, lang, unit); }, color: t.ink3, fontFamily: t.font, fontSize: 11 },
                 splitLine: { lineStyle: { color: t.rule, type: 'dotted' } }
             },

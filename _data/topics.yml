@@ -460,8 +460,11 @@
       - { name: "Ευρωπαϊκή Κεντρική Τράπεζα", url: "https://data.ecb.europa.eu", note: "Στεγαστικά δάνεια και επιτόκια" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Βάρος κόστους στέγασης, ιδιοκατοίκηση, συνωστισμός" }
       - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Ο δείκτης των ενοικίων" }
+      - { name: "ΕΛΣΤΑΤ, οικοδομική δραστηριότητα", url: "https://www.statistics.gr/el/statistics/-/publication/SOP03/-", note: "Οι ιδιωτικές οικοδομικές άδειες κάθε μήνα" }
+      - { name: "Eurostat, κατασκευές", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Άδειες για κατοικίες, παραγωγή στις κατασκευές, κόστος κατασκευής και τιμές νέων κατοικιών" }
     notes:
       - "Ο δείκτης ενοικίων του ΕνΔΤΚ μετρά ενοίκια όλων των μισθώσεων, παλαιών και νέων· οι νέες μισθώσεις ακριβαίνουν πιο γρήγορα."
+      - "Η ΕΕ δεν δημοσιεύει πια μέσο όρο για το κόστος κατασκευής, γι' αυτό το δείχνουμε μόνο για την Ελλάδα."
       - "Τα στοιχεία της Eurostat, της ΕΚΤ και της ΤτΕ τα μεταφράσαμε και τα αναδιατάξαμε εμείς· δεν ευθύνονται για τις αλλαγές."
   en:
     name: "Housing"
@@ -473,8 +476,11 @@
       - { name: "European Central Bank", url: "https://data.ecb.europa.eu", note: "Mortgages and interest rates" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Housing cost overburden, home ownership, overcrowding" }
       - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "The rents index" }
+      - { name: "ELSTAT, building activity", url: "https://www.statistics.gr/en/statistics/-/publication/SOP03/-", note: "Private building permits every month" }
+      - { name: "Eurostat, construction", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Dwelling permits, construction output, construction costs and prices of new dwellings" }
     notes:
       - "The HICP rents index covers all leases, old and new; new leases rise faster."
+      - "The EU no longer publishes an average for construction costs, so we show them for Greece only."
       - "We translated and rearranged the Eurostat, ECB and Bank of Greece data; they are not responsible for the changes."
 
 - key: energy
@@ -652,8 +658,10 @@
       - { name: "Eurostat, Έρευνα Εργατικού Δυναμικού", url: "https://ec.europa.eu/eurostat/web/lfs", note: "Ανεργία και απασχόληση, μηνιαία, τριμηνιαία και ανά περιφέρεια" }
       - { name: "Eurostat, μισθοί και κόστος εργασίας", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Κατώτατος μισθός, μέσος μισθός πλήρους απασχόλησης, καθαρές αποδοχές" }
       - { name: "ΕΛΣΤΑΤ, Έρευνα Εργατικού Δυναμικού", url: "https://www.statistics.gr/el/statistics/-/publication/SJO01/-", note: "Η ελληνική πηγή της έρευνας" }
+      - { name: "Eurostat, κενές θέσεις εργασίας", url: "https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en", note: "Οι θέσεις που ψάχνουν άνθρωπο, κάθε τρίμηνο" }
     notes:
       - "Τα μηνιαία ποσοστά ανεργίας είναι εποχικά διορθωμένα· τα περιφερειακά είναι ετήσια."
+      - "Τους απασχολούμενους ανά κλάδο τους συγκρίνουμε με το ίδιο τρίμηνο πριν από πέντε χρόνια, γιατί η έρευνα δεν διορθώνεται εποχικά."
       - "Οι πραγματικοί μισθοί υπολογίζονται με τον εναρμονισμένο δείκτη τιμών (βλ. Πληθωρισμός). Ο κατώτατος μισθός είναι σε 12 μηνιαίες δόσεις, όπως τον μετρά η Eurostat."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
@@ -665,8 +673,10 @@
       - { name: "Eurostat, Labour Force Survey", url: "https://ec.europa.eu/eurostat/web/lfs", note: "Unemployment and employment, monthly, quarterly and by region" }
       - { name: "Eurostat, earnings and labour costs", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Minimum wage, average full-time salary, net earnings" }
       - { name: "ELSTAT, Labour Force Survey", url: "https://www.statistics.gr/en/statistics/-/publication/SJO01/-", note: "The Greek source of the survey" }
+      - { name: "Eurostat, job vacancies", url: "https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en", note: "Jobs looking for someone to fill them, every quarter" }
     notes:
       - "Monthly unemployment rates are seasonally adjusted; regional rates are annual."
+      - "We compare employment by sector with the same quarter five years earlier, because the survey is not seasonally adjusted."
       - "Real wages use the harmonised price index (see Inflation). The minimum wage is in 12 monthly payments, as Eurostat measures it."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 

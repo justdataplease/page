@@ -1,0 +1,30 @@
+# housing-new-buildings-2026-10: median asking price per m2 in our sale listings of the last 12 complete months, homes
+# built 2015 or later vs before 1980, Greece and each region (akinita.price_by_feature, feature "Έτος κατασκευής";
+# Western Macedonia left out: too few new-build listings). Checked 2026-10-21.
+type: dumbbell
+unit: " €"
+max: 6000
+decimals: 0
+title:
+  gr: "Ζητούμενη τιμή ανά τ.μ.: νεόδμητα και παλιά σπίτια"
+  en: "Asking price per m²: new and old homes"
+note:
+  gr: "Διάμεση ζητούμενη τιμή στις αγγελίες πώλησης των τελευταίων 12 μηνών. Πηγή: αγγελίες ακινήτων. Επεξεργασία: DataForGreece."
+  en: "Median asking price in the sale listings of the last 12 months. Source: property listings. Processing: DataForGreece."
+series:
+  - name: {gr: "Χτισμένα από το 2015", en: "Built 2015 or later"}
+  - name: {gr: "Χτισμένα πριν το 1980", en: "Built before 1980"}
+rows:
+  - {label: {gr: "Ελλάδα", en: "Greece"}, values: [4000, 2195]}
+  - {label: {gr: "Νότιο Αιγαίο", en: "South Aegean"}, values: [5245, 2632]}
+  - {label: {gr: "Αττική", en: "Attica"}, values: [4538, 2286]}
+  - {label: {gr: "Ιόνια Νησιά", en: "Ionian Islands"}, values: [4487, 2083]}
+  - {label: {gr: "Κρήτη", en: "Crete"}, values: [3915, 1630]}
+  - {label: {gr: "Πελοπόννησος", en: "Peloponnese"}, values: [3195, 1284]}
+  - {label: {gr: "Κεντρική Μακεδονία", en: "Central Macedonia"}, values: [2979, 2333]}
+  - {label: {gr: "Βόρειο Αιγαίο", en: "North Aegean"}, values: [2933, 1176]}
+  - {label: {gr: "Δυτική Ελλάδα", en: "Western Greece"}, values: [2800, 1242]}
+  - {label: {gr: "Ανατ. Μακεδονία και Θράκη", en: "East Macedonia and Thrace"}, values: [2720, 1284]}
+  - {label: {gr: "Ήπειρος", en: "Epirus"}, values: [2701, 1276]}
+  - {label: {gr: "Στερεά Ελλάδα", en: "Central Greece"}, values: [2409, 1088]}
+  - {label: {gr: "Θεσσαλία", en: "Thessaly"}, values: [2400, 1158]}
