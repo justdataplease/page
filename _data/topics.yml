@@ -235,8 +235,10 @@
     updates: "Κάθε μέρα"
     sources:
       - { name: "Δήμος Αθηναίων – Έξυπνη Γειτονιά", url: "https://opendata.cityofathens.gr/", note: "Αισθητήρες αέρα ανά ώρα και συσκευές WiFi ανά ημέρα, σε πλατείες, πάρκα και γήπεδα" }
+      - { name: "Ευρωπαϊκός Οργανισμός Περιβάλλοντος, ποιότητα αέρα", url: "https://eeadmz1-downloads-webapp.azurewebsites.net/", note: "Οι επίσημοι σταθμοί του εθνικού δικτύου στην Αττική, επικυρωμένα στοιχεία" }
     notes:
       - "Είναι αισθητήρες χαμηλού κόστους: δείχνουν διαφορές ανάμεσα σε γειτονιές, ώρες και εποχές, όχι τις επίσημες μετρήσεις του δικτύου του Υπουργείου. Οι ενδείξεις χαλασμένων αισθητήρων αφαιρούνται."
+      - "Οι επίσημοι σταθμοί έχουν επικυρωμένα στοιχεία μόνο για τα προηγούμενα χρόνια, γι' αυτό τους δείχνουμε σε δική τους σελίδα και δεν τους ανακατεύουμε με τους αισθητήρες."
       - "Η θερμοκρασία μετριέται στο ύψος του δρόμου και δείχνει πιο ψηλά από τους επίσημους μετεωρολογικούς σταθμούς."
       - "Το WiFi μετρά διαφορετικές συσκευές ανά σταθμό και ημέρα, όχι ανθρώπους· ένα κινητό που περνά από δύο σταθμούς μετριέται και στους δύο."
   en:
@@ -246,8 +248,10 @@
     updates: "Every day"
     sources:
       - { name: "City of Athens – Smart Neighbourhood", url: "https://opendata.cityofathens.gr/", note: "Air sensors by hour and WiFi devices by day, in squares, parks and sports grounds" }
+      - { name: "European Environment Agency, air quality", url: "https://eeadmz1-downloads-webapp.azurewebsites.net/", note: "The official national-network stations in Attica, verified data" }
     notes:
       - "These are low-cost sensors: they show differences between neighbourhoods, hours and seasons, not the official readings of the Ministry's network. Readings from broken sensors are removed."
+      - "The official stations only have verified data for past years, so they have a page of their own and are not mixed with the sensors."
       - "Temperature is measured at street level and reads higher than the official weather stations."
       - "WiFi counts different devices per station and day, not people; a phone that passes two stations is counted at both."
 
@@ -660,7 +664,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNzgxMDhhNDctYjRlYS00MjkxLThiNzgtZmJhZTBjMmM5OTZiIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Εργασία & μισθοί"
-    dek: "Πόσοι δουλεύουν, πόσοι ψάχνουν δουλειά και πόσα παίρνουν: ανεργία κάθε μήνα, κατώτατος και μέσος μισθός, πραγματικοί μισθοί, κάθε περιφέρεια, δίπλα στην ΕΕ."
+    dek: "Πόσοι δουλεύουν, πόσοι ψάχνουν δουλειά και πόσα παίρνουν: ανεργία κάθε μήνα και το μητρώο ανέργων, κατώτατος και μέσος μισθός, πραγματικοί μισθοί, κάθε περιφέρεια, δίπλα στην ΕΕ."
     coverage: "1999 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -668,14 +672,16 @@
       - { name: "Eurostat, μισθοί και κόστος εργασίας", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Κατώτατος μισθός, μέσος μισθός πλήρους απασχόλησης, καθαρές αποδοχές" }
       - { name: "ΕΛΣΤΑΤ, Έρευνα Εργατικού Δυναμικού", url: "https://www.statistics.gr/el/statistics/-/publication/SJO01/-", note: "Η ελληνική πηγή της έρευνας" }
       - { name: "Eurostat, κενές θέσεις εργασίας", url: "https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en", note: "Οι θέσεις που ψάχνουν άνθρωπο, κάθε τρίμηνο" }
+      - { name: "ΔΥΠΑ, στατιστικά", url: "https://www.dypa.gov.gr/statistika", note: "Εγγεγραμμένοι άνεργοι και επιδοτούμενοι, κάθε μήνα και ανά περιφέρεια" }
     notes:
       - "Τα μηνιαία ποσοστά ανεργίας είναι εποχικά διορθωμένα· τα περιφερειακά είναι ετήσια."
+      - "Οι εγγεγραμμένοι άνεργοι της ΔΥΠΑ είναι όσοι γράφτηκαν στο μητρώο της· είναι άλλος ορισμός από την ανεργία της έρευνας, γι' αυτό τα δύο νούμερα δεν συγκρίνονται απευθείας."
       - "Τους απασχολούμενους ανά κλάδο τους συγκρίνουμε με το ίδιο τρίμηνο πριν από πέντε χρόνια, γιατί η έρευνα δεν διορθώνεται εποχικά."
       - "Οι πραγματικοί μισθοί υπολογίζονται με τον εναρμονισμένο δείκτη τιμών (βλ. Πληθωρισμός). Ο κατώτατος μισθός είναι σε 12 μηνιαίες δόσεις, όπως τον μετρά η Eurostat."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Work & pay"
-    dek: "How many work, how many are looking for work and what they earn: monthly unemployment, minimum and average wage, real wages, every region, next to the EU."
+    dek: "How many work, how many are looking for work and what they earn: monthly unemployment and the jobless register, minimum and average wage, real wages, every region, next to the EU."
     coverage: "1999 – today · 13 regions · 27 EU countries"
     updates: "Every month"
     sources:
@@ -683,8 +689,10 @@
       - { name: "Eurostat, earnings and labour costs", url: "https://ec.europa.eu/eurostat/web/labour-market/information-data/earnings", note: "Minimum wage, average full-time salary, net earnings" }
       - { name: "ELSTAT, Labour Force Survey", url: "https://www.statistics.gr/en/statistics/-/publication/SJO01/-", note: "The Greek source of the survey" }
       - { name: "Eurostat, job vacancies", url: "https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en", note: "Jobs looking for someone to fill them, every quarter" }
+      - { name: "DYPA (Public Employment Service), statistics", url: "https://www.dypa.gov.gr/statistika", note: "Registered unemployed and benefit recipients, every month and by region" }
     notes:
       - "Monthly unemployment rates are seasonally adjusted; regional rates are annual."
+      - "DYPA's registered unemployed are the people on its register; that is a different definition from the survey's unemployment, so the two figures are not directly comparable."
       - "We compare employment by sector with the same quarter five years earlier, because the survey is not seasonally adjusted."
       - "Real wages use the harmonised price index (see Inflation). The minimum wage is in 12 monthly payments, as Eurostat measures it."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
@@ -972,6 +980,47 @@
       - { name: "Eurostat, road transport", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en", note: "New cars and cars on the road by fuel, per inhabitant and by region" }
     notes:
       - "Listing prices are asking prices, not sale prices."
+      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+
+- key: transport
+  kind: topic
+  category: business
+  model: stats
+  image: assets/posts/athens.webp
+  since: 1990
+  cadence: monthly
+  data: [transport-greece]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMWI5NzE1M2ItNGUwMC00MWZiLWFjMTUtZTFiODY5MjdhZjI3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Μεταφορές"
+    dek: "Πόσοι παίρνουν κάθε μέρα το μετρό, τα λεωφορεία, το τραμ και τον προαστιακό της Αθήνας, ποιοι σταθμοί γεμίζουν και πότε, και πόσο λίγο ταξιδεύει η Ελλάδα με τρένο δίπλα στην ΕΕ."
+    coverage: "ΟΑΣΑ 2020 – σήμερα · Eurostat 1990 – σήμερα · 27 χώρες ΕΕ"
+    updates: "Κάθε μέρα (ΟΑΣΑ) · κάθε χρόνο (Eurostat)"
+    sources:
+      - { name: "ΟΑΣΑ, επιβατικό κοινό (data.gov.gr)", url: "https://data.gov.gr/dataset/oasa_ridership", note: "Επικυρώσεις εισιτηρίων ανά σταθμό και ώρα, κάθε μέρα" }
+      - { name: "Eurostat, σιδηροδρομικές μεταφορές", url: "https://ec.europa.eu/eurostat/web/transport/database", note: "Επιβάτες τρένων και σιδηροδρομικά ατυχήματα" }
+      - { name: "Eurostat, μεταφορές ανά μέσο", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_hv_psmod/default/table?lang=en", note: "Αυτοκίνητο, λεωφορείο και τρένο στις μετακινήσεις, και τα εμπορεύματα" }
+    notes:
+      - "Οι επικυρώσεις δεν είναι επιβάτες: στο μετρό μετρώνται είσοδοι και έξοδοι, και στα λεωφορεία πολλοί δεν χτυπούν εισιτήριο."
+      - "Ο ΟΑΣΑ άλλαξε τη ροή των δεδομένων το φθινόπωρο του 2024· στα λεωφορεία και στο τραμ τα νούμερα πριν και μετά δεν συγκρίνονται."
+      - "Αφήνουμε έξω τις μέρες με κενά ή διπλά στοιχεία στην πηγή· ο τελευταίος μήνας που δείχνουμε είναι ο τελευταίος πλήρης."
+      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+  en:
+    name: "Transport"
+    dek: "How many people take the Athens metro, buses, tram and suburban railway every day, which stations fill up and when, and how little Greece travels by train next to the EU."
+    coverage: "OASA 2020 – today · Eurostat 1990 – today · 27 EU countries"
+    updates: "Every day (OASA) · every year (Eurostat)"
+    sources:
+      - { name: "OASA, ridership (data.gov.gr)", url: "https://data.gov.gr/dataset/oasa_ridership", note: "Ticket validations by station and hour, every day" }
+      - { name: "Eurostat, rail transport", url: "https://ec.europa.eu/eurostat/web/transport/database", note: "Rail passengers and rail accidents" }
+      - { name: "Eurostat, transport by mode", url: "https://ec.europa.eu/eurostat/databrowser/view/tran_hv_psmod/default/table?lang=en", note: "Car, bus and train in passenger travel, and freight" }
+    notes:
+      - "Validations are not passengers: on the metro both entries and exits count, and many bus riders do not validate."
+      - "OASA changed its data feed in autumn 2024; for buses and tram the figures before and after are not comparable."
+      - "We leave out days with gaps or doubled figures in the source; the latest month shown is the last complete one."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 # ── Special topics: one-off, event-like features ─────────────────────────
