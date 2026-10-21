@@ -1,0 +1,49 @@
+# gemi-official-business-births-2026-10: GEMI new head offices (incorporation year 2024, NACE Rev. 2 sections of the
+# main KAD 2008 code) per 100 official enterprise births (Eurostat bd_size, 2024), sections with 100+ official births.
+# BigQuery gemi.gemi_vs_official (breakdown = sector, year = 2024).gemi_share_of_official_pct, checked 2026-10-21.
+type: bar
+unit: "%"
+max: 140
+decimals: 0
+title:
+  gr: "Νέες επιχειρήσεις στο ΓΕΜΗ ως % των επίσημων, ανά κλάδο (2024)"
+  en: "New businesses in GEMI as a % of the official count, by sector (2024)"
+note:
+  gr: "Νέες έδρες στο ΓΕΜΗ ÷ γεννήσεις επιχειρήσεων της Eurostat (μητρώο επιχειρήσεων ΕΛΣΤΑΤ), ίδιοι κλάδοι. Πηγές: ΓΕΜΗ, Eurostat. Επεξεργασία: DataForGreece."
+  en: "New head offices in GEMI ÷ Eurostat enterprise births (ELSTAT business register), same sectors. Sources: GEMI, Eurostat. Processing: DataForGreece."
+reference:
+  value: 100
+  label: {gr: "όσες και τα επίσημα", en: "as many as the official count"}
+rows:
+  - label: {gr: "Ενέργεια", en: "Energy"}
+    value: 133.2
+  - label: {gr: "Χρηματοπιστωτικά & ασφάλειες", en: "Finance & insurance"}
+    value: 132.3
+  - label: {gr: "Ακίνητα", en: "Real estate"}
+    value: 131.1
+  - label: {gr: "Καταλύματα & εστίαση", en: "Accommodation & food"}
+    value: 99.4
+  - label: {gr: "Εμπόριο", en: "Trade"}
+    value: 97.8
+  - label: {gr: "Νερό & απόβλητα", en: "Water & waste"}
+    value: 95.6
+  - label: {gr: "Κατασκευές", en: "Construction"}
+    value: 87.7
+  - label: {gr: "Μεταποίηση", en: "Manufacturing"}
+    value: 87.2
+  - label: {gr: "Ενημέρωση & επικοινωνία", en: "Information & communication"}
+    value: 80.9
+  - label: {gr: "Άλλες υπηρεσίες", en: "Other services"}
+    value: 77.8
+  - label: {gr: "Διοικητικές & υποστηρικτικές", en: "Administrative & support"}
+    value: 77.0
+  - label: {gr: "Τέχνες & ψυχαγωγία", en: "Arts & recreation"}
+    value: 72.7
+  - label: {gr: "Μεταφορές & αποθήκευση", en: "Transport & storage"}
+    value: 58.7
+  - label: {gr: "Επαγγελματικές & επιστημονικές", en: "Professional & scientific"}
+    value: 48.8
+  - label: {gr: "Εκπαίδευση", en: "Education"}
+    value: 46.4
+  - label: {gr: "Υγεία & κοινωνική μέριμνα", en: "Health & social work"}
+    value: 33.8

@@ -1,0 +1,44 @@
+# gemi-official-business-births-2026-10: GEMI new head offices (incorporation year 2023) per 100 official enterprise
+# births (Eurostat bd_size_r, 2023, the latest regional year) by region. BigQuery gemi.gemi_vs_official
+# (breakdown = region, year = 2023).gemi_share_of_official_pct; Greece (reference) = breakdown total 2023, checked 2026-10-21.
+type: bar
+unit: "%"
+max: 100
+decimals: 0
+title:
+  gr: "Νέες επιχειρήσεις στο ΓΕΜΗ ως % των επίσημων, ανά περιφέρεια (2023)"
+  en: "New businesses in GEMI as a % of the official count, by region (2023)"
+note:
+  gr: "Νέες έδρες στο ΓΕΜΗ ÷ γεννήσεις επιχειρήσεων της Eurostat, ίδιοι κλάδοι. Το 2023 είναι το τελευταίο έτος με στοιχεία ανά περιφέρεια. Πηγές: ΓΕΜΗ, Eurostat. Επεξεργασία: DataForGreece."
+  en: "New head offices in GEMI ÷ Eurostat enterprise births, same sectors. 2023 is the latest year with regional data. Sources: GEMI, Eurostat. Processing: DataForGreece."
+reference:
+  value: 75.2
+  decimals: 0
+  label_prefix: {gr: "Ελλάδα", en: "Greece"}
+rows:
+  - label: {gr: "Νότιο Αιγαίο", en: "South Aegean"}
+    value: 92.1
+  - label: {gr: "Ιόνια Νησιά", en: "Ionian Islands"}
+    value: 81.3
+  - label: {gr: "Αττική", en: "Attica"}
+    value: 78.8
+  - label: {gr: "Κρήτη", en: "Crete"}
+    value: 78.2
+  - label: {gr: "Στερεά Ελλάδα", en: "Central Greece"}
+    value: 71.9
+  - label: {gr: "Κεντρική Μακεδονία", en: "Central Macedonia"}
+    value: 71.4
+  - label: {gr: "Βόρειο Αιγαίο", en: "North Aegean"}
+    value: 69.2
+  - label: {gr: "Δυτική Ελλάδα", en: "Western Greece"}
+    value: 68.2
+  - label: {gr: "Θεσσαλία", en: "Thessaly"}
+    value: 68.2
+  - label: {gr: "Πελοπόννησος", en: "Peloponnese"}
+    value: 68.0
+  - label: {gr: "Ανατολική Μακεδονία και Θράκη", en: "Eastern Macedonia and Thrace"}
+    value: 64.6
+  - label: {gr: "Ήπειρος", en: "Epirus"}
+    value: 62.3
+  - label: {gr: "Δυτική Μακεδονία", en: "Western Macedonia"}
+    value: 57.1

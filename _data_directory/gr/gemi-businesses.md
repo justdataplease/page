@@ -8,8 +8,8 @@ published_by: "DataForGreece"
 last_update: "2026-10-02"
 date_added: "2026-10-07"
 data_dates: "Μητρώο 2026/10 · κινήσεις 2024/11 - 2026/10"
-source_name: "ΓΕΜΗ – Ανοιχτά δεδομένα,ΓΕΜΗ – Δημοσιότητα"
-source_url: "https://opendata.businessportal.gr,https://publicity.businessportal.gr"
+source_name: "ΓΕΜΗ – Ανοιχτά δεδομένα,ΓΕΜΗ – Δημοσιότητα,Eurostat"
+source_url: "https://opendata.businessportal.gr,https://publicity.businessportal.gr,https://ec.europa.eu/eurostat/databrowser/view/bd_size/default/table?lang=en"
 description_detailed: "Το Γενικό Εμπορικό Μητρώο (ΓΕΜΗ): κάθε εγγεγραμμένη επιχείρηση με νομική μορφή, κατάσταση, ημερομηνία σύστασης, έδρα, κλάδο και κεφάλαιο, οι νέες εγγραφές και τα λουκέτα κάθε μέρα και όλες οι δραστηριότητες κάθε επιχείρησης. Το ΓΕΜΗ δημοσιεύει τα δεδομένα με άδεια που ζητά αναφορά στο «ΓΕΜΗ»."
 description_preprocess: "Συνδυάζουμε τις δύο δημόσιες πηγές του ίδιου μητρώου και κρατάμε για κάθε επιχείρηση την πιο πρόσφατη εικόνα της. Κάθε επιχείρηση μετρά μία φορά, στην έδρα της, και παίρνει έναν κλάδο με τη σημερινή ταξινόμηση. Ονόματα και ΑΦΜ φυσικών προσώπων δεν δημοσιεύονται."
 image_path: assets/topic-businesses-ethniki.jpg
@@ -39,4 +39,4 @@ image_path: assets/topic-businesses-ethniki.jpg
 | has_website            | Ιστότοπος                | Αν η επιχείρηση δηλώνει ιστότοπο.                                                                          |
 | owner_gender_class     | Φύλο ιδιοκτησίας         | Αν ανήκει σε γυναίκες, σε άνδρες ή σε μικτή ομάδα· το φύλο εκτιμάται από τα ονόματα των ιδιοκτητών.          |
 
-**ΣΗΜΕΙΩΣΗ** - Τρεις πίνακες: gemi_companies (μία γραμμή ανά αριθμό ΓΕΜΗ), gemi_events (μία γραμμή ανά επιχείρηση, είδος κίνησης και ημέρα: event_type = registration, closing ή alteration, event_date) και gemi_company_activities (μία γραμμή ανά επιχείρηση και δραστηριότητα: kad_code, activity_type, kad_2026_section). Οι δύο τελευταίοι συνδέονται με τον πρώτο μέσω του ar_gemi.
+**ΣΗΜΕΙΩΣΗ** - Τρεις πίνακες: gemi_companies (μία γραμμή ανά αριθμό ΓΕΜΗ), gemi_events (μία γραμμή ανά επιχείρηση, είδος κίνησης και ημέρα: event_type = registration, closing ή alteration, event_date) και gemi_company_activities (μία γραμμή ανά επιχείρηση και δραστηριότητα: kad_code, activity_type, kad_2026_section). Οι δύο τελευταίοι συνδέονται με τον πρώτο μέσω του ar_gemi. Ο πίνακας gemi_vs_official βάζει τις νέες επιχειρήσεις του ΓΕΜΗ δίπλα στις επίσημες γεννήσεις και τους θανάτους επιχειρήσεων της Eurostat, ανά κλάδο και περιφέρεια.

@@ -1,0 +1,23 @@
+# gemi-official-business-births-2026-10: official enterprise births (Eurostat bd_size, Greece, industry, construction
+# and market services) and GEMI new head offices in the same sections, by year. BigQuery gemi.gemi_vs_official
+# (breakdown = total), checked 2026-10-21. 2025: GEMI only (the official year is not out yet).
+type: line
+unit: ""
+max: 100000
+y_interval: 20000
+decimals: 0
+title:
+  gr: "Νέες επιχειρήσεις ανά έτος: επίσημα στοιχεία και ΓΕΜΗ"
+  en: "New businesses per year: official count and GEMI"
+note:
+  gr: "Επίσημα: γεννήσεις επιχειρήσεων της Eurostat (μητρώο επιχειρήσεων ΕΛΣΤΑΤ). ΓΕΜΗ: νέες έδρες στους ίδιους κλάδους. Για το 2025 υπάρχει μόνο το ΓΕΜΗ. Πηγές: ΓΕΜΗ, Eurostat. Επεξεργασία: DataForGreece."
+  en: "Official: Eurostat enterprise births (ELSTAT business register). GEMI: new head offices in the same sectors. For 2025 only GEMI is out. Sources: GEMI, Eurostat. Processing: DataForGreece."
+x_label: {gr: "Έτος", en: "Year"}
+x: [2021, 2022, 2023, 2024, 2025]
+fallback_step: 1
+x_interval: 0
+series:
+  - name: {gr: "Επίσημα (Eurostat)", en: "Official (Eurostat)"}
+    values: [63597, 90224, 78754, 88028, null]
+  - name: {gr: "ΓΕΜΗ", en: "GEMI"}
+    values: [45594, 50642, 59260, 67103, 74031]

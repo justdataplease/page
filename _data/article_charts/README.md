@@ -45,6 +45,7 @@ hover, and Share / PNG buttons that export the whole figure with the DataForGree
     selector_label: {gr, en}   e.g. Region or Sector
     table_label: {gr, en}      expandable table summary; includes every series
     y_interval: 10            optional explicit y-axis tick interval
+    x_interval: 0             optional: x labels skipped between shown ones (default 4, every 5th; 0 = every x)
                               optional series.denominators adds counts to tooltips
                               optional series.dashed distinguishes the national line
                               null values show gaps in lines and an em dash in the table;

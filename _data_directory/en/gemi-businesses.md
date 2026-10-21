@@ -8,8 +8,8 @@ published_by: "DataForGreece"
 last_update: "2026-10-02"
 date_added: "2026-10-07"
 data_dates: "Registry 2026/10 · events 2024/11 - 2026/10"
-source_name: "GEMI – Open data,GEMI – Publicity portal"
-source_url: "https://opendata.businessportal.gr,https://publicity.businessportal.gr"
+source_name: "GEMI – Open data,GEMI – Publicity portal,Eurostat"
+source_url: "https://opendata.businessportal.gr,https://publicity.businessportal.gr,https://ec.europa.eu/eurostat/databrowser/view/bd_size/default/table?lang=en"
 description_detailed: "The General Commercial Registry (GEMI): every registered company with its legal form, status, incorporation date, seat, sector and capital, the new registrations and closures every day, and every activity of every company. GEMI publishes the data under a licence that asks for attribution to “GEMI”."
 description_preprocess: "We combine the two public sources of the same registry and keep the latest picture of each company. Each company counts once, at its head office, and gets one sector in today's classification. Names and tax numbers of individuals are not published."
 image_path: assets/topic-businesses-ethniki.jpg
@@ -39,4 +39,4 @@ image_path: assets/topic-businesses-ethniki.jpg
 | has_website            | Whether the company lists a website.                                                                           |
 | owner_gender_class     | Whether it is owned by women, by men or by a mixed group; gender is inferred from the owners' names.            |
 
-**NOTE** - Three tables: gemi_companies (one row per GEMI number), gemi_events (one row per company, event type and day: event_type = registration, closing or alteration, event_date) and gemi_company_activities (one row per company and activity: kad_code, activity_type, kad_2026_section). The last two join the first on ar_gemi.
+**NOTE** - Three tables: gemi_companies (one row per GEMI number), gemi_events (one row per company, event type and day: event_type = registration, closing or alteration, event_date) and gemi_company_activities (one row per company and activity: kad_code, activity_type, kad_2026_section). The last two join the first on ar_gemi. The table gemi_vs_official sets GEMI's new businesses next to Eurostat's official enterprise births and deaths, by sector and region.

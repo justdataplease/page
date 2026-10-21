@@ -95,7 +95,7 @@
                 nameTextStyle: { color: t.ink2, fontFamily: t.font, fontSize: 12 },
                 axisTick: { show: false }, axisLine: { lineStyle: { color: t.ink3 } },
                 axisLabel: { color: t.ink3, fontFamily: t.font, fontSize: 11,
-                    interval: spec.select_series ? (narrow ? 1 : 0) : (narrow ? 9 : 4) }
+                    interval: spec.x_interval != null ? spec.x_interval : spec.select_series ? (narrow ? 1 : 0) : (narrow ? 9 : 4) }
             },
             yAxis: {
                 type: 'value', min: 0, max: spec.max || 100, interval: spec.y_interval || (spec.max || 100) / 5,
