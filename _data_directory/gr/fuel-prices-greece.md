@@ -11,10 +11,10 @@ published_by: "DataForGreece"
 last_update: "2025-02-01"
 date_added: "2024-11-09"
 data_dates: "2017/01 - 2025/01"
-source_name: "Υπουργείο Ανάπτυξης και Ανταγωνιστικότητας"
-source_url: "http://www.fuelprices.gr/"
+source_name: "Υπουργείο Ανάπτυξης και Ανταγωνιστικότητας,Ευρωπαϊκή Επιτροπή – Εβδομαδιαίο Δελτίο Πετρελαίου"
+source_url: "http://www.fuelprices.gr/,https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
 chart_id: "fuel-prices-greece-daily"
-description_detailed: "Οι τιμές της βενζίνης, του πετρελαίου κίνησης και θέρμανσης και του υγραερίου, όπως τις δημοσιεύει το Υπουργείο Ανάπτυξης από τα πρατήρια, για όλη τη χώρα και κάθε νομό. Μαζί οι χονδρικές τιμές, για να φανεί πόσο από την τιμή μένει στο πρατήριο."
+description_detailed: "Οι τιμές της βενζίνης, του πετρελαίου κίνησης και θέρμανσης και του υγραερίου, όπως τις δημοσιεύει το Υπουργείο Ανάπτυξης από τα πρατήρια, για όλη τη χώρα και κάθε νομό. Μαζί οι χονδρικές τιμές, για να φανεί πόσο από την τιμή μένει στο πρατήριο. Δίπλα τους οι τιμές σε κάθε χώρα της ΕΕ, με και χωρίς φόρους."
 description_preprocess: "Τα δελτία του Υπουργείου έρχονται σε PDF· τα διαβάζουμε, τα ενώνουμε σε ενιαίο σύνολο και ελέγχουμε ότι οι τιμές είναι λογικές. Το Υπουργείο δεν εγγυάται την πληρότητα των στοιχείων των πρατηρίων."
 description_data_access_sql_bigquery: SELECT * FROM dataforgreece.public_data.fuel_prices_greece_v
 image_path: assets/posts/fuel_station.webp

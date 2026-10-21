@@ -1,0 +1,23 @@
+# fuel-prices-eu-taxes-2026-10: unleaded 95 with all taxes, Greece vs the EU average as published (EU27_2007 in 2012,
+# EU28 2013-2019, EU27_2020 from 2020), plain average of the weekly prices of each year; 2026 = to 19 October.
+# EC Weekly Oil Bulletin (stats.stats_fuel_eu). Checked 2026-10-21.
+type: line
+unit: " €"
+min: 1.2
+max: 2.2
+y_interval: 0.2
+decimals: 2
+title:
+  gr: "Αμόλυβδη 95: τιμή με φόρους, Ελλάδα και ΕΕ (€ ανά λίτρο)"
+  en: "Unleaded 95: price with taxes, Greece and the EU (€ per litre)"
+note:
+  gr: "Μέσος όρος των εβδομαδιαίων τιμών κάθε έτους· το 2026 ως τις 19 Οκτωβρίου. ΕΕ: οι χώρες μέλη της κάθε εποχής. Πηγή: Ευρωπαϊκή Επιτροπή (Εβδομαδιαίο Δελτίο Πετρελαίου). Επεξεργασία: DataForGreece."
+  en: "Average of each year's weekly prices; 2026 to 19 October. EU: the member states of each period. Source: European Commission (Weekly Oil Bulletin). Processing: DataForGreece."
+x_label: {gr: "Έτος", en: "Year"}
+x: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+fallback_step: 2
+series:
+  - name: {gr: "Ελλάδα", en: "Greece"}
+    values: [1.750, 1.693, 1.653, 1.481, 1.394, 1.511, 1.597, 1.586, 1.445, 1.646, 2.051, 1.902, 1.855, 1.761, 1.981]
+  - name: {gr: "ΕΕ", en: "EU"}
+    values: [1.622, 1.564, 1.534, 1.397, 1.291, 1.351, 1.427, 1.414, 1.277, 1.504, 1.804, 1.742, 1.701, 1.632, 1.843]

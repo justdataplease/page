@@ -1,0 +1,26 @@
+# fuel-prices-eu-taxes-2026-10: unleaded 95 on 19 October 2026, price without taxes vs with all taxes (VAT, excise),
+# a selection of member states + the EU average (EC Weekly Oil Bulletin, stats.stats_fuel_eu). Checked 2026-10-21.
+type: dumbbell
+unit: " €"
+max: 2.8
+decimals: 2
+title:
+  gr: "Αμόλυβδη 95: τιμή χωρίς και με φόρους (19 Οκτωβρίου 2026, € ανά λίτρο)"
+  en: "Unleaded 95: price without and with taxes (19 October 2026, € per litre)"
+note:
+  gr: "Φόροι: ΦΠΑ, ειδικός φόρος κατανάλωσης και άλλα τέλη. Πηγή: Ευρωπαϊκή Επιτροπή (Εβδομαδιαίο Δελτίο Πετρελαίου). Επεξεργασία: DataForGreece."
+  en: "Taxes: VAT, excise duty and other charges. Source: European Commission (Weekly Oil Bulletin). Processing: DataForGreece."
+series:
+  - name: {gr: "Με φόρους", en: "With taxes"}
+  - name: {gr: "Χωρίς φόρους", en: "Without taxes"}
+rows:
+  - {label: {gr: "Δανία", en: "Denmark"}, values: [2.60, 1.37]}
+  - {label: {gr: "Ολλανδία", en: "Netherlands"}, values: [2.39, 1.13]}
+  - {label: {gr: "Φινλανδία", en: "Finland"}, values: [2.33, 1.13]}
+  - {label: {gr: "Ελλάδα", en: "Greece"}, values: [2.19, 1.05]}
+  - {label: {gr: "Πορτογαλία", en: "Portugal"}, values: [2.10, 1.12]}
+  - {label: {gr: "Ιταλία", en: "Italy"}, values: [2.02, 0.98]}
+  - {label: {gr: "ΕΕ (μέσος όρος)", en: "EU (average)"}, values: [1.99, 1.10]}
+  - {label: {gr: "Ισπανία", en: "Spain"}, values: [1.78, 1.20]}
+  - {label: {gr: "Κύπρος", en: "Cyprus"}, values: [1.76, 1.11]}
+  - {label: {gr: "Βουλγαρία", en: "Bulgaria"}, values: [1.65, 1.01]}

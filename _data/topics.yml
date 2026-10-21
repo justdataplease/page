@@ -36,9 +36,11 @@
     sources:
       - { name: "Παρατηρητήριο Τιμών Υγρών Καυσίμων, Υπουργείο Ανάπτυξης", url: "https://www.fuelprices.gr", note: "Ημερήσια και εβδομαδιαία δελτία (PDF)" }
       - { name: "e-katanalotis (αρχείο 2021–2024)", url: "https://e-katanalotis.gov.gr", note: "Τιμές πρατηρίων ανά εταιρεία" }
+      - { name: "Ευρωπαϊκή Επιτροπή, Εβδομαδιαίο Δελτίο Πετρελαίου", url: "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en", note: "Οι τιμές σε κάθε κράτος μέλος της ΕΕ, με και χωρίς φόρους" }
     notes:
       - "Οι τιμές είναι σταθμισμένοι μέσοι όροι του Υπουργείου· δεν προστίθενται μεταξύ τους."
       - "Οι εθνικές τιμές και οι τιμές ανά νομό είναι διαφορετικές σειρές και δεν αναμειγνύονται."
+      - "Για τη σύγκριση με την ΕΕ χρησιμοποιούμε το δελτίο της Ευρωπαϊκής Επιτροπής, που έχει τιμή κάθε Δευτέρας· ο μέσος όρος της ΕΕ είναι σταθμισμένος με την κατανάλωση."
   en:
     name: "Fuel prices"
     dek: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, from 2012 to today."
@@ -47,9 +49,11 @@
     sources:
       - { name: "Observatory of Liquid Fuel Prices, Ministry of Development", url: "https://www.fuelprices.gr", note: "Daily and weekly bulletins (PDF)" }
       - { name: "e-katanalotis (2021–2024 archive)", url: "https://e-katanalotis.gov.gr", note: "Station prices by brand" }
+      - { name: "European Commission, Weekly Oil Bulletin", url: "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en", note: "Prices in every EU member state, with and without taxes" }
     notes:
       - "Prices are the Ministry's weighted averages; they are never added together."
       - "National and per-prefecture prices are separate series and are not mixed."
+      - "For the EU comparison we use the European Commission's bulletin, which has one price per Monday; the EU average is weighted by consumption."
 
 - key: supermarket-prices
   kind: topic
