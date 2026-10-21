@@ -5,13 +5,13 @@ description: "Πόσο πληρώνεται ο αγρότης, πόσο του �
 category: Τιμές & ακρίβεια
 date: 2026-10-08
 published_by: "DataForGreece"
-last_update: "2026-10-08"
+last_update: "2026-10-21"
 date_added: "2026-10-08"
-data_dates: "δείκτες 2020/Q1 - 2026/Q2 · τιμές στο χωράφι 2000 - 2024 · ράφι 1996/01 - 2026/08"
-source_name: "Eurostat – Τιμές παραγωγού αγροτικών προϊόντων (apri_pi_outq),Eurostat – Κόστος εισροών γεωργίας (apri_pi_inq),Eurostat – Τιμές στο χωράφι φυτικών προϊόντων (apri_ap_crpouta),Eurostat – Τιμές στο χωράφι γάλακτος και αυγών (apri_ap_anouta),Eurostat – Εναρμονισμένος δείκτης τιμών καταναλωτή (prc_hicp_minr)"
-source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en"
-description_detailed: "Η ίδια τιμή σε τρία σημεία: τι παίρνει ο αγρότης, τι πληρώνει για ενέργεια, λιπάσματα και ζωοτροφές, και τι πληρώνουμε εμείς στο ράφι, για την Ελλάδα και την ΕΕ. Μαζί οι τιμές στο χωράφι για ελαιόλαδο, σιτάρι, γάλα και άλλα προϊόντα."
-description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα, μαζί με τις αναθεωρήσεις. Για να μπουν δίπλα δίπλα, φέρνουμε όλες τις τιμές στην ίδια βάση. Τα ελληνικά ονόματα των προϊόντων τα γράψαμε εμείς."
+data_dates: "δείκτες 2020/Q1 - 2026/Q2 · τιμές στο χωράφι 2000 - 2024 · χονδρική 2018/05 - σήμερα · ράφι 1996/01 - 2026/08"
+source_name: "Eurostat – Τιμές παραγωγού αγροτικών προϊόντων (apri_pi_outq),Eurostat – Κόστος εισροών γεωργίας (apri_pi_inq),Eurostat – Τιμές στο χωράφι φυτικών προϊόντων (apri_ap_crpouta),Eurostat – Τιμές στο χωράφι γάλακτος και αυγών (apri_ap_anouta),Eurostat – Εναρμονισμένος δείκτης τιμών καταναλωτή (prc_hicp_minr),ΟΚΑΑ – Δελτία τιμών χονδρικής"
+source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en,https://www.okaa.gr/"
+description_detailed: "Η ίδια τιμή σε τρία σημεία: τι παίρνει ο αγρότης, τι πληρώνει για ενέργεια, λιπάσματα και ζωοτροφές, και τι πληρώνουμε εμείς στο ράφι, για την Ελλάδα και την ΕΕ. Μαζί οι τιμές στο χωράφι για ελαιόλαδο, σιτάρι, γάλα και άλλα προϊόντα, και οι τιμές χονδρικής βασικών φρούτων, λαχανικών και κρεάτων στην αγορά της Αθήνας."
+description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat και τα ημερήσια δελτία της ΟΚΑΑ και ενημερώνονται αυτόματα, μαζί με τις αναθεωρήσεις. Για να μπουν δίπλα δίπλα, φέρνουμε όλες τις τιμές στην ίδια βάση. Τα ελληνικά ονόματα των προϊόντων τα γράψαμε εμείς."
 image_path: assets/posts/topic-farm-to-shelf.webp
 ---
 
@@ -26,5 +26,6 @@ image_path: assets/posts/topic-farm-to-shelf.webp
 | period_date, year, quarter, month | Ημερομηνία                 | Η πρώτη μέρα της περιόδου και τα μέρη της. |
 | value, value_prev_year            | Τιμή                       | Η τιμή της πηγής και η τιμή της ίδιας περιόδου έναν χρόνο πριν. |
 | is_latest                         | Πιο πρόσφατη               | TRUE στην πιο πρόσφατη τιμή κάθε σειράς. |
+| product_gr, month, prevailing     | Χονδρική (ΟΚΑΑ)            | Προϊόν, μήνας και επικρατούσα τιμή χονδρικής σε € ανά κιλό. |
 
-**ΣΗΜΕΙΩΣΗ** - Πηγή: Eurostat. Στο ράφι προστίθενται μεταποίηση, μεταφορά και εμπόριο, γι’ αυτό οι τιμές παραγωγού και καταναλωτή συγκρίνονται μόνο ως μεταβολές. Τα στοιχεία της Eurostat επαναχρησιμοποιούνται ελεύθερα με αναφορά της πηγής· τα μεταφράσαμε και τα αναδιατάξαμε εμείς και η Eurostat δεν ευθύνεται για τις αλλαγές.
+**ΣΗΜΕΙΩΣΗ** - Πηγές: Eurostat και ΟΚΑΑ. Στο ράφι προστίθενται μεταποίηση, μεταφορά και εμπόριο, γι’ αυτό οι τιμές παραγωγού και καταναλωτή συγκρίνονται μόνο ως μεταβολές. Τα στοιχεία της Eurostat επαναχρησιμοποιούνται ελεύθερα με αναφορά της πηγής· τα μεταφράσαμε και τα αναδιατάξαμε εμείς και η Eurostat δεν ευθύνεται για τις αλλαγές.

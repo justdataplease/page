@@ -690,9 +690,11 @@
     sources:
       - { name: "Eurostat, τιμές γεωργικών προϊόντων", url: "https://ec.europa.eu/eurostat/web/agriculture", note: "Δείκτες τιμών παραγωγού και κόστους παραγωγής, τιμές πώλησης" }
       - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Οι τιμές καταναλωτή για τα ίδια τρόφιμα" }
+      - { name: "ΟΚΑΑ, τιμές χονδρικής", url: "https://www.okaa.gr/", note: "Οι τιμές της Κεντρικής Λαχαναγοράς και της Κρεαταγοράς Αθηνών, κάθε εργάσιμη μέρα" }
     notes:
       - "Οι τιμές παραγωγού και οι τιμές καταναλωτή είναι δείκτες με διαφορετική βάση· συγκρίνουμε μόνο τη μεταβολή τους, όχι τα επίπεδα."
       - "Οι τιμές ραφιού ανά προϊόν είναι στο θέμα Τιμές σούπερ μάρκετ."
+      - "Η τιμή χονδρικής είναι η επικρατούσα τιμή στα δελτία της ΟΚΑΑ· η τιμή παραγωγού της Eurostat είναι μέσος όρος όλης της χώρας και της χρονιάς, γι' αυτό η σύγκρισή τους δείχνει τάξη μεγέθους."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "From farm to shelf"
@@ -702,9 +704,11 @@
     sources:
       - { name: "Eurostat, agricultural prices", url: "https://ec.europa.eu/eurostat/web/agriculture", note: "Producer and input price indices, selling prices" }
       - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Consumer prices for the same foods" }
+      - { name: "OKAA, wholesale prices", url: "https://www.okaa.gr/", note: "Prices at the Athens Central Fruit, Vegetable and Meat Market, every working day" }
     notes:
       - "Producer and consumer prices are indices on different bases; we compare only how they change, not their levels."
       - "Shelf prices by product are in the Supermarket prices topic."
+      - "The wholesale price is the prevailing price in OKAA's bulletins; Eurostat's farm-gate price is an average over the whole country and year, so comparing them shows orders of magnitude."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: public-debt

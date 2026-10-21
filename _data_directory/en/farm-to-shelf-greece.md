@@ -5,13 +5,13 @@ description: "What farmers earn, what their inputs cost and what we pay on the s
 category: Prices & cost of living
 date: 2026-10-08
 published_by: "DataForGreece"
-last_update: "2026-10-08"
+last_update: "2026-10-21"
 date_added: "2026-10-08"
-data_dates: "indices 2020/Q1 - 2026/Q2 · farm-gate prices 2000 - 2024 · shelf 1996/01 - 2026/08"
-source_name: "Eurostat – Agricultural output prices (apri_pi_outq),Eurostat – Agricultural input prices (apri_pi_inq),Eurostat – Farm-gate prices of crops (apri_ap_crpouta),Eurostat – Farm-gate prices of milk and eggs (apri_ap_anouta),Eurostat – Harmonised index of consumer prices (prc_hicp_minr)"
-source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en"
-description_detailed: "One price at three points: what farmers get, what they pay for energy, fertiliser and feed, and what we pay on the shelf, in Greece and the EU. Alongside them are farm-gate prices for olive oil, wheat, milk and more."
-description_preprocess: "The data come from Eurostat and update automatically, revisions included. To set them side by side, we bring all prices to the same base. We wrote the Greek product names ourselves."
+data_dates: "indices 2020/Q1 - 2026/Q2 · farm-gate prices 2000 - 2024 · wholesale 2018/05 - today · shelf 1996/01 - 2026/08"
+source_name: "Eurostat – Agricultural output prices (apri_pi_outq),Eurostat – Agricultural input prices (apri_pi_inq),Eurostat – Farm-gate prices of crops (apri_ap_crpouta),Eurostat – Farm-gate prices of milk and eggs (apri_ap_anouta),Eurostat – Harmonised index of consumer prices (prc_hicp_minr),OKAA – Wholesale price bulletins"
+source_url: "https://ec.europa.eu/eurostat/databrowser/view/apri_pi_outq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_pi_inq/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_crpouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/apri_ap_anouta/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en,https://www.okaa.gr/"
+description_detailed: "One price at three points: what farmers get, what they pay for energy, fertiliser and feed, and what we pay on the shelf, in Greece and the EU. Alongside them are farm-gate prices for olive oil, wheat, milk and more, and the wholesale prices of staple fruit, vegetables and meat at the Athens market."
+description_preprocess: "The data come from Eurostat and OKAA's daily bulletins and update automatically, revisions included. To set them side by side, we bring all prices to the same base. We wrote the Greek product names ourselves."
 image_path: assets/posts/topic-farm-to-shelf.webp
 ---
 
@@ -26,5 +26,6 @@ image_path: assets/posts/topic-farm-to-shelf.webp
 | period_date, year, quarter, month | The first day of the period and its parts. |
 | value, value_prev_year            | The value as the source publishes it, and the same period a year earlier. |
 | is_latest                         | TRUE on the latest value of each series. |
+| product_en, month, prevailing     | Wholesale (OKAA): product, month and prevailing wholesale price in € per kg. |
 
-**NOTE** - Source: Eurostat. Processing, transport and retail are added on the way to the shelf, so producer and consumer prices compare only as changes. Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged them, and Eurostat is not responsible for the changes.
+**NOTE** - Sources: Eurostat and OKAA. Processing, transport and retail are added on the way to the shelf, so producer and consumer prices compare only as changes. Eurostat data may be reused freely with acknowledgement of the source; we translated and rearranged them, and Eurostat is not responsible for the changes.
