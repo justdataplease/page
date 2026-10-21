@@ -65,6 +65,9 @@
     function lineOption(spec, lang, width, t) {
         var unit = spec.unit || '', colors = [t.accent, SECOND];
         var fmt = function (v) { return numberText(v, spec.decimals, lang, unit); };
+        // axis labels: as many decimals as the step needs (a 0.2 € step must not print "2 €, 2 €, 2 €")
+        var yStep = spec.y_interval || ((spec.max || 100) - (spec.min || 0)) / 5;
+        var axisDecimals = yStep >= 1 ? 0 : Math.min(3, Math.ceil(-Math.log10(yStep) - 1e-9));
         var series = spec.select_series ? [spec.series[spec.selected_series], spec.series[0]] : spec.series;
         var names = series.map(function (s) { return s.name[lang]; });
         var narrow = width < 520;
@@ -98,8 +101,8 @@
                     interval: spec.x_interval != null ? spec.x_interval : spec.select_series ? (narrow ? 1 : 0) : (narrow ? 9 : 4) }
             },
             yAxis: {
-                type: 'value', min: spec.min || 0, max: spec.max || 100, interval: spec.y_interval || ((spec.max || 100) - (spec.min || 0)) / 5,
-                axisLabel: { formatter: function (v) { return numberText(v, 0, lang, unit); }, color: t.ink3, fontFamily: t.font, fontSize: 11 },
+                type: 'value', min: spec.min || 0, max: spec.max || 100, interval: yStep,
+                axisLabel: { formatter: function (v) { return numberText(v, axisDecimals, lang, unit); }, color: t.ink3, fontFamily: t.font, fontSize: 11 },
                 splitLine: { lineStyle: { color: t.rule, type: 'dotted' } }
             },
             series: series.map(function (s, i) {

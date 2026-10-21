@@ -83,7 +83,9 @@
         {%- endif %}
         <span><span>{{ t.charts }}</span> <b>{{ m_charts.size }}</b></span>
         <a href="{{ t.paths.news }}"><span>{{ t.research_plural }}</span> <b>{{ m_articles.size }}</b></a>
+        {%- if m_reports.size > 0 %}
         <a href="{{ t.paths.reports }}"><span>{{ t.reports }}</span> <b>{{ m_reports.size }}</b></a>
+        {%- endif %}
     </div>
 </div>
 {%- endif %}

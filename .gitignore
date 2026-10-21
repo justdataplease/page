@@ -6,3 +6,5 @@ vendor
 .idea/
 Gemfile.lock
 .claude/settings.local.json
+# private research and plans: never in the public repo
+_research/

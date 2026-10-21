@@ -2,7 +2,7 @@
 title: Businesses in the GEMI registry
 slug: gemi-businesses
 description: Every company in the General Commercial Registry, new registrations and closures
-category: Economy
+category: Business & tourism
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-02"

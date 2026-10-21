@@ -15,7 +15,7 @@ related_dataset_slugs:
 We set road deaths next to the crimes the police record, with data from **Eurostat** and **ELSTAT**, and compared Greece with the other member states. The picture is split: on the roads Greece is still among the worst countries in the EU, while for most crimes it sits around the middle or below.
 
 - **Roads:** **664** people were killed in 2024, **64 per million inhabitants**. That is the 3rd highest rate in the EU, after Romania and Bulgaria. The median member state is at 43.
-- **More recent:** in the 12 months to July 2026 ELSTAT counts **490** deaths, against 602 in the 12 months before. These figures are still provisional.
+- **More recent:** deaths fell over the last twelve months. The monthly figures, motorcycles, and when and where crashes happen are in our [road safety article](/en/blog/road-safety-motorcycles-2026-10/).
 - **Crime:** thefts of vehicles or their parts are **4 times** the rate of the median member state. Robbery, homicide, theft and home burglary are at the middle or lower.
 
 ## Fewer deaths, but the gap to the EU stays

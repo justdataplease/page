@@ -1,4 +1,5 @@
 ---
+redirect_to: /en/data/
 layout: reports
 title: "Reports"
 description: "Discover Greece Through Data"

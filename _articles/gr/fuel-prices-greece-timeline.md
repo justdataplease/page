@@ -1,5 +1,5 @@
 ---
-title: Πορεία Τιμών Καυσίμων στην Ελλάδα 2020–2025
+title: Η πορεία των τιμών καυσίμων στην Ελλάδα, 2020–2025
 slug: fuel-prices-greece-timeline
 redirect_from:
   - /qu36yl/
@@ -10,16 +10,9 @@ related_dataset_slugs:
 image_path: assets/posts/fuel_station.webp
 ---
 
-Kατανόηση της επίδρασης σημαντικών παγκόσμιων γεγονότων στις τιμές καυσίμων στην Ελλάδα.
+Κατανόηση της επίδρασης σημαντικών παγκόσμιων γεγονότων στις τιμές καυσίμων στην Ελλάδα.
 
-<div class="pt-2">
-<iframe 
-    src="/charts/fuel-prices-greece-daily/" 
-    frameborder="0" 
-    style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
-    allowfullscreen>
-</iframe>
-</div>
+{% include article-chart.html id="fuel-prices-monthly-2020-2025" %}
 
 - Απρίλιος 2020 - Πανδημία COVID-19
 

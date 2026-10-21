@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 data_dates: "2022/01 - 2026/09"
 source_name: "DataForGreece – home listings,Bank of Greece,ELSTAT,Eurostat"
 source_url: "https://dataforgreece.gr/en/data/real-estate/,https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices,https://www.statistics.gr/en/statistics/-/publication/SJU24/-,https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en"
-description_detailed: "What sellers and landlords ask for a home across Greece, from the sale and rental listings we collect every week. For the country, every region and every municipality with enough listings: price per m², a price index, the typical home (price and size) and the gross rental yield."
+description_detailed: "What sellers and landlords ask for a home across Greece, from the sale and rental listings we collect every week. For the country, every region and every municipality with enough listings: price per square metre, a price index, the typical home (price and size) and the gross rental yield."
 description_preprocess: "Each home counts once, even when several agencies list it, at the price it asked that month. The index holds the mix of homes steady (size, age, type), so it does not rise just because bigger or newer homes came to market. Extreme prices and municipalities with few listings are left out."
 image_path: assets/posts/topic-real-estate.webp
 ---

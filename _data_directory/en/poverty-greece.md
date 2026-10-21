@@ -11,7 +11,7 @@ data_dates: "2003 - 2025 · some series from 1995 · regions 2018 - 2025"
 source_name: "Eurostat – At risk of poverty or social exclusion (ilc_peps01n),Eurostat – At-risk-of-poverty rate (ilc_li02),Eurostat – Gini inequality (ilc_di12),Eurostat – Mean and median income (ilc_di03),Eurostat – Poverty by region (ilc_peps11n),ELSTAT – Survey on Income and Living Conditions"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_di12/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_di03/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_peps11n/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SFA10/-"
 description_detailed: "The main results of the EU survey on income and living conditions, every year: income, poverty, inequality and deprivation, for Greece, its regions and the EU countries, with children and older people shown separately."
-description_preprocess: "The data come from Eurostat and update automatically, because countries also revise earlier years. We wrote the Greek names ourselves."
+description_preprocess: "The data come from Eurostat and update automatically, because countries also revise earlier years."
 image_path: assets/posts/topic-poverty.webp
 ---
 

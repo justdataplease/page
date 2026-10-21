@@ -11,7 +11,7 @@ data_dates: "prices 2007/S1 - 2026/S1 · generation 2008/01 - 2026/07 · annual 
 source_name: "Eurostat – Household electricity prices (nrg_pc_204),Eurostat – Non-household electricity prices (nrg_pc_205),Eurostat – Household gas prices (nrg_pc_202),Eurostat – Monthly electricity generation (nrg_cb_pem),Eurostat – Annual electricity production (nrg_bal_peh),Eurostat – Renewables share (nrg_ind_ren),Eurostat – Inability to keep the home warm (ilc_mdes01),Eurostat – Arrears on utility bills (ilc_mdes07)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_202/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_cb_pem/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_peh/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes01/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes07/default/table?lang=en"
 description_detailed: "Electricity and gas prices, with and without taxes, for every EU country. Alongside them: what Greece's electricity is made from each month, the renewables share and how many people cannot keep their home warm."
-description_preprocess: "The data come from Eurostat and update automatically, including revisions to prices and energy balances. We wrote the Greek names ourselves."
+description_preprocess: "The data come from Eurostat and update automatically, including revisions to prices and energy balances."
 image_path: assets/posts/topic-energy.webp
 ---
 

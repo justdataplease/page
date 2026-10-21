@@ -30,7 +30,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZmU1OWQ4MjMtZmQyYS00YzM1LWJhYjEtNzFiOTE4ZjEyYmE0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Τιμές καυσίμων"
-    dek: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, από το 2012 μέχρι σήμερα."
+    dek: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, και πώς συγκρίνονται με την υπόλοιπη ΕΕ."
     coverage: "2012 – σήμερα · 51 νομοί"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -43,7 +43,7 @@
       - "Για τη σύγκριση με την ΕΕ χρησιμοποιούμε το δελτίο της Ευρωπαϊκής Επιτροπής, που έχει τιμή κάθε Δευτέρας· ο μέσος όρος της ΕΕ είναι σταθμισμένος με την κατανάλωση."
   en:
     name: "Fuel prices"
-    dek: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, from 2012 to today."
+    dek: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, and how they compare with the rest of the EU."
     coverage: "2012 – today · 51 prefectures"
     updates: "Every quarter"
     sources:
@@ -71,24 +71,26 @@
     - { model: katanalotis_product, url: "https://app.powerbi.com/view?r=eyJrIjoiMjRkNzFhZDctNWZmZS00MDg4LWI4YzQtZmEzNjE3ZGI1MDZmIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές ανά προϊόν και σούπερ μάρκετ", en: "Prices by product and supermarket" }
   gr:
     name: "Τιμές σούπερ μάρκετ"
-    dek: "Κάθε τιμή ραφιού που έχουμε για την Ελλάδα από το 2021: κατηγορίες, αλυσίδες, ακρίβεια και τα φθηνότερα καλάθια."
+    dek: "Κάθε τιμή ραφιού που έχουμε για την Ελλάδα: κατηγορίες, αλυσίδες, ακρίβεια και τα φθηνότερα καλάθια."
     coverage: "Σεπτέμβριος 2021 – σήμερα"
     updates: "Κάθε τρίμηνο"
     sources:
       - { name: "e-katanalotis (2021–2026)", url: "https://e-katanalotis.gov.gr", note: "Η εφαρμογή του Υπουργείου Ανάπτυξης" }
       - { name: "ΠόσοΚάνει", url: "https://posokanei.gov.gr", note: "Όλες οι αλυσίδες, από τον Σεπτέμβριο 2026" }
-      - { name: "ΑΒ Βασιλόπουλος, Σκλαβενίτης", url: "https://www.ab.gr", note: "Τα ηλεκτρονικά καταστήματα, από τον Νοέμβριο 2024" }
+      - { name: "ΑΒ Βασιλόπουλος", url: "https://www.ab.gr", note: "Το ηλεκτρονικό κατάστημα, από τον Νοέμβριο 2024" }
+      - { name: "Σκλαβενίτης", url: "https://www.sklavenitis.gr", note: "Το ηλεκτρονικό κατάστημα, από τον Νοέμβριο 2024" }
     notes:
       - "Τα σύνολα ανά αλυσίδα και κατηγορία μετρούν μία πηγή ανά προϊόν, ώστε να μη διπλομετρώνται τιμές."
   en:
     name: "Supermarket prices"
-    dek: "Every shelf price we hold for Greece since 2021: categories, retailers, inflation and the cheapest baskets."
+    dek: "Every shelf price we hold for Greece: categories, retailers, inflation and the cheapest baskets."
     coverage: "September 2021 – today"
     updates: "Every quarter"
     sources:
       - { name: "e-katanalotis (2021–2026)", url: "https://e-katanalotis.gov.gr", note: "The Ministry of Development's app" }
       - { name: "PosoKanei", url: "https://posokanei.gov.gr", note: "Every retailer, from September 2026" }
-      - { name: "AB Vasilopoulos, Sklavenitis", url: "https://www.ab.gr", note: "Their online shops, from November 2024" }
+      - { name: "AB Vasilopoulos", url: "https://www.ab.gr", note: "Its online shop, from November 2024" }
+      - { name: "Sklavenitis", url: "https://www.sklavenitis.gr", note: "Its online shop, from November 2024" }
     notes:
       - "Totals by retailer and category count one source per product, so no price is counted twice."
 
@@ -106,7 +108,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDU3ZmQxMWMtZjk1Yy00YzgzLWE5ZTItZjkyZDU3ZTA4MjM3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Ακίνητα: τιμές αγγελιών"
-    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα από το 2022: τιμή ανά τ.μ., τυπικό σπίτι και απόδοση ενοικίου."
+    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα: τιμή ανά τετραγωνικό μέτρο, τυπικό σπίτι και απόδοση ενοικίου."
     coverage: "2022 – σήμερα · όλη η Ελλάδα · 13 περιφέρειες · δήμοι"
     updates: "Κάθε μήνα"
     sources:
@@ -121,7 +123,7 @@
       - "Η σελίδα «Αγγελίες και επίσημα στοιχεία» βάζει τις ζητούμενες τιμές δίπλα στις τιμές συναλλαγών της Τράπεζας της Ελλάδος, στις αγοραπωλησίες και τις άδειες της ΕΛΣΤΑΤ και στο εισόδημα των νοικοκυριών."
   en:
     name: "Property asking prices"
-    dek: "What sellers and landlords ask for a home, by region and municipality, every month since 2022: price per m², the typical home and rental yield."
+    dek: "What sellers and landlords ask for a home, by region and municipality, every month: price per square metre, the typical home and rental yield."
     coverage: "2022 – today · all of Greece · 13 regions · municipalities"
     updates: "Every month"
     sources:
@@ -194,7 +196,7 @@
     - { model: fires, url: "https://app.powerbi.com/view?r=eyJrIjoiNzc1YTI1OTEtMWFjNi00MjMwLTk0YjYtNmNkMTQzMjM5NDIyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Πυρκαγιές ανά νομό και χρονιά", en: "Fires by prefecture and year" }
   gr:
     name: "Δασικές πυρκαγιές"
-    dek: "Κάθε δασική και αστική πυρκαγιά της Πυροσβεστικής από το 2000 και οι καμένες εκτάσεις από δορυφόρο (EFFIS)."
+    dek: "Κάθε δασική και αστική πυρκαγιά που κατέγραψε η Πυροσβεστική και οι καμένες εκτάσεις από δορυφόρο (EFFIS)."
     coverage: "2000 – σήμερα"
     updates: "Κάθε χρόνο"
     sources:
@@ -204,7 +206,7 @@
       - "Οι εκτάσεις της Πυροσβεστικής και του EFFIS μετρώνται διαφορετικά και δεν προστίθενται."
   en:
     name: "Forest fires"
-    dek: "Every forest and urban fire recorded by the Fire Service since 2000, and the burnt areas seen by satellite (EFFIS)."
+    dek: "Every forest and urban fire recorded by the Fire Service, and the burnt areas seen by satellite (EFFIS)."
     coverage: "2000 – today"
     updates: "Every year"
     sources:
@@ -265,24 +267,26 @@
     - { model: athens_municipality_budget, url: "https://app.powerbi.com/view?r=eyJrIjoiOGVmOGIxZDMtYmJlMy00MDc2LWJlNjctOWFlYjcwYzkyZjgxIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Ο προϋπολογισμός γραμμή προς γραμμή", en: "The budget line by line" }
   gr:
     name: "Προϋπολογισμός"
-    dek: "Πού πάνε τα χρήματα: ο προϋπολογισμός του Δήμου Αθηναίων από το 2005, η μηνιαία εκτέλεσή του και ο κρατικός προϋπολογισμός."
+    dek: "Πού πάνε τα χρήματα: ο προϋπολογισμός του Δήμου Αθηναίων, η μηνιαία εκτέλεσή του και ο κρατικός προϋπολογισμός."
     coverage: "2005 – σήμερα"
     updates: "Κάθε χρόνο"
     sources:
       - { name: "Δήμος Αθηναίων", url: "https://www.cityofathens.gr", note: "Προϋπολογισμός και μηνιαίες καταστάσεις εκτέλεσης" }
       - { name: "Διαύγεια", url: "https://diavgeia.gov.gr", note: "Αποφάσεις προϋπολογισμού και αναμορφώσεις από το 2026" }
-      - { name: "Υπουργείο Εθνικής Οικονομίας και Οικονομικών, Eurostat", url: "https://minfin.gov.gr", note: "Κρατικός προϋπολογισμός" }
+      - { name: "Υπουργείο Εθνικής Οικονομίας και Οικονομικών", url: "https://minfin.gov.gr", note: "Κρατικός προϋπολογισμός: εκτέλεση, νόμος, στόχοι" }
+      - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Γενική κυβέρνηση, για σύγκριση" }
     notes:
       - "Από το 2026 οι κωδικοί αλλάζουν (ΑΛΕ αντί για ΚΑΕ)· οι συγκρίσεις με τα προηγούμενα χρόνια γίνονται μόνο όπου υπάρχει επίσημη αντιστοίχιση."
   en:
     name: "Budget"
-    dek: "Where the money goes: the Municipality of Athens budget since 2005, its monthly execution and the Greek state budget."
+    dek: "Where the money goes: the Municipality of Athens budget, its monthly execution and the Greek state budget."
     coverage: "2005 – today"
     updates: "Every year"
     sources:
       - { name: "Municipality of Athens", url: "https://www.cityofathens.gr", note: "Budget and monthly execution statements" }
       - { name: "Diavgeia", url: "https://diavgeia.gov.gr", note: "Budget decisions and amendments from 2026" }
-      - { name: "Ministry of Finance, Eurostat", url: "https://minfin.gov.gr", note: "State budget" }
+      - { name: "Ministry of Finance", url: "https://minfin.gov.gr", note: "State budget: execution, budget law, targets" }
+      - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "General government, for comparison" }
     notes:
       - "From 2026 the budget codes change (ALE instead of KAE); years are compared only where an official crosswalk exists."
 
@@ -300,24 +304,26 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOGQzNGY0NjItODQ4ZC00YzY0LTkyNTctNDRlN2JlMmNiMmNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Εκλογές"
-    dek: "Όλες οι εκλογές από το 1974: εθνικές, ευρωεκλογές, δημοψηφίσματα, περιφερειακές και δημοτικές, μέχρι το εκλογικό τμήμα, με τα δημογραφικά."
+    dek: "Όλες οι εκλογές της Μεταπολίτευσης: εθνικές, ευρωεκλογές, δημοψηφίσματα, περιφερειακές και δημοτικές, μέχρι το εκλογικό τμήμα, με τα δημογραφικά."
     coverage: "1974 – 2024"
     updates: "Μετά από κάθε εκλογή"
     sources:
       - { name: "Υπουργείο Εσωτερικών", url: "https://ekloges.ypes.gr", note: "Αποτελέσματα όλων των επιπέδων" }
       - { name: "Βουλή των Ελλήνων", url: "https://www.hellenicparliament.gr", note: "Ιστορικά αποτελέσματα" }
-      - { name: "ΕΛΣΤΑΤ, iMEdD", url: "https://www.statistics.gr", note: "Απογραφή, εκλογικοί κατάλογοι, συμμετοχή" }
+      - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr", note: "Απογραφή, για τα δημογραφικά" }
+      - { name: "iMEdD Lab", url: "https://lab.imedd.org", note: "Συμμετοχή στις παλαιότερες εκλογές" }
     notes:
       - "Κάθε επίπεδο (επικράτεια, περιφέρεια, δήμος, τμήμα) είναι ξεχωριστός πίνακας· τα σύνολα δεν μεταφέρονται από το ένα στο άλλο."
   en:
     name: "Elections"
-    dek: "Every election since 1974: national, European, referendums, regional and municipal, down to the polling station, with demographics."
+    dek: "Every election since the return of democracy: national, European, referendums, regional and municipal, down to the polling station, with demographics."
     coverage: "1974 – 2024"
     updates: "After every election"
     sources:
       - { name: "Ministry of the Interior", url: "https://ekloges.ypes.gr", note: "Results at every level" }
       - { name: "Hellenic Parliament", url: "https://www.hellenicparliament.gr", note: "Historical results" }
-      - { name: "ELSTAT, iMEdD", url: "https://www.statistics.gr", note: "Census, electoral rolls, turnout" }
+      - { name: "ELSTAT", url: "https://www.statistics.gr", note: "Census, for the demographics" }
+      - { name: "iMEdD Lab", url: "https://lab.imedd.org", note: "Turnout in older elections" }
     notes:
       - "Each level (country, region, municipality, station) is a separate table; totals are not carried from one to another."
 
@@ -379,7 +385,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOTM3ZTlhMmUtODVkMi00MWY1LWI3MzMtZmVkMTMzYzZiMDg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Πληθυσμός"
-    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και των 13 περιφερειών κατά ηλικία και φύλο, η μετανάστευση και οι απογραφές από το 1821."
+    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και κάθε περιφέρειας κατά ηλικία και φύλο, η μετανάστευση και όλες οι απογραφές από την ίδρυση του κράτους."
     coverage: "2001 – 2025 · 13 περιφέρειες · απογραφές από το 1821"
     updates: "Κάθε χρόνο"
     sources:
@@ -392,7 +398,7 @@
       - "Οι ηλικίες δίνονται σε πενταετείς ομάδες: η διάμεση ηλικία είναι ομάδα (π.χ. 45–49), όχι ακριβής αριθμός."
   en:
     name: "Population"
-    dek: "How many we are and how we are ageing: the population of the country and its 13 regions by age and sex, migration and the censuses since 1821."
+    dek: "How many we are and how we are ageing: the population of the country and every region by age and sex, migration and every census since the founding of the state."
     coverage: "2001 – 2025 · 13 regions · censuses since 1821"
     updates: "Every year"
     sources:
@@ -404,7 +410,6 @@
       - "1821 is a retrospective estimate, not a census, and the historical milestones each cover a different territory; they do not form a continuous series."
       - "Ages come in five-year groups: the median age is a group (e.g. 45–49), not an exact number."
 
-# ── Special topics: one-off, event-like features ─────────────────────────
 - key: inflation
   kind: topic
   category: prices
@@ -566,7 +571,7 @@
   category: business
   model: stats
   image: assets/posts/topic-tourism.webp
-  since: 2000
+  since: 1994
   cadence: quarterly
   data: [tourism-greece]
   charts: []
@@ -879,6 +884,7 @@
       - { name: "Eurostat, εγκληματικότητα", url: "https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en", note: "Αδικήματα που κατέγραψε η αστυνομία, ανά κατηγορία και περιοχή" }
     notes:
       - "Τα εγκλήματα είναι όσα κατέγραψε η αστυνομία: όσα δεν καταγγέλλονται δεν φαίνονται, και οι χώρες καταγράφουν με διαφορετικούς κανόνες."
+      - "Εδώ τα τροχαία είναι η μακροχρόνια εικόνα και η σύγκριση με την ΕΕ· τα μηνιαία στοιχεία, οι μοτοσικλέτες και το πού και πότε είναι στο θέμα Τροχαία."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Safety"
@@ -891,6 +897,7 @@
       - { name: "Eurostat, crime", url: "https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en", note: "Police-recorded offences by category and area" }
     notes:
       - "Crime means what the police recorded: unreported crime is missing, and countries record by different rules."
+      - "Roads here means the long-run picture and the EU comparison; the monthly figures, motorcycles, and where and when are in the Road safety topic."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: road-safety
@@ -967,10 +974,11 @@
       - "Listing prices are asking prices, not sale prices."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
+# ── Special topics: one-off, event-like features ─────────────────────────
 - key: women-in-business
   kind: special
   parent: businesses
-  image: assets/women-business-gemi-2026-10.png
+  image: assets/posts/women-business-gemi-2026-10.webp
   when: 2026-10
   data: [gemi-women]
   charts: []
@@ -1015,11 +1023,13 @@
   explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
     - { model: katanalotis_itsjustperiod, url: "https://app.powerbi.com/view?r=eyJrIjoiN2ZlYjBkMjYtMzkxYi00Y2JkLTlkYTAtMjQxZDg0MDgxNjNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές προϊόντων περιόδου", en: "Period product prices" }
   gr:
-    name: "Προϊόντα Περιόδου"
+    name: "Προϊόντα περιόδου"
     dek: "Με την πρωτοβουλία It's just period: οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ και ο ΦΠΑ που τα επιβαρύνει."
     when_label: "Ιανουάριος 2025"
     sources:
-      - { name: "e-katanalotis, ΑΒ Βασιλόπουλος, Σκλαβενίτης", url: "https://e-katanalotis.gov.gr", note: "Τιμές ραφιού" }
+      - { name: "e-katanalotis", url: "https://e-katanalotis.gov.gr", note: "Τιμές ραφιού" }
+      - { name: "ΑΒ Βασιλόπουλος", url: "https://www.ab.gr", note: "Τιμές ραφιού" }
+      - { name: "Σκλαβενίτης", url: "https://www.sklavenitis.gr", note: "Τιμές ραφιού" }
       - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "Η πρωτοβουλία" }
     notes: []
   en:
@@ -1027,6 +1037,8 @@
     dek: "With the It's just period initiative: what period products cost in supermarkets, and the VAT charged on them."
     when_label: "January 2025"
     sources:
-      - { name: "e-katanalotis, AB Vasilopoulos, Sklavenitis", url: "https://e-katanalotis.gov.gr", note: "Shelf prices" }
+      - { name: "e-katanalotis", url: "https://e-katanalotis.gov.gr", note: "Shelf prices" }
+      - { name: "AB Vasilopoulos", url: "https://www.ab.gr", note: "Shelf prices" }
+      - { name: "Sklavenitis", url: "https://www.sklavenitis.gr", note: "Shelf prices" }
       - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "The initiative" }
     notes: []

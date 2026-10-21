@@ -1,0 +1,19 @@
+# forest-fires-greece-timeline: forest area burned per year, Greece 2000-2023 (Fire Service records, fires project,
+# dataset "forest", SUM(burned_total_ha) by year, thousand hectares). Checked 2026-10-22 (BigQuery).
+type: line
+unit: ""
+max: 300
+y_interval: 50
+decimals: 0
+title:
+  gr: "Καμένη έκταση σε δασικές πυρκαγιές ανά έτος (χιλιάδες εκτάρια)"
+  en: "Area burned in forest fires per year (thousand hectares)"
+note:
+  gr: "Δάση, δασικές και άλλες εκτάσεις που κάηκαν σε δασικές πυρκαγιές. Πηγή: Πυροσβεστική Υπηρεσία. Επεξεργασία: DataForGreece."
+  en: "Forests, woodland and other land burned in forest fires. Source: Hellenic Fire Service. Processing: DataForGreece."
+x_label: {gr: "Έτος", en: "Year"}
+x: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+fallback_step: 2
+series:
+  - name: {gr: "Καμένη έκταση", en: "Area burned"}
+    values: [156, 43, 8, 8, 13, 9, 15, 264, 39, 45, 15, 35, 50, 27, 19, 17, 42, 23, 19, 16, 22, 133, 29, 177]

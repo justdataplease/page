@@ -44,6 +44,6 @@ The official figures by region stop at 2023. In the South Aegean GEMI recorded *
 - We compare the same sectors: industry, construction and market services, without agriculture, public administration and membership organisations. We count head offices only, not branches.
 - The official figures are revised. Deaths for the latest year are provisional.
 
-All the figures, by sector and region, are on the page «ΓΕΜΗ και επίσημα στοιχεία» of the [businesses dashboard](/en/data/businesses/#dashboard).
+All the figures, by sector and region, are on the page «ΓΕΜΗ και επίσημα στοιχεία» (GEMI and official data) of the [businesses dashboard](/en/data/businesses/#dashboard).
 
 *Sources: GEMI (businessportal.gr), Eurostat (business demography, from ELSTAT's business register). Processing: DataForGreece.*

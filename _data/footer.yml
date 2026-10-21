@@ -40,7 +40,7 @@ en:
     - name: "JustDataPlease"
       url: "https://justdataplease.com"
     - name: "Contact Us"
-      url: "/about/"
+      url: "/en/about/"
     - name: "Attribution & Usage Policy"
       url: "/en/attribution/"
 

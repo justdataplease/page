@@ -2,7 +2,7 @@
 title: Επιχειρήσεις στο ΓΕΜΗ
 slug: gemi-businesses
 description: Όλες οι επιχειρήσεις του Γενικού Εμπορικού Μητρώου, οι νέες εγγραφές και τα λουκέτα
-category: Οικονομία
+category: Επιχειρήσεις & τουρισμός
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-02"

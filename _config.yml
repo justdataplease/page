@@ -1,12 +1,12 @@
 title: Data for Greece
-description: Aνακάλυψε την Ελλάδα μέσα από δεδομένα
+description: Ανακάλυψε την Ελλάδα μέσα από δεδομένα
 baseurl: "" # Base URL (e.g., /blog if hosted at example.com/blog)
 url: "https://dataforgreece.gr"
 author: DataForGreece
 email: support@justdataplease.com
-include: [ '_shortlinks','_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr','_topics/en','_topics/gr' ]
-exclude: [ 'README.md', 'sync-content.ps1', 'Gemfile', 'Gemfile.lock', 'node_modules', 'vendor',
-           # posts left out of this edition (kept in the main site, so sync-content still copies them)
+include: [ '_charts/en','_charts/gr', '_reports/en','_reports/gr','_articles/en','_articles/gr','_data_directory/en','_data_directory/gr','_topics/en','_topics/gr' ]
+exclude: [ 'README.md', 'Readme.md', 'data/Readme.md', 'ids.md', 'Gemfile', 'Gemfile.lock', 'node_modules', 'vendor', '_research',
+           # a community post left out of the newspaper edition (kept in the repo, not published)
            '_articles/gr/forest-fires-greece-dv-2025-04.md', '_articles/en/forest-fires-greece-dv-2025-04.md' ]
 
 # ── Newspaper edition ───────────────────────────────────────────────

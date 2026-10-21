@@ -1,5 +1,5 @@
 ---
-title: "Road deaths: fewer this year, but motorcycles remain the big problem"
+title: "Road deaths: fewer over the last year, but motorcycles remain the big problem"
 slug: road-safety-motorcycles-2026-10
 date: 2026-10-21
 topic: road-safety
@@ -14,7 +14,7 @@ related_dataset_slugs:
 
 We set **ELSTAT**'s monthly road-accident figures next to **Eurostat**'s data on road deaths, cars and motorcycles in every EU country.
 
-- **This year:** in the 12 months to July 2026, **490** people were killed on the roads, against 602 in the 12 months before (−18.6%). Serious injuries fell to 451 (−14.7%). These figures are still provisional.
+- **Last twelve months:** in the 12 months to July 2026, **490** people were killed on the roads, against 602 in the 12 months before (−18.6%). Serious injuries fell to 451 (−14.7%). These figures are still provisional.
 - **Motorcycles:** Greece has **178 motorcycles per 1,000 inhabitants**, the most in the EU and almost five times the median member state (39). In 2024 motorcycles and mopeds accounted for **287 of the 664** road deaths (43%).
 - **Cars:** with 597 cars per 1,000 inhabitants in 2025, Greece is slightly above the EU (584).
 

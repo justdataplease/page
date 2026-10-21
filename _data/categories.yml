@@ -3,8 +3,8 @@
 # a topic page's breadcrumb and kicker name its category. Anchor on /dedomena/: #cat-<key>.
 
 - key: economy
-  gr: { name: "Οικονομία", dek: "Ανάπτυξη, περιφέρειες, τράπεζες και εμπόριο: η εικόνα της ελληνικής οικονομίας δίπλα στην ΕΕ." }
-  en: { name: "Economy", dek: "Growth, regions, banks and trade: the Greek economy next to the EU." }
+  gr: { name: "Οικονομία", dek: "Ανάπτυξη, κλάδοι, περιφέρειες και το κλίμα στην αγορά: η εικόνα της ελληνικής οικονομίας δίπλα στην ΕΕ." }
+  en: { name: "Economy", dek: "Growth, sectors, regions and business sentiment: the Greek economy next to the EU." }
 
 - key: prices
   gr: { name: "Τιμές & ακρίβεια", dek: "Από το ράφι και την αντλία μέχρι το ενοίκιο: τι πληρώνουμε και πώς αλλάζει." }

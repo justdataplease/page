@@ -1,9 +1,9 @@
 ---
-title: Τιμές Σουπερμάρκετ - It's just period
+title: Τιμές σούπερ μάρκετ - It's just period
 slug: supermarket-prices-itsjustperiod
-description: Τιμές Σουπερμάρκετ - It's just period
+description: Τιμές σούπερ μάρκετ - It's just period
 category: Οικονομία
 date: 2024-11-09
-embedded_url: https://app.powerbi.com/view?r=eyJrIjoiNzI5MzRjOTYtMWMzZC00N2VmLWJhMzMtY2FjMDdlOTk0MDE1IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9
+embedded_url: https://app.powerbi.com/view?r=eyJrIjoiN2ZlYjBkMjYtMzkxYi00Y2JkLTlkYTAtMjQxZDg0MDgxNjNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9
 ---
 

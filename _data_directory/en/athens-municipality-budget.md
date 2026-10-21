@@ -2,7 +2,7 @@
 title: Budget of the Municipality of Athens
 slug: athens-municipality-budget
 description: "The City of Athens budget: what was voted, what was spent and where the money went"
-category: Economy
+category: State & politics
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 
@@ -10,14 +10,14 @@ published_by: "DataForGreece"
 last_update: "2024-10-20"
 date_added: "2024-10-20"
 data_dates: "2005/01 - 2024/10"
-source_name: "Municipality of Athens Budget and Expenditure Dataset"
-source_url: "https://old.cityofathens.gr/khe/proypologismos"
+source_name: "Municipality of Athens,Diavgeia,Ministry of National Economy and Finance"
+source_url: "https://www.cityofathens.gr,https://diavgeia.gov.gr,https://minfin.gov.gr"
 contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 
 chart_id: "athens-municipality-budget"
-description_detailed: "The City of Athens budget and how it was carried out, year by year and month by month: what was voted, how it was amended, what was committed and what was paid or collected, by category and department."
-description_preprocess: "The data come from the City of Athens and Diavgeia and update regularly. We join them into one set and give the categories consistent names."
+description_detailed: "The City of Athens budget and how it was carried out, year by year and month by month: what was voted, how it was amended, what was committed and what was paid or collected, by category and department. Next to it, the state budget: its monthly execution, the budget law and each ministry's targets."
+description_preprocess: "The data come from the City of Athens, Diavgeia and the Ministry of Finance and update regularly. We join them into one set and give the categories consistent names."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
 image_path: assets/posts/athens.webp
 

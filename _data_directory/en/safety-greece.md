@@ -11,7 +11,7 @@ data_dates: "Road deaths 2000 - 2024 · crime 2008 - 2024"
 source_name: "Eurostat – Road deaths (tran_sf_roadus),Eurostat – Road accidents by area (tran_sf_roadnu),Eurostat – Offences by category (crim_off_cat),Eurostat – Offences by area (crim_gen_reg),ELSTAT – Road traffic accidents (SDT03)"
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadnu/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SDT03/-"
 description_detailed: "Road deaths, in total, per inhabitant and by road user, road accidents by area, and the offences the police recorded, such as homicides, robberies, burglaries and thefts. For Greece, its regions and regional units, and the EU countries."
-description_preprocess: "The data come from Eurostat, which collects them from ELSTAT and the Hellenic Police, and update automatically. We wrote the Greek names ourselves. Crime is hard to compare from country to country."
+description_preprocess: "The data come from Eurostat, which collects them from ELSTAT and the Hellenic Police, and update automatically. Crime is hard to compare from country to country."
 image_path: assets/posts/default-blog-cover.webp
 ---
 

@@ -1,7 +1,8 @@
 ---
+redirect_to: /dedomena/
 layout: reports
 title: "Πίνακες Δεδομένων"
-description: "Aνακάλυψε την Ελλάδα μέσα από δεδομένα"
+description: "Ανακάλυψε την Ελλάδα μέσα από δεδομένα"
 lang: "gr"
 permalink: /reports/
 ---

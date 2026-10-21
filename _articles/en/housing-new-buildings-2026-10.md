@@ -47,6 +47,6 @@ The most expensive new homes are in the South Aegean (€5,245 per m²) and Atti
 - ELSTAT's building permits cover all private buildings, not only homes.
 - Eurostat's construction cost index covers new residential buildings. The EU no longer publishes an average, so we show it for Greece only.
 
-All the figures, by month and quarter, are on the [housing dashboard](/en/data/housing/#dashboard), page "Νέα κτίρια".
+All the figures, by month and quarter, are on the [housing dashboard](/en/data/housing/#dashboard), page "Νέα κτίρια" (New buildings).
 
 *Sources: ELSTAT (building activity), Eurostat (construction), property listings. Processing: DataForGreece.*

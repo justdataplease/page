@@ -9,7 +9,7 @@ period: 2026-10
 author: "Dora Andreadi"
 author_url: "https://www.linkedin.com/in/theodora-andreadi-2426a1184/"
 use_cover_image: true
-image_path: assets/women-business-gemi-2026-10.png
+image_path: assets/posts/women-business-gemi-2026-10.webp
 image_aspect_ratio: "16 / 9"
 image_alt: "A woman in a blazer, seen from behind with her arms raised in front of modern office buildings."
 related_dataset_slugs:

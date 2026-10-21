@@ -42,6 +42,6 @@ Had the Cyclades been a country, that week they would have been the 3rd dearest 
 - The EU bulletin has one price per Monday. The prefecture bulletins are daily: the latest we have are from 30 September 2026, which we compared with the EU bulletin of Monday 28 September.
 - Prices are not adjusted for each country's price and income levels.
 
-All the figures, every week since 2012 and for every country, are on the [fuel prices dashboard](/en/data/fuel-prices/#dashboard), page "Η Ελλάδα στην ΕΕ".
+All the figures, every week since 2012 and for every country, are on the [fuel prices dashboard](/en/data/fuel-prices/#dashboard), page "Η Ελλάδα στην ΕΕ" (Greece in the EU).
 
 *Sources: European Commission (Weekly Oil Bulletin), Observatory of Liquid Fuel Prices, Ministry of Development. Processing: DataForGreece.*

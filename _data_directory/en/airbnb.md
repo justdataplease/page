@@ -2,7 +2,7 @@
 title: Airbnb
 slug: airbnb
 description: "How many Airbnb listings there are in Athens, Thessaloniki, Crete and the South Aegean, at what price, how full they are and how they compare with long-term renting"
-category: Economy
+category: Business & tourism
 date: 2025-01-14
 download_url: 
 
@@ -13,7 +13,7 @@ data_dates: "Athens from 2015/07 · South Aegean from 2019/03 · Crete, Thessalo
 source_name: "Inside Airbnb,DataForGreece – market data,ELSTAT,Eurostat"
 source_url: "https://insideairbnb.com/,https://dataforgreece.gr/en/data/real-estate/,https://www.statistics.gr/en/statistics/-/publication/SAM05/-,https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en"
 chart_id: "airbnb-greece-overview"
-description_detailed: "Airbnb listings in the areas Inside Airbnb covers, month by month: how many there are, what a night costs, how full they are and who rents them out. Next to them is our own market data on rents: how many homes go to Airbnb instead of to tenants, whether Airbnb earns more than a rent in each neighbourhood, and whether rents rose faster where it spread."
+description_detailed: "Airbnb listings in the areas Inside Airbnb covers, month by month: how many there are, what a night costs, how full they are and who rents them out. Next to them, our own rent data: how many homes go to Airbnb instead of tenants, whether Airbnb earns more than renting in each neighbourhood, and whether rents rose faster where it spread."
 description_preprocess: "The Airbnb data come from Inside Airbnb, the rents from our own market data, and we refresh both regularly. Each rental listing counts once, in the neighbourhood where it is. The comparisons are gross, before costs and taxes, and are made only where there is enough data."
 image_path: assets/posts/airbnb.webp
 ---

@@ -2,7 +2,7 @@
 title: Προϋπολογισμός Δήμου Αθηναίων
 slug: athens-municipality-budget
 description: "Ο προϋπολογισμός του Δήμου Αθηναίων: τι ψηφίστηκε, τι εκτελέστηκε και πού πήγαν τα χρήματα"
-category: Οικονομία
+category: Κράτος & πολιτική
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 
@@ -10,14 +10,14 @@ published_by: "DataForGreece"
 last_update: "2024-10-20"
 date_added: "2024-10-20"
 data_dates: "2005/01 - 2024/10"
-source_name: "Δήμος Αθηναίων"
-source_url: "https://old.cityofathens.gr/khe/proypologismos"
+source_name: "Δήμος Αθηναίων,Διαύγεια,Υπουργείο Εθνικής Οικονομίας και Οικονομικών"
+source_url: "https://www.cityofathens.gr,https://diavgeia.gov.gr,https://minfin.gov.gr"
 contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 
 chart_id: "athens-municipality-budget"
-description_detailed: "Ο προϋπολογισμός του Δήμου Αθηναίων και η εκτέλεσή του, έτος προς έτος και μήνα προς μήνα: τι ψηφίστηκε, πώς τροποποιήθηκε, τι δεσμεύτηκε και τι πληρώθηκε ή εισπράχθηκε, ανά κατηγορία και διεύθυνση."
-description_preprocess: "Τα στοιχεία έρχονται από τον Δήμο Αθηναίων και τη Διαύγεια και ενημερώνονται τακτικά. Τα ενώνουμε σε ενιαίο σύνολο και δίνουμε κοινά ονόματα στις κατηγορίες."
+description_detailed: "Ο προϋπολογισμός του Δήμου Αθηναίων και η εκτέλεσή του, έτος προς έτος και μήνα προς μήνα: τι ψηφίστηκε, πώς τροποποιήθηκε, τι δεσμεύτηκε και τι πληρώθηκε ή εισπράχθηκε, ανά κατηγορία και διεύθυνση. Δίπλα του ο κρατικός προϋπολογισμός: η μηνιαία εκτέλεση, ο νόμος και οι στόχοι κάθε υπουργείου."
+description_preprocess: "Τα στοιχεία έρχονται από τον Δήμο Αθηναίων, τη Διαύγεια και το Υπουργείο Οικονομικών και ενημερώνονται τακτικά. Τα ενώνουμε σε ενιαίο σύνολο και δίνουμε κοινά ονόματα στις κατηγορίες."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.athens_municipality_budget_v"
 image_path: assets/posts/athens.webp
 ---

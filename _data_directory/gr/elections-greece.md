@@ -2,7 +2,7 @@
 title: Εκλογές στην Ελλάδα, 1974–2024
 slug: elections-greece
 description: "Τα αποτελέσματα όλων των εκλογών μετά τη Μεταπολίτευση, σε κάθε επίπεδο, με τα δημογραφικά"
-category: Πολιτική
+category: Κράτος & πολιτική
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-02"

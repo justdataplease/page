@@ -158,11 +158,13 @@ gr:
   dataset_one: "Σύνολο δεδομένων"
   livebox_text: "σύνολα δεδομένων ενημερώνονται <b>ζωντανά</b>, αυτόματα από τις πηγές τους."
   cadence:
+    monthly: "Κάθε μήνα"
     quarterly: "Κάθε τρίμηνο"
     semiannual: "Κάθε εξάμηνο"
     annual: "Κάθε χρόνο"
     special: "Σε κάθε γεγονός"
   edition_kind:
+    monthly: "Μηνιαία ανάλυση"
     quarterly: "Τριμηνιαία ανάλυση"
     semiannual: "Εξαμηνιαία ανάλυση"
     annual: "Ετήσια ανάλυση"
@@ -323,11 +325,13 @@ en:
   dataset_one: "Dataset"
   livebox_text: "datasets update <b>live</b>, automatically from their sources."
   cadence:
+    monthly: "Every month"
     quarterly: "Every quarter"
     semiannual: "Every six months"
     annual: "Every year"
     special: "With every event"
   edition_kind:
+    monthly: "Monthly analysis"
     quarterly: "Quarterly analysis"
     semiannual: "Half-year analysis"
     annual: "Annual analysis"

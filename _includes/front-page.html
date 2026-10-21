@@ -137,7 +137,9 @@
                     <li><a href="{{ site.baseurl }}{{ t.paths.news }}"><span>{{ t.research_plural }}</span><i></i><b>{{ h1_articles.size }}</b></a></li>
                     <li><a href="{{ site.baseurl }}{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span><i></i><b>{{ h1_datasets.size }}</b></a></li>
                     <li><span class="index-box__row"><span>{{ t.charts }}</span><i></i><b>{{ h1_charts.size }}</b></span></li>
+                    {%- if h1_reports.size > 0 %}
                     <li><a href="{{ site.baseurl }}{{ t.paths.reports }}"><span>{{ t.reports }}</span><i></i><b>{{ h1_reports.size }}</b></a></li>
+                    {%- endif %}
                 </ul>
             </aside>
         </section>

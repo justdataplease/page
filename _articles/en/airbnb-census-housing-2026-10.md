@@ -56,6 +56,6 @@ The share is highest in the cities: 47% in Central Athens and 40% in Thessalonik
 - Eurostat's nights cover all the platforms, not only Airbnb, and are experimental statistics. For 2024 the regional figures do not add up to the national total, so we compare 2025 with 2019.
 - For Athens, the Airbnb figures cover the municipality of Athens only, not all of Attica.
 
-The figures by municipality, with the asking rents from our own listings, are on the «Airbnb & ενοίκια» page of the [Airbnb dashboard](/en/data/airbnb/#dashboard).
+The figures by municipality, with the asking rents from our own listings, are on the «Airbnb & ενοίκια» (Airbnb and rents) page of the [Airbnb dashboard](/en/data/airbnb/#dashboard).
 
 *Sources: Inside Airbnb (licence CC BY 4.0), ELSTAT (Population-Housing Census 2021), Eurostat. Processing: DataForGreece.*

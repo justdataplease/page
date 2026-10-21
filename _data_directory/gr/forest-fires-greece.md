@@ -1,9 +1,9 @@
 ---
-title: Δασικές Πυρκαγιές στην Ελλάδα
+title: Δασικές πυρκαγιές στην Ελλάδα
 slug: forest-fires-greece
 description: "Οι δασικές πυρκαγιές στην Ελλάδα: πότε, πού, πόσο έκαψαν και με ποια μέσα αντιμετωπίστηκαν"
 date: 2024-10-14
-category: Περιβάλλον
+category: Ενέργεια & περιβάλλον
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 redirect_from:
   - /fires/
@@ -11,9 +11,8 @@ published_by: "DataForGreece"
 last_update: "2024-10-14"
 date_added: "2024-10-14"
 data_dates: "2000/01 - 2023/12"
-source_name: "Πυροσβεστικό Σώμα Ελλάδας - Σύνολα Δεδομένων"
-source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon"
-chart_id: "forest-fires-greece-monthly"
+source_name: "Πυροσβεστικό Σώμα Ελλάδας,EFFIS (Copernicus)"
+source_url: "https://www.fireservice.gr/el_GR/synola-dedomenon,https://forest-fire.emergency.copernicus.eu"
 description_detailed: "Κάθε πυρκαγιά και συμβάν όπου επενέβη η Πυροσβεστική: πότε ξεκίνησε και πότε σβήστηκε, πού, πόση έκταση κάηκε και τι είδους γη, και πόσο προσωπικό και εναέρια μέσα κινητοποιήθηκαν. Μαζί οι καμένες εκτάσεις όπως τις βλέπει ο δορυφόρος (EFFIS)."
 description_preprocess: "Τα στοιχεία έρχονται από τα ανοιχτά δεδομένα της Πυροσβεστικής και από το EFFIS. Ενώνουμε τα αρχεία σε ενιαίο σύνολο, καθαρίζουμε ονόματα και ημερομηνίες και κρατάμε τις δύο πηγές χωριστά, γιατί μετρούν διαφορετικά."
 description_data_access_sql_bigquery: "SELECT * FROM dataforgreece.public_data.forest_fires_greece_v"

@@ -1,8 +1,8 @@
 ---
-title: Timeline of Greek Fuel Prices 2020–2024
+title: Timeline of Greek Fuel Prices 2020–2025
 slug: fuel-prices-greece-timeline
 use_cover_image: false
-date: 2024-11-10
+date: 2025-02-01
 related_dataset_slugs: 
   - fuel-prices-greece
 image_path: assets/posts/fuel_station.webp
@@ -10,14 +10,7 @@ image_path: assets/posts/fuel_station.webp
 
 Understanding the impact of global Key events on Greek fuel prices.
 
-<div class="pt-2">
-<iframe 
-    src="/en/charts/fuel-prices-greece-daily/" 
-    frameborder="0" 
-    style="border: 0; width: 100%; aspect-ratio: 4 / 3;" 
-    allowfullscreen>
-</iframe>
-</div>
+{% include article-chart.html id="fuel-prices-monthly-2020-2025" %}
 
 - April 2020 - COVID-19 Pandemic
 

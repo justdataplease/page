@@ -2,7 +2,7 @@
 title: Elections in Greece, 1974–2024
 slug: elections-greece
 description: "The results of every election since the restoration of democracy, at every level, with demographics"
-category: Politics
+category: State & politics
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-02"
