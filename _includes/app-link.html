@@ -1,0 +1,10 @@
+{%- comment -%} The link of one app of _data/apps.yml (include.app, include.lang): a page of ours (<lang>.url starting
+  with "/") opens in the same tab with →, an outside site (url) in a new tab with ↗. Sets app_href, app_target, app_arrow. {%- endcomment -%}
+{%- assign _ax = include.app[include.lang] -%}
+{%- assign _au = _ax.url | default: include.app.url -%}
+{%- assign _a0 = _au | slice: 0 -%}
+{%- if _a0 == "/" -%}
+{%- assign app_href = site.baseurl | append: _au -%}{%- assign app_target = "" -%}{%- assign app_arrow = "→" -%}
+{%- else -%}
+{%- assign app_href = _au -%}{%- assign app_target = ' target="_blank" rel="noopener"' -%}{%- assign app_arrow = "↗" -%}
+{%- endif -%}

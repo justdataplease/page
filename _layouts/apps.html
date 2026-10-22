@@ -10,17 +10,18 @@
     <div class="apps-list">
         {%- assign apps_ = site.data.apps | sort: "date" | reverse %}
         {%- for ap in apps_ %}
-        {%- assign apx = ap[page.lang] %}
+        {%- assign apx = ap[page.lang] -%}
+        {%- include app-link.html app=ap lang=page.lang %}
         <article class="app-card">
-            <a class="art app-card__art" href="{{ ap.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <a class="art app-card__art" href="{{ app_href }}"{{ app_target }} tabindex="-1" aria-hidden="true">
                 <img src="{{ site.baseurl }}/{{ ap.image }}" alt="{{ apx.alt }}" loading="lazy">
             </a>
             <div class="app-card__text">
-                <p class="app-card__domain">{{ ap.domain }} <span aria-hidden="true">↗</span></p>
-                <h2 class="hl hl--l"><a href="{{ ap.url }}" target="_blank" rel="noopener">{{ apx.title }}</a></h2>
+                <p class="app-card__domain">{{ ap.domain }} <span aria-hidden="true">{{ app_arrow }}</span></p>
+                <h2 class="hl hl--l"><a href="{{ app_href }}"{{ app_target }}>{{ apx.title }}</a></h2>
                 <p class="app-card__dek">{{ apx.dek }}</p>
                 <p class="meta">{{ t.app_added }} <time datetime="{{ ap.date | date_to_xmlschema }}">{% include date.html date=ap.date lang=page.lang %}</time>{% if apx.credit %} · {{ apx.credit }}{% endif %}</p>
-                <a class="btn btn--sm app-card__btn" href="{{ ap.url }}" target="_blank" rel="noopener">{{ t.open_app }} {{ ap.domain }} <span aria-hidden="true">↗</span></a>
+                <a class="btn btn--sm app-card__btn" href="{{ app_href }}"{{ app_target }}>{{ t.open_app }}{% if app_target != "" %} {{ ap.domain }}{% endif %} <span aria-hidden="true">{{ app_arrow }}</span></a>
             </div>
         </article>
         {%- endfor %}

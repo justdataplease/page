@@ -112,14 +112,15 @@
             <aside class="h1-apps" aria-labelledby="h1-apps">
                 <h2 class="h1-apps__label" id="h1-apps"><a href="{{ site.baseurl }}{{ t.paths.apps }}">{{ t.apps }}</a></h2>
                 {%- for ap in h1_apps limit: 3 %}
-                {%- assign apx = ap[lang] %}
+                {%- assign apx = ap[lang] -%}
+                {%- include app-link.html app=ap lang=lang %}
                 <article class="h1-app">
-                    <a class="art h1-app__art" href="{{ ap.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <a class="art h1-app__art" href="{{ app_href }}"{{ app_target }} tabindex="-1" aria-hidden="true">
                         <img src="{{ site.baseurl }}/{{ ap.image }}" alt="" loading="lazy">
                     </a>
                     <div class="h1-app__text">
-                        <p class="h1-app__domain">{{ ap.domain }} <span aria-hidden="true">↗</span></p>
-                        <h3 class="hl hl--s"><a href="{{ ap.url }}" target="_blank" rel="noopener">{{ apx.title }}</a></h3>
+                        <p class="h1-app__domain">{{ ap.domain }} <span aria-hidden="true">{{ app_arrow }}</span></p>
+                        <h3 class="hl hl--s"><a href="{{ app_href }}"{{ app_target }}>{{ apx.title }}</a></h3>
                         <p class="h1-app__dek">{{ apx.dek }}</p>
                     </div>
                 </article>
