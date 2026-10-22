@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /en/blog/safety-roads-crime-2026-10/
 title: "Road deaths: fewer over the last year, but motorcycles remain the big problem"
 slug: road-safety-motorcycles-2026-10
 date: 2026-10-21

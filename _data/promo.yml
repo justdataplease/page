@@ -1,0 +1,16 @@
+# The always-on card at the top of the front page's right column, above the analyses (user, 2026-10-22: heyhood.net
+# "top right, like an article, always there"). Empty url = no card.
+url: "https://www.heyhood.net/"
+image: assets/posts/heyhood.webp
+gr:
+  kicker: "Εφαρμογή"
+  title: "heyhood: πού να μείνεις σε Ελλάδα και Κύπρο"
+  dek: "Διάλεξε τι μετράει για σένα και δες κάθε γειτονιά κατά σειρά, με δεκαπέντε δείκτες ποιότητας ζωής από ανοιχτά δεδομένα."
+  more: "Άνοιξε το heyhood.net"
+  alt: "Το λογότυπο του heyhood"
+en:
+  kicker: "App"
+  title: "heyhood: where to live in Greece and Cyprus"
+  dek: "Choose what matters to you and see every neighbourhood ranked, with fifteen quality-of-life indicators built on open data."
+  more: "Open heyhood.net"
+  alt: "The heyhood logo"

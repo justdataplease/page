@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /blog/safety-roads-crime-2026-10/
 title: "Τροχαία: λιγότεροι νεκροί τον τελευταίο χρόνο, αλλά οι μοτοσικλέτες μένουν το μεγάλο πρόβλημα"
 slug: road-safety-motorcycles-2026-10
 date: 2026-10-21

@@ -105,8 +105,25 @@
         {%- comment -%} ── Right: analyses + index ── {%- endcomment %}
         <section class="h1-side" aria-labelledby="h1-analyses">
             <h2 class="label" id="h1-analyses"><a href="{{ site.baseurl }}{{ t.paths.news }}">{{ t.analyses }}</a></h2>
+            {%- comment -%} the always-on card (_data/promo.yml) takes the big slot; the analyses below it are rows {%- endcomment -%}
+            {%- assign h1_promo = site.data.promo -%}
+            {%- assign h1_pr = h1_promo[lang] -%}
+            {%- if h1_promo.url and h1_promo.url != "" %}
+            <article class="h1-an h1-an--big h1-promo">
+                <a class="art" href="{{ h1_promo.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="{{ site.baseurl }}/{{ h1_promo.image }}" alt="{{ h1_pr.alt }}" loading="lazy">
+                </a>
+                <p class="kicker">{% include upper.html text=h1_pr.kicker %}</p>
+                <h3 class="hl hl--m"><a href="{{ h1_promo.url }}" target="_blank" rel="noopener">{{ h1_pr.title }}</a></h3>
+                <p class="story__dek">{{ h1_pr.dek }}</p>
+                <a class="more" href="{{ h1_promo.url }}" target="_blank" rel="noopener">{{ h1_pr.more }} ↗</a>
+            </article>
+            {%- assign h1_big = false -%}
+            {%- else -%}
+            {%- assign h1_big = true -%}
+            {%- endif %}
             {%- for a in h1_articles offset: 1 limit: 3 %}
-            {%- if forloop.first %}
+            {%- if forloop.first and h1_big %}
             <article class="h1-an h1-an--big">
                 <a class="art" href="{{ site.baseurl }}{{ a.url }}" tabindex="-1" aria-hidden="true">
                     <img src="{{ site.baseurl }}/{{ a.image_path | default: h1_img }}" alt="" loading="lazy">
