@@ -105,6 +105,55 @@
 .h1-lead__excerpt { margin-bottom: .5rem; column-fill: balance; }
 .h1-lead__excerpt p { orphans: 1; widows: 1; }
 
+/* Εφαρμογές που ξεχωρίσαμε: a tinted panel with an accent rule above the analyses, so the apps read as their own
+   section; each app is a row with a square picture at the left. */
+.h1-apps {
+    margin: 0 0 1.5rem;
+    padding: .85rem 1rem 1rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--accent);
+}
+.h1-apps__label {
+    margin: 0 0 .8rem;
+    font-family: var(--f-sans);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent-strong, var(--accent));
+}
+.h1-apps__label a:hover { text-decoration: underline; }
+.h1-app {
+    display: grid;
+    grid-template-columns: 5.25rem minmax(0, 1fr);
+    column-gap: .8rem;
+    align-items: start;
+}
+.h1-app + .h1-app { margin-top: .85rem; padding-top: .85rem; border-top: 1px solid var(--rule); }
+.h1-app__art { margin: .15rem 0 0; }
+.h1-app__art img { aspect-ratio: 1 / 1; border-radius: 3px; }
+.h1-app__domain {
+    margin: 0 0 .2rem;
+    font-family: var(--f-sans);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--accent-strong, var(--accent));
+}
+.h1-app .hl { margin: 0 0 .25rem; }
+.h1-app__dek {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    margin: 0;
+    font-size: .86rem;
+    line-height: 1.42;
+    color: var(--ink-2);
+}
+.h1-apps__more { margin-top: .85rem; }
+
 /* Αναλύσεις: one big, then two rows with a thumbnail on the right. */
 .h1-an { margin-bottom: 1rem; }
 .h1-an + .h1-an { padding-top: 1rem; border-top: 1px solid var(--rule); }

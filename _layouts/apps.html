@@ -1,0 +1,34 @@
+{%- comment -%} Εφαρμογές που ξεχωρίσαμε: every app of _data/apps.yml, newest first (the front page shows the three newest).
+  Used by gr/efarmoges.html and en/apps.html. {%- endcomment -%}
+{% include head.html %}
+<body>
+{% include masthead.html %}
+
+<main class="wrap">
+    {% include section-head.html title=t.apps crumb=t.apps dek=t.apps_dek %}
+
+    <div class="apps-list">
+        {%- assign apps_ = site.data.apps | sort: "date" | reverse %}
+        {%- for ap in apps_ %}
+        {%- assign apx = ap[page.lang] %}
+        <article class="app-card">
+            <a class="art app-card__art" href="{{ ap.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="{{ site.baseurl }}/{{ ap.image }}" alt="{{ apx.alt }}" loading="lazy">
+            </a>
+            <div class="app-card__text">
+                <p class="app-card__domain">{{ ap.domain }} <span aria-hidden="true">↗</span></p>
+                <h2 class="hl hl--l"><a href="{{ ap.url }}" target="_blank" rel="noopener">{{ apx.title }}</a></h2>
+                <p class="app-card__dek">{{ apx.dek }}</p>
+                <p class="meta">{{ t.app_added }} <time datetime="{{ ap.date | date_to_xmlschema }}">{% include date.html date=ap.date lang=page.lang %}</time>{% if apx.credit %} · {{ apx.credit }}{% endif %}</p>
+                <a class="btn btn--sm app-card__btn" href="{{ ap.url }}" target="_blank" rel="noopener">{{ t.open_app }} {{ ap.domain }} <span aria-hidden="true">↗</span></a>
+            </div>
+        </article>
+        {%- endfor %}
+    </div>
+</main>
+
+<div class="wrap article-end">{% include newsletter.html wide=true %}</div>
+{% include disclaimer.html %}
+{% include footer.html %}
+</body>
+</html>

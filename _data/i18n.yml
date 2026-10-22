@@ -9,6 +9,7 @@ gr:
     reports: "/reports/"
     topics: "/dedomena/"
     about: "/about/"
+    apps: "/efarmoges/"
   substack: "https://dataforgreece.substack.com/subscribe"
 
   # masthead + front-page cover
@@ -155,6 +156,13 @@ gr:
   all_analyses: "Όλες οι αναλύσεις"
   more_analyses: "Περισσότερες αναλύσεις"
   more_and_data: "Περισσότερες αναλύσεις & δεδομένα"
+  apps: "Εφαρμογές που ξεχωρίσαμε"
+  apps_nav: "ΕΦΑΡΜΟΓΕΣ"
+  apps_short: "Εφαρμογές"
+  apps_dek: "Εργαλεία φτιαγμένα με ανοιχτά δεδομένα, που αξίζει να δοκιμάσεις."
+  all_apps: "Όλες οι εφαρμογές"
+  open_app: "Άνοιξε"
+  app_added: "Τη διαλέξαμε στις"
   dataset_one: "Σύνολο δεδομένων"
   livebox_text: "σύνολα δεδομένων ενημερώνονται <b>ζωντανά</b>, αυτόματα από τις πηγές τους."
   cadence:
@@ -184,6 +192,7 @@ en:
     reports: "/en/reports/"
     topics: "/en/data/"
     about: "/en/about/"
+    apps: "/en/apps/"
   substack: "https://dataforgreececom.substack.com/subscribe"
 
   motto: "Discover Greece through data."
@@ -322,6 +331,13 @@ en:
   all_analyses: "All analysis"
   more_analyses: "More analysis"
   more_and_data: "More analysis & data"
+  apps: "Apps we picked"
+  apps_nav: "APPS"
+  apps_short: "Apps"
+  apps_dek: "Tools built on open data that are worth a try."
+  all_apps: "All apps"
+  open_app: "Open"
+  app_added: "Picked on"
   dataset_one: "Dataset"
   livebox_text: "datasets update <b>live</b>, automatically from their sources."
   cadence:

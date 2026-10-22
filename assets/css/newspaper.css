@@ -666,6 +666,31 @@ figcaption { margin-top: .4rem; font-family: var(--f-sans); font-size: .72rem; c
 .river__art { grid-area: art; align-self: start; margin: 0; }
 .river__dek { margin: .2rem 0 0; font-size: 1rem; line-height: 1.5; color: var(--ink-2); }
 
+/* Εφαρμογές που ξεχωρίσαμε (_layouts/apps.html): one card per app, the picture at the left. */
+.apps-list { border-top: 1px solid var(--rule-ink); }
+.app-card {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: calc(var(--gutter) * 1.5);
+    align-items: start;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+.app-card__art { margin: 0; }
+.app-card__art img { border: 1px solid var(--rule); }
+.app-card__domain {
+    margin: 0 0 .35rem;
+    font-family: var(--f-sans);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--accent-strong, var(--accent));
+}
+.app-card .hl { margin: 0 0 .5rem; }
+.app-card__dek { max-width: 40rem; margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink-2); }
+.app-card__btn { margin-top: 1rem; }
+@media (max-width: 720px) { .app-card { grid-template-columns: minmax(0, 1fr); gap: .9rem; } }
+
 .crumbs {
     display: flex;
     flex-wrap: wrap;

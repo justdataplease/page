@@ -67,6 +67,7 @@
                 {%- if forloop.first %}
                 {%- comment -%} Topics are this edition's own section (navbar.yml is shared with the main site). {%- endcomment %}
                 <li><a href="{{ site.baseurl }}{{ t.paths.topics }}"{% if page.url contains t.paths.topics %} aria-current="page"{% endif %}>{{ t.topics_nav }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ t.paths.apps }}"{% if page.url == t.paths.apps %} aria-current="page"{% endif %}>{{ t.apps_nav }}</a></li>
                 {%- endif %}
                 {%- endfor %}
             </ul>

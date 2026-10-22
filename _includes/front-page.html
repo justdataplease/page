@@ -4,7 +4,8 @@
   home pages only (every class here starts with h1-, or reuses a shared one from newspaper.css).
     Top, three columns:  Νέα δεδομένα (square thumbnails + a ΖΩΝΤΑΝΑ/update line)
                          | cover photo band + the lead story with a large picture
-                         | Αναλύσεις (one with a big picture, two with side thumbnails) + "Σε αυτό το φύλλο"
+                         | Εφαρμογές που ξεχωρίσαμε (tinted panel, the three newest of _data/apps.yml)
+                           + Αναλύσεις (one with a big picture, two with side thumbnails) + "Σε αυτό το φύλλο"
     Δεδομένα: the topics as tiles, 4 per row (8 topics = 4 x 2), 3:2 photos, rows aligned so the buttons share one
     line; the special features under them as a slim dated strip (thumbnail, name, one line, button), so a new topic
     never leaves a lone tile on a third row.
@@ -102,28 +103,33 @@
             {%- endif %}
         </div>
 
-        {%- comment -%} ── Right: analyses + index ── {%- endcomment %}
+        {%- comment -%} ── Right: apps we picked, analyses + index ── {%- endcomment %}
         <section class="h1-side" aria-labelledby="h1-analyses">
-            <h2 class="label" id="h1-analyses"><a href="{{ site.baseurl }}{{ t.paths.news }}">{{ t.analyses }}</a></h2>
-            {%- comment -%} the always-on card (_data/promo.yml) takes the big slot; the analyses below it are rows {%- endcomment -%}
-            {%- assign h1_promo = site.data.promo -%}
-            {%- assign h1_pr = h1_promo[lang] -%}
-            {%- if h1_promo.url and h1_promo.url != "" %}
-            <article class="h1-an h1-an--big h1-promo">
-                <a class="art" href="{{ h1_promo.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                    <img src="{{ site.baseurl }}/{{ h1_promo.image }}" alt="{{ h1_pr.alt }}" loading="lazy">
-                </a>
-                <p class="kicker">{% include upper.html text=h1_pr.kicker %}</p>
-                <h3 class="hl hl--m"><a href="{{ h1_promo.url }}" target="_blank" rel="noopener">{{ h1_pr.title }}</a></h3>
-                <p class="story__dek">{{ h1_pr.dek }}</p>
-                <a class="more" href="{{ h1_promo.url }}" target="_blank" rel="noopener">{{ h1_pr.more }} ↗</a>
-            </article>
-            {%- assign h1_big = false -%}
-            {%- else -%}
-            {%- assign h1_big = true -%}
+            {%- comment -%} Εφαρμογές που ξεχωρίσαμε (_data/apps.yml): the three newest, in a tinted panel of their own
+              above the analyses (user, 2026-10-22: "not under Αναλύσεις, and make them stand out"). {%- endcomment -%}
+            {%- assign h1_apps = site.data.apps | sort: "date" | reverse -%}
+            {%- if h1_apps.size > 0 %}
+            <aside class="h1-apps" aria-labelledby="h1-apps">
+                <h2 class="h1-apps__label" id="h1-apps"><a href="{{ site.baseurl }}{{ t.paths.apps }}">{{ t.apps }}</a></h2>
+                {%- for ap in h1_apps limit: 3 %}
+                {%- assign apx = ap[lang] %}
+                <article class="h1-app">
+                    <a class="art h1-app__art" href="{{ ap.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="{{ site.baseurl }}/{{ ap.image }}" alt="" loading="lazy">
+                    </a>
+                    <div class="h1-app__text">
+                        <p class="h1-app__domain">{{ ap.domain }} <span aria-hidden="true">↗</span></p>
+                        <h3 class="hl hl--s"><a href="{{ ap.url }}" target="_blank" rel="noopener">{{ apx.title }}</a></h3>
+                        <p class="h1-app__dek">{{ apx.dek }}</p>
+                    </div>
+                </article>
+                {%- endfor %}
+                <a class="more h1-apps__more" href="{{ site.baseurl }}{{ t.paths.apps }}">{{ t.all_apps }} →</a>
+            </aside>
             {%- endif %}
+            <h2 class="label" id="h1-analyses"><a href="{{ site.baseurl }}{{ t.paths.news }}">{{ t.analyses }}</a></h2>
             {%- for a in h1_articles offset: 1 limit: 3 %}
-            {%- if forloop.first and h1_big %}
+            {%- if forloop.first %}
             <article class="h1-an h1-an--big">
                 <a class="art" href="{{ site.baseurl }}{{ a.url }}" tabindex="-1" aria-hidden="true">
                     <img src="{{ site.baseurl }}/{{ a.image_path | default: h1_img }}" alt="" loading="lazy">
@@ -154,6 +160,7 @@
                     <li><a href="{{ site.baseurl }}{{ t.paths.news }}"><span>{{ t.research_plural }}</span><i></i><b>{{ h1_articles.size }}</b></a></li>
                     <li><a href="{{ site.baseurl }}{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span><i></i><b>{{ h1_datasets.size }}</b></a></li>
                     <li><span class="index-box__row"><span>{{ t.charts }}</span><i></i><b>{{ h1_charts.size }}</b></span></li>
+                    <li><a href="{{ site.baseurl }}{{ t.paths.apps }}"><span>{{ t.apps_short }}</span><i></i><b>{{ site.data.apps.size }}</b></a></li>
                     {%- if h1_reports.size > 0 %}
                     <li><a href="{{ site.baseurl }}{{ t.paths.reports }}"><span>{{ t.reports }}</span><i></i><b>{{ h1_reports.size }}</b></a></li>
                     {%- endif %}

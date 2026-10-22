@@ -1,0 +1,31 @@
+# Εφαρμογές που ξεχωρίσαμε (user, 2026-10-22): apps built on open data that we pick out. The front page shows the
+# three newest (by `date`, the day we added the app) in a panel at the top of the right column, above the analyses;
+# the apps page (gr/efarmoges.html, en/apps.html) lists them all, newest first.
+- key: soundwatch
+  date: "2026-10-22 12:00"
+  url: "https://soundwatch-explorer.vercel.app/"
+  domain: "soundwatch-explorer"
+  image: assets/posts/soundwatch.webp
+  gr:
+    title: "SoundWatch: ο θόρυβος της Αθήνας ώρα με την ώρα"
+    dek: "Πού και πότε έχει ησυχία: χάρτης, ημέρες επί ώρες και συγκρίσεις από τους αισθητήρες θορύβου του SoundWatch σε γειτονιές της Αθήνας."
+    credit: "Δεδομένα: soundwatch.gr"
+    alt: "Χάρτης της Αθήνας με τους αισθητήρες θορύβου, χρωματισμένους από το ήσυχο στο θορυβώδες"
+  en:
+    title: "SoundWatch: Athens noise, hour by hour"
+    dek: "Where and when it is quiet: a map, day-by-hour grids and comparisons from SoundWatch's noise sensors in Athens neighbourhoods."
+    credit: "Data: soundwatch.gr"
+    alt: "Map of Athens with the noise sensors, coloured from quiet to loud"
+- key: heyhood
+  date: "2026-10-22 03:00"
+  url: "https://www.heyhood.net/"
+  domain: "heyhood.net"
+  image: assets/posts/heyhood.webp
+  gr:
+    title: "heyhood: πού να μείνεις σε Ελλάδα και Κύπρο"
+    dek: "Διάλεξε τι μετράει για σένα και δες κάθε γειτονιά κατά σειρά, με δεκαπέντε δείκτες ποιότητας ζωής από ανοιχτά δεδομένα."
+    alt: "Σύγκριση δύο γειτονιών στο heyhood σε δεκαπέντε δείκτες"
+  en:
+    title: "heyhood: where to live in Greece and Cyprus"
+    dek: "Choose what matters to you and see every neighbourhood ranked, with fifteen quality-of-life indicators built on open data."
+    alt: "Two neighbourhoods compared on heyhood across fifteen indicators"
