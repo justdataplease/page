@@ -1,0 +1,17 @@
+# asking-vs-contracts-2026-10: median declared contract price per m2 by age of the building (contract year minus
+# construction year), 2025, dwellings in full ownership; n = 1,050, 1,844, 3,911, 10,813. Checked 2026-10-23 (BigQuery minfin.vs_market / minfin.transfers; medians are BigQuery APPROX_QUANTILES).
+type: bar
+unit: " €"
+max: 2500
+decimals: 0
+title:
+  gr: "Δηλωμένη τιμή συμβολαίων ανά ηλικία κτιρίου, 2025 (€ ανά τ.μ.)"
+  en: "Declared contract price by age of the building, 2025 (€ per m²)"
+note:
+  gr: "Διάμεση τιμή ανά τ.μ. κατοικιών με πλήρη κυριότητα. Ηλικία: έτος συμβολαίου μείον έτος κατασκευής. Πηγή: Υπουργείο Οικονομικών (ΑΑΔΕ). Επεξεργασία: DataForGreece."
+  en: "Median price per m² of homes in full ownership. Age: contract year minus construction year. Source: Ministry of Finance (AADE). Processing: DataForGreece."
+rows:
+  - {label: {gr: "Έως 4 ετών", en: "Up to 4 years old"}, value: 2187}
+  - {label: {gr: "5–19 ετών", en: "5–19 years old"}, value: 1471}
+  - {label: {gr: "20–39 ετών", en: "20–39 years old"}, value: 1346}
+  - {label: {gr: "40 ετών και άνω", en: "40 years and older"}, value: 1156}

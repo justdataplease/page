@@ -101,18 +101,19 @@
   image: assets/posts/topic-real-estate.webp
   since: 2022
   cadence: monthly
-  data: [real-estate-greece, auctions-greece]
+  data: [real-estate-greece, auctions-greece, property-transfers-greece]
   charts: []
   report: ""
   articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDU3ZmQxMWMtZjk1Yy00YzgzLWE5ZTItZjkyZDU3ZTA4MjM3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
-    name: "Ακίνητα: τιμές αγγελιών και πλειστηριασμοί"
-    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα, και πώς καταλήγουν οι πλειστηριασμοί ακινήτων δίπλα στην αγορά."
+    name: "Ακίνητα: αγγελίες, συμβόλαια και πλειστηριασμοί"
+    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα, πόσο δηλώνεται στα συμβόλαια και πώς καταλήγουν οι πλειστηριασμοί ακινήτων δίπλα στην αγορά."
     coverage: "2022 – σήμερα · όλη η Ελλάδα · 13 περιφέρειες · δήμοι"
     updates: "Κάθε μήνα"
     sources:
       - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/real-estate/", note: "Δικές μας συλλογές αγγελιών πώλησης και ενοικίασης κατοικιών και πλειστηριασμών ακινήτων" }
+      - { name: "Υπουργείο Οικονομικών (ΑΑΔΕ)", url: "https://www.gsis.gr/sites/default/files/akinhta/mhtrwo-ax-met-ak-2025.xlsx", note: "Μητρώο συμβολαίων μεταβίβασης ακινήτων: δηλωμένη τιμή, εμβαδόν, ηλικία και τιμή ζώνης" }
       - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices", note: "Δείκτης τιμών διαμερισμάτων (συναλλαγές)" }
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/SJU24/-", note: "Αγοραπωλησίες ακινήτων και οικοδομικές άδειες" }
       - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Εισόδημα νοικοκυριών και επιβάρυνση από το κόστος στέγασης ανά περιφέρεια" }
@@ -120,16 +121,18 @@
       - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Για τις τιμές συναλλαγών δείτε το θέμα Κατοικία (Τράπεζα της Ελλάδος)."
       - "Οι δήμοι με λίγες αγγελίες δεν εμφανίζονται, ώστε μία-δύο ακριβές βίλες να μη «φτιάχνουν» την τιμή ενός ολόκληρου δήμου."
       - "Τα ενοίκια συγκρίνονται με το Airbnb στη σελίδα «Airbnb & ενοίκια» του θέματος Airbnb."
+      - "Η σελίδα «Αγγελίες και συμβόλαια» βάζει τις ζητούμενες τιμές δίπλα στη δηλωμένη τιμή των συμβολαίων του Υπουργείου Οικονομικών και στην τιμή ζώνης (αντικειμενική αξία). Η δηλωμένη τιμή δεν είναι εκτίμηση: αφορά κυρίως παλιά σπίτια, γι' αυτό η απόσταση από τις αγγελίες δεν είναι «έκπτωση». Οι δήμοι συγκρίνονται μόνο όταν το όνομά τους ταυτίζεται στις δύο πηγές."
       - "Η σελίδα «Αγγελίες και επίσημα στοιχεία» βάζει τις ζητούμενες τιμές δίπλα στις τιμές συναλλαγών της Τράπεζας της Ελλάδος, στις αγοραπωλησίες και τις άδειες της ΕΛΣΤΑΤ και στο εισόδημα των νοικοκυριών."
       - "Πλειστηριασμοί: το αποτέλεσμα κάθε δημοπρασίας δεν το βλέπουμε, γι' αυτό το συμπεραίνουμε. Όταν το ακίνητο αποσύρεται αμέσως μετά τη δημοπρασία χωρίς νέο γύρο, το λέμε «πιθανή κατακύρωση», σε πλειοδότη ή στον πιστωτή."
       - "Οι πλειστηριασμοί συγκρίνονται με την τιμή πρώτης προσφοράς, όχι με την τελική τιμή, και με τα δικά μας δεδομένα αγοράς: τις ζητούμενες τιμές των αγγελιών πώλησης που συλλέγουμε, για τον ίδιο τύπο κατοικίας και την ίδια περιοχή. Δεν είναι επίσημος δείκτης τιμών."
   en:
-    name: "Property: asking prices and auctions"
-    dek: "What sellers and landlords ask for a home, by region and municipality, every month, and how property auctions end up next to the market."
+    name: "Property: listings, contracts and auctions"
+    dek: "What sellers and landlords ask for a home, by region and municipality, every month, what is declared in the contracts, and how property auctions end up next to the market."
     coverage: "2022 – today · all of Greece · 13 regions · municipalities"
     updates: "Every month"
     sources:
       - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/real-estate/", note: "Our own collection of homes listed for sale and for rent, and of property auctions" }
+      - { name: "Ministry of Finance (AADE)", url: "https://www.gsis.gr/sites/default/files/akinhta/mhtrwo-ax-met-ak-2025.xlsx", note: "Register of property transfer contracts: declared price, area, age and zone price" }
       - { name: "Bank of Greece", url: "https://www.bankofgreece.gr/en/statistics/real-estate-market/residential-and-commercial-property-price-indices-and-other-short-term-indices", note: "Apartment price index (transactions)" }
       - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/SJU24/-", note: "Property sales and building permits" }
       - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Household income and housing cost overburden by region" }
@@ -137,6 +140,7 @@
       - "These are asking prices from listings, not sale prices; deals usually close lower. For transaction prices see the Housing topic (Bank of Greece)."
       - "Municipalities with few listings are left out, so one or two expensive villas cannot set a whole municipality's price."
       - "Rents are compared with Airbnb on the «Airbnb & ενοίκια» page of the Airbnb topic."
+      - "The page «Αγγελίες και συμβόλαια» puts asking prices next to the declared price in the Ministry of Finance contracts and the zone price (objective value). The declared price is not an estimate: it covers mostly old homes, so the gap from the listings is not a «discount». Municipalities are compared only when their name is the same in both sources."
       - "The page «Αγγελίες και επίσημα στοιχεία» puts asking prices next to the Bank of Greece transaction prices, ELSTAT's property sales and building permits, and household income."
       - "Auctions: we do not see the result of each auction, so we infer it. When the property is withdrawn right after the auction with no new round, we call it a «probable adjudication», to a bidder or to the creditor."
       - "Auctions are compared by their starting price, not the final price, with our market data: the asking prices of the sale listings we collect, for the same dwelling type and area. It is not an official price index."

@@ -1,0 +1,23 @@
+# asking-vs-contracts-2026-10: median asking price per m2 of the sale listings we collect (each listing once per year, at
+# its latest complete month) and median declared price per m2 of the Ministry of Finance transfer contracts (dwellings in
+# full ownership, 15-500 m2), Greece by year; 2026 = contracts to 1 Oct and listings to Sep. Checked 2026-10-23 (BigQuery minfin.vs_market / minfin.transfers; medians are BigQuery APPROX_QUANTILES).
+type: line
+unit: ""
+max: 3000
+y_interval: 500
+decimals: 0
+title:
+  gr: "Ζητούμενη τιμή και τιμή συμβολαίων ανά έτος (€ ανά τ.μ.)"
+  en: "Asking price and contract price by year (€ per m²)"
+note:
+  gr: "Διάμεσες τιμές ανά τ.μ., κατοικίες με πλήρη κυριότητα. Ζητούμενη: τα δικά μας δεδομένα αγοράς. Συμβόλαια: δηλωμένη τιμή, Υπουργείο Οικονομικών (ΑΑΔΕ). Το 2026 είναι μερικό έτος. Επεξεργασία: DataForGreece."
+  en: "Median prices per m², homes in full ownership. Asking: our market data. Contracts: declared price, Ministry of Finance (AADE). 2026 is a partial year. Processing: DataForGreece."
+x_label: {gr: "Έτος", en: "Year"}
+x: [2022, 2023, 2024, 2025, 2026]
+fallback_step: 1
+x_interval: 0
+series:
+  - name: {gr: "Ζητούμενη τιμή (αγγελίες)", en: "Asking price (listings)"}
+    values: [1867, 2074, 2229, 2378, 2500]
+  - name: {gr: "Τιμή συμβολαίων", en: "Contract price"}
+    values: [891, 1064, 1158, 1272, 1369]

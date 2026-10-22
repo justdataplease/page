@@ -1,0 +1,30 @@
+# asking-vs-contracts-2026-10: how far the median asking price per m2 is above the median declared contract price per m2,
+# by region, 2025 (dwellings in full ownership; Greece = 87.0%). Checked 2026-10-23 (BigQuery minfin.vs_market / minfin.transfers; medians are BigQuery APPROX_QUANTILES).
+type: bar
+unit: "%"
+max: 200
+decimals: 0
+title:
+  gr: "Πόσο πάνω από τα συμβόλαια είναι οι αγγελίες, ανά περιφέρεια, 2025"
+  en: "How far above the contracts the listings are, by region, 2025"
+note:
+  gr: "Η ζητούμενη τιμή ανά τ.μ. έναντι της δηλωμένης τιμής των συμβολαίων, διάμεσες τιμές, κατοικίες με πλήρη κυριότητα. Επεξεργασία: DataForGreece."
+  en: "Asking price per m² against the declared contract price, median prices, homes in full ownership. Processing: DataForGreece."
+reference:
+  value: 87
+  decimals: 0
+  label_prefix: {gr: "Ελλάδα", en: "Greece"}
+rows:
+  - {label: {gr: "Νότιο Αιγαίο", en: "South Aegean"}, value: 179}
+  - {label: {gr: "Κρήτη", en: "Crete"}, value: 144}
+  - {label: {gr: "Στερεά Ελλάδα", en: "Central Greece"}, value: 121}
+  - {label: {gr: "Βόρειο Αιγαίο", en: "North Aegean"}, value: 117}
+  - {label: {gr: "Πελοπόννησος", en: "Peloponnese"}, value: 97}
+  - {label: {gr: "Ιόνια Νησιά", en: "Ionian Islands"}, value: 92}
+  - {label: {gr: "Κεντρική Μακεδονία", en: "Central Macedonia"}, value: 85}
+  - {label: {gr: "Θεσσαλία", en: "Thessaly"}, value: 77}
+  - {label: {gr: "Ανατολική Μακεδονία και Θράκη", en: "Eastern Macedonia and Thrace"}, value: 72}
+  - {label: {gr: "Ήπειρος", en: "Epirus"}, value: 66}
+  - {label: {gr: "Δυτική Ελλάδα", en: "Western Greece"}, value: 65}
+  - {label: {gr: "Αττική", en: "Attica"}, value: 65}
+  - {label: {gr: "Δυτική Μακεδονία", en: "Western Macedonia"}, value: 62}
