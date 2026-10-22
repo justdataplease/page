@@ -2,22 +2,6 @@
 # three newest (by `date`, the day we added the app) in a panel at the top of the right column, above the analyses;
 # the apps page (gr/efarmoges.html, en/apps.html) lists them all, newest first.
 # url: an outside site (opens in a new tab, ↗), or a page of ours per language (gr.url / en.url starting with "/").
-- key: soundwatch
-  date: "2026-10-22 12:00"
-  domain: "Power BI · Data for Greece"
-  image: assets/posts/soundwatch.webp
-  gr:
-    url: "/dedomena/noise/"
-    title: "SoundWatch: ο θόρυβος της Αθήνας ώρα με την ώρα"
-    dek: "Πού και πότε έχει ησυχία: χάρτης, ημέρες επί ώρες και συγκρίσεις από τους αισθητήρες θορύβου του SoundWatch σε γειτονιές της Αθήνας."
-    credit: "Δεδομένα: soundwatch.gr"
-    alt: "Ο χάρτης και η κατάταξη των τόπων στο dashboard θορύβου του Data for Greece"
-  en:
-    url: "/en/data/noise/"
-    title: "SoundWatch: Athens noise, hour by hour"
-    dek: "Where and when it is quiet: a map, day-by-hour grids and comparisons from SoundWatch's noise sensors in Athens neighbourhoods."
-    credit: "Data: soundwatch.gr"
-    alt: "The map and the ranking of places on the Data for Greece noise dashboard"
 - key: heyhood
   date: "2026-10-22 03:00"
   url: "https://www.heyhood.net/"
