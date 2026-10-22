@@ -513,12 +513,13 @@
       - { name: "Ευρωπαϊκή Κεντρική Τράπεζα", url: "https://data.ecb.europa.eu", note: "Στεγαστικά δάνεια και επιτόκια" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Βάρος κόστους στέγασης, ιδιοκατοίκηση, συνωστισμός" }
       - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Ο δείκτης των ενοικίων" }
-      - { name: "ΕΛΣΤΑΤ, οικοδομική δραστηριότητα", url: "https://www.statistics.gr/el/statistics/-/publication/SOP03/-", note: "Οι ιδιωτικές οικοδομικές άδειες κάθε μήνα, και ανά περιφέρεια και περιοχή" }
+      - { name: "ΕΛΣΤΑΤ, οικοδομική δραστηριότητα", url: "https://www.statistics.gr/el/statistics/-/publication/SOP03/-", note: "Οι ιδιωτικές οικοδομικές άδειες κάθε μήνα, ανά περιφέρεια και περιοχή, και κάθε χρόνο ανά δήμο και είδος άδειας" }
       - { name: "Eurostat, κατασκευές", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Άδειες για κατοικίες, παραγωγή στις κατασκευές, κόστος κατασκευής και τιμές νέων κατοικιών" }
     notes:
       - "Ο δείκτης ενοικίων του ΕνΔΤΚ μετρά ενοίκια όλων των μισθώσεων, παλαιών και νέων· οι νέες μισθώσεις ακριβαίνουν πιο γρήγορα."
       - "Η ΕΕ δεν δημοσιεύει πια μέσο όρο για το κόστος κατασκευής, γι' αυτό το δείχνουμε μόνο για την Ελλάδα."
       - "Ανά περιφέρεια η ΕΛΣΤΑΤ δίνει τις νέες κατοικίες και τις άδειες για νέα κτίρια και προσθήκες, όχι το σύνολο των αδειών· γι' αυτό τα σύνολα των σελίδων διαφέρουν."
+      - "Ανά δήμο τα στοιχεία είναι ετήσια, από τους συγκεντρωτικούς πίνακες κάθε Δεκεμβρίου της ΕΛΣΤΑΤ· για ένα έτος η ΕΛΣΤΑΤ δεν έχει πίνακα ανά δήμο. Οι κάτοικοι κάθε δήμου είναι της απογραφής."
       - "Τα στοιχεία της Eurostat, της ΕΚΤ και της ΤτΕ τα μεταφράσαμε και τα αναδιατάξαμε εμείς· δεν ευθύνονται για τις αλλαγές."
   en:
     name: "Housing"
@@ -530,12 +531,13 @@
       - { name: "European Central Bank", url: "https://data.ecb.europa.eu", note: "Mortgages and interest rates" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Housing cost overburden, home ownership, overcrowding" }
       - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "The rents index" }
-      - { name: "ELSTAT, building activity", url: "https://www.statistics.gr/en/statistics/-/publication/SOP03/-", note: "Private building permits every month, also by region and area" }
+      - { name: "ELSTAT, building activity", url: "https://www.statistics.gr/en/statistics/-/publication/SOP03/-", note: "Private building permits every month, by region and area, and every year by municipality and type of permit" }
       - { name: "Eurostat, construction", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Dwelling permits, construction output, construction costs and prices of new dwellings" }
     notes:
       - "The HICP rents index covers all leases, old and new; new leases rise faster."
       - "The EU no longer publishes an average for construction costs, so we show them for Greece only."
       - "By region ELSTAT gives new dwellings and permits for new buildings and extensions, not all permits, so the totals on the two pages differ."
+      - "By municipality the data are annual, from ELSTAT's December summary tables; for one year ELSTAT has no table by municipality. Each municipality's residents are those of the census."
       - "We translated and rearranged the Eurostat, ECB and Bank of Greece data; they are not responsible for the changes."
 
 - key: energy
