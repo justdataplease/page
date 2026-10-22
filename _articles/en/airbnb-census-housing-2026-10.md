@@ -7,7 +7,7 @@ uses: [airbnb, real-estate, housing, tourism]
 period: 2026-10
 use_cover_image: false
 image_path: assets/posts/airbnb.webp
-image_alt: "Houses on a Greek island."
+image_alt: "A combination key lockbox hanging from a balcony railing with bamboo screening."
 related_dataset_slugs:
   - airbnb
   - real-estate-greece

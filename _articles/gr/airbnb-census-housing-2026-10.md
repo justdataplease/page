@@ -7,7 +7,7 @@ uses: [airbnb, real-estate, housing, tourism]
 period: 2026-10
 use_cover_image: false
 image_path: assets/posts/airbnb.webp
-image_alt: "Σπίτια σε ελληνικό νησί."
+image_alt: "Κουτί φύλαξης κλειδιών με συνδυασμό σε κάγκελο μπαλκονιού με επένδυση από μπαμπού."
 related_dataset_slugs:
   - airbnb
   - real-estate-greece

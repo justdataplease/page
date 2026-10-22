@@ -7,7 +7,7 @@ uses: [athens-neighbourhoods]
 period: 2026-10
 use_cover_image: false
 image_path: assets/posts/topic-athens-neighbourhoods.webp
-image_alt: "Πλατεία στο κέντρο της Αθήνας με δέντρα και κίνηση."
+image_alt: "Άποψη από ψηλά στις πυκνοδομημένες γειτονιές της Αθήνας."
 related_dataset_slugs:
   - athens-neighbourhoods
 ---

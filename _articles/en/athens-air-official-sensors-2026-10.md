@@ -7,7 +7,7 @@ uses: [athens-neighbourhoods]
 period: 2026-10
 use_cover_image: false
 image_path: assets/posts/topic-athens-neighbourhoods.webp
-image_alt: "A square in central Athens with trees and traffic."
+image_alt: "Elevated view over densely built Athens neighbourhoods."
 related_dataset_slugs:
   - athens-neighbourhoods
 ---
