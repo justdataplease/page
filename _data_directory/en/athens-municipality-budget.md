@@ -7,11 +7,11 @@ date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 
 published_by: "DataForGreece"
-last_update: "2024-10-20"
+last_update: "2026-10-22"
 date_added: "2024-10-20"
 data_dates: "2005/01 - 2024/10"
-source_name: "Municipality of Athens,Diavgeia,Ministry of National Economy and Finance"
-source_url: "https://www.cityofathens.gr,https://diavgeia.gov.gr,https://minfin.gov.gr"
+source_name: "Municipality of Athens,Diavgeia,Ministry of National Economy and Finance,ELSTAT – Population census"
+source_url: "https://www.cityofathens.gr,https://diavgeia.gov.gr,https://minfin.gov.gr,https://www.statistics.gr/en/statistics/-/publication/SAM03/-"
 contributed_by: "Adam Markakis"
 contributed_by_url: "https://www.linkedin.com/in/amarkakis"
 

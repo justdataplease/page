@@ -279,6 +279,7 @@
       - { name: "Διαύγεια", url: "https://diavgeia.gov.gr", note: "Αποφάσεις προϋπολογισμού και αναμορφώσεις από το 2026" }
       - { name: "Υπουργείο Εθνικής Οικονομίας και Οικονομικών", url: "https://minfin.gov.gr", note: "Κρατικός προϋπολογισμός: εκτέλεση, νόμος, στόχοι" }
       - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Γενική κυβέρνηση, για σύγκριση" }
+      - { name: "ΕΛΣΤΑΤ, απογραφή πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SAM03/-", note: "Οι κάτοικοι του Δήμου, για τις πληρωμές ανά κάτοικο" }
     notes:
       - "Από το 2026 οι κωδικοί αλλάζουν (ΑΛΕ αντί για ΚΑΕ)· οι συγκρίσεις με τα προηγούμενα χρόνια γίνονται μόνο όπου υπάρχει επίσημη αντιστοίχιση."
   en:
@@ -291,6 +292,7 @@
       - { name: "Diavgeia", url: "https://diavgeia.gov.gr", note: "Budget decisions and amendments from 2026" }
       - { name: "Ministry of Finance", url: "https://minfin.gov.gr", note: "State budget: execution, budget law, targets" }
       - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "General government, for comparison" }
+      - { name: "ELSTAT, population census", url: "https://www.statistics.gr/en/statistics/-/publication/SAM03/-", note: "The municipality's residents, for payments per resident" }
     notes:
       - "From 2026 the budget codes change (ALE instead of KAE); years are compared only where an official crosswalk exists."
 
@@ -473,11 +475,12 @@
       - { name: "Ευρωπαϊκή Κεντρική Τράπεζα", url: "https://data.ecb.europa.eu", note: "Στεγαστικά δάνεια και επιτόκια" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Βάρος κόστους στέγασης, ιδιοκατοίκηση, συνωστισμός" }
       - { name: "Eurostat, ΕνΔΤΚ", url: "https://ec.europa.eu/eurostat/web/hicp", note: "Ο δείκτης των ενοικίων" }
-      - { name: "ΕΛΣΤΑΤ, οικοδομική δραστηριότητα", url: "https://www.statistics.gr/el/statistics/-/publication/SOP03/-", note: "Οι ιδιωτικές οικοδομικές άδειες κάθε μήνα" }
+      - { name: "ΕΛΣΤΑΤ, οικοδομική δραστηριότητα", url: "https://www.statistics.gr/el/statistics/-/publication/SOP03/-", note: "Οι ιδιωτικές οικοδομικές άδειες κάθε μήνα, και ανά περιφέρεια και περιοχή" }
       - { name: "Eurostat, κατασκευές", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Άδειες για κατοικίες, παραγωγή στις κατασκευές, κόστος κατασκευής και τιμές νέων κατοικιών" }
     notes:
       - "Ο δείκτης ενοικίων του ΕνΔΤΚ μετρά ενοίκια όλων των μισθώσεων, παλαιών και νέων· οι νέες μισθώσεις ακριβαίνουν πιο γρήγορα."
       - "Η ΕΕ δεν δημοσιεύει πια μέσο όρο για το κόστος κατασκευής, γι' αυτό το δείχνουμε μόνο για την Ελλάδα."
+      - "Ανά περιφέρεια η ΕΛΣΤΑΤ δίνει τις νέες κατοικίες και τις άδειες για νέα κτίρια και προσθήκες, όχι το σύνολο των αδειών· γι' αυτό τα σύνολα των σελίδων διαφέρουν."
       - "Τα στοιχεία της Eurostat, της ΕΚΤ και της ΤτΕ τα μεταφράσαμε και τα αναδιατάξαμε εμείς· δεν ευθύνονται για τις αλλαγές."
   en:
     name: "Housing"
@@ -489,11 +492,12 @@
       - { name: "European Central Bank", url: "https://data.ecb.europa.eu", note: "Mortgages and interest rates" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Housing cost overburden, home ownership, overcrowding" }
       - { name: "Eurostat, HICP", url: "https://ec.europa.eu/eurostat/web/hicp", note: "The rents index" }
-      - { name: "ELSTAT, building activity", url: "https://www.statistics.gr/en/statistics/-/publication/SOP03/-", note: "Private building permits every month" }
+      - { name: "ELSTAT, building activity", url: "https://www.statistics.gr/en/statistics/-/publication/SOP03/-", note: "Private building permits every month, also by region and area" }
       - { name: "Eurostat, construction", url: "https://ec.europa.eu/eurostat/web/short-term-business-statistics", note: "Dwelling permits, construction output, construction costs and prices of new dwellings" }
     notes:
       - "The HICP rents index covers all leases, old and new; new leases rise faster."
       - "The EU no longer publishes an average for construction costs, so we show them for Greece only."
+      - "By region ELSTAT gives new dwellings and permits for new buildings and extensions, not all permits, so the totals on the two pages differ."
       - "We translated and rearranged the Eurostat, ECB and Bank of Greece data; they are not responsible for the changes."
 
 - key: energy
@@ -590,6 +594,8 @@
     sources:
       - { name: "Eurostat, στατιστικές τουρισμού", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Αφίξεις και διανυκτερεύσεις σε καταλύματα, κλίνες, ανά περιφέρεια" }
       - { name: "Τράπεζα της Ελλάδος", url: "https://www.bankofgreece.gr", note: "Ταξιδιωτικές εισπράξεις (ισοζύγιο πληρωμών)" }
+      - { name: "Τράπεζα της Ελλάδος, έρευνα συνόρων", url: "https://www.bankofgreece.gr/en/statistics/external-sector/balance-of-payments/travel-services", note: "Ταξιδιώτες, διανυκτερεύσεις και δαπάνη ανά χώρα προέλευσης, και η κρουαζιέρα" }
+      - { name: "ΕΛΣΤΑΤ, μουσεία και αρχαιολογικοί χώροι", url: "https://www.statistics.gr/el/statistics/-/publication/SCI21/-", note: "Επισκέπτες και εισπράξεις κάθε μήνα, σε κάθε χώρο" }
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/STO12/-", note: "Η ελληνική πηγή των στοιχείων καταλυμάτων" }
       - { name: "Eurostat, πλατφόρμες βραχυχρόνιας μίσθωσης", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Διανυκτερεύσεις μέσω Airbnb, Booking, Expedia και Tripadvisor ανά περιοχή" }
       - { name: "Eurostat, αεροπορικές και θαλάσσιες μεταφορές", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Επιβάτες ανά αεροδρόμιο και λιμάνι" }
@@ -597,6 +603,7 @@
       - "Οι διανυκτερεύσεις αφορούν τα καταλύματα της έρευνας (ξενοδοχεία, κάμπινγκ, ενοικιαζόμενα)· η βραχυχρόνια μίσθωση φαίνεται στο θέμα Airbnb."
       - "Η σελίδα «Πίεση ανά κάτοικο» δείχνει τις διανυκτερεύσεις ανά κάτοικο σε κάθε περιοχή και πόσες κλείνονται μέσω πλατφορμών, με τα πειραματικά στοιχεία της Eurostat."
       - "Η σελίδα «Αφίξεις: αεροδρόμια και λιμάνια» δείχνει τους επιβάτες σε κάθε αεροδρόμιο (μηνιαία) και στα κύρια λιμάνια (τριμηνιαία, χωρίς τους επιβάτες κρουαζιέρας)."
+      - "Η σελίδα «Από πού έρχονται» μετρά όσους ήρθαν από το εξωτερικό στα σύνορα (Τράπεζα της Ελλάδος): είναι άλλος ορισμός από τις αφίξεις στα καταλύματα."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Tourism"
@@ -606,6 +613,8 @@
     sources:
       - { name: "Eurostat, tourism statistics", url: "https://ec.europa.eu/eurostat/web/tourism", note: "Arrivals and nights in accommodation, bed places, by region" }
       - { name: "Bank of Greece", url: "https://www.bankofgreece.gr", note: "Travel receipts (balance of payments)" }
+      - { name: "Bank of Greece, border survey", url: "https://www.bankofgreece.gr/en/statistics/external-sector/balance-of-payments/travel-services", note: "Travellers, nights and spending by country of origin, and cruises" }
+      - { name: "ELSTAT, museums and archaeological sites", url: "https://www.statistics.gr/en/statistics/-/publication/SCI21/-", note: "Visitors and receipts every month, at every site" }
       - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/STO12/-", note: "The Greek source of the accommodation data" }
       - { name: "Eurostat, short-term rental platforms", url: "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_oan3/default/table?lang=en", note: "Nights booked through Airbnb, Booking, Expedia and Tripadvisor by area" }
       - { name: "Eurostat, air and sea transport", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Passengers by airport and port" }
@@ -613,6 +622,7 @@
       - "Nights cover the surveyed accommodation (hotels, campsites, rented rooms); short-term rentals are in the Airbnb topic."
       - "The page «Πίεση ανά κάτοικο» shows the nights per resident in each area and how many are booked through the platforms, from Eurostat's experimental statistics."
       - "The page «Αφίξεις: αεροδρόμια και λιμάνια» shows the passengers at each airport (monthly) and at the main ports (quarterly, without cruise passengers)."
+      - "The page «Από πού έρχονται» (Where they come from) counts travellers from abroad at the border (Bank of Greece): a different measure from arrivals at accommodation."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: poverty
