@@ -12,7 +12,7 @@ source_name: "DataForGreece – Used-car listings,Eurostat – New cars by fuel 
 source_url: "https://dataforgreece.gr/en/data/cars/,https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_r_vehst/default/table?lang=en"
 description_detailed: "The used cars for sale in the listings we collect every month, with asking price, fuel, age and mileage, next to the new cars registered and the cars on the road, by fuel, per inhabitant and by region."
 description_preprocess: "We keep only undamaged used cars with a sensible price and age, and show medians, because the number of listings changes from month to month. The official data come from Eurostat and update automatically."
-image_path: assets/posts/default-blog-cover.webp
+image_path: assets/posts/topic-cars.webp
 ---
 
 | **Column**                  | **Column (Greek)**         | **Description** |

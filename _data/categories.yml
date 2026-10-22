@@ -23,8 +23,8 @@
   en: { name: "Society", dek: "Population, income, poverty, health and education." }
 
 - key: business
-  gr: { name: "Επιχειρήσεις & τουρισμός", dek: "Οι εταιρείες της χώρας, ο τουρισμός και η βραχυχρόνια μίσθωση." }
-  en: { name: "Business & tourism", dek: "The country's companies, tourism and short-term rentals." }
+  gr: { name: "Επιχειρήσεις & τουρισμός", dek: "Οι εταιρείες της χώρας, ο τουρισμός, η βραχυχρόνια μίσθωση, τα αυτοκίνητα και οι μεταφορές." }
+  en: { name: "Business & tourism", dek: "The country's companies, tourism, short-term rentals, cars and transport." }
 
 - key: energy
   gr: { name: "Ενέργεια & περιβάλλον", dek: "Ρεύμα, ενεργειακό μείγμα, εκπομπές και πυρκαγιές." }

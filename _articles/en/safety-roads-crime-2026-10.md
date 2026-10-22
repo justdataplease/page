@@ -6,8 +6,8 @@ topic: safety
 uses: [safety]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "A road in Greece."
+image_path: assets/posts/topic-safety.webp
+image_alt: "An Athens street with a zebra crossing at dusk."
 related_dataset_slugs:
   - safety-greece
 ---

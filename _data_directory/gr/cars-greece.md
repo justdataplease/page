@@ -12,7 +12,7 @@ source_name: "DataForGreece – Αγγελίες μεταχειρισμένων 
 source_url: "https://dataforgreece.gr/dedomena/cars/,https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_r_vehst/default/table?lang=en"
 description_detailed: "Οι μεταχειρισμένοι που πωλούνται στις αγγελίες που συλλέγουμε κάθε μήνα, με ζητούμενη τιμή, καύσιμο, ηλικία και χιλιόμετρα, δίπλα στα καινούργια αυτοκίνητα που ταξινομούνται και σε όσα κυκλοφορούν, ανά καύσιμο, ανά κάτοικο και ανά περιφέρεια."
 description_preprocess: "Κρατάμε μόνο μεταχειρισμένα χωρίς ζημιά, με λογική τιμή και ηλικία, και δείχνουμε διάμεσες τιμές, γιατί ο αριθμός των αγγελιών αλλάζει από μήνα σε μήνα. Τα επίσημα στοιχεία έρχονται από τη Eurostat και ενημερώνονται αυτόματα."
-image_path: assets/posts/default-blog-cover.webp
+image_path: assets/posts/topic-cars.webp
 ---
 
 | **Στήλη**                   | **Στήλη (Ελληνικά)**       | **Περιγραφή** |

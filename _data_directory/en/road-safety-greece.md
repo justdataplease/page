@@ -12,7 +12,7 @@ source_name: "ELSTAT – Road traffic accidents (SDT03),Eurostat – Road deaths
 source_url: "https://www.statistics.gr/en/statistics/-/publication/SDT03/-,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_r_acci/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadnu/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadve/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadro/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_motorc/default/table?lang=en"
 description_detailed: "Road accidents with casualties, deaths and injuries in Greece every month, and every year by region, vehicle, age, sex and road type. Alongside, the cars and motorcycles in use and the road deaths per inhabitant in every EU country."
 description_preprocess: "The monthly figures come from ELSTAT and the yearly ones from Eurostat, and update automatically. The latest months are provisional and change. Motorcycles per inhabitant and deaths per vehicle are our own calculation."
-image_path: assets/posts/default-blog-cover.webp
+image_path: assets/posts/topic-road-safety.webp
 ---
 
 | **Column**                  | **Column (Greek)**         | **Description** |

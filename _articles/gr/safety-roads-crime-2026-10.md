@@ -6,8 +6,8 @@ topic: safety
 uses: [safety]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Δρόμος στην Ελλάδα."
+image_path: assets/posts/topic-safety.webp
+image_alt: "Δρόμος στην Αθήνα με διάβαση πεζών το σούρουπο."
 related_dataset_slugs:
   - safety-greece
 ---

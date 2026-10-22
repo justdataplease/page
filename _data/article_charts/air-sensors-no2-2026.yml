@@ -1,0 +1,25 @@
+# athens-air-official-sensors-2026-10: NO2 at the City of Athens low-cost sensors, average of the days with a valid daily
+# mean from 1 January to 21 October 2026, the six highest of the 97 sensors with at least 100 days, and the average of
+# the 97 (geitonies.air_daily). Each sensor started on a different day (Κοτζιά 27 March, Ομονοίας 30 June).
+# Checked 2026-10-22 (BigQuery).
+type: bar
+unit: ""
+max: 80
+decimals: 1
+title:
+  gr: "Διοξείδιο του αζώτου στους αισθητήρες του Δήμου Αθηναίων, 2026 (µg/m³)"
+  en: "Nitrogen dioxide at the City of Athens sensors, 2026 (µg/m³)"
+note:
+  gr: "Οι έξι υψηλότεροι από 97 αισθητήρες χαμηλού κόστους και ο μέσος όρος όλων· μέσος όρος των ημερών με μετρήσεις ως τις 21 Οκτωβρίου, όχι ετήσιος. Πηγή: Δήμος Αθηναίων. Επεξεργασία: DataForGreece."
+  en: "The six highest of 97 low-cost sensors and the average of all; average of the days with readings to 21 October, not an annual mean. Source: City of Athens. Processing: DataForGreece."
+reference:
+  value: 40
+  label: {gr: "όριο ΕΕ (ετήσιο)", en: "EU limit (annual)"}
+rows:
+  - {label: {gr: "Πλατεία Κοτζιά", en: "Kotzia Square"}, value: 61.6}
+  - {label: {gr: "Πλατείες Κοραή και Κλαυθμώνος", en: "Korai and Klafthmonos squares"}, value: 56.1}
+  - {label: {gr: "Πλατεία Ομονοίας", en: "Omonia Square"}, value: 54.6}
+  - {label: {gr: "Πλατεία Αγίου Παντελεήμονα", en: "Agios Panteleimonas Square"}, value: 47.5}
+  - {label: {gr: "Πλατεία Παύλου Μπακογιάννη", en: "Pavlou Bakogianni Square"}, value: 45.7}
+  - {label: {gr: "Πλατεία Αγίας Αικατερίνης", en: "Agia Aikaterini Square"}, value: 45.1}
+  - {label: {gr: "Μέσος όρος 97 αισθητήρων", en: "Average of 97 sensors"}, value: 31.9}

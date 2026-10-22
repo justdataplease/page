@@ -1,0 +1,29 @@
+# athens-air-official-sensors-2026-10: NO2 annual mean 2025 at the official national-network stations in Attica with a
+# valid year (>= 75% of the hours), EEA verified data (geitonies.air_official_annual). Αθηνάς and Βοτανικός have no
+# valid 2025 mean. Checked 2026-10-22 (BigQuery).
+type: bar
+unit: ""
+max: 80
+decimals: 1
+title:
+  gr: "Διοξείδιο του αζώτου στους επίσημους σταθμούς της Αττικής, 2025 (µg/m³)"
+  en: "Nitrogen dioxide at the official stations in Attica, 2025 (µg/m³)"
+note:
+  gr: "Μέσος όρος του έτους, επικυρωμένα στοιχεία. Λείπουν οι σταθμοί με λίγες έγκυρες ώρες (Αθηνάς, Βοτανικός). Πηγή: Ευρωπαϊκός Οργανισμός Περιβάλλοντος. Επεξεργασία: DataForGreece."
+  en: "Annual mean, verified data. Stations with too few valid hours are left out (Athinas, Votanikos). Source: European Environment Agency. Processing: DataForGreece."
+reference:
+  value: 40
+  label: {gr: "όριο ΕΕ", en: "EU limit"}
+rows:
+  - {label: {gr: "Πατησίων", en: "Patision"}, value: 62.0}
+  - {label: {gr: "Πειραιάς-1", en: "Piraeus-1"}, value: 57.3}
+  - {label: {gr: "Αριστοτέλους", en: "Aristotelous"}, value: 42.8}
+  - {label: {gr: "Νέα Σμύρνη", en: "Nea Smyrni"}, value: 25.8}
+  - {label: {gr: "Λιόσια", en: "Liosia"}, value: 25.6}
+  - {label: {gr: "Περιστέρι", en: "Peristeri"}, value: 25.1}
+  - {label: {gr: "Ελευσίνα", en: "Elefsina"}, value: 22.7}
+  - {label: {gr: "Μαρούσι", en: "Marousi"}, value: 22.7}
+  - {label: {gr: "Λυκόβρυση", en: "Lykovrysi"}, value: 21.6}
+  - {label: {gr: "Κορωπί", en: "Koropi"}, value: 12.9}
+  - {label: {gr: "Αγία Παρασκευή", en: "Agia Paraskevi"}, value: 10.7}
+  - {label: {gr: "Θρακομακεδόνες", en: "Thrakomakedones"}, value: 5.8}

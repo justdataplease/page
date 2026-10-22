@@ -874,6 +874,7 @@
   kind: topic
   category: society
   model: stats
+  image: assets/posts/topic-safety.webp
   since: 2000
   cadence: annual
   data: [safety-greece]
@@ -912,6 +913,7 @@
   kind: topic
   category: society
   model: stats
+  image: assets/posts/topic-road-safety.webp
   since: 2000
   cadence: monthly
   data: [road-safety-greece]
@@ -952,6 +954,7 @@
   kind: topic
   category: business
   model: autokinita
+  image: assets/posts/topic-cars.webp
   since: 2013
   cadence: monthly
   data: [cars-greece]

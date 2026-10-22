@@ -12,7 +12,7 @@ source_name: "ΕΛΣΤΑΤ – Οδικά τροχαία ατυχήματα (SDT
 source_url: "https://www.statistics.gr/el/statistics/-/publication/SDT03/-,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_r_acci/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadnu/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadve/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadro/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carpda/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/road_eqs_motorc/default/table?lang=en"
 description_detailed: "Τα τροχαία με παθόντες, οι νεκροί και οι τραυματίες στην Ελλάδα κάθε μήνα, και κάθε χρόνο ανά περιφέρεια, όχημα, ηλικία, φύλο και τύπο δρόμου. Μαζί, τα αυτοκίνητα και οι μοτοσικλέτες σε κυκλοφορία και οι νεκροί ανά κάτοικο σε κάθε χώρα της ΕΕ."
 description_preprocess: "Τα μηνιαία στοιχεία έρχονται από την ΕΛΣΤΑΤ και τα ετήσια από τη Eurostat, και ενημερώνονται αυτόματα. Οι πιο πρόσφατοι μήνες είναι προσωρινοί και αλλάζουν. Τις μοτοσικλέτες ανά κάτοικο και τους νεκρούς ανά όχημα τους υπολογίζουμε εμείς."
-image_path: assets/posts/default-blog-cover.webp
+image_path: assets/posts/topic-road-safety.webp
 ---
 
 | **Στήλη**                   | **Στήλη (Ελληνικά)**       | **Περιγραφή** |

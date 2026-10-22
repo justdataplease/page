@@ -21,7 +21,7 @@
 {%- assign h1_topics = site.data.topics | where: "kind", "topic" -%}
 {%- assign h1_specials = site.data.topics | where: "kind", "special" -%}
 {%- assign h1_lead = h1_articles.first -%}
-{%- assign h1_img = 'assets/posts/default-blog-cover.webp' -%}
+{%- assign h1_img = 'assets/posts/athens.webp' -%}
 {%- assign h1_brief_n = 4 -%}
 {%- assign h1_live = 0 -%}
 {%- for d in h1_datasets -%}{%- if d.last_update contains 'Live' -%}{%- assign h1_live = h1_live | plus: 1 -%}{%- endif -%}{%- endfor -%}

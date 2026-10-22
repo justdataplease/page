@@ -5,13 +5,13 @@ description: "Monthly unemployment, employment, the minimum and average wage and
 category: Work & pay
 date: 2026-10-08
 published_by: "DataForGreece"
-last_update: "2026-10-21"
+last_update: "2026-10-22"
 date_added: "2026-10-08"
 data_dates: "1998/04 - 2026/08 · regions 1999 - 2025 · pay 1995 - 2026"
-source_name: "Eurostat – Monthly unemployment (une_rt_m),Eurostat – Employment rate (lfsi_emp_q),Eurostat – Unemployment by region (lfst_r_lfu3rt),Eurostat – Minimum wage (earn_mw_cur),Eurostat – Average full-time salary (nama_10_fte),ELSTAT – Labour Force Survey,Eurostat – Job vacancies (jvs_q_r21),Eurostat – Employment by sector (lfsq_egan2),Eurostat – Employment by region (lfst_r_lfe2emprt)"
-source_url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/earn_mw_cur/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_fte/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SJO01/-,https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsq_egan2/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfe2emprt/default/table?lang=en"
-description_detailed: "Unemployment every month, employment and job vacancies, for Greece, its regions and the EU countries, along with the minimum and average wage, labour costs and what wages are worth once rising prices are taken out."
-description_preprocess: "The data come from Eurostat and update automatically, because unemployment is revised every month. We work out the real wage ourselves with the consumer price index."
+source_name: "Eurostat – Monthly unemployment (une_rt_m),Eurostat – Employment rate (lfsi_emp_q),Eurostat – Unemployment by region (lfst_r_lfu3rt),Eurostat – Minimum wage (earn_mw_cur),Eurostat – Average full-time salary (nama_10_fte),ELSTAT – Labour Force Survey,Eurostat – Job vacancies (jvs_q_r21),Eurostat – Employment by sector (lfsq_egan2),Eurostat – Employment by region (lfst_r_lfe2emprt),DYPA – Registered unemployed"
+source_url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_q/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/earn_mw_cur/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/nama_10_fte/default/table?lang=en,https://www.statistics.gr/en/statistics/-/publication/SJO01/-,https://ec.europa.eu/eurostat/databrowser/view/jvs_q_r21/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfsq_egan2/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfe2emprt/default/table?lang=en,https://www.dypa.gov.gr/statistika"
+description_detailed: "Unemployment every month, employment and job vacancies, for Greece, its regions and the EU countries, along with the minimum and average wage, labour costs and what wages are worth once rising prices are taken out. Alongside, DYPA's register of the unemployed, every month and by region."
+description_preprocess: "The data come from Eurostat and DYPA and update automatically, because unemployment is revised every month. We work out the real wage ourselves with the consumer price index."
 image_path: assets/posts/topic-work-fisherman.webp
 ---
 

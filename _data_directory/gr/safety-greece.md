@@ -12,7 +12,7 @@ source_name: "Eurostat – Νεκροί σε τροχαία (tran_sf_roadus),Eur
 source_url: "https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadus/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/tran_sf_roadnu/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/crim_off_cat/default/table?lang=en,https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table?lang=en,https://www.statistics.gr/el/statistics/-/publication/SDT03/-"
 description_detailed: "Οι νεκροί στους δρόμους, συνολικά, ανά κάτοικο και ανά κατηγορία χρήστη, τα τροχαία ατυχήματα ανά περιοχή και τα εγκλήματα που κατέγραψε η αστυνομία, όπως ανθρωποκτονίες, ληστείες, διαρρήξεις και κλοπές. Για την Ελλάδα, τις περιφέρειες και τις περιφερειακές ενότητες, και τις χώρες της ΕΕ."
 description_preprocess: "Τα στοιχεία έρχονται από τη Eurostat, που τα συγκεντρώνει από την ΕΛΣΤΑΤ και την Ελληνική Αστυνομία, και ενημερώνονται αυτόματα. Τα ελληνικά ονόματα τα γράψαμε εμείς. Τα εγκλήματα δεν συγκρίνονται εύκολα από χώρα σε χώρα."
-image_path: assets/posts/default-blog-cover.webp
+image_path: assets/posts/topic-safety.webp
 ---
 
 | **Στήλη**                   | **Στήλη (Ελληνικά)**       | **Περιγραφή** |

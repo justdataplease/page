@@ -6,8 +6,8 @@ topic: housing
 uses: [housing, real-estate]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Οικοδομή πολυκατοικίας με γερανό σε ελληνική πόλη."
+image_path: assets/posts/housing-new-buildings-2026-10.webp
+image_alt: "Πολυκατοικία από σκυρόδεμα και τούβλα υπό κατασκευή με γερανό στην Ελλάδα."
 related_dataset_slugs:
   - housing-greece
   - real-estate-greece

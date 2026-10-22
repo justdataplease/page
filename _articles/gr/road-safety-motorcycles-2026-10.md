@@ -6,8 +6,8 @@ topic: road-safety
 uses: [road-safety]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Μοτοσικλέτες και αυτοκίνητα σε δρόμο της Αθήνας."
+image_path: assets/posts/topic-road-safety.webp
+image_alt: "Οδηγός σκούτερ με κράνος περιμένει δίπλα σε αυτοκίνητα σε φανάρι στην Αθήνα."
 related_dataset_slugs:
   - road-safety-greece
 ---

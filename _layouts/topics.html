@@ -94,7 +94,7 @@
             {%- if sp.parent -%}{%- assign sp_parent = site.data.topics | where: "key", sp.parent | first -%}{%- endif -%}
             <li class="tl-sp__item" id="{{ sp.key }}">
                 <a class="art tl-sp__art" href="{{ sp_href }}" tabindex="-1" aria-hidden="true">
-                    <img src="{{ site.baseurl }}/{{ sp.image | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy">
+                    <img src="{{ site.baseurl }}/{{ sp.image | default: 'assets/posts/athens.webp' }}" alt="" loading="lazy">
                 </a>
                 <div class="tl-sp__text">
                     <p class="tl-sp__when">{% include upper.html text=sp_when %}</p>

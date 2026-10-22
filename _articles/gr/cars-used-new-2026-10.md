@@ -6,8 +6,8 @@ topic: cars
 uses: [cars]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Αυτοκίνητα σε δρόμο της Αθήνας."
+image_path: assets/posts/topic-cars.webp
+image_alt: "Παλαιότερα και νεότερα μικρά αυτοκίνητα σταθμευμένα σε ελληνικό δρόμο."
 related_dataset_slugs:
   - cars-greece
 ---

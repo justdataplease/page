@@ -6,8 +6,8 @@ topic: cars
 uses: [cars]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Cars on a street in Athens."
+image_path: assets/posts/topic-cars.webp
+image_alt: "Older and newer compact cars parked on a Greek street."
 related_dataset_slugs:
   - cars-greece
 ---

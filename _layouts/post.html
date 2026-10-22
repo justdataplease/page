@@ -15,7 +15,7 @@
 
         {%- if page.use_cover_image %}
         <figure class="art art--cover">
-            <img src="{{ site.baseurl }}/{{ page.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="{{ page.image_alt | default: '' | escape }}"{% if page.image_aspect_ratio %} style="aspect-ratio: {{ page.image_aspect_ratio | escape }}"{% endif %}>
+            <img src="{{ site.baseurl }}/{{ page.image_path | default: 'assets/posts/athens.webp' }}" alt="{{ page.image_alt | default: '' | escape }}"{% if page.image_aspect_ratio %} style="aspect-ratio: {{ page.image_aspect_ratio | escape }}"{% endif %}>
             {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
         </figure>
         {%- endif %}
@@ -32,7 +32,7 @@
                 {%- assign rd = site.data_directory | where: "slug", slug | where: "lang", page.lang | first %}
                 {%- if rd %}
                 <a class="related__item" href="{% include data-href.html doc=rd %}">
-                    <span class="art"><img src="{{ site.baseurl }}/{{ rd.image_path | default: 'assets/posts/default-blog-cover.webp' }}" alt="" loading="lazy"></span>
+                    <span class="art"><img src="{{ site.baseurl }}/{{ rd.image_path | default: 'assets/posts/athens.webp' }}" alt="" loading="lazy"></span>
                     <span class="related__text">
                         <span class="kicker">{% include upper.html text=rd.category %}</span>
                         <span class="hl hl--s">{{ rd.title }}</span>

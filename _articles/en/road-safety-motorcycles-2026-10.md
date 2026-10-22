@@ -6,8 +6,8 @@ topic: road-safety
 uses: [road-safety]
 period: 2026-10
 use_cover_image: false
-image_path: assets/posts/default-blog-cover.webp
-image_alt: "Motorcycles and cars on a street in Athens."
+image_path: assets/posts/topic-road-safety.webp
+image_alt: "A helmeted scooter rider waiting alongside cars at a traffic light in Athens."
 related_dataset_slugs:
   - road-safety-greece
 ---
