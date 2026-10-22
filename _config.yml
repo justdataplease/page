@@ -20,6 +20,12 @@ newspaper:
 
 google_analytics: G-VT1VMYFGDL
 
+# Chat with the data: datamoov's website chat (datamoov → Settings → Integrations → Website chat).
+# origin = the datamoov address, token = the chat's token (public, it ships in the page). Either empty = no chat button.
+datamoov_chat:
+  origin: ""
+  token: ""
+
 collections:
   articles:
     output: true
