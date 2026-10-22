@@ -255,6 +255,44 @@
       - "Temperature is measured at street level and reads higher than the official weather stations."
       - "WiFi counts different devices per station and day, not people; a phone that passes two stations is counted at both."
 
+- key: noise
+  kind: topic
+  category: energy
+  model: soundwatch
+  # map of the SoundWatch sensors coloured by level, rendered from OpenStreetMap data (ODbL) by cases/soundwatch/basemap.py
+  image: assets/posts/topic-noise.webp
+  since: 2026
+  cadence: monthly
+  data: [noise-athens]
+  charts: []
+  report: ""
+  articles: []
+  dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMTMwOTViN2ItYmIxMy00ZjM5LWI4ZjMtZTE4Y2E0ZTlkMzRiIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
+  gr:
+    name: "Θόρυβος στην Αθήνα"
+    dek: "Πόσος θόρυβος έχει κάθε γειτονιά, ποια ώρα ησυχάζει η πόλη και πόσο πιο ήσυχη είναι η νύχτα, από τους αισθητήρες θορύβου του SoundWatch."
+    coverage: "2026 – σήμερα · Αθήνα και γύρω δήμοι · αισθητήρες σε γειτονιές"
+    updates: "Κάθε μέρα"
+    sources:
+      - { name: "SoundWatch", url: "https://soundwatch.gr/", note: "Αισθητήρες θορύβου σε γειτονιές της Αθήνας, ανοιχτά δεδομένα ανά ώρα (Schema Labs)" }
+      - { name: "OpenStreetMap", url: "https://www.openstreetmap.org/copyright", note: "Ο χάρτης στο φόντο, © OpenStreetMap contributors" }
+    notes:
+      - "Οι στάθμες είναι dB της συσκευής, χωρίς βαθμονόμηση: δείχνουν διαφορές ανάμεσα σε τόπους και ώρες, όχι επίσημες μετρήσεις θορύβου, και δεν συγκρίνονται με νομικά όρια ή με άλλα όργανα."
+      - "Οι μέσοι όροι είναι ενεργειακοί, όπως μετριέται ο ήχος: δέκα dB παραπάνω είναι δέκα φορές η ηχητική ενέργεια. Δύο συσκευές μπορεί να διαφέρουν λίγο μεταξύ τους, γι' αυτό μια διαφορά ενός ή δύο dB δεν λέει πολλά."
+      - "Ένας τόπος κατατάσσεται μόνο με αρκετές μέρες μετρήσεων στην επιλογή· οι αισθητήρες που έχουν σταματήσει να μετρούν φαίνονται με τις παλαιότερες μετρήσεις τους."
+  en:
+    name: "Noise in Athens"
+    dek: "How noisy each neighbourhood is, when the city goes quiet and how much quieter the night is, from SoundWatch's noise sensors."
+    coverage: "2026 – today · Athens and nearby municipalities · sensors in neighbourhoods"
+    updates: "Every day"
+    sources:
+      - { name: "SoundWatch", url: "https://soundwatch.gr/", note: "Noise sensors in Athens neighbourhoods, open data by hour (Schema Labs)" }
+      - { name: "OpenStreetMap", url: "https://www.openstreetmap.org/copyright", note: "The background map, © OpenStreetMap contributors" }
+    notes:
+      - "Levels are device decibels, not calibrated: they show differences between places and hours, not official noise measurements, and are never compared with legal limits or other instruments."
+      - "Averages are energy averages, the way sound is measured: ten decibels more is ten times the sound energy. Two devices can differ a little, so a gap of one or two decibels means little."
+      - "A place is ranked only with enough days of readings in the selection; sensors that have stopped reporting show their older readings."
+
 - key: budget
   kind: topic
   category: state
