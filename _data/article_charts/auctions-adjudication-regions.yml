@@ -1,0 +1,31 @@
+# auctions-vs-market-2026-10: probable adjudication (the property withdrawn right after the auction, no later round) as a
+# share of the auctions held, by region; all property types, auctions held Jul 2025 - Oct 2026 (our market data).
+# Checked 2026-10-22 (BigQuery pleistiriasmoi.auctions, is_full_coverage; Greece 14,045 of 25,071 = 56.0%).
+type: bar
+unit: "%"
+max: 80
+decimals: 1
+title:
+  gr: "Πιθανή κατακύρωση, ανά περιφέρεια"
+  en: "Probable adjudication, by region"
+note:
+  gr: "Μερίδιο των δημοπρασιών που έγιναν όπου το ακίνητο αποσύρθηκε αμέσως μετά, χωρίς νέο γύρο. Ιούλιος 2025 έως Οκτώβριος 2026. Επεξεργασία: DataForGreece."
+  en: "Share of the auctions held where the property was withdrawn right after, with no new round. July 2025 to October 2026. Processing: DataForGreece."
+reference:
+  value: 56.0
+  decimals: 1
+  label_prefix: {gr: "Ελλάδα", en: "Greece"}
+rows:
+  - {label: {gr: "Κρήτη", en: "Crete"}, value: 61.7}
+  - {label: {gr: "Αττική", en: "Attica"}, value: 60.2}
+  - {label: {gr: "Ιόνια Νησιά", en: "Ionian Islands"}, value: 59.7}
+  - {label: {gr: "Δυτική Ελλάδα", en: "Western Greece"}, value: 55.4}
+  - {label: {gr: "Πελοπόννησος", en: "Peloponnese"}, value: 54.8}
+  - {label: {gr: "Θεσσαλία", en: "Thessaly"}, value: 54.4}
+  - {label: {gr: "Βόρειο Αιγαίο", en: "North Aegean"}, value: 54.0}
+  - {label: {gr: "Κεντρική Μακεδονία", en: "Central Macedonia"}, value: 53.8}
+  - {label: {gr: "Ήπειρος", en: "Epirus"}, value: 52.7}
+  - {label: {gr: "Νότιο Αιγαίο", en: "South Aegean"}, value: 52.1}
+  - {label: {gr: "Αν. Μακεδονία και Θράκη", en: "East Macedonia and Thrace"}, value: 50.7}
+  - {label: {gr: "Στερεά Ελλάδα", en: "Central Greece"}, value: 50.4}
+  - {label: {gr: "Δυτική Μακεδονία", en: "Western Macedonia"}, value: 49.3}

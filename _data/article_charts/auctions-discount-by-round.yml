@@ -1,0 +1,19 @@
+# auctions-vs-market-2026-10: median distance of the starting price per m2 below our market data (the median asking
+# price per m2 of the sale listings we collect, same dwelling type and area, 12 months around the auction), by the
+# property's round; dwellings in full ownership, auctions held Jul 2025 - Oct 2026 (probable adjudication or no buyer).
+# Checked 2026-10-22 (BigQuery pleistiriasmoi.vs_market, n = 5,819 / 3,579 / 1,975 / 1,930).
+type: bar
+unit: "%"
+max: 60
+decimals: 1
+title:
+  gr: "Πόσο κάτω από την αγορά ξεκινά η δημοπρασία, ανά γύρο"
+  en: "How far below the market the auction starts, by round"
+note:
+  gr: "Διάμεση απόσταση της τιμής πρώτης προσφοράς ανά τ.μ. από τα δικά μας δεδομένα αγοράς. Κατοικίες, δημοπρασίες Ιουλίου 2025 έως Οκτωβρίου 2026. Επεξεργασία: DataForGreece."
+  en: "Median gap between the starting price per m² and our market data. Homes, auctions July 2025 to October 2026. Processing: DataForGreece."
+rows:
+  - {label: {gr: "1ος γύρος", en: "1st round"}, value: 30.1}
+  - {label: {gr: "2ος γύρος", en: "2nd round"}, value: 30.5}
+  - {label: {gr: "3ος γύρος", en: "3rd round"}, value: 40.5}
+  - {label: {gr: "4ος και μετά", en: "4th and later"}, value: 50.5}
