@@ -1,6 +1,7 @@
 ---
 title: "Listings ask 87% above the contracts, but the gap is closing"
 slug: asking-vs-contracts-2026-10
+published: false
 date: 2026-10-22
 topic: real-estate
 uses: [real-estate, housing]

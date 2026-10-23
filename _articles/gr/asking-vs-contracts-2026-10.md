@@ -1,6 +1,7 @@
 ---
 title: "Οι αγγελίες ζητούν 87% πάνω από τα συμβόλαια, αλλά η απόσταση κλείνει"
 slug: asking-vs-contracts-2026-10
+published: false
 date: 2026-10-22
 topic: real-estate
 uses: [real-estate, housing]
