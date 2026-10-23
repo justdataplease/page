@@ -403,9 +403,11 @@
       - { name: "ΓΕΜΗ – Ανοιχτά δεδομένα", url: "https://opendata.businessportal.gr", note: "Άδεια ODC-BY 1.0" }
       - { name: "ΓΕΜΗ – Δημοσιότητα", url: "https://publicity.businessportal.gr", note: "Εγγραφές, διαγραφές και μεταβολές ανά ημέρα" }
       - { name: "Eurostat, δημογραφία επιχειρήσεων", url: "https://ec.europa.eu/eurostat/databrowser/view/bd_size/default/table?lang=en", note: "Γεννήσεις και θάνατοι επιχειρήσεων από το μητρώο επιχειρήσεων της ΕΛΣΤΑΤ" }
+      - { name: "ΕΛΣΤΑΤ – Εκτιμήσεις πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SPO18/-", note: "Πληθυσμός ανά περιφέρεια, για τις επιχειρήσεις ανά κάτοικο" }
     notes:
       - "Οι επιχειρήσεις μετρώνται μία φορά, στην έδρα τους."
       - "Η σελίδα «ΓΕΜΗ και επίσημα στοιχεία» βάζει τις νέες επιχειρήσεις του ΓΕΜΗ δίπλα στις επίσημες γεννήσεις και τους θανάτους επιχειρήσεων, ανά κλάδο και περιφέρεια. Οι ελεύθεροι επαγγελματίες δεν εγγράφονται στο ΓΕΜΗ, γι' αυτό τα δύο νούμερα δεν ταυτίζονται."
+      - "Η σελίδα «Τι ανεβαίνει» δείχνει τις δραστηριότητες με τη μεγαλύτερη άνοδο νέων επιχειρήσεων, το κύμα της ενέργειας, τον Covid και πόσες επιχειρήσεις αντέχουν σε κάθε κλάδο."
   en:
     name: "Businesses"
     dek: "The General Commercial Registry: every registered company, new registrations and closures, by sector and region."
@@ -415,9 +417,11 @@
       - { name: "GEMI – Open data", url: "https://opendata.businessportal.gr", note: "Licence ODC-BY 1.0" }
       - { name: "GEMI – Publicity portal", url: "https://publicity.businessportal.gr", note: "Registrations, closures and changes by day" }
       - { name: "Eurostat, business demography", url: "https://ec.europa.eu/eurostat/databrowser/view/bd_size/default/table?lang=en", note: "Enterprise births and deaths from ELSTAT's business register" }
+      - { name: "ELSTAT – Population estimates", url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-", note: "Population by region, for businesses per resident" }
     notes:
       - "Each company is counted once, at its head office."
       - "The page «ΓΕΜΗ και επίσημα στοιχεία» sets GEMI's new businesses next to the official enterprise births and deaths, by sector and region. Self-employed professionals do not register with GEMI, so the two counts do not match."
+      - "The page «Τι ανεβαίνει» shows the activities whose new businesses rose the most, the energy wave, Covid and how many companies last in each sector."
 
 - key: population
   kind: topic
