@@ -566,27 +566,33 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDJkY2Q1ZGItZTUyNi00MDE2LWEyNzUtMWI4ZGI3NzA4MjEwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Ηλεκτρισμός & ενέργεια"
-    dek: "Πόσο πληρώνουμε το ρεύμα και το φυσικό αέριο σε σχέση με την Ευρώπη, πόσο είναι φόροι, από τι παράγεται το ρεύμα κάθε μήνα και πόσοι δυσκολεύονται να ζεστάνουν το σπίτι τους."
+    dek: "Τι πληρώνουμε για ρεύμα και φυσικό αέριο σε σχέση με την Ευρώπη, από τι παράγεται το ρεύμα, πόση ενέργεια είναι ανανεώσιμη και πόση εισαγόμενη, με τι ζεσταίνονται τα σπίτια και ποια ενεργειακή κλάση έχουν όσα πωλούνται ή νοικιάζονται."
     coverage: "2007 – σήμερα · 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
       - { name: "Eurostat, τιμές ενέργειας", url: "https://ec.europa.eu/eurostat/web/energy", note: "Τιμές ρεύματος και φυσικού αερίου για νοικοκυριά και επιχειρήσεις, με και χωρίς φόρους" }
-      - { name: "Eurostat, ενεργειακές στατιστικές", url: "https://ec.europa.eu/eurostat/web/energy", note: "Παραγωγή ρεύματος ανά καύσιμο, μερίδιο ΑΠΕ" }
+      - { name: "Eurostat, ενεργειακές στατιστικές", url: "https://ec.europa.eu/eurostat/web/energy", note: "Παραγωγή, εισαγωγές και εξαγωγές ρεύματος, μερίδιο ΑΠΕ, εξάρτηση από εισαγωγές, ενέργεια των νοικοκυριών ανά χρήση και καύσιμο" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Ενεργειακή φτώχεια: θέρμανση και απλήρωτοι λογαριασμοί" }
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/real-estate/", note: "Δικές μας συλλογές αγγελιών κατοικιών: ενεργειακή κλάση, ηλιακός θερμοσίφωνας και ζητούμενη τιμή" }
     notes:
       - "Οι τιμές για τα νοικοκυριά αφορούν τη μεσαία κατανάλωση (2.500–5.000 kWh τον χρόνο)."
+      - "Ο στόχος για το 2030 στη σελίδα «ΑΠΕ και εισαγωγές» είναι ο στόχος της ΕΕ-27 συνολικά (42,5% της ακαθάριστης τελικής κατανάλωσης ενέργειας, Οδηγία (ΕΕ) 2023/2413), όχι ο εθνικός στόχος της Ελλάδας."
+      - "Η ενεργειακή κλάση και ο ηλιακός θερμοσίφωνας προέρχονται από τις αγγελίες που συλλέγουμε, των τελευταίων δώδεκα μηνών, με κάθε αγγελία μία φορά. Η κλάση Α περιλαμβάνει την Α+ και η Β την Β+. Οι τιμές είναι ζητούμενες, όχι τιμές συναλλαγών, και συγκρίνονται μόνο ανάμεσα σε σπίτια της ίδιας ηλικίας."
       - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Electricity & energy"
-    dek: "What we pay for electricity and gas compared with Europe, how much of it is tax, what our power is made from every month, and how many struggle to heat their home."
+    dek: "What we pay for electricity and gas compared with Europe, what our power is made from, how much of our energy is renewable or imported, what heats our homes and which energy class the homes for sale or rent have."
     coverage: "2007 – today · 27 EU countries"
     updates: "Every month"
     sources:
       - { name: "Eurostat, energy prices", url: "https://ec.europa.eu/eurostat/web/energy", note: "Electricity and gas prices for households and businesses, with and without taxes" }
-      - { name: "Eurostat, energy statistics", url: "https://ec.europa.eu/eurostat/web/energy", note: "Electricity generation by fuel, renewables share" }
+      - { name: "Eurostat, energy statistics", url: "https://ec.europa.eu/eurostat/web/energy", note: "Electricity generation, imports and exports, renewables share, import dependency, household energy by use and fuel" }
       - { name: "Eurostat, EU-SILC", url: "https://ec.europa.eu/eurostat/web/income-and-living-conditions", note: "Energy poverty: heating and unpaid bills" }
+      - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/real-estate/", note: "Our own collection of home listings: energy class, solar water heater and asking price" }
     notes:
       - "Household prices are for medium consumption (2,500–5,000 kWh a year)."
+      - "The 2030 target on the page «ΑΠΕ και εισαγωγές» is the EU-27's target as a whole (42.5% of gross final energy consumption, Directive (EU) 2023/2413), not Greece's national target."
+      - "The energy class and the solar water heater come from the listings we collect, over the last twelve months, each listing once. Class A includes A+ and class B includes B+. Prices are asking prices, not sale prices, and are compared only between homes of the same age."
       - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: economy
