@@ -2,7 +2,7 @@
 title: Προϋπολογισμός Δήμου Αθηναίων
 slug: athens-municipality-budget
 description: "Ο προϋπολογισμός του Δήμου Αθηναίων: τι ψηφίστηκε, τι εκτελέστηκε και πού πήγαν τα χρήματα"
-category: Κράτος & πολιτική
+category: "Κράτος & πολιτική"
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 

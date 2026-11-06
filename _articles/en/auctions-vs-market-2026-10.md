@@ -1,5 +1,5 @@
 ---
-title: "Property auctions start a third below the market"
+title: "Property auctions: the starting price opens a third below asking prices"
 slug: auctions-vs-market-2026-10
 date: 2026-10-22
 topic: real-estate
@@ -13,40 +13,39 @@ related_dataset_slugs:
   - real-estate-greece
 ---
 
-We put side by side the property auctions in our market data, the asking prices of the sale listings we collect every month, and the official figures of the **Bank of Greece** and **ELSTAT**.
+For the homes that appear to have been sold at auction, the starting price was typically **33.8%** below what listings ask for the same type of home in the same area. Every round with no buyer pushes the price down: from the fourth round on, the starting price is almost half the asking prices (**50.5%** below).
 
-- **Auctions:** from July 2025 to October 2026, **25,071** property auctions were held. In **56%** the property was withdrawn right after, with no new round: a probable adjudication. In 34% no buyer was found.
-- **Price:** for the homes that appear to have been adjudicated, the starting price was at the median **33.8%** below our market data for the same type of home and area. The median starting price was **€1,203 per m²**, the median asking price in the market €1,833.
-- **Rounds:** every auction with no buyer pushes the price down. In the first round the starting price is 30.1% below the market; from the fourth round on, **50.5%**.
+- **Rounds:** from July 2025 to October 2026, **25,071** property auction rounds were held. In 34% no buyer was found. In **56%** the property was withdrawn right after, with no new round: we call that a probable adjudication, that is, a probable sale.
+- **Price:** the median starting price was **€1,203 per m²**; the median asking price in the listings, €1,833.
 
 ## What we measure, and what we cannot see
 
-We cannot see the final price of each auction. We can see whether the property comes back in a new round or is withdrawn. When it is withdrawn within three weeks of the auction with no new round, we call it a **probable adjudication**: the property went to a bidder or to the creditor, or the process was stopped at the last minute.
+We cannot see the final price of each auction. We can see whether the property comes back in a new round or is withdrawn. When it is withdrawn within three weeks with no new round, we call it a **probable adjudication**: the property went to a bidder or to the creditor, or the process was stopped at the last minute by a suspension or a settlement. So the 56% is the upper limit of sales, not their exact number.
 
-That is why we compare the **starting price**, the least a buyer can offer. The final price is equal or higher, so the gap to the market is the largest possible "discount", not what each buyer paid.
+That is why we compare the **starting price**, the least a buyer can offer. The final price is equal or higher, so the gap is the largest possible "discount", not what each buyer paid.
 
-The market here is the asking prices of listings, not transaction prices. The two move closely: from 2022 to the second quarter of 2026 apartment prices rose **40.9%** according to the Bank of Greece (provisional data) and the asking prices in our listings 35.9%. Homes at auction are often older or in worse condition than the average home in the listings, so part of the gap is quality.
+And the comparison is with the asking prices of listings, not with transaction prices. The two move together: from 2022 to the second quarter of 2026 apartment prices rose **40.9%** according to the Bank of Greece (provisional data) and the asking prices in our listings 35.9%. Their levels differ, though, and homes at auction are often older or in worse condition than the average home in the listings.
 
 ## Every round with no buyer lowers the price
 
-When no buyer is found, the property comes back with a lower starting price. In the first and second rounds the gap to the market stays around 30%. In the third it reaches 40.5%, and from the fourth round on the starting price is, at the median, about half of our market data.
+When no buyer is found, the property comes back with a lower starting price. In the first and second rounds the gap to asking prices stays around 30%. In the third it reaches 40.5%, and from the fourth round on the starting price is almost half.
 
 {% include article-chart.html id="auctions-discount-by-round" %}
 
-The gap also differs by area. In the apartment auctions held in Attica the starting price is 36.8% below the market; in the Thessaloniki prefecture, 31.4%.
+The gap also differs by area. For apartments in Attica the starting price opens 36.8% below asking prices; for apartments in the Thessaloniki prefecture, 31.4%.
 
-## Where more properties are adjudicated
+## Where more properties are withdrawn
 
-Probable adjudication is most common in **Crete** (61.7% of the auctions held) and **Attica** (60.2%), which also holds the most auctions: 7,798 of 25,071. It is rarest in Western Macedonia (49.3%) and Central Greece (50.4%).
+Probable adjudication is most common in **Crete** (61.7% of rounds) and **Attica** (60.2%), which also holds the most auctions: 7,798 of the 25,071 rounds. It is rarest in Western Macedonia (49.3%). By type of property, parking spaces are withdrawn most often (72.6%) and industrial premises least often (47.2%).
 
-{% include article-chart.html id="auctions-adjudication-regions" %}
+Another **4,981** rounds are already scheduled for the coming months.
 
-By type, parking spaces (72.6%), offices (69.0%) and storage rooms (63.8%) are adjudicated more often than apartments (56.6%) and detached houses (53.2%). Building plots (50.6%) and industrial premises (47.2%) find a buyer less often.
+## What to keep in mind
 
-## What is coming
+- We compare with asking prices, which are higher than the prices declared in contracts. In 2025 the median declared home price in the Ministry of Finance's contracts was €1,272 per m², close to the median auction starting price, but for a different period and a different sample.
+- A property can go through several rounds, so there are more rounds than properties.
+- For 2,572 recent rounds the result is not visible yet.
 
-The busiest month was October 2025, with 3,088 auctions. Another **4,981** are already scheduled for the coming months. For scale, ELSTAT recorded **145,765** property sales across the country in 2024, up from 112,283 in 2022.
+All the figures, by month, region, municipality and type of property, are on the «Πλειστηριασμοί» (Auctions) and «Πλειστηριασμοί και αγορά» (Auctions and market) pages of the [property dashboard](/en/data/real-estate/#dashboard).
 
-All the figures, by month, region and type of property, are on the «Πλειστηριασμοί» and «Πλειστηριασμοί και αγορά» pages of the property dashboard.
-
-*Sources: our market data (auctions and sale listings), Bank of Greece (apartment price index), ELSTAT (property sales). Auctions from 2 July 2025 to 21 October 2026; market comparison for homes in full ownership. For 2,572 recent auctions the result is not visible yet.*
+*Sources: our own market data (auctions and sale listings), Bank of Greece (apartment price index), Ministry of Finance (register of transfer contracts). Rounds from 2 July 2025 to 21 October 2026; comparison for homes in full ownership. Processing: DataForGreece.*

@@ -1,5 +1,5 @@
 ---
 topic: cars
 title: "Cars"
-description: "What sellers ask for a used car, from our own listings, next to new registrations by fuel, electric cars and cars per inhabitant."
+description: "What sellers ask for a used car, by fuel and age, which new cars are registered and how we compare with the EU."
 ---

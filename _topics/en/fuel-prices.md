@@ -1,6 +1,8 @@
 ---
-redirect_from: /en/topics/fuel-prices/
+redirect_from:
+  - /en/topics/fuel-prices/
+  - /en/blog/fuel-prices-greece-timeline/
 topic: fuel-prices
 title: "Fuel prices"
-description: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, and how they compare with the rest of the EU."
+description: "What we pay at the pump in every prefecture, how much the station keeps and how much of the price is tax, next to the other EU countries."
 ---

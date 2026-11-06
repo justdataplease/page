@@ -4,7 +4,7 @@ redirect_from:
 title: Road safety and vehicles in Greece and the EU
 slug: road-safety-greece
 description: "Road accidents, deaths and injuries in Greece every month and by area, with cars and motorcycles per inhabitant in the EU countries"
-category: Society
+category: "Tourism & getting around"
 date: 2026-10-21
 published_by: "DataForGreece"
 last_update: "2026-10-21"

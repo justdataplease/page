@@ -2,7 +2,7 @@
 title: Forest Fires in Greece
 slug: forest-fires-greece
 description: "Forest fires in Greece: when, where, how much burned and what was sent to fight them"
-category: Energy & environment
+category: "Energy & environment"
 date: 2024-10-14
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 

@@ -2,7 +2,7 @@
 title: GDP and the Greek economy, every quarter and every region
 slug: economy-greece
 description: "GDP every quarter, the sectors, GDP in every region and economic sentiment, next to the EU"
-category: Economy
+category: "Economy & work"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

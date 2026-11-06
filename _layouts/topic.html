@@ -59,7 +59,9 @@
             <dl class="topic__facts">
                 <div><dt>{{ t.coverage }}</dt><dd>{{ tx.coverage }}</dd></div>
                 <div><dt>{{ t.updates }}</dt><dd>{{ tx.updates }}</dd></div>
+                {%- if t_arts.size > 0 %}
                 <div><dt>{{ t.editions_every }}</dt><dd>{{ t.cadence[tp.cadence] }}</dd></div>
+                {%- endif %}
             </dl>
             {%- endif %}
         </header>
@@ -85,9 +87,11 @@
 
         <div class="dataset__grid">
             <div class="topic__main">
+                {%- comment -%} No «Η πρώτη ανάλυση έρχεται σύντομα» (editorial review 2026-11-05): a topic without an
+                  analysis shows no Αναλύσεις block. {%- endcomment -%}
+                {%- if t_arts.size > 0 %}
                 <section aria-labelledby="topic-editions">
                     <h2 class="band__label" id="topic-editions">{{ t.editions }}</h2>
-                    {%- if t_arts.size > 0 %}
                     <div class="river">
                         {%- for item in t_arts %}
                         {%- capture k %}{% include edition-label.html doc=item %}{% endcapture %}
@@ -97,10 +101,8 @@
                         {% include river-item.html doc=item kicker=k dek=dk %}
                         {%- endfor %}
                     </div>
-                    {%- else %}
-                    <p class="topic__empty">{{ t.no_editions }}</p>
-                    {%- endif %}
                 </section>
+                {%- endif %}
 
                 {%- if tx.notes.size > 0 %}
                 <section class="topic__notes-block" aria-labelledby="topic-notes">

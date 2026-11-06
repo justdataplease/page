@@ -2,7 +2,7 @@
 title: Emissions, waste and recycling in Greece and the EU
 slug: environment-greece
 description: "Greenhouse gas emissions, how much waste we produce, recycle and bury, and renewables, next to the EU"
-category: Energy & environment
+category: "Energy & environment"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

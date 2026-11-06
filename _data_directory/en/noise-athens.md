@@ -2,7 +2,7 @@
 title: Noise in Athens neighbourhoods
 slug: noise-athens
 description: "SoundWatch's noise sensors in Athens neighbourhoods: how much noise, at what hour and where"
-category: Energy & environment
+category: "Energy & environment"
 date: 2026-10-22
 published_by: "DataForGreece"
 last_update: "2026-10-22"

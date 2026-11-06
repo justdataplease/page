@@ -2,7 +2,7 @@
 title: Health in Greece and the EU
 slug: health-greece
 description: "Life expectancy, health spending, doctors, nurses and beds, and how many go without a doctor, for Greece, its regions and the EU"
-category: Society
+category: "Society"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

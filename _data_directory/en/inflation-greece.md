@@ -2,7 +2,7 @@
 title: Inflation in Greece and the EU
 slug: inflation-greece
 description: "Inflation every month, category by category, for Greece and every EU country"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

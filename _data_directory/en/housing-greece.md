@@ -2,7 +2,7 @@
 title: House prices, rents and mortgages in Greece
 slug: housing-greece
 description: "Apartment prices in Athens, Thessaloniki and the whole country, rents, mortgages and housing costs, next to the EU"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-22"

@@ -1,5 +1,5 @@
 ---
 topic: real-estate
-title: "Property asking prices"
-description: "What sellers and landlords ask for a home, by region and municipality, every month: price per square metre, the typical home and rental yield."
+title: "Property: listings, contracts and auctions"
+description: "What listings ask to buy and to rent in every municipality, what is declared in the contracts and where property auctions start."
 ---

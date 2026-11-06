@@ -2,7 +2,7 @@
 title: Τιμές σούπερ μάρκετ - It's just period
 slug: supermarket-prices-itsjustperiod
 description: "Οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ, σε συνεργασία με την ομάδα It's just period"
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 date: 2024-12-17
 download_url: 
 

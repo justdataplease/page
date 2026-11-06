@@ -2,7 +2,7 @@
 title: Home asking prices in Greece
 slug: real-estate-greece
 description: "Asking prices for homes for sale and for rent, by region and municipality, every month"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

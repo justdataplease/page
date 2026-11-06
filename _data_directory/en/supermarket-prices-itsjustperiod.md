@@ -2,7 +2,7 @@
 title: Supermarket Prices - It's just period
 slug: supermarket-prices-itsjustperiod
 description: "Period product prices in supermarkets, with the It's just period team"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2024-12-17
 download_url: 
 

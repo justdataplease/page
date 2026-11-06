@@ -2,7 +2,7 @@
 title: Property transfer contracts
 slug: property-transfers-greece
 description: "Property transfer contracts from the Ministry of Finance register: declared price, area, age and place, next to the asking prices"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-23
 published_by: "DataForGreece"
 last_update: "2026-10-23"

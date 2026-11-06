@@ -2,7 +2,7 @@
 title: Airbnb
 slug: airbnb
 description: "How many Airbnb listings there are in Athens, Thessaloniki, Crete and the South Aegean, at what price, how full they are and how they compare with long-term renting"
-category: Business & tourism
+category: "Tourism & getting around"
 date: 2025-01-14
 download_url: 
 

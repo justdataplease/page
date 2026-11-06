@@ -2,7 +2,7 @@
 title: Supermarket Prices
 slug: supermarket-prices
 description: "Supermarket prices: the same products in every chain, month by month"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2024-12-22
 download_url: 
 

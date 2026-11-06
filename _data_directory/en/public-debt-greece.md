@@ -2,7 +2,7 @@
 title: Greece's public debt, deficit and taxes
 slug: public-debt-greece
 description: "Public debt every quarter, the deficit, government revenue, spending and taxes, next to the EU countries"
-category: State & politics
+category: "State & politics"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

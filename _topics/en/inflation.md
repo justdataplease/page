@@ -1,5 +1,5 @@
 ---
 topic: inflation
 title: "Inflation"
-description: "How much more life costs, category by category: food, energy, rents, restaurants. And where Greece stands in the EU."
+description: "How fast each category gets dearer, from food to rents, and where Greece stands among the EU countries."
 ---

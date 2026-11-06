@@ -2,7 +2,7 @@
 title: Πληθωρισμός στην Ελλάδα και την ΕΕ
 slug: inflation-greece
 description: "Ο πληθωρισμός κάθε μήνα, κατηγορία προς κατηγορία, για την Ελλάδα και κάθε χώρα της ΕΕ"
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

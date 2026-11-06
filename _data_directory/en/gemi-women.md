@@ -2,7 +2,7 @@
 title: Women in GEMI companies
 slug: gemi-women
 description: How many GEMI companies women own or run, by sector, legal form and region
-category: Business & tourism
+category: "Economy & work"
 date: 2026-10-18
 published_by: "DataForGreece"
 last_update: "2026-10-18"

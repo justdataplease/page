@@ -1,5 +1,5 @@
 ---
 topic: athens-neighbourhoods
-title: "Athens neighbourhoods: air and footfall"
-description: "What we breathe in Athens' squares, parks and sports grounds, when pollution rises during the day, how hot each neighbourhood gets and how many people pass through, from the City's own sensors."
+title: "Athens neighbourhoods: air and heat"
+description: "What we breathe and how hot it gets in every square and neighbourhood of Athens, hour by hour, from the City's sensors, next to the official stations."
 ---

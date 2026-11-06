@@ -2,7 +2,7 @@
 title: Property auctions
 slug: auctions-greece
 description: "Property auctions from our market data: starting price, result and the market next to them"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-22
 published_by: "DataForGreece"
 last_update: "2026-10-22"

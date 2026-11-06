@@ -2,7 +2,7 @@
 title: Πλειστηριασμοί ακινήτων
 slug: auctions-greece
 description: "Οι πλειστηριασμοί ακινήτων από τα δικά μας δεδομένα αγοράς: τιμή πρώτης προσφοράς, αποτέλεσμα και η αγορά δίπλα τους"
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 date: 2026-10-22
 published_by: "DataForGreece"
 last_update: "2026-10-22"

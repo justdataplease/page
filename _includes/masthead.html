@@ -43,7 +43,7 @@
             {%- if is_home %}
             <div class="ear ear--right">
                 <p class="ear__head">{{ t.late_edition }}</p>
-                <p>{{ m_datasets.size }} {{ t.datasets_lower }}{% if m_live > 0 %} · {{ m_live }} {{ t.live_lower }}{% endif %}</p>
+                <p>{{ m_datasets.size }} {{ t.datasets_lower }}</p>
             </div>
             {%- endif %}
         </div>
@@ -75,18 +75,4 @@
     </div>
 </header>
 
-{%- if is_home %}
-<div class="ticker" aria-label="{{ t.in_this_issue }}">
-    <div class="wrap ticker__in">
-        <a href="{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span> <b>{{ m_datasets.size }}</b></a>
-        {%- if m_live > 0 %}
-        <span><span>{{ t.live }}</span> <b class="up">▲ {{ m_live }}</b></span>
-        {%- endif %}
-        <span><span>{{ t.charts }}</span> <b>{{ m_charts.size }}</b></span>
-        <a href="{{ t.paths.news }}"><span>{{ t.research_plural }}</span> <b>{{ m_articles.size }}</b></a>
-        {%- if m_reports.size > 0 %}
-        <a href="{{ t.paths.reports }}"><span>{{ t.reports }}</span> <b>{{ m_reports.size }}</b></a>
-        {%- endif %}
-    </div>
-</div>
-{%- endif %}
+{%- comment -%} The counts ticker (datasets, «ζωντανά», charts, analyses) went in the editorial review of 2026-11-05. {%- endcomment -%}

@@ -65,6 +65,43 @@
 .tl-key__sep { color: var(--ink-3); }
 .tl-key b { color: var(--ink); font-weight: 700; }
 
+/* ---------- Bar over the ledger: the buttons key (list only) + the Πλέγμα / Λίστα toggle ---------- */
+.tl-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem 1.5rem;
+    margin: 0 0 .7rem;
+}
+.tl-bar .tl-key { margin: 0; }
+.tl-view {
+    display: inline-flex;
+    margin-left: auto;
+    border: 1px solid var(--rule-ink);
+}
+.tl-view[hidden] { display: none; }
+.tl-view__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .38rem .8rem;
+    border: 0;
+    background: transparent;
+    font-family: var(--f-sans);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    cursor: pointer;
+}
+.tl-view__btn + .tl-view__btn { border-left: 1px solid var(--rule-ink); }
+.tl-view__btn svg { width: .8rem; height: .8rem; fill: currentColor; }
+.tl-view__btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.tl-view__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tl-row__meta { display: none; }
+
 /* ---------- Categories: one titled ledger each (_data/categories.yml) ---------- */
 .tl-cat { margin-top: 2.6rem; scroll-margin-top: 1rem; }
 .tl-cat:first-of-type { margin-top: 1.4rem; }
@@ -397,4 +434,72 @@
     .tl-sp__item { grid-template-columns: 7.5rem minmax(0, 1fr); gap: .8rem 1rem; }
     .tl-sp__act { grid-column: 1 / -1; flex-direction: column; align-items: stretch; }
     .tl-sp__act .btn--block { display: block; width: 100%; }
+}
+
+/* ==========================================================================
+   Grid view (default; .tl--grid on <main>): every topic as a small card -
+   picture, name, dek, how often it updates. The ledger columns (sources,
+   analysis, button) stay on the topic page and in the list view.
+   Placed last so it wins over the ledger's tablet/phone rules.
+   ========================================================================== */
+.tl--grid .tl-key,
+.tl--grid .tl-head,
+.tl--grid .tl-row__data,
+.tl--grid .tl-row__ana,
+.tl--grid .tl-row__act,
+.tl--grid .tl-sp__act,
+.tl--grid .tl-sp__text .meta { display: none; }
+
+.tl--grid .tl-ledger,
+.tl--grid .tl-sp {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.8rem var(--gutter);
+    padding-top: 1rem;
+    border-top: 0;
+}
+[data-theme="salmon"] .tl--grid .tl-ledger::before { display: none; }
+
+.tl--grid .tl-row,
+.tl--grid article.tl-row:last-of-type:nth-of-type(odd),
+.tl--grid .tl-sp__item {
+    display: flex;
+    flex-direction: column;
+    grid-column: auto;
+    grid-row: auto;
+    padding: 0;
+    border: 0;
+}
+.tl--grid .tl-row__art,
+.tl--grid article.tl-row:last-of-type:nth-of-type(odd) .tl-row__art,
+.tl--grid .tl-sp__art { margin: 0 0 .65rem; }
+.tl--grid .tl-row__art img,
+.tl--grid .tl-sp__art img { aspect-ratio: 3 / 2; width: 100%; object-fit: cover; }
+.tl--grid .tl-row__no { display: none; }
+.tl--grid .tl-row__name,
+.tl--grid .tl-sp__text .hl { margin: 0 0 .3rem; font-size: clamp(1.05rem, 1.25vw, 1.22rem); line-height: 1.2; }
+.tl--grid .tl-row__dek,
+.tl--grid .tl-sp__dek { -webkit-line-clamp: 3; line-clamp: 3; font-size: .88rem; line-height: 1.42; }
+.tl--grid .tl-sp__dek { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+.tl--grid .tl-row__meta {
+    display: block;
+    margin: .45rem 0 0;
+    font-family: var(--f-sans);
+    font-size: .72rem;
+    font-weight: 600;
+    color: var(--ink-3);
+}
+.tl--grid .tl-row:hover .tl-row__name a,
+.tl--grid .tl-sp__item:hover .hl a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .12em; }
+
+@media (max-width: 1080px) {
+    .tl--grid .tl-ledger,
+    .tl--grid .tl-sp { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+    .tl--grid .tl-ledger,
+    .tl--grid .tl-sp { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.3rem 1rem; }
+    .tl--grid .tl-row__dek,
+    .tl--grid .tl-sp__dek { -webkit-line-clamp: 2; line-clamp: 2; font-size: .82rem; }
+    .tl-bar { justify-content: flex-end; }
 }

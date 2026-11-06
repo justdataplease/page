@@ -1,4 +1,6 @@
 ---
+# Unpublished in the editorial review of 2026-11-05 (thin, dated, or not built on our data); its URL redirects to the topic page.
+published: false
 title: Forest Fires in Greece 2000-2023
 slug: forest-fires-greece-timeline
 use_cover_image: false

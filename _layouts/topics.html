@@ -12,7 +12,10 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/topics.css?v={{ site.time | date: '%s' }}">
 {% include masthead.html %}
 
-<main class="wrap tl">
+<main class="wrap tl tl--grid" id="tl-main">
+    {%- comment -%} Grid (cards: picture, name, dek) by default, the full ledger on "Λίστα" (user, 2026-11-05).
+      The choice is remembered per browser; read here, before the rows render, so the page never flashes. {%- endcomment -%}
+    <script>try { if (localStorage.getItem('dfg-dedomena-view') === 'list') document.getElementById('tl-main').classList.remove('tl--grid'); } catch (e) {}</script>
     {% include section-head.html title=t.data_directory crumb=t.data_directory_upper dek=t.topics_dek %}
 
     <nav class="tl-jump" id="tl-index" aria-label="{{ t.index }}">
@@ -30,10 +33,17 @@
         </ul>
     </nav>
 
-    <p class="tl-key">
-        <span class="tl-key__label">{% include upper.html text=t.buttons %}</span>
-        <span><b>{{ t.explore }}:</b> {{ t.buttons_explore }}</span>
-    </p>
+    {%- comment -%} The one-button legend («Τα κουμπιά») went in the editorial review of 2026-11-05. {%- endcomment %}
+    <div class="tl-bar">
+        <div class="tl-view" role="group" aria-label="{{ t.view }}" hidden>
+            <button type="button" class="tl-view__btn" data-view="grid" aria-pressed="true">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="6" height="6"/><rect x="9" y="1" width="6" height="6"/><rect x="1" y="9" width="6" height="6"/><rect x="9" y="9" width="6" height="6"/></svg>{{ t.view_grid }}
+            </button>
+            <button type="button" class="tl-view__btn" data-view="list" aria-pressed="false">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="14" height="2.4"/><rect x="1" y="6.8" width="14" height="2.4"/><rect x="1" y="11.6" width="14" height="2.4"/></svg>{{ t.view_list }}
+            </button>
+        </div>
+    </div>
 
     {%- comment -%}
       One ledger per category (_data/categories.yml, in its order; a category with no topic is not shown), then the
@@ -119,6 +129,26 @@
     {%- endif %}
 
 </main>
+<script>
+(function () {
+    var main = document.getElementById('tl-main'), box = main && main.querySelector('.tl-view');
+    if (!box) return;
+    var btns = box.querySelectorAll('.tl-view__btn');
+    function show(view) {
+        main.classList.toggle('tl--grid', view === 'grid');
+        for (var i = 0; i < btns.length; i++) btns[i].setAttribute('aria-pressed', String(btns[i].getAttribute('data-view') === view));
+    }
+    show(main.classList.contains('tl--grid') ? 'grid' : 'list');
+    box.hidden = false;
+    box.addEventListener('click', function (e) {
+        var b = e.target.closest('.tl-view__btn');
+        if (!b) return;
+        var view = b.getAttribute('data-view');
+        show(view);
+        try { localStorage.setItem('dfg-dedomena-view', view); } catch (err) {}
+    });
+})();
+</script>
 
 <div class="wrap article-end">{% include newsletter.html wide=true %}</div>
 {% include disclaimer.html %}

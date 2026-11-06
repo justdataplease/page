@@ -2,7 +2,7 @@
 title: From farm to shelf, producer and consumer prices
 slug: farm-to-shelf-greece
 description: "What farmers earn, what their inputs cost and what we pay on the shelf, in Greece and the EU"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-21"

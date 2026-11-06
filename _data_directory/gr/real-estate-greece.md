@@ -2,7 +2,7 @@
 title: Τιμές αγγελιών κατοικιών στην Ελλάδα
 slug: real-estate-greece
 description: "Οι ζητούμενες τιμές πώλησης και ενοικίου των κατοικιών, ανά περιφέρεια και δήμο, κάθε μήνα"
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

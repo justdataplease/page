@@ -3,7 +3,7 @@ title: Δασικές πυρκαγιές στην Ελλάδα
 slug: forest-fires-greece
 description: "Οι δασικές πυρκαγιές στην Ελλάδα: πότε, πού, πόσο έκαψαν και με ποια μέσα αντιμετωπίστηκαν"
 date: 2024-10-14
-category: Ενέργεια & περιβάλλον
+category: "Ενέργεια & περιβάλλον"
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fires-greece/forest-fires-combined-greece_2023.csv.zip
 redirect_from:
   - /fires/

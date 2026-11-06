@@ -1,4 +1,6 @@
 ---
+# Unpublished in the editorial review of 2026-11-05 (thin, dated, or not built on our data); its URL redirects to the topic page.
+published: false
 title: 'Τιμές ελαιόλαδου στην Ελλάδα: ανάλυση της αγοράς 2022-2025'
 slug: supermarket-prices-olive-oil-2025-01-27
 use_cover_image: false

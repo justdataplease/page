@@ -2,7 +2,7 @@
 title: Fuel Prices in Greece
 slug: fuel-prices-greece
 description: "Motor and heating fuel prices in Greece, in every prefecture"
-category: Prices & cost of living
+category: "Prices & housing"
 date: 2024-11-09
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip
 

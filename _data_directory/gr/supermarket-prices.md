@@ -2,7 +2,7 @@
 title: Τιμές σούπερ μάρκετ
 slug: supermarket-prices
 description: "Οι τιμές των σούπερ μάρκετ: τα ίδια προϊόντα σε κάθε αλυσίδα, μήνα με μήνα"
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 date: 2024-12-22
 download_url: 
 redirect_from:

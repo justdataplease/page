@@ -2,7 +2,7 @@
 title: Transport in Greece and the EU
 slug: transport-greece
 description: "How many people take the Athens metro and buses every day, and how people and goods travel in Greece next to the EU"
-category: Business & tourism
+category: "Tourism & getting around"
 date: 2026-10-22
 published_by: "DataForGreece"
 last_update: "2026-10-22"

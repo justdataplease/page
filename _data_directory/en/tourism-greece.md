@@ -2,7 +2,7 @@
 title: Tourism in Greece, every month and every region
 slug: tourism-greece
 description: "Arrivals and nights every month, travel receipts, every region and where Greece stands in the EU"
-category: Business & tourism
+category: "Tourism & getting around"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-22"

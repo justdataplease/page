@@ -2,7 +2,7 @@
 title: Work, unemployment and pay in Greece
 slug: work-greece
 description: "Monthly unemployment, employment, the minimum and average wage and labour costs, for Greece, its regions and the EU"
-category: Work & pay
+category: "Economy & work"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-22"

@@ -20,6 +20,7 @@
         <p class="tl-row__no">{{ include.n | prepend: "0" | slice: -2, 2 }}</p>
         <h2 class="hl hl--m tl-row__name" id="{{ _r.key }}-name"><a href="{{ _r_href }}">{{ _rx.name }}</a></h2>
         <p class="tl-row__dek">{{ _rx.dek }}</p>
+        <p class="tl-row__meta">{{ _rx.updates }}{% if _tarts.size > 0 %} · {{ t.editions }} ({{ _tarts.size }}){% endif %}</p>
     </div>
 
     <dl class="tl-row__data tl-facts">
@@ -38,6 +39,9 @@
     </dl>
 
     <div class="tl-row__ana">
+        {%- comment -%} Editorial review 2026-11-05: no cadence promise and no "coming soon" on topics without an
+          analysis; the column stays empty for them. {%- endcomment -%}
+        {%- if _tlatest %}
         <p class="tl-cadence">{{ t.editions_every }} {{ _r_cad }}</p>
         <dl class="tl-facts">
             <div>
@@ -47,12 +51,9 @@
                     <a href="{{ site.baseurl }}{{ _tlatest.url }}">{% include years.html text=_tlatest.title %}</a>
                     <span class="tl-latest__date">{% include date.html date=_tlatest.date %}</span>
                 </dd>
-                {%- else %}
-                <dd class="tl-latest tl-latest--none">{{ t.no_editions }}</dd>
                 {%- endif %}
             </div>
         </dl>
-        {%- if _tarts.size > 0 %}
         <a class="tl-more" href="{{ _r_href }}#topic-editions">{{ t.editions }} ({{ _tarts.size }}) <span aria-hidden="true">→</span></a>
         {%- endif %}
     </div>

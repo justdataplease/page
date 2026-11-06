@@ -1,6 +1,6 @@
 ---
 redirect_from: /en/topics/budget/
 topic: budget
-title: "Budget"
-description: "Where the money goes: the Municipality of Athens budget, its monthly execution and the Greek state budget."
+title: "Budgets: City of Athens and the state"
+description: "What the City of Athens votes and what it actually pays, and how the state budget is executed against its targets."
 ---

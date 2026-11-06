@@ -1,6 +1,9 @@
 ---
-redirect_from: /themata/fuel-prices/
+redirect_from:
+  - /themata/fuel-prices/
+  - /blog/fuel-prices-greece-timeline/
+  - /qu36yl/
 topic: fuel-prices
 title: "Τιμές καυσίμων"
-description: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, και πώς συγκρίνονται με την υπόλοιπη ΕΕ."
+description: "Τι πληρώνουμε στην αντλία σε κάθε νομό, πόσα μένουν στο πρατήριο και πόσο της τιμής είναι φόροι, δίπλα στις άλλες χώρες της ΕΕ."
 ---

@@ -1,5 +1,5 @@
 ---
 topic: transport
 title: "Transport"
-description: "How many people take the Athens metro, buses, tram and suburban railway every day, which stations fill up and when, and how little Greece travels by train next to the EU."
+description: "How many tickets and cards are validated every day on the Athens metro, buses, tram and suburban rail, which stations fill up and when, and how much Greece travels by train."
 ---

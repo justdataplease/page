@@ -2,7 +2,7 @@
 title: Electricity and energy in Greece and the EU
 slug: energy-greece
 description: "Electricity and gas prices, what Greece's power is made from, renewables, imports, household energy and the energy class of homes on the market, in Greece and the EU"
-category: Energy & environment
+category: "Energy & environment"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-26"

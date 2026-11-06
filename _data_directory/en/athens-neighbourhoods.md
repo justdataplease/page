@@ -1,8 +1,8 @@
 ---
 title: Air and footfall in Athens neighbourhoods
 slug: athens-neighbourhoods
-description: "The City of Athens air sensors and WiFi points in squares, parks and sports grounds: pollution, heat and footfall by neighbourhood"
-category: Energy & environment
+description: "The City of Athens air sensors and WiFi points in squares, parks and sports grounds: pollution and heat by neighbourhood, and how many devices the WiFi sees"
+category: "Energy & environment"
 date: 2026-10-15
 published_by: "DataForGreece"
 last_update: "2026-10-22"
@@ -10,7 +10,7 @@ date_added: "2026-10-15"
 data_dates: "2025/10 - 2026/10"
 source_name: "City of Athens,European Environment Agency"
 source_url: "https://opendata.cityofathens.gr/,https://eeadmz1-downloads-webapp.azurewebsites.net/"
-description_detailed: "What we breathe and how many people pass through the neighbourhoods of Athens, from the sensors of the City of Athens «Smart Neighbourhood» programme in squares, parks and sports grounds. For every station: particles, nitrogen dioxide, ozone and temperature by hour and by day, and how many devices its WiFi sees. Alongside, the official stations in Attica. Updated every day."
+description_detailed: "What we breathe and how hot it gets in the neighbourhoods of Athens, from the sensors of the City of Athens «Smart Neighbourhood» programme in squares, parks and sports grounds. For every station: particles, nitrogen dioxide, ozone and temperature by hour and by day, and how many devices its WiFi sees. Devices are not people: one phone can be counted at several stations. Alongside, the official stations in Attica."
 description_preprocess: "The data come from the City's open-data portal; we refresh them every day and keep the original values too. We drop the readings of broken sensors and the days a WiFi point was down. Do not add stations up: air values are averages, and one phone is counted at every station it passes."
 image_path: assets/posts/topic-athens-neighbourhoods.webp
 ---

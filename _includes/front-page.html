@@ -21,7 +21,18 @@
 {%- assign h1_charts = site.charts | where: "lang", lang | where_exp: "c", "c.embedded_url contains 'app.powerbi.com'" -%}
 {%- assign h1_topics = site.data.topics | where: "kind", "topic" -%}
 {%- assign h1_specials = site.data.topics | where: "kind", "special" -%}
+{%- comment -%} The lead story: an analysis with `lead: true` in its front matter, else the newest (editorial review
+  2026-11-05: the editor picks the lead, not the date). The lead is then left out of the analyses column. {%- endcomment -%}
+{%- assign h1_leads = h1_articles | where: "lead", true -%}
+{%- if h1_leads.size > 0 -%}
+{%- assign h1_lead = h1_leads.first -%}
+{%- assign h1_rest = "" | split: "" -%}
+{%- for a in h1_articles -%}{%- if a.url != h1_lead.url -%}{%- assign h1_rest = h1_rest | push: a -%}{%- endif -%}{%- endfor -%}
+{%- assign h1_first = "" | split: "" | push: h1_lead -%}
+{%- assign h1_articles = h1_first | concat: h1_rest -%}
+{%- else -%}
 {%- assign h1_lead = h1_articles.first -%}
+{%- endif -%}
 {%- assign h1_img = 'assets/posts/athens.webp' -%}
 {%- assign h1_brief_n = 4 -%}
 {%- assign h1_live = 0 -%}
@@ -67,11 +78,8 @@
             </article>
             {%- endfor %}
             <a class="more" href="{{ site.baseurl }}{{ t.paths.data_directory }}">{{ t.all_data }} →</a>
-
-            <aside class="h1-livebox">
-                <p class="h1-livebox__num">{{ h1_live }}<span>/{{ h1_datasets.size }}</span></p>
-                <p class="h1-livebox__text">{{ t.livebox_text }}</p>
-            </aside>
+            {%- comment -%} The «ζωντανά» count box went in the editorial review of 2026-11-05 (no dashboard refreshes
+              itself, so «live» promised too much). {%- endcomment %}
         </section>
 
         {%- comment -%} ── Centre: cover band + lead story ── {%- endcomment %}
@@ -154,19 +162,8 @@
             </article>
             {%- endif %}
             {%- endfor %}
-
-            <aside class="index-box h1-index">
-                <h2 class="index-box__title">{{ t.in_this_issue }}</h2>
-                <ul>
-                    <li><a href="{{ site.baseurl }}{{ t.paths.news }}"><span>{{ t.research_plural }}</span><i></i><b>{{ h1_articles.size }}</b></a></li>
-                    <li><a href="{{ site.baseurl }}{{ t.paths.data_directory }}"><span>{{ t.datasets }}</span><i></i><b>{{ h1_datasets.size }}</b></a></li>
-                    <li><span class="index-box__row"><span>{{ t.charts }}</span><i></i><b>{{ h1_charts.size }}</b></span></li>
-                    <li><a href="{{ site.baseurl }}{{ t.paths.apps }}"><span>{{ t.apps_short }}</span><i></i><b>{{ site.data.apps.size }}</b></a></li>
-                    {%- if h1_reports.size > 0 %}
-                    <li><a href="{{ site.baseurl }}{{ t.paths.reports }}"><span>{{ t.reports }}</span><i></i><b>{{ h1_reports.size }}</b></a></li>
-                    {%- endif %}
-                </ul>
-            </aside>
+            {%- comment -%} The «Σε αυτό το φύλλο» counts box went in the editorial review of 2026-11-05: counts of
+              charts and apps told the reader nothing. {%- endcomment %}
         </section>
     </div>
 

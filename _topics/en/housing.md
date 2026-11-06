@@ -1,5 +1,5 @@
 ---
 topic: housing
-title: "Housing"
-description: "Apartment prices, rents, mortgages and how many households are overburdened by housing costs, in Greece and the EU."
+title: "Housing and construction"
+description: "Official apartment prices, rents, mortgages, where new homes are built and how many households struggle with the cost of housing."
 ---

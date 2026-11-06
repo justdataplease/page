@@ -1,5 +1,5 @@
 ---
 topic: poverty
 title: "Income & poverty"
-description: "Average income, inequality, the risk of poverty and deprivation: who lives in hardship and how it changes year by year."
+description: "How many live below the poverty line, how unequally income is shared and who is most at risk, next to the EU."
 ---

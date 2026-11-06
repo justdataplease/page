@@ -26,11 +26,11 @@
   data: [fuel-prices-greece]
   charts: []
   report: ""
-  articles: [fuel-prices-greece-timeline]
+  articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZmU1OWQ4MjMtZmQyYS00YzM1LWJhYjEtNzFiOTE4ZjEyYmE0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Τιμές καυσίμων"
-    dek: "Αμόλυβδη, diesel, υγραέριο και πετρέλαιο θέρμανσης: οι μέσες τιμές λιανικής σε όλη τη χώρα και σε κάθε νομό, και πώς συγκρίνονται με την υπόλοιπη ΕΕ."
+    dek: "Τι πληρώνουμε στην αντλία σε κάθε νομό, πόσα μένουν στο πρατήριο και πόσο της τιμής είναι φόροι, δίπλα στις άλλες χώρες της ΕΕ."
     coverage: "2012 – σήμερα · 51 νομοί"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -38,12 +38,10 @@
       - { name: "e-katanalotis (αρχείο 2021–2024)", url: "https://e-katanalotis.gov.gr", note: "Τιμές πρατηρίων ανά εταιρεία" }
       - { name: "Ευρωπαϊκή Επιτροπή, Εβδομαδιαίο Δελτίο Πετρελαίου", url: "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en", note: "Οι τιμές σε κάθε κράτος μέλος της ΕΕ, με και χωρίς φόρους" }
     notes:
-      - "Οι τιμές είναι σταθμισμένοι μέσοι όροι του Υπουργείου· δεν προστίθενται μεταξύ τους."
-      - "Οι εθνικές τιμές και οι τιμές ανά νομό είναι διαφορετικές σειρές και δεν αναμειγνύονται."
       - "Για τη σύγκριση με την ΕΕ χρησιμοποιούμε το δελτίο της Ευρωπαϊκής Επιτροπής, που έχει τιμή κάθε Δευτέρας· ο μέσος όρος της ΕΕ είναι σταθμισμένος με την κατανάλωση."
   en:
     name: "Fuel prices"
-    dek: "Unleaded, diesel, LPG and heating oil: average retail prices for the whole country and every prefecture, and how they compare with the rest of the EU."
+    dek: "What we pay at the pump in every prefecture, how much the station keeps and how much of the price is tax, next to the other EU countries."
     coverage: "2012 – today · 51 prefectures"
     updates: "Every quarter"
     sources:
@@ -51,8 +49,6 @@
       - { name: "e-katanalotis (2021–2024 archive)", url: "https://e-katanalotis.gov.gr", note: "Station prices by brand" }
       - { name: "European Commission, Weekly Oil Bulletin", url: "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en", note: "Prices in every EU member state, with and without taxes" }
     notes:
-      - "Prices are the Ministry's weighted averages; they are never added together."
-      - "National and per-prefecture prices are separate series and are not mixed."
       - "For the EU comparison we use the European Commission's bulletin, which has one price per Monday; the EU average is weighted by consumption."
 
 - key: supermarket-prices
@@ -62,16 +58,16 @@
   image: assets/posts/supermarket.webp
   since: 2021
   cadence: quarterly
-  data: [supermarket-prices]
+  data: [supermarket-prices, supermarket-prices-itsjustperiod]
   charts: [supermarket-prices]
   report: supermarket-prices-greece
-  articles: [supermarket-prices-olive-oil-2025-01-27]
+  articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDFlZjVjMTEtYWYzOC00OTViLWJkM2ItOTZhZGVmY2I0NGE0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9&pageName=602281e74549b403059d" }
   explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
     - { model: katanalotis_product, url: "https://app.powerbi.com/view?r=eyJrIjoiMjRkNzFhZDctNWZmZS00MDg4LWI4YzQtZmEzNjE3ZGI1MDZmIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές ανά προϊόν και σούπερ μάρκετ", en: "Prices by product and supermarket" }
   gr:
     name: "Τιμές σούπερ μάρκετ"
-    dek: "Κάθε τιμή ραφιού που έχουμε για την Ελλάδα: κατηγορίες, αλυσίδες, ακρίβεια και τα φθηνότερα καλάθια."
+    dek: "Η τιμή κάθε προϊόντος σε κάθε αλυσίδα: πού κοστίζει λιγότερο, τι ακρίβυνε, τι έφερε η πρωτοβουλία μείωσης τιμών και πώς συγκρινόμαστε με την ΕΕ."
     coverage: "Σεπτέμβριος 2021 – σήμερα"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -81,9 +77,10 @@
       - { name: "Σκλαβενίτης", url: "https://www.sklavenitis.gr", note: "Το ηλεκτρονικό κατάστημα, από τον Νοέμβριο 2024" }
     notes:
       - "Τα σύνολα ανά αλυσίδα και κατηγορία μετρούν μία πηγή ανά προϊόν, ώστε να μη διπλομετρώνται τιμές."
+      - "Τα προϊόντα περιόδου τα παρακολουθούμε μαζί με την ομάδα It's Just Period, στη σελίδα «Προϊόντα Περιόδου» του dashboard."
   en:
     name: "Supermarket prices"
-    dek: "Every shelf price we hold for Greece: categories, retailers, inflation and the cheapest baskets."
+    dek: "The price of every product in every retailer: where it costs least, what went up, what the price-cut initiative brought and how we compare with the EU."
     coverage: "September 2021 – today"
     updates: "Every quarter"
     sources:
@@ -93,6 +90,7 @@
       - { name: "Sklavenitis", url: "https://www.sklavenitis.gr", note: "Its online shop, from November 2024" }
     notes:
       - "Totals by retailer and category count one source per product, so no price is counted twice."
+      - "We track period products together with the It's Just Period team, on the dashboard's «Προϊόντα Περιόδου» page."
 
 - key: real-estate
   kind: topic
@@ -108,7 +106,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDU3ZmQxMWMtZjk1Yy00YzgzLWE5ZTItZjkyZDU3ZTA4MjM3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Ακίνητα: αγγελίες, συμβόλαια και πλειστηριασμοί"
-    dek: "Πόσα ζητούν πωλητές και ιδιοκτήτες για ένα σπίτι, ανά περιφέρεια και δήμο, κάθε μήνα, πόσο δηλώνεται στα συμβόλαια και πώς καταλήγουν οι πλειστηριασμοί ακινήτων δίπλα στην αγορά."
+    dek: "Τι ζητούν οι αγγελίες πώλησης και ενοικίασης σε κάθε δήμο, τι δηλώνεται στα συμβόλαια και από πού ξεκινούν οι πλειστηριασμοί."
     coverage: "2022 – σήμερα · όλη η Ελλάδα · 13 περιφέρειες · δήμοι"
     updates: "Κάθε μήνα"
     sources:
@@ -118,16 +116,13 @@
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/SJU24/-", note: "Αγοραπωλησίες ακινήτων και οικοδομικές άδειες" }
       - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Εισόδημα νοικοκυριών και επιβάρυνση από το κόστος στέγασης ανά περιφέρεια" }
     notes:
-      - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Για τις τιμές συναλλαγών δείτε το θέμα Κατοικία (Τράπεζα της Ελλάδος)."
+      - "Είναι ζητούμενες τιμές αγγελιών, όχι τιμές συναλλαγών· οι πράξεις κλείνουν συνήθως χαμηλότερα. Τις τιμές συναλλαγών της Τράπεζας της Ελλάδος θα τις βρείτε στο θέμα «Στέγαση και οικοδομή»."
       - "Οι δήμοι με λίγες αγγελίες δεν εμφανίζονται, ώστε μία-δύο ακριβές βίλες να μη «φτιάχνουν» την τιμή ενός ολόκληρου δήμου."
-      - "Τα ενοίκια συγκρίνονται με το Airbnb στη σελίδα «Airbnb & ενοίκια» του θέματος Airbnb."
-      - "Η σελίδα «Αγγελίες και συμβόλαια» βάζει τις ζητούμενες τιμές δίπλα στη δηλωμένη τιμή των συμβολαίων του Υπουργείου Οικονομικών και στην τιμή ζώνης (αντικειμενική αξία). Η δηλωμένη τιμή δεν είναι εκτίμηση: αφορά κυρίως παλιά σπίτια, γι' αυτό η απόσταση από τις αγγελίες δεν είναι «έκπτωση». Οι δήμοι συγκρίνονται μόνο όταν το όνομά τους ταυτίζεται στις δύο πηγές."
-      - "Η σελίδα «Αγγελίες και επίσημα στοιχεία» βάζει τις ζητούμενες τιμές δίπλα στις τιμές συναλλαγών της Τράπεζας της Ελλάδος, στις αγοραπωλησίες και τις άδειες της ΕΛΣΤΑΤ και στο εισόδημα των νοικοκυριών."
-      - "Πλειστηριασμοί: το αποτέλεσμα κάθε δημοπρασίας δεν το βλέπουμε, γι' αυτό το συμπεραίνουμε. Όταν το ακίνητο αποσύρεται αμέσως μετά τη δημοπρασία χωρίς νέο γύρο, το λέμε «πιθανή κατακύρωση», σε πλειοδότη ή στον πιστωτή."
-      - "Οι πλειστηριασμοί συγκρίνονται με την τιμή πρώτης προσφοράς, όχι με την τελική τιμή, και με τα δικά μας δεδομένα αγοράς: τις ζητούμενες τιμές των αγγελιών πώλησης που συλλέγουμε, για τον ίδιο τύπο κατοικίας και την ίδια περιοχή. Δεν είναι επίσημος δείκτης τιμών."
+      - "Η δηλωμένη τιμή των συμβολαίων αφορά κυρίως παλιά σπίτια, γι' αυτό η απόστασή της από τις αγγελίες δεν είναι «έκπτωση». Οι δήμοι συγκρίνονται μόνο όταν το όνομά τους ταυτίζεται στις δύο πηγές."
+      - "Πλειστηριασμοί: το αποτέλεσμα δεν το βλέπουμε, το συμπεραίνουμε. Όταν το ακίνητο αποσύρεται αμέσως μετά χωρίς νέο γύρο, το λέμε «πιθανή κατακύρωση». Συγκρίνουμε την τιμή πρώτης προσφοράς, όχι την τελική, με τις ζητούμενες τιμές για τον ίδιο τύπο κατοικίας στην ίδια περιοχή· δεν είναι επίσημος δείκτης τιμών."
   en:
     name: "Property: listings, contracts and auctions"
-    dek: "What sellers and landlords ask for a home, by region and municipality, every month, what is declared in the contracts, and how property auctions end up next to the market."
+    dek: "What listings ask to buy and to rent in every municipality, what is declared in the contracts and where property auctions start."
     coverage: "2022 – today · all of Greece · 13 regions · municipalities"
     updates: "Every month"
     sources:
@@ -137,17 +132,14 @@
       - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/SJU24/-", note: "Property sales and building permits" }
       - { name: "Eurostat", url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2hhinc/default/table?lang=en", note: "Household income and housing cost overburden by region" }
     notes:
-      - "These are asking prices from listings, not sale prices; deals usually close lower. For transaction prices see the Housing topic (Bank of Greece)."
+      - "These are asking prices from listings, not sale prices; deals usually close lower. The Bank of Greece transaction prices are in the «Housing and construction» topic."
       - "Municipalities with few listings are left out, so one or two expensive villas cannot set a whole municipality's price."
-      - "Rents are compared with Airbnb on the «Airbnb & ενοίκια» page of the Airbnb topic."
-      - "The page «Αγγελίες και συμβόλαια» puts asking prices next to the declared price in the Ministry of Finance contracts and the zone price (objective value). The declared price is not an estimate: it covers mostly old homes, so the gap from the listings is not a «discount». Municipalities are compared only when their name is the same in both sources."
-      - "The page «Αγγελίες και επίσημα στοιχεία» puts asking prices next to the Bank of Greece transaction prices, ELSTAT's property sales and building permits, and household income."
-      - "Auctions: we do not see the result of each auction, so we infer it. When the property is withdrawn right after the auction with no new round, we call it a «probable adjudication», to a bidder or to the creditor."
-      - "Auctions are compared by their starting price, not the final price, with our market data: the asking prices of the sale listings we collect, for the same dwelling type and area. It is not an official price index."
+      - "The declared contract price is mostly for older homes, so its gap to the listings is not a «discount». Municipalities are compared only when their names match in both sources."
+      - "Auctions: we don't see the outcome, we infer it. When a property is withdrawn right after the auction with no new round, we call it a «likely sale». We compare the starting bid, not the final price, with asking prices for the same home type in the same area; it is not an official price index."
 
 - key: airbnb
   kind: topic
-  category: business
+  category: travel
   model: airbnb
   image: assets/posts/airbnb.webp
   since: 2015
@@ -161,7 +153,7 @@
     - { model: inside_airbnb, url: "https://app.powerbi.com/view?r=eyJrIjoiOTRlM2M4MzEtYmUyZS00ZDRiLTkwZDItMmM0MmMwZDk0YjkwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Airbnb ανά γειτονιά και μήνα", en: "Airbnb by neighbourhood and month" }
   gr:
     name: "Airbnb"
-    dek: "Πόσα καταλύματα και σε ποια τιμή: Αθήνα, Θεσσαλονίκη, Κρήτη και Νότιο Αιγαίο, ανά γειτονιά και δήμο."
+    dek: "Πόσα σπίτια είναι στο Airbnb σε κάθε γειτονιά της Αθήνας, της Θεσσαλονίκης, της Κρήτης και του Νοτίου Αιγαίου, σε ποια τιμή, ποιοι τα έχουν και αν αποδίδουν περισσότερο από το ενοίκιο."
     coverage: "2015 – σήμερα · 4 περιοχές"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -171,11 +163,10 @@
     notes:
       - "Δεκέμβριος 2025 – Φεβρουάριος 2026: η πηγή δεν δίνει τιμές, γι' αυτό το διάγραμμα έχει κενό."
       - "Από τον Μάρτιο 2026 η πηγή μετρά την τιμή με νέο τρόπο· οι τιμές πριν και μετά δεν συγκρίνονται άμεσα."
-      - "Η σελίδα «Airbnb & ενοίκια» του dashboard συγκρίνει ανά δήμο τα σπίτια στο Airbnb με τις δικές μας αγγελίες μακροχρόνιας ενοικίασης και με τις κατοικίες της απογραφής 2021 (ΕΛΣΤΑΤ)."
-      - "Η σελίδα «Ενοίκιο ή Airbnb ανά γειτονιά» δείχνει, γειτονιά προς γειτονιά, αν ένα σπίτι αποδίδει περισσότερο στο Airbnb ή με ενοίκιο και αν τα ενοίκια ανέβηκαν περισσότερο όπου υπάρχει περισσότερο Airbnb."
+      - "Μετράμε αγγελίες, όχι κρατήσεις: μια αγγελία δεν σημαίνει ότι το σπίτι νοικιάζεται."
   en:
     name: "Airbnb"
-    dek: "How many listings and at what price: Athens, Thessaloniki, Crete and the South Aegean, by neighbourhood and municipality."
+    dek: "How many homes are on Airbnb in every neighbourhood of Athens, Thessaloniki, Crete and the South Aegean, at what price, who holds them and whether they earn more than a long-term rent."
     coverage: "2015 – today · 4 areas"
     updates: "Every quarter"
     sources:
@@ -185,8 +176,7 @@
     notes:
       - "December 2025 – February 2026: the source has no prices, so the chart shows a gap."
       - "From March 2026 the source measures price differently; prices before and after are not directly comparable."
-      - "The dashboard page «Airbnb & ενοίκια» compares, per municipality, the homes on Airbnb with our own long-term rental listings and with the dwellings of the 2021 census (ELSTAT)."
-      - "The dashboard page «Ενοίκιο ή Airbnb ανά γειτονιά» shows, neighbourhood by neighbourhood, whether a home earns more on Airbnb or rented out, and whether rents rose faster where there is more Airbnb."
+      - "We count listings, not bookings: a listing does not mean the home is actually let."
 
 - key: forest-fires
   kind: topic
@@ -198,13 +188,13 @@
   data: [forest-fires-greece]
   charts: []
   report: ""
-  articles: [forest-fires-greece-timeline]
+  articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMDdhNzk0NjktZjJlZi00NjRlLWE0NjctNmQ2YTkzNzRmMzlhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
     - { model: fires, url: "https://app.powerbi.com/view?r=eyJrIjoiNzc1YTI1OTEtMWFjNi00MjMwLTk0YjYtNmNkMTQzMjM5NDIyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Πυρκαγιές ανά νομό και χρονιά", en: "Fires by prefecture and year" }
   gr:
     name: "Δασικές πυρκαγιές"
-    dek: "Κάθε δασική και αστική πυρκαγιά που κατέγραψε η Πυροσβεστική και οι καμένες εκτάσεις από δορυφόρο (EFFIS)."
+    dek: "Κάθε δασική πυρκαγιά που κατέγραψε η Πυροσβεστική, ανά νομό, μήνα και μέγεθος, δίπλα στη δορυφορική μέτρηση της καμένης έκτασης."
     coverage: "2000 – σήμερα"
     updates: "Κάθε χρόνο"
     sources:
@@ -214,7 +204,7 @@
       - "Οι εκτάσεις της Πυροσβεστικής και του EFFIS μετρώνται διαφορετικά και δεν προστίθενται."
   en:
     name: "Forest fires"
-    dek: "Every forest and urban fire recorded by the Fire Service, and the burnt areas seen by satellite (EFFIS)."
+    dek: "Every forest fire the Fire Service recorded, by prefecture, month and size, next to the satellite measurement of the burned area."
     coverage: "2000 – today"
     updates: "Every year"
     sources:
@@ -237,31 +227,27 @@
   articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMTBjY2NmYTEtZTJmZi00Nzk2LTlmNzMtMGFiYmYyNDVhOTQ3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
-    name: "Γειτονιές της Αθήνας: αέρας και κίνηση"
-    dek: "Τι αναπνέουμε στις πλατείες, τα πάρκα και τα γήπεδα της Αθήνας, πότε μέσα στη μέρα ανεβαίνει η ρύπανση, πόσο ζεσταίνεται κάθε γειτονιά και πόσος κόσμος περνά, από τους αισθητήρες του Δήμου."
+    name: "Γειτονιές της Αθήνας: αέρας και ζέστη"
+    dek: "Τι αναπνέουμε και πόση ζέστη κάνει σε κάθε πλατεία και γειτονιά της Αθήνας, ώρα με την ώρα, από τους αισθητήρες του Δήμου, δίπλα στους επίσημους σταθμούς."
     coverage: "2025 – σήμερα · Δήμος Αθηναίων · επτά δημοτικά διαμερίσματα"
-    updates: "Κάθε μέρα"
+    updates: "Κάθε μήνα"
     sources:
       - { name: "Δήμος Αθηναίων – Έξυπνη Γειτονιά", url: "https://opendata.cityofathens.gr/", note: "Αισθητήρες αέρα ανά ώρα και συσκευές WiFi ανά ημέρα, σε πλατείες, πάρκα και γήπεδα" }
       - { name: "Ευρωπαϊκός Οργανισμός Περιβάλλοντος, ποιότητα αέρα", url: "https://eeadmz1-downloads-webapp.azurewebsites.net/", note: "Οι επίσημοι σταθμοί του εθνικού δικτύου στην Αττική, επικυρωμένα στοιχεία" }
     notes:
       - "Είναι αισθητήρες χαμηλού κόστους: δείχνουν διαφορές ανάμεσα σε γειτονιές, ώρες και εποχές, όχι τις επίσημες μετρήσεις του δικτύου του Υπουργείου. Οι ενδείξεις χαλασμένων αισθητήρων αφαιρούνται."
-      - "Οι επίσημοι σταθμοί έχουν επικυρωμένα στοιχεία μόνο για τα προηγούμενα χρόνια, γι' αυτό τους δείχνουμε σε δική τους σελίδα και δεν τους ανακατεύουμε με τους αισθητήρες."
       - "Η θερμοκρασία μετριέται στο ύψος του δρόμου και δείχνει πιο ψηλά από τους επίσημους μετεωρολογικούς σταθμούς."
-      - "Το WiFi μετρά διαφορετικές συσκευές ανά σταθμό και ημέρα, όχι ανθρώπους· ένα κινητό που περνά από δύο σταθμούς μετριέται και στους δύο."
   en:
-    name: "Athens neighbourhoods: air and footfall"
-    dek: "What we breathe in Athens' squares, parks and sports grounds, when pollution rises during the day, how hot each neighbourhood gets and how many people pass through, from the City's own sensors."
+    name: "Athens neighbourhoods: air and heat"
+    dek: "What we breathe and how hot it gets in every square and neighbourhood of Athens, hour by hour, from the City's sensors, next to the official stations."
     coverage: "2025 – today · City of Athens · seven municipal districts"
-    updates: "Every day"
+    updates: "Every month"
     sources:
       - { name: "City of Athens – Smart Neighbourhood", url: "https://opendata.cityofathens.gr/", note: "Air sensors by hour and WiFi devices by day, in squares, parks and sports grounds" }
       - { name: "European Environment Agency, air quality", url: "https://eeadmz1-downloads-webapp.azurewebsites.net/", note: "The official national-network stations in Attica, verified data" }
     notes:
       - "These are low-cost sensors: they show differences between neighbourhoods, hours and seasons, not the official readings of the Ministry's network. Readings from broken sensors are removed."
-      - "The official stations only have verified data for past years, so they have a page of their own and are not mixed with the sensors."
       - "Temperature is measured at street level and reads higher than the official weather stations."
-      - "WiFi counts different devices per station and day, not people; a phone that passes two stations is counted at both."
 
 - key: noise
   kind: topic
@@ -280,25 +266,25 @@
     name: "Θόρυβος στην Αθήνα"
     dek: "Πόσος θόρυβος έχει κάθε γειτονιά, ποια ώρα ησυχάζει η πόλη και πόσο πιο ήσυχη είναι η νύχτα, από τους αισθητήρες θορύβου του SoundWatch."
     coverage: "2026 – σήμερα · Αθήνα και γύρω δήμοι · αισθητήρες σε γειτονιές"
-    updates: "Κάθε μέρα"
+    updates: "Κάθε μήνα"
     sources:
       - { name: "SoundWatch", url: "https://soundwatch.gr/", note: "Αισθητήρες θορύβου σε γειτονιές της Αθήνας, ανοιχτά δεδομένα ανά ώρα (Schema Labs)" }
       - { name: "OpenStreetMap", url: "https://www.openstreetmap.org/copyright", note: "Ο χάρτης στο φόντο, © OpenStreetMap contributors" }
     notes:
       - "Οι στάθμες είναι dB της συσκευής, χωρίς βαθμονόμηση: δείχνουν διαφορές ανάμεσα σε τόπους και ώρες, όχι επίσημες μετρήσεις θορύβου, και δεν συγκρίνονται με νομικά όρια ή με άλλα όργανα."
-      - "Οι μέσοι όροι είναι ενεργειακοί, όπως μετριέται ο ήχος: δέκα dB παραπάνω είναι δέκα φορές η ηχητική ενέργεια. Δύο συσκευές μπορεί να διαφέρουν λίγο μεταξύ τους, γι' αυτό μια διαφορά ενός ή δύο dB δεν λέει πολλά."
+      - "Οι μέσοι όροι είναι ενεργειακοί, όπως μετριέται ο ήχος: δέκα dB παραπάνω σημαίνουν δεκαπλάσια ηχητική ενέργεια. Διαφορά ενός ή δύο dB ανάμεσα σε δύο τόπους δεν λέει πολλά."
       - "Ένας τόπος κατατάσσεται μόνο με αρκετές μέρες μετρήσεων στην επιλογή· οι αισθητήρες που έχουν σταματήσει να μετρούν φαίνονται με τις παλαιότερες μετρήσεις τους."
   en:
     name: "Noise in Athens"
     dek: "How noisy each neighbourhood is, when the city goes quiet and how much quieter the night is, from SoundWatch's noise sensors."
     coverage: "2026 – today · Athens and nearby municipalities · sensors in neighbourhoods"
-    updates: "Every day"
+    updates: "Every month"
     sources:
       - { name: "SoundWatch", url: "https://soundwatch.gr/", note: "Noise sensors in Athens neighbourhoods, open data by hour (Schema Labs)" }
       - { name: "OpenStreetMap", url: "https://www.openstreetmap.org/copyright", note: "The background map, © OpenStreetMap contributors" }
     notes:
       - "Levels are device decibels, not calibrated: they show differences between places and hours, not official noise measurements, and are never compared with legal limits or other instruments."
-      - "Averages are energy averages, the way sound is measured: ten decibels more is ten times the sound energy. Two devices can differ a little, so a gap of one or two decibels means little."
+      - "Averages are energy averages, the way sound is measured: ten dB more means ten times the sound energy. A gap of one or two dB between two places says little."
       - "A place is ranked only with enough days of readings in the selection; sensors that have stopped reporting show their older readings."
 
 - key: budget
@@ -316,8 +302,8 @@
   explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
     - { model: athens_municipality_budget, url: "https://app.powerbi.com/view?r=eyJrIjoiOGVmOGIxZDMtYmJlMy00MDc2LWJlNjctOWFlYjcwYzkyZjgxIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Ο προϋπολογισμός γραμμή προς γραμμή", en: "The budget line by line" }
   gr:
-    name: "Προϋπολογισμός"
-    dek: "Πού πάνε τα χρήματα: ο προϋπολογισμός του Δήμου Αθηναίων, η μηνιαία εκτέλεσή του και ο κρατικός προϋπολογισμός."
+    name: "Προϋπολογισμοί: Δήμος Αθηναίων και κράτος"
+    dek: "Τι ψηφίζει και τι τελικά πληρώνει ο Δήμος Αθηναίων, και πώς εκτελείται ο κρατικός προϋπολογισμός απέναντι στους στόχους του."
     coverage: "2005 – σήμερα"
     updates: "Κάθε χρόνο"
     sources:
@@ -327,10 +313,10 @@
       - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Γενική κυβέρνηση, για σύγκριση" }
       - { name: "ΕΛΣΤΑΤ, απογραφή πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SAM03/-", note: "Οι κάτοικοι του Δήμου, για τις πληρωμές ανά κάτοικο" }
     notes:
-      - "Από το 2026 οι κωδικοί αλλάζουν (ΑΛΕ αντί για ΚΑΕ)· οι συγκρίσεις με τα προηγούμενα χρόνια γίνονται μόνο όπου υπάρχει επίσημη αντιστοίχιση."
+      - "Από το 2026 ο Δήμος άλλαξε κωδικούς λογαριασμών· οι συγκρίσεις με τα προηγούμενα χρόνια γίνονται μόνο όπου υπάρχει επίσημη αντιστοίχιση."
   en:
-    name: "Budget"
-    dek: "Where the money goes: the Municipality of Athens budget, its monthly execution and the Greek state budget."
+    name: "Budgets: City of Athens and the state"
+    dek: "What the City of Athens votes and what it actually pays, and how the state budget is executed against its targets."
     coverage: "2005 – today"
     updates: "Every year"
     sources:
@@ -340,7 +326,7 @@
       - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "General government, for comparison" }
       - { name: "ELSTAT, population census", url: "https://www.statistics.gr/en/statistics/-/publication/SAM03/-", note: "The municipality's residents, for payments per resident" }
     notes:
-      - "From 2026 the budget codes change (ALE instead of KAE); years are compared only where an official crosswalk exists."
+      - "From 2026 the City changed its account codes; comparisons with earlier years are made only where there is an official mapping."
 
 - key: elections
   kind: topic
@@ -356,7 +342,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOGQzNGY0NjItODQ4ZC00YzY0LTkyNTctNDRlN2JlMmNiMmNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Εκλογές"
-    dek: "Όλες οι εκλογές της Μεταπολίτευσης: εθνικές, ευρωεκλογές, δημοψηφίσματα, περιφερειακές και δημοτικές, μέχρι το εκλογικό τμήμα, με τα δημογραφικά."
+    dek: "Όλες οι εκλογές της Μεταπολίτευσης, από την επικράτεια ως το εκλογικό τμήμα: κόμματα, συμμετοχή, σταυροί."
     coverage: "1974 – 2024"
     updates: "Μετά από κάθε εκλογή"
     sources:
@@ -364,11 +350,9 @@
       - { name: "Βουλή των Ελλήνων", url: "https://www.hellenicparliament.gr", note: "Ιστορικά αποτελέσματα" }
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr", note: "Απογραφή, για τα δημογραφικά" }
       - { name: "iMEdD Lab", url: "https://lab.imedd.org", note: "Συμμετοχή στις παλαιότερες εκλογές" }
-    notes:
-      - "Κάθε επίπεδο (επικράτεια, περιφέρεια, δήμος, τμήμα) είναι ξεχωριστός πίνακας· τα σύνολα δεν μεταφέρονται από το ένα στο άλλο."
   en:
     name: "Elections"
-    dek: "Every election since the return of democracy: national, European, referendums, regional and municipal, down to the polling station, with demographics."
+    dek: "Every election since the restoration of democracy, from the whole country down to the polling station: parties, turnout, preference votes."
     coverage: "1974 – 2024"
     updates: "After every election"
     sources:
@@ -376,12 +360,10 @@
       - { name: "Hellenic Parliament", url: "https://www.hellenicparliament.gr", note: "Historical results" }
       - { name: "ELSTAT", url: "https://www.statistics.gr", note: "Census, for the demographics" }
       - { name: "iMEdD Lab", url: "https://lab.imedd.org", note: "Turnout in older elections" }
-    notes:
-      - "Each level (country, region, municipality, station) is a separate table; totals are not carried from one to another."
 
 - key: businesses
   kind: topic
-  category: business
+  category: economy
   model: gemi
   # "Εθνική Τράπεζα της Ελλάδος" facade - photo supplied by the user (2026-10-06)
   image: assets/topic-businesses-ethniki.jpg
@@ -396,7 +378,7 @@
     - { model: gemi, url: "https://app.powerbi.com/view?r=eyJrIjoiNTIxY2NkMmItNWJjMS00MmU1LWIwZDEtNDI2ZTMzNDMzODJhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Επιχειρήσεις ανά κλάδο και περιοχή", en: "Companies by sector and area" }
   gr:
     name: "Επιχειρήσεις"
-    dek: "Το Γενικό Εμπορικό Μητρώο: κάθε εγγεγραμμένη επιχείρηση, οι νέες εγγραφές και τα λουκέτα, ανά κλάδο και περιοχή."
+    dek: "Κάθε επιχείρηση του Γενικού Εμπορικού Μητρώου: βρείτε μια εταιρεία και δείτε πόσες ανοίγουν και πόσες κλείνουν, σε ποιους κλάδους και πού."
     coverage: "Όλο το μητρώο · κινήσεις από τον Νοέμβριο 2024"
     updates: "Κάθε χρόνο"
     sources:
@@ -406,11 +388,11 @@
       - { name: "ΕΛΣΤΑΤ – Εκτιμήσεις πληθυσμού", url: "https://www.statistics.gr/el/statistics/-/publication/SPO18/-", note: "Πληθυσμός ανά περιφέρεια, για τις επιχειρήσεις ανά κάτοικο" }
     notes:
       - "Οι επιχειρήσεις μετρώνται μία φορά, στην έδρα τους."
-      - "Η σελίδα «ΓΕΜΗ και επίσημα στοιχεία» βάζει τις νέες επιχειρήσεις του ΓΕΜΗ δίπλα στις επίσημες γεννήσεις και τους θανάτους επιχειρήσεων, ανά κλάδο και περιφέρεια. Οι ελεύθεροι επαγγελματίες δεν εγγράφονται στο ΓΕΜΗ, γι' αυτό τα δύο νούμερα δεν ταυτίζονται."
-      - "Η σελίδα «Τι ανεβαίνει» δείχνει τις δραστηριότητες με τη μεγαλύτερη άνοδο νέων επιχειρήσεων, το κύμα της ενέργειας, τον Covid και πόσες επιχειρήσεις αντέχουν σε κάθε κλάδο."
+      - "Οι ελεύθεροι επαγγελματίες δεν εγγράφονται στο ΓΕΜΗ, γι' αυτό λείπουν κλάδοι όπως η υγεία και οι νομικές υπηρεσίες."
+      - "Λύση στο μητρώο δεν σημαίνει πάντα ότι η επιχείρηση σταμάτησε να λειτουργεί την ίδια μέρα."
   en:
     name: "Businesses"
-    dek: "The General Commercial Registry: every registered company, new registrations and closures, by sector and region."
+    dek: "Every business in the General Commercial Registry: find a company and see how many open and close, in which sectors and where."
     coverage: "The whole registry · events since November 2024"
     updates: "Every year"
     sources:
@@ -420,8 +402,8 @@
       - { name: "ELSTAT – Population estimates", url: "https://www.statistics.gr/en/statistics/-/publication/SPO18/-", note: "Population by region, for businesses per resident" }
     notes:
       - "Each company is counted once, at its head office."
-      - "The page «ΓΕΜΗ και επίσημα στοιχεία» sets GEMI's new businesses next to the official enterprise births and deaths, by sector and region. Self-employed professionals do not register with GEMI, so the two counts do not match."
-      - "The page «Τι ανεβαίνει» shows the activities whose new businesses rose the most, the energy wave, Covid and how many companies last in each sector."
+      - "Self-employed professionals do not register with GEMI, so sectors such as health and legal services are missing."
+      - "A dissolution in the registry does not always mean the business stopped working on that day."
 
 - key: population
   kind: topic
@@ -441,7 +423,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiOTM3ZTlhMmUtODVkMi00MWY1LWI3MzMtZmVkMTMzYzZiMDg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Πληθυσμός"
-    dek: "Πόσοι είμαστε και πόσο μεγαλώνουμε: ο πληθυσμός της χώρας και κάθε περιφέρειας κατά ηλικία και φύλο, η μετανάστευση και όλες οι απογραφές από την ίδρυση του κράτους."
+    dek: "Πόσοι είμαστε και πόσο γερνάμε: ο πληθυσμός της χώρας και κάθε περιφέρειας κατά ηλικία και φύλο, η μετανάστευση και οι απογραφές από την ίδρυση του κράτους."
     coverage: "2001 – 2025 · 13 περιφέρειες · απογραφές από το 1821"
     updates: "Κάθε χρόνο"
     sources:
@@ -451,10 +433,9 @@
     notes:
       - "Η μεταβολή του πληθυσμού μιας περιφέρειας δεν είναι εσωτερική μετανάστευση: περιλαμβάνει γεννήσεις, θανάτους και μετακινήσεις από και προς το εξωτερικό. Η μετανάστευση εδώ είναι μόνο η διεθνής."
       - "Το 1821 είναι αναδρομική εκτίμηση, όχι απογραφή, και τα ιστορικά ορόσημα αφορούν άλλη επικράτεια κάθε φορά· δεν συνδέονται σε συνεχή σειρά."
-      - "Οι ηλικίες δίνονται σε πενταετείς ομάδες: η διάμεση ηλικία είναι ομάδα (π.χ. 45–49), όχι ακριβής αριθμός."
   en:
     name: "Population"
-    dek: "How many we are and how we are ageing: the population of the country and every region by age and sex, migration and every census since the founding of the state."
+    dek: "How many we are and how fast we age: the population of the country and every region by age and sex, migration, and every census since the founding of the state."
     coverage: "2001 – 2025 · 13 regions · censuses since 1821"
     updates: "Every year"
     sources:
@@ -464,7 +445,6 @@
     notes:
       - "A region's change in population is not internal migration: it includes births, deaths and moves to and from abroad. Migration here is international only."
       - "1821 is a retrospective estimate, not a census, and the historical milestones each cover a different territory; they do not form a continuous series."
-      - "Ages come in five-year groups: the median age is a group (e.g. 45–49), not an exact number."
 
 - key: inflation
   kind: topic
@@ -480,7 +460,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiODkxNWY3ZDYtN2EzYi00Y2UwLTlmMTMtNmJjNGVlYjEzZmYwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Πληθωρισμός"
-    dek: "Πόσο ακριβαίνει η ζωή, κατηγορία προς κατηγορία: τρόφιμα, ενέργεια, ενοίκια, εστιατόρια. Και πού βρίσκεται η Ελλάδα στην ΕΕ."
+    dek: "Πόσο ακριβαίνει κάθε κατηγορία, από τα τρόφιμα ως τα ενοίκια, και πού είναι η Ελλάδα ανάμεσα στις χώρες της ΕΕ."
     coverage: "1996 – σήμερα · Ελλάδα και 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -489,10 +469,9 @@
       - { name: "ΕΛΣΤΑΤ", url: "https://www.statistics.gr/el/statistics/-/publication/DKT87/-", note: "Ο εθνικός ΔΤΚ, για όποιον θέλει τον επίσημο ελληνικό δείκτη" }
     notes:
       - "Ο εναρμονισμένος δείκτης (ΕνΔΤΚ) είναι αυτός που συγκρίνεται ανάμεσα στις χώρες της ΕΕ· διαφέρει λίγο από τον εθνικό ΔΤΚ της ΕΛΣΤΑΤ."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Inflation"
-    dek: "How much more life costs, category by category: food, energy, rents, restaurants. And where Greece stands in the EU."
+    dek: "How fast each category gets dearer, from food to rents, and where Greece stands among the EU countries."
     coverage: "1996 – today · Greece and the 27 EU countries"
     updates: "Every month"
     sources:
@@ -501,7 +480,6 @@
       - { name: "ELSTAT", url: "https://www.statistics.gr/en/statistics/-/publication/DKT87/-", note: "The national CPI" }
     notes:
       - "The harmonised index (HICP) is the one comparable across EU countries; it differs slightly from ELSTAT's national CPI."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: housing
   kind: topic
@@ -516,8 +494,8 @@
   articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDhjM2MyYTMtNmIwOC00YjM4LTgwMDctMTdlMDdiNTBiNGFhIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
-    name: "Κατοικία"
-    dek: "Τιμές διαμερισμάτων, ενοίκια, στεγαστικά δάνεια και πόσα νοικοκυριά «πνίγονται» από το κόστος στέγασης, στην Ελλάδα και την ΕΕ."
+    name: "Στέγαση και οικοδομή"
+    dek: "Οι επίσημες τιμές των διαμερισμάτων, τα ενοίκια, τα στεγαστικά δάνεια, πού χτίζονται νέα σπίτια και πόσα νοικοκυριά δυσκολεύονται με το κόστος στέγασης."
     coverage: "1993 – σήμερα · Αθήνα, Θεσσαλονίκη, άλλες πόλεις · 27 χώρες ΕΕ"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -530,12 +508,10 @@
     notes:
       - "Ο δείκτης ενοικίων του ΕνΔΤΚ μετρά ενοίκια όλων των μισθώσεων, παλαιών και νέων· οι νέες μισθώσεις ακριβαίνουν πιο γρήγορα."
       - "Η ΕΕ δεν δημοσιεύει πια μέσο όρο για το κόστος κατασκευής, γι' αυτό το δείχνουμε μόνο για την Ελλάδα."
-      - "Ανά περιφέρεια η ΕΛΣΤΑΤ δίνει τις νέες κατοικίες και τις άδειες για νέα κτίρια και προσθήκες, όχι το σύνολο των αδειών· γι' αυτό τα σύνολα των σελίδων διαφέρουν."
-      - "Ανά δήμο τα στοιχεία είναι ετήσια, από τους συγκεντρωτικούς πίνακες κάθε Δεκεμβρίου της ΕΛΣΤΑΤ· για ένα έτος η ΕΛΣΤΑΤ δεν έχει πίνακα ανά δήμο. Οι κάτοικοι κάθε δήμου είναι της απογραφής."
-      - "Τα στοιχεία της Eurostat, της ΕΚΤ και της ΤτΕ τα μεταφράσαμε και τα αναδιατάξαμε εμείς· δεν ευθύνονται για τις αλλαγές."
+      - "Οι άδειες ανά περιφέρεια και ανά δήμο έρχονται από άλλους πίνακες της ΕΛΣΤΑΤ· τα σύνολά τους διαφέρουν από τα σύνολα της χώρας."
   en:
-    name: "Housing"
-    dek: "Apartment prices, rents, mortgages and how many households are overburdened by housing costs, in Greece and the EU."
+    name: "Housing and construction"
+    dek: "Official apartment prices, rents, mortgages, where new homes are built and how many households struggle with the cost of housing."
     coverage: "1993 – today · Athens, Thessaloniki, other cities · 27 EU countries"
     updates: "Every quarter"
     sources:
@@ -548,9 +524,7 @@
     notes:
       - "The HICP rents index covers all leases, old and new; new leases rise faster."
       - "The EU no longer publishes an average for construction costs, so we show them for Greece only."
-      - "By region ELSTAT gives new dwellings and permits for new buildings and extensions, not all permits, so the totals on the two pages differ."
-      - "By municipality the data are annual, from ELSTAT's December summary tables; for one year ELSTAT has no table by municipality. Each municipality's residents are those of the census."
-      - "We translated and rearranged the Eurostat, ECB and Bank of Greece data; they are not responsible for the changes."
+      - "Permits by region and by municipality come from other ELSTAT tables; their totals differ from the national totals."
 
 - key: energy
   kind: topic
@@ -565,8 +539,8 @@
   articles: []
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiZDJkY2Q1ZGItZTUyNi00MDE2LWEyNzUtMWI4ZGI3NzA4MjEwIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
-    name: "Ηλεκτρισμός & ενέργεια"
-    dek: "Τι πληρώνουμε για ρεύμα και φυσικό αέριο σε σχέση με την Ευρώπη, από τι παράγεται το ρεύμα, πόση ενέργεια είναι ανανεώσιμη και πόση εισαγόμενη, με τι ζεσταίνονται τα σπίτια και ποια ενεργειακή κλάση έχουν όσα πωλούνται ή νοικιάζονται."
+    name: "Ενέργεια"
+    dek: "Τι πληρώνουμε για ρεύμα και φυσικό αέριο δίπλα στην ΕΕ, από πού έρχεται η ενέργειά μας, πώς ζεσταίνονται τα σπίτια και τι ενεργειακή κλάση έχουν όσα πωλούνται."
     coverage: "2007 – σήμερα · 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -576,12 +550,11 @@
       - { name: "DataForGreece", url: "https://dataforgreece.gr/dedomena/real-estate/", note: "Δικές μας συλλογές αγγελιών κατοικιών: ενεργειακή κλάση, ηλιακός θερμοσίφωνας και ζητούμενη τιμή" }
     notes:
       - "Οι τιμές για τα νοικοκυριά αφορούν τη μεσαία κατανάλωση (2.500–5.000 kWh τον χρόνο)."
-      - "Ο στόχος για το 2030 στη σελίδα «ΑΠΕ και εισαγωγές» είναι ο στόχος της ΕΕ-27 συνολικά (42,5% της ακαθάριστης τελικής κατανάλωσης ενέργειας, Οδηγία (ΕΕ) 2023/2413), όχι ο εθνικός στόχος της Ελλάδας."
+      - "Ο στόχος για τις ανανεώσιμες πηγές είναι ο στόχος της ΕΕ συνολικά, όχι ο εθνικός στόχος της Ελλάδας."
       - "Η ενεργειακή κλάση και ο ηλιακός θερμοσίφωνας προέρχονται από τις αγγελίες που συλλέγουμε, των τελευταίων δώδεκα μηνών, με κάθε αγγελία μία φορά. Η κλάση Α περιλαμβάνει την Α+ και η Β την Β+. Οι τιμές είναι ζητούμενες, όχι τιμές συναλλαγών, και συγκρίνονται μόνο ανάμεσα σε σπίτια της ίδιας ηλικίας."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
-    name: "Electricity & energy"
-    dek: "What we pay for electricity and gas compared with Europe, what our power is made from, how much of our energy is renewable or imported, what heats our homes and which energy class the homes for sale or rent have."
+    name: "Energy"
+    dek: "What we pay for electricity and gas next to the EU, where our energy comes from, how homes are heated and the energy class of the homes for sale."
     coverage: "2007 – today · 27 EU countries"
     updates: "Every month"
     sources:
@@ -591,9 +564,8 @@
       - { name: "DataForGreece", url: "https://dataforgreece.gr/en/data/real-estate/", note: "Our own collection of home listings: energy class, solar water heater and asking price" }
     notes:
       - "Household prices are for medium consumption (2,500–5,000 kWh a year)."
-      - "The 2030 target on the page «ΑΠΕ και εισαγωγές» is the EU-27's target as a whole (42.5% of gross final energy consumption, Directive (EU) 2023/2413), not Greece's national target."
+      - "The renewables target is the EU's target as a whole, not Greece's national target."
       - "The energy class and the solar water heater come from the listings we collect, over the last twelve months, each listing once. Class A includes A+ and class B includes B+. Prices are asking prices, not sale prices, and are compared only between homes of the same age."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: economy
   kind: topic
@@ -609,7 +581,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiY2NkMzUwN2EtODQ5Ni00NjliLTk5NzEtMGYyZmM0MjI3M2MyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Οικονομία & ΑΕΠ"
-    dek: "Ανάπτυξη κάθε τρίμηνο, τι την κινεί, ποιοι κλάδοι μεγαλώνουν, πόσο πλούσια είναι κάθε περιφέρεια και κάθε περιφερειακή ενότητα, και το κλίμα στην αγορά."
+    dek: "Πόσο μεγαλώνει η οικονομία κάθε τρίμηνο, πόσο απέχει από το υψηλό πριν από την κρίση και πόσο πλούσια είναι κάθε περιφέρεια δίπλα στην ΕΕ."
     coverage: "1995 – σήμερα · 13 περιφέρειες, 52 περιφερειακές ενότητες · 27 χώρες ΕΕ"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -618,10 +590,9 @@
       - { name: "Ευρωπαϊκή Επιτροπή, δείκτης οικονομικού κλίματος", url: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/business-and-consumer-surveys_en", note: "Οικονομικό κλίμα και καταναλωτική εμπιστοσύνη, κάθε μήνα" }
     notes:
       - "Η ανάπτυξη μετριέται σε σταθερές τιμές (χωρίς τον πληθωρισμό)· τα τριμηνιαία είναι εποχικά διορθωμένα."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Economy & GDP"
-    dek: "Growth every quarter, what drives it, which sectors grow, how rich every region and regional unit is, and the mood in the market."
+    dek: "How fast the economy grows every quarter, how far it is from its pre-crisis peak and how rich every region is next to the EU."
     coverage: "1995 – today · 13 regions, 52 regional units · 27 EU countries"
     updates: "Every quarter"
     sources:
@@ -630,11 +601,10 @@
       - { name: "European Commission, economic sentiment", url: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/business-and-consumer-surveys_en", note: "Economic sentiment and consumer confidence, monthly" }
     notes:
       - "Growth is measured in constant prices (inflation removed); quarterly figures are seasonally adjusted."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: tourism
   kind: topic
-  category: business
+  category: travel
   model: stats
   image: assets/posts/topic-tourism.webp
   since: 1994
@@ -646,7 +616,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYmJkYTQ4NjgtN2IxOS00MGMxLTllMzgtMTI1MzU0NWM5ZjFkIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Τουρισμός"
-    dek: "Αφίξεις, διανυκτερεύσεις και έσοδα κάθε μήνα, ποιες περιφέρειες γεμίζουν, πόσες κλίνες υπάρχουν και πού είμαστε στην Ευρώπη."
+    dek: "Πόσοι έρχονται, από πού και πόσα ξοδεύουν, ποιες περιοχές σηκώνουν τους περισσότερους επισκέπτες ανά κάτοικο και πού είμαστε στην Ευρώπη."
     coverage: "1994 – σήμερα · 13 περιφέρειες, 52 περιφερειακές ενότητες · 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -659,13 +629,10 @@
       - { name: "Eurostat, αεροπορικές και θαλάσσιες μεταφορές", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Επιβάτες ανά αεροδρόμιο και λιμάνι" }
     notes:
       - "Οι διανυκτερεύσεις αφορούν τα καταλύματα της έρευνας (ξενοδοχεία, κάμπινγκ, ενοικιαζόμενα)· η βραχυχρόνια μίσθωση φαίνεται στο θέμα Airbnb."
-      - "Η σελίδα «Πίεση ανά κάτοικο» δείχνει τις διανυκτερεύσεις ανά κάτοικο σε κάθε περιοχή και πόσες κλείνονται μέσω πλατφορμών, με τα πειραματικά στοιχεία της Eurostat."
-      - "Η σελίδα «Αφίξεις: αεροδρόμια και λιμάνια» δείχνει τους επιβάτες σε κάθε αεροδρόμιο (μηνιαία) και στα κύρια λιμάνια (τριμηνιαία, χωρίς τους επιβάτες κρουαζιέρας)."
-      - "Η σελίδα «Από πού έρχονται» μετρά όσους ήρθαν από το εξωτερικό στα σύνορα (Τράπεζα της Ελλάδος): είναι άλλος ορισμός από τις αφίξεις στα καταλύματα."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+      - "Όσοι μπήκαν στη χώρα, που μετρά η Τράπεζα της Ελλάδος, δεν είναι το ίδιο με τις αφίξεις στα καταλύματα."
   en:
     name: "Tourism"
-    dek: "Arrivals, nights and receipts every month, which regions fill up, how many beds there are and where we stand in Europe."
+    dek: "How many come, from where and how much they spend, which areas carry the most visitors per resident and where we stand in Europe."
     coverage: "1994 – today · 13 regions, 52 regional units · 27 EU countries"
     updates: "Every month"
     sources:
@@ -678,10 +645,7 @@
       - { name: "Eurostat, air and sea transport", url: "https://ec.europa.eu/eurostat/databrowser/view/avia_paoa/default/table?lang=en", note: "Passengers by airport and port" }
     notes:
       - "Nights cover the surveyed accommodation (hotels, campsites, rented rooms); short-term rentals are in the Airbnb topic."
-      - "The page «Πίεση ανά κάτοικο» shows the nights per resident in each area and how many are booked through the platforms, from Eurostat's experimental statistics."
-      - "The page «Αφίξεις: αεροδρόμια και λιμάνια» shows the passengers at each airport (monthly) and at the main ports (quarterly, without cruise passengers)."
-      - "The page «Από πού έρχονται» (Where they come from) counts travellers from abroad at the border (Bank of Greece): a different measure from arrivals at accommodation."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+      - "Those who entered the country, as the Bank of Greece counts them, are not the same as arrivals at accommodation."
 
 - key: poverty
   kind: topic
@@ -697,7 +661,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjMzNGFmZDctNDE2NS00YzA1LTkwNDUtZGY1MjgzMTRiMzk3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Εισόδημα & φτώχεια"
-    dek: "Μέσο εισόδημα, ανισότητα, κίνδυνος φτώχειας και στερήσεις: ποιοι ζουν δύσκολα και πώς αλλάζει από χρόνο σε χρόνο."
+    dek: "Πόσοι ζουν κάτω από το όριο της φτώχειας, πόσο άνισα μοιράζεται το εισόδημα και ποιοι κινδυνεύουν περισσότερο, δίπλα στην ΕΕ."
     coverage: "2003 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
     updates: "Κάθε χρόνο"
     sources:
@@ -705,10 +669,9 @@
       - { name: "ΕΛΣΤΑΤ, Έρευνα Εισοδήματος και Συνθηκών Διαβίωσης", url: "https://www.statistics.gr/el/statistics/-/publication/SFA10/-", note: "Η ελληνική πηγή της έρευνας" }
     notes:
       - "Η έρευνα κάθε έτους μετρά το εισόδημα του προηγούμενου έτους."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Income & poverty"
-    dek: "Average income, inequality, the risk of poverty and deprivation: who lives in hardship and how it changes year by year."
+    dek: "How many live below the poverty line, how unequally income is shared and who is most at risk, next to the EU."
     coverage: "2003 – today · 13 regions · 27 EU countries"
     updates: "Every year"
     sources:
@@ -716,11 +679,10 @@
       - { name: "ELSTAT, Survey on Income and Living Conditions", url: "https://www.statistics.gr/en/statistics/-/publication/SFA10/-", note: "The Greek source of the survey" }
     notes:
       - "Each year's survey measures the previous year's income."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: work
   kind: topic
-  category: work
+  category: economy
   model: stats
   image: assets/posts/topic-work-fisherman.webp
   since: 1999
@@ -732,7 +694,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNzgxMDhhNDctYjRlYS00MjkxLThiNzgtZmJhZTBjMmM5OTZiIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Εργασία & μισθοί"
-    dek: "Πόσοι δουλεύουν, πόσοι ψάχνουν δουλειά και πόσα παίρνουν: ανεργία κάθε μήνα και το μητρώο ανέργων, κατώτατος και μέσος μισθός, πραγματικοί μισθοί, κάθε περιφέρεια, δίπλα στην ΕΕ."
+    dek: "Ανεργία κάθε μήνα, το μητρώο ανέργων, μισθοί και τι αγοράζουν, σε κάθε περιφέρεια και δίπλα στην ΕΕ."
     coverage: "1999 – σήμερα · 13 περιφέρειες · 27 χώρες ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -744,12 +706,10 @@
     notes:
       - "Τα μηνιαία ποσοστά ανεργίας είναι εποχικά διορθωμένα· τα περιφερειακά είναι ετήσια."
       - "Οι εγγεγραμμένοι άνεργοι της ΔΥΠΑ είναι όσοι γράφτηκαν στο μητρώο της· είναι άλλος ορισμός από την ανεργία της έρευνας, γι' αυτό τα δύο νούμερα δεν συγκρίνονται απευθείας."
-      - "Τους απασχολούμενους ανά κλάδο τους συγκρίνουμε με το ίδιο τρίμηνο πριν από πέντε χρόνια, γιατί η έρευνα δεν διορθώνεται εποχικά."
-      - "Οι πραγματικοί μισθοί υπολογίζονται με τον εναρμονισμένο δείκτη τιμών (βλ. Πληθωρισμός). Ο κατώτατος μισθός είναι σε 12 μηνιαίες δόσεις, όπως τον μετρά η Eurostat."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
+      - "Οι πραγματικοί μισθοί είναι μετά τον πληθωρισμό. Ο κατώτατος μισθός δείχνεται σε δώδεκα δόσεις, όπως τον μετρά η Eurostat."
   en:
     name: "Work & pay"
-    dek: "How many work, how many are looking for work and what they earn: monthly unemployment and the jobless register, minimum and average wage, real wages, every region, next to the EU."
+    dek: "Unemployment every month, the jobless register, wages and what they buy, in every region and next to the EU."
     coverage: "1999 – today · 13 regions · 27 EU countries"
     updates: "Every month"
     sources:
@@ -761,9 +721,7 @@
     notes:
       - "Monthly unemployment rates are seasonally adjusted; regional rates are annual."
       - "DYPA's registered unemployed are the people on its register; that is a different definition from the survey's unemployment, so the two figures are not directly comparable."
-      - "We compare employment by sector with the same quarter five years earlier, because the survey is not seasonally adjusted."
-      - "Real wages use the harmonised price index (see Inflation). The minimum wage is in 12 monthly payments, as Eurostat measures it."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
+      - "Real wages are after inflation. The minimum wage is shown in twelve instalments, the way Eurostat measures it."
 
 - key: farm-to-shelf
   kind: topic
@@ -779,7 +737,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjY3ODQwNjEtYWIyYS00YjU1LWExOTAtNGU2Y2E1YzNmYjg0IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Από το χωράφι στο ράφι"
-    dek: "Πόσο πληρώνεται ο αγρότης και πόσο πληρώνουμε εμείς: τιμές παραγωγού για λάδι, γάλα, φρούτα και λαχανικά, το κόστος λιπασμάτων και ενέργειας, και οι τιμές στο ράφι."
+    dek: "Πόσο πληρώνεται ο αγρότης, πόσο του κοστίζει η παραγωγή, τι πληρώνει η λαχαναγορά και τι εμείς στο ράφι, προϊόν προς προϊόν."
     coverage: "2000 – σήμερα · Ελλάδα και ΕΕ"
     updates: "Κάθε τρίμηνο"
     sources:
@@ -788,12 +746,10 @@
       - { name: "ΟΚΑΑ, τιμές χονδρικής", url: "https://www.okaa.gr/", note: "Οι τιμές της Κεντρικής Λαχαναγοράς και της Κρεαταγοράς Αθηνών, κάθε εργάσιμη μέρα" }
     notes:
       - "Οι τιμές παραγωγού και οι τιμές καταναλωτή είναι δείκτες με διαφορετική βάση· συγκρίνουμε μόνο τη μεταβολή τους, όχι τα επίπεδα."
-      - "Οι τιμές ραφιού ανά προϊόν είναι στο θέμα Τιμές σούπερ μάρκετ."
       - "Η τιμή χονδρικής είναι η επικρατούσα τιμή στα δελτία της ΟΚΑΑ· η τιμή παραγωγού της Eurostat είναι μέσος όρος όλης της χώρας και της χρονιάς, γι' αυτό η σύγκρισή τους δείχνει τάξη μεγέθους."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "From farm to shelf"
-    dek: "What farmers are paid and what we pay: producer prices for olive oil, milk, fruit and vegetables, the cost of fertiliser and energy, and shelf prices."
+    dek: "What the farmer is paid, what production costs, what the wholesale market pays and what we pay on the shelf, product by product."
     coverage: "2000 – today · Greece and the EU"
     updates: "Every quarter"
     sources:
@@ -802,9 +758,7 @@
       - { name: "OKAA, wholesale prices", url: "https://www.okaa.gr/", note: "Prices at the Athens Central Fruit, Vegetable and Meat Market, every working day" }
     notes:
       - "Producer and consumer prices are indices on different bases; we compare only how they change, not their levels."
-      - "Shelf prices by product are in the Supermarket prices topic."
       - "The wholesale price is the prevailing price in OKAA's bulletins; Eurostat's farm-gate price is an average over the whole country and year, so comparing them shows orders of magnitude."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: public-debt
   kind: topic
@@ -827,7 +781,6 @@
       - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Χρέος, έλλειμμα, έσοδα, δαπάνες ανά λειτουργία, φόροι" }
     notes:
       - "Τα στοιχεία αφορούν τη γενική κυβέρνηση (κράτος, δήμοι, ασφαλιστικά ταμεία), όπως τα κοινοποιεί η Ελλάδα στην ΕΕ· ο κρατικός προϋπολογισμός είναι στο θέμα Προϋπολογισμός."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Debt, deficit & taxes"
     dek: "Public debt and the deficit, where public spending goes and where revenue comes from: VAT, income tax, contributions, next to the EU."
@@ -837,7 +790,6 @@
       - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Debt, deficit, revenue, spending by function, taxes" }
     notes:
       - "The data covers general government (state, municipalities, social security funds) as Greece reports it to the EU; the state budget is in the Budget topic."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: health
   kind: topic
@@ -853,24 +805,20 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiNjA5YmNiZGEtNDNlYS00ZWRjLWFlZDItYjA1ZTYzOGI5YjAyIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Υγεία"
-    dek: "Προσδόκιμο ζωής, πόσα πληρώνουμε από την τσέπη μας για την υγεία, γιατροί, νοσηλευτές και κρεβάτια, και πόσοι μένουν χωρίς γιατρό λόγω κόστους."
+    dek: "Προσδόκιμο ζωής, πόσα πληρώνουμε από την τσέπη μας για την υγεία, γιατροί, νοσηλευτές και κρεβάτια νοσοκομείων, και πόσοι δεν πήγαν σε γιατρό ενώ χρειάζονταν."
     coverage: "2000 – σήμερα · 27 χώρες ΕΕ"
     updates: "Κάθε χρόνο"
     sources:
       - { name: "Eurostat, στατιστικές υγείας", url: "https://ec.europa.eu/eurostat/web/health", note: "Δαπάνες υγείας, προσωπικό, κλίνες, ανεκπλήρωτες ανάγκες" }
       - { name: "Eurostat, δημογραφία", url: "https://ec.europa.eu/eurostat/web/population-demography", note: "Προσδόκιμο ζωής" }
-    notes:
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Health"
-    dek: "Life expectancy, how much we pay out of pocket for health, doctors, nurses and beds, and how many go without care because of the cost."
+    dek: "Life expectancy, how much we pay for health out of our own pocket, doctors, nurses and hospital beds, and how many did not see a doctor when they needed one."
     coverage: "2000 – today · 27 EU countries"
     updates: "Every year"
     sources:
       - { name: "Eurostat, health statistics", url: "https://ec.europa.eu/eurostat/web/health", note: "Health spending, staff, beds, unmet needs" }
       - { name: "Eurostat, demography", url: "https://ec.europa.eu/eurostat/web/population-demography", note: "Life expectancy" }
-    notes:
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: education
   kind: topic
@@ -892,8 +840,6 @@
     sources:
       - { name: "Eurostat, εκπαίδευση", url: "https://ec.europa.eu/eurostat/web/education-and-training", note: "Επίπεδο εκπαίδευσης, πρόωρη εγκατάλειψη, NEET, μαθητές ανά εκπαιδευτικό" }
       - { name: "Eurostat, δημόσια οικονομικά", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Δημόσια δαπάνη για την παιδεία" }
-    notes:
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Education"
     dek: "How many young people finish university, how many leave school early, how many neither work nor study, pupils per teacher and what the state spends."
@@ -902,8 +848,6 @@
     sources:
       - { name: "Eurostat, education", url: "https://ec.europa.eu/eurostat/web/education-and-training", note: "Attainment, early leavers, NEET, pupils per teacher" }
       - { name: "Eurostat, government finance", url: "https://ec.europa.eu/eurostat/web/government-finance-statistics", note: "Public spending on education" }
-    notes:
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: environment
   kind: topic
@@ -926,7 +870,6 @@
       - { name: "Eurostat, περιβάλλον", url: "https://ec.europa.eu/eurostat/web/environment", note: "Εκπομπές αερίων του θερμοκηπίου, αστικά απόβλητα και ανακύκλωση" }
     notes:
       - "Οι καμένες εκτάσεις είναι στο θέμα Δασικές πυρκαγιές."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Environment"
     dek: "Greenhouse gas emissions, how much waste we produce and how much we recycle, and where Greece stands in the EU."
@@ -936,11 +879,10 @@
       - { name: "Eurostat, environment", url: "https://ec.europa.eu/eurostat/web/environment", note: "Greenhouse gas emissions, municipal waste and recycling" }
     notes:
       - "Burnt areas are in the Forest fires topic."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: road-safety
   kind: topic
-  category: society
+  category: travel
   model: stats
   image: assets/posts/topic-road-safety.webp
   since: 2000
@@ -952,7 +894,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMTVmY2U4OGQtNGJlMC00MDg4LThiMzktNWYyZTQ2ZTBhZjJlIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Τροχαία"
-    dek: "Πόσοι σκοτώνονται και τραυματίζονται στους δρόμους, πότε και πού, με ποιο όχημα, και πώς συγκρίνεται η Ελλάδα με την Ευρώπη σε νεκρούς, αυτοκίνητα και μοτοσικλέτες."
+    dek: "Πόσοι σκοτώνονται και τραυματίζονται στους δρόμους, πότε, πού και με ποιο όχημα, και πώς συγκρίνεται η Ελλάδα με την ΕΕ."
     coverage: "Κάθε μήνα 2010 – σήμερα · κάθε χρόνο 2000 – σήμερα · περιφέρειες, περιφερειακές ενότητες και ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -962,11 +904,9 @@
       - { name: "Eurostat, οχήματα σε κυκλοφορία", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en", note: "Αυτοκίνητα ανά κάτοικο, αυτοκίνητα και μοτοσικλέτες σε κυκλοφορία" }
     notes:
       - "Τα μηνιαία στοιχεία της ΕΛΣΤΑΤ για τους τελευταίους μήνες είναι προσωρινά και αναθεωρούνται."
-      - "Τις μοτοσικλέτες ανά κάτοικο και τους νεκρούς ανά όχημα τους υπολογίζουμε εμείς από τα στοιχεία της Eurostat για την ίδια χρονιά."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Road safety"
-    dek: "How many people are killed and injured on the roads, when and where, in which vehicle, and how Greece compares with Europe on deaths, cars and motorcycles."
+    dek: "How many are killed and injured on the roads, when, where and in which vehicle, and how Greece compares with the EU."
     coverage: "Every month 2010 – today · every year 2000 – today · regions, regional units and the EU"
     updates: "Every month"
     sources:
@@ -976,12 +916,10 @@
       - { name: "Eurostat, vehicles in use", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table?lang=en", note: "Cars per inhabitant, cars and motorcycles in use" }
     notes:
       - "ELSTAT's monthly figures for the latest months are provisional and get revised."
-      - "Motorcycles per inhabitant and deaths per vehicle are our calculation from Eurostat's figures for the same year."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: cars
   kind: topic
-  category: business
+  category: travel
   model: autokinita
   image: assets/posts/topic-cars.webp
   since: 2013
@@ -993,7 +931,7 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiYTNlNWI1Y2QtMjFhYi00ZjUwLTkzOWYtYzZiMmYxYjE5MWFlIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Αυτοκίνητα"
-    dek: "Τι ζητούν οι πωλητές για ένα μεταχειρισμένο, από τις δικές μας αγγελίες, δίπλα στις ταξινομήσεις καινούργιων ανά καύσιμο, στα ηλεκτρικά και στα αυτοκίνητα ανά κάτοικο."
+    dek: "Τι ζητούν οι πωλητές για ένα μεταχειρισμένο, ανά καύσιμο και ηλικία, τι καινούργια ταξινομούνται και πώς συγκρινόμαστε με την ΕΕ."
     coverage: "Αγγελίες 2025 – σήμερα · ταξινομήσεις 2013 – σήμερα · περιφέρειες και ΕΕ"
     updates: "Κάθε μήνα"
     sources:
@@ -1001,10 +939,9 @@
       - { name: "Eurostat, οδικές μεταφορές", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en", note: "Καινούργια αυτοκίνητα και αυτοκίνητα σε κυκλοφορία ανά καύσιμο, ανά κάτοικο και ανά περιφέρεια" }
     notes:
       - "Οι τιμές των αγγελιών είναι ζητούμενες, όχι τιμές πώλησης."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Cars"
-    dek: "What sellers ask for a used car, from our own listings, next to new registrations by fuel, electric cars and cars per inhabitant."
+    dek: "What sellers ask for a used car, by fuel and age, which new cars are registered and how we compare with the EU."
     coverage: "Listings 2025 – today · registrations 2013 – today · regions and the EU"
     updates: "Every month"
     sources:
@@ -1012,11 +949,10 @@
       - { name: "Eurostat, road transport", url: "https://ec.europa.eu/eurostat/databrowser/view/road_eqr_carpda/default/table?lang=en", note: "New cars and cars on the road by fuel, per inhabitant and by region" }
     notes:
       - "Listing prices are asking prices, not sale prices."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 - key: transport
   kind: topic
-  category: business
+  category: travel
   model: stats
   image: assets/posts/athens.webp
   since: 1990
@@ -1028,9 +964,9 @@
   dashboards: { lite: "", full: "https://app.powerbi.com/view?r=eyJrIjoiMWI5NzE1M2ItNGUwMC00MWZiLWFjMTUtZTFiODY5MjdhZjI3IiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9" }
   gr:
     name: "Μεταφορές"
-    dek: "Πόσοι παίρνουν κάθε μέρα το μετρό, τα λεωφορεία, το τραμ και τον προαστιακό της Αθήνας, ποιοι σταθμοί γεμίζουν και πότε, και πόσο λίγο ταξιδεύει η Ελλάδα με τρένο δίπλα στην ΕΕ."
+    dek: "Πόσα εισιτήρια και κάρτες χτυπιούνται κάθε μέρα στο μετρό, στα λεωφορεία, στο τραμ και στον προαστιακό της Αθήνας, ποιοι σταθμοί γεμίζουν και πότε, και πόσο ταξιδεύει η Ελλάδα με τρένο."
     coverage: "ΟΑΣΑ 2020 – σήμερα · Eurostat 1990 – σήμερα · 27 χώρες ΕΕ"
-    updates: "Κάθε μέρα (ΟΑΣΑ) · κάθε χρόνο (Eurostat)"
+    updates: "Κάθε μήνα (ΟΑΣΑ) · κάθε χρόνο (Eurostat)"
     sources:
       - { name: "ΟΑΣΑ, επιβατικό κοινό (data.gov.gr)", url: "https://data.gov.gr/dataset/oasa_ridership", note: "Επικυρώσεις εισιτηρίων ανά σταθμό και ώρα, κάθε μέρα" }
       - { name: "Eurostat, σιδηροδρομικές μεταφορές", url: "https://ec.europa.eu/eurostat/web/transport/database", note: "Επιβάτες τρένων και σιδηροδρομικά ατυχήματα" }
@@ -1038,13 +974,11 @@
     notes:
       - "Οι επικυρώσεις δεν είναι επιβάτες: στο μετρό μετρώνται είσοδοι και έξοδοι, και στα λεωφορεία πολλοί δεν χτυπούν εισιτήριο."
       - "Ο ΟΑΣΑ άλλαξε τη ροή των δεδομένων το φθινόπωρο του 2024· στα λεωφορεία και στο τραμ τα νούμερα πριν και μετά δεν συγκρίνονται."
-      - "Αφήνουμε έξω τις μέρες με κενά ή διπλά στοιχεία στην πηγή· ο τελευταίος μήνας που δείχνουμε είναι ο τελευταίος πλήρης."
-      - "Τα στοιχεία της Eurostat τα μεταφράσαμε και τα αναδιατάξαμε εμείς· η Eurostat δεν ευθύνεται για τις αλλαγές."
   en:
     name: "Transport"
-    dek: "How many people take the Athens metro, buses, tram and suburban railway every day, which stations fill up and when, and how little Greece travels by train next to the EU."
+    dek: "How many tickets and cards are validated every day on the Athens metro, buses, tram and suburban rail, which stations fill up and when, and how much Greece travels by train."
     coverage: "OASA 2020 – today · Eurostat 1990 – today · 27 EU countries"
-    updates: "Every day (OASA) · every year (Eurostat)"
+    updates: "Every month (OASA) · every year (Eurostat)"
     sources:
       - { name: "OASA, ridership (data.gov.gr)", url: "https://data.gov.gr/dataset/oasa_ridership", note: "Ticket validations by station and hour, every day" }
       - { name: "Eurostat, rail transport", url: "https://ec.europa.eu/eurostat/web/transport/database", note: "Rail passengers and rail accidents" }
@@ -1052,8 +986,6 @@
     notes:
       - "Validations are not passengers: on the metro both entries and exits count, and many bus riders do not validate."
       - "OASA changed its data feed in autumn 2024; for buses and tram the figures before and after are not comparable."
-      - "We leave out days with gaps or doubled figures in the source; the latest month shown is the last complete one."
-      - "We translated and rearranged the Eurostat data; Eurostat is not responsible for the changes."
 
 # ── Special topics: one-off, event-like features ─────────────────────────
 - key: women-in-business
@@ -1079,6 +1011,7 @@
       - "Το φύλο εκτιμάται από το όνομα, γιατί το μητρώο δεν το καταγράφει."
       - "Ιδιοκτήτρια στο μητρώο δεν σημαίνει πάντα ότι η γυναίκα διοικεί την επιχείρηση."
       - "Οι πιο νέες επιχειρήσεις δεν έχουν ακόμη πρόσωπα στα δεδομένα."
+      - "Όσα ονόματα δεν αναγνωρίζουμε δεν μετρούν, γι' αυτό ορισμένες περιοχές, όπως η Θράκη, καλύπτονται λιγότερο."
   en:
     name: "Women in business"
     dek: "How many companies women own, how many they run and in which sectors, from the people and roles in the General Commercial Registry."
@@ -1090,36 +1023,4 @@
       - "Gender is inferred from the name, because the registry does not record it."
       - "A woman listed as owner does not always run the company."
       - "The newest companies do not have people in the data yet."
-
-- key: period-products
-  kind: special
-  parent: supermarket-prices
-  image: assets/posts/supermarket_period.webp
-  when: 2025-01
-  data: [supermarket-prices-itsjustperiod]
-  charts: [supermarket-prices-itsjustperiod]
-  report: ""
-  articles: [supermarket-prices-itsjustperiod-announcement-2025-01-20]
-  dashboards: { lite: "", full: "" }
-  explore:   # the older, detailed reports to inspect every number (Power BI, published as-is)
-    - { model: katanalotis_itsjustperiod, url: "https://app.powerbi.com/view?r=eyJrIjoiN2ZlYjBkMjYtMzkxYi00Y2JkLTlkYTAtMjQxZDg0MDgxNjNjIiwidCI6IjAzMTVmMTIzLTFlOGQtNDVhYi04N2M0LWNlZTljODA1NTE4OSIsImMiOjl9", gr: "Τιμές προϊόντων περιόδου", en: "Period product prices" }
-  gr:
-    name: "Προϊόντα περιόδου"
-    dek: "Με την πρωτοβουλία It's just period: οι τιμές των προϊόντων περιόδου στα σούπερ μάρκετ και ο ΦΠΑ που τα επιβαρύνει."
-    when_label: "Ιανουάριος 2025"
-    sources:
-      - { name: "e-katanalotis", url: "https://e-katanalotis.gov.gr", note: "Τιμές ραφιού" }
-      - { name: "ΑΒ Βασιλόπουλος", url: "https://www.ab.gr", note: "Τιμές ραφιού" }
-      - { name: "Σκλαβενίτης", url: "https://www.sklavenitis.gr", note: "Τιμές ραφιού" }
-      - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "Η πρωτοβουλία" }
-    notes: []
-  en:
-    name: "Period products"
-    dek: "With the It's just period initiative: what period products cost in supermarkets, and the VAT charged on them."
-    when_label: "January 2025"
-    sources:
-      - { name: "e-katanalotis", url: "https://e-katanalotis.gov.gr", note: "Shelf prices" }
-      - { name: "AB Vasilopoulos", url: "https://www.ab.gr", note: "Shelf prices" }
-      - { name: "Sklavenitis", url: "https://www.sklavenitis.gr", note: "Shelf prices" }
-      - { name: "It's just period", url: "https://www.instagram.com/itsjustperiod/", note: "The initiative" }
-    notes: []
+      - "Names we cannot read are not counted, so some areas, such as Thrace, are covered less."

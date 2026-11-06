@@ -3,7 +3,7 @@ title: Τιμές καυσίμων κίνησης και θέρμανσης στ
 slug: fuel-prices-greece
 description: "Οι τιμές των καυσίμων κίνησης και θέρμανσης στην Ελλάδα, σε κάθε νομό"
 date: 2024-11-09
-category: Τιμές & ακρίβεια
+category: "Τιμές & στέγαση"
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/fuel-prices-greece/fuel-prices-greece.zip
 redirect_from:
   - /fuel/

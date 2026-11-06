@@ -2,7 +2,7 @@
 title: Πληθυσμός της Ελλάδας κατά ηλικία και φύλο
 slug: population-greece
 description: "Ο πληθυσμός της χώρας και των περιφερειών κατά ηλικία και φύλο, η διεθνής μετανάστευση και οι ιστορικές απογραφές"
-category: Κοινωνία
+category: "Κοινωνία"
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-07"

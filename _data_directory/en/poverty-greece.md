@@ -2,7 +2,7 @@
 title: Income, poverty and inequality in Greece
 slug: poverty-greece
 description: "Income, poverty, inequality and deprivation, for children, older people and every region, next to the EU countries"
-category: Society
+category: "Society"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

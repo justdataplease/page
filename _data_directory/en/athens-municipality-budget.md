@@ -2,7 +2,7 @@
 title: Budget of the Municipality of Athens
 slug: athens-municipality-budget
 description: "The City of Athens budget: what was voted, what was spent and where the money went"
-category: State & politics
+category: "State & politics"
 date: 2024-10-20
 download_url: https://github.com/justdataplease/dataforgreece/raw/refs/heads/main/data/athens-municipality-budget/athens-municipality-budget-greece_2024.csv.zip
 

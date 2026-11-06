@@ -2,7 +2,7 @@
 title: Population of Greece by age and sex
 slug: population-greece
 description: "The population of the country and its regions by age and sex, international migration and the historical censuses"
-category: Society
+category: "Society"
 date: 2026-10-07
 published_by: "DataForGreece"
 last_update: "2026-10-07"

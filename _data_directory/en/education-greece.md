@@ -2,7 +2,7 @@
 title: Education in Greece and the EU
 slug: education-greece
 description: "Graduates, early school leavers, young people neither working nor studying, pupils per teacher and education spending, next to the EU"
-category: Society
+category: "Society"
 date: 2026-10-08
 published_by: "DataForGreece"
 last_update: "2026-10-08"

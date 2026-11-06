@@ -2,7 +2,7 @@
 title: Θόρυβος στις γειτονιές της Αθήνας
 slug: noise-athens
 description: "Οι αισθητήρες θορύβου του SoundWatch σε γειτονιές της Αθήνας: πόσος θόρυβος, ποια ώρα και σε ποιον τόπο"
-category: Ενέργεια & περιβάλλον
+category: "Ενέργεια & περιβάλλον"
 date: 2026-10-22
 published_by: "DataForGreece"
 last_update: "2026-10-22"

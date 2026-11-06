@@ -1,5 +1,5 @@
 ---
 topic: energy
-title: "Electricity & energy"
-description: "What we pay for electricity and gas compared with Europe, what our power is made from, how much of our energy is renewable or imported, what heats our homes and which energy class the homes for sale or rent have."
+title: "Energy"
+description: "What we pay for electricity and gas next to the EU, where our energy comes from, how homes are heated and the energy class of the homes for sale."
 ---

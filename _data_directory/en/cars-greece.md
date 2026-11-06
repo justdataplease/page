@@ -2,7 +2,7 @@
 title: Cars in Greece
 slug: cars-greece
 description: "Used-car asking prices from our own listings, new registrations and cars on the road by fuel"
-category: Business & tourism
+category: "Tourism & getting around"
 date: 2026-10-21
 published_by: "DataForGreece"
 last_update: "2026-10-21"
@@ -24,4 +24,4 @@ image_path: assets/posts/topic-cars.webp
 | age_median, mileage_median  | Age, mileage               | The median years since first registration and the median kilometres. |
 | measure, share              | Share                      | Each fuel's share of the listings, of the new cars registered and of the cars on the road. |
 
-**NOTE** - Sources: our own collection of used-car listings and Eurostat. Prices are asking prices, not sale prices. Eurostat data may be reused freely with the source cited; we translated and rearranged them.
+**NOTE** - Sources: our own collection of used-car listings and Eurostat. Prices are asking prices, not sale prices. Eurostat data may be reused freely with the source cited; we translated and rearranged them and Eurostat is not responsible for the changes.
